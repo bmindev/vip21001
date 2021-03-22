@@ -2,7 +2,7 @@
 <a href="javascript:void(0)" title="Cart" class="cart-icon" data-cart-toggle>
     {% render 'icon-cart' %}
     <span class="cart-text"{% if settings.enable_multilang %} data-translate="cart.general.shopping_cart"{% endif %}>
-        {{ 'cart.general.shopping_cart' | t }}
+        <!-- {{ 'cart.general.shopping_cart' | t }} -->
     </span>
     <span class="cartCount" data-cart-count>
         {{ cart.item_count }}

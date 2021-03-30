@@ -28,19 +28,19 @@
         
         <div class="header-pc">
           <div class="header-panel-top">
-            <!-- {% if section.settings.display_customer_service and section.settings.customer_service_text != blank %}
+            {% if section.settings.display_customer_service and section.settings.customer_service_text != blank %}
             <div class="cus-ser-text">
               {% render 'multilang' with section.settings.customer_service_text %}
             </div>
-            {% endif %} -->
+            {% endif %} 
             
-            <!-- {% if settings.enable_multilang_shopify or settings.enable_multiple_currencies or settings.enable_shopify_payments_currencies %}
+            {% if settings.enable_multilang_shopify or settings.enable_multiple_currencies or settings.enable_shopify_payments_currencies %}
             <div class="lang-currency-groups">
               {% render 'new-language-picker' %}
 
               {% render 'new-currency-picker' %}
             </div>
-            {% endif %} -->
+            {% endif %}
             
             {% if settings.enable_search %}
             <div class="nav-search">                    
@@ -65,18 +65,19 @@
                 </a>
                 {% else %}
                 <a class="logo-title" href="{{ routes.cart_url | split: 'cart' | first }}">
-                  <!-- {{ shop.name }} --> VIP
+                   {{ shop.name }} 
+                   VIP
                 </a>
                 {% endif %}
               </div>
             </div>
             
             <div class="right-groups header-items">
-              <!-- {% if section.settings.display_free_shipping and section.settings.free_shipping_text != blank %}
+              {% if section.settings.display_free_shipping and section.settings.free_shipping_text != blank %}
               <div class="free-shipping-text">
                 {% render 'multilang' with section.settings.free_shipping_text %}
               </div>
-              {% endif %} -->
+              {% endif %}
               
               <div class="wrapper-top-cart">
                 {% render 'wrapper-top-cart' %}

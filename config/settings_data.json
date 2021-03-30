@@ -2,7 +2,7 @@
   "current": {
     "layout_body": "default",
     "bg_body_boxed": "#f8f8f8",
-    "header_layout": "03",
+    "header_layout": "04",
     "list_collections_layout": "collections_01_grid",
     "category_layout": "default",
     "product_layout": "default",
@@ -2842,6 +2842,62 @@
           "bg_lb_hot": "#ffbb49",
           "color_lb_hot": "#fff",
           "display_megamenu": true
+        }
+      },
+      "header-03": {
+        "type": "header-03",
+        "settings": {
+          "display_header_top": true,
+          "top_message_text": "Top Promotion Bar Description",
+          "font_weight_bold": false,
+          "bg_header_top": "#232323",
+          "text_header_top_color": "#fff",
+          "display_parallax": false,
+          "menu_parallax_color": "#fff",
+          "bg_header_bottom_color_1": "#f8f8f8",
+          "bg_header_bottom_color": "#fff",
+          "header_bottom_icon_color": "#232323",
+          "header_bottom_text_color": "#3c3c3c",
+          "display_header_social": true,
+          "display_customer_service": true,
+          "customer_service_text": "Customer Service 1.900.000.6690",
+          "display_free_shipping": true,
+          "free_shipping_text": "Mid-Season Sale Up to 70% OFF",
+          "brand_type": "text",
+          "brand_text": "",
+          "logo_max_width": 50,
+          "logo_text_color": "#000",
+          "max_height_logo_pc": "37px",
+          "max_height_logo_mb": "26px",
+          "bg_search_color": "#fff",
+          "search_color": "#848484",
+          "search_border_color": "#ebebeb",
+          "bg_cart_color": "#e95144",
+          "cart_color": "#fff"
+        }
+      },
+      "header-02": {
+        "type": "header-02",
+        "settings": {
+          "display_header_top": true,
+          "top_message_text": "Mid-Season Sale Up to 70% OFF.",
+          "bg_header_top": "#ffe8e8",
+          "text_header_top_color": "#b05d5d",
+          "brand_type": "text",
+          "brand_text": "",
+          "logo_max_width": 50,
+          "logo_text_color": "#000",
+          "max_height_logo_pc": "37px",
+          "max_height_logo_mb": "26px",
+          "bg_search_color": "#fff",
+          "search_color": "#646464",
+          "search_border_color": "#cbcbcb",
+          "bg_header_bottom_color": "#fff",
+          "header_bottom_link_color": "#646464",
+          "free_shipping_text_1": "Free Express Shipping for all orders",
+          "free_shipping_text_2": "Free In-store returns",
+          "bg_cart_color": "#fff",
+          "cart_color": "#646464"
         }
       }
     },

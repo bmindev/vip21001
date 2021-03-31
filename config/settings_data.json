@@ -4,7 +4,7 @@
     "bg_body_boxed": "#f8f8f8",
     "header_layout": "02",
     "list_collections_layout": "collections_01_grid",
-    "category_layout": "default",
+    "category_layout": "express_order",
     "product_layout": "default",
     "blog_layout": "default",
     "footer_layout": "default",
@@ -38,7 +38,7 @@
     "product_image_border": false,
     "product_image_border_color": "#e6e6e6",
     "product_image_resize": true,
-    "product_image_crop": false,
+    "product_image_crop": true,
     "product_image_height": "130",
     "show_vendor": true,
     "display_product_reviews": true,
@@ -82,13 +82,13 @@
     "display_sticky": true,
     "display_sticky_mb": true,
     "display_countdown": true,
-    "enable_quick_shop": false,
-    "enable_notify_form": false,
+    "enable_quick_shop": true,
+    "enable_notify_form": true,
     "ajax_popup_cart": "upsell",
     "cart_popup_related_title": "YOU MAY ALSO LIKE",
     "show_shipping_calculator": true,
     "shipping_calculator_heading": "Get shipping estimates | Holen Versand Schätzungen",
-    "shipping_calculator_default_country": "India",
+    "shipping_calculator_default_country": "United States",
     "redirect_button": "link_to",
     "link_to_redirect": "\/collections\/all",
     "font_2": "shopify_fonts",
@@ -1012,7 +1012,9 @@
           "1542796773039": {
             "type": "style_4",
             "settings": {
-              "megamenu_items_4": "Demo"
+              "megamenu_items_4": "Demo",
+              "banner_first_style_4": "shopify:\/\/shop_images\/vip_bag.jpg",
+              "link_banner_first_style_4": "shopify:\/\/products\/artemis-cabin"
             }
           }
         },
@@ -2398,9 +2400,11 @@
             "type": "image",
             "settings": {
               "bg_color_column": "",
+              "image": "shopify:\/\/shop_images\/vip_bag.jpg",
               "title": "Lorem De Dorus",
               "des": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue an melitos. Duis tristique del ante le maliquam. Praesent murna de tellus laoreet cosmopolis.",
               "button": "Shop Now",
+              "link": "shopify:\/\/products\/artemis-cabin",
               "color_button": ""
             }
           },
@@ -2886,17 +2890,17 @@
           "brand_type": "text",
           "brand_text": "",
           "logo_max_width": 50,
-          "logo_text_color": "#000",
+          "logo_text_color": "#000000",
           "max_height_logo_pc": "37px",
           "max_height_logo_mb": "26px",
-          "bg_search_color": "#fff",
+          "bg_search_color": "#ffffff",
           "search_color": "#646464",
           "search_border_color": "#cbcbcb",
-          "bg_header_bottom_color": "#fff",
+          "bg_header_bottom_color": "#ffffff",
           "header_bottom_link_color": "#646464",
           "free_shipping_text_1": "Free Express Shipping for all orders",
           "free_shipping_text_2": "Free In-store returns",
-          "bg_cart_color": "#fff",
+          "bg_cart_color": "#ffffff",
           "cart_color": "#646464"
         }
       },

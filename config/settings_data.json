@@ -1653,7 +1653,7 @@
             "settings": {
               "enable": true,
               "title": "Color",
-              "list_tags": ""
+              "list_tags": "Red, Blue"
             }
           },
           "1543546574439": {
@@ -1698,11 +1698,11 @@
         ],
         "settings": {
           "display_sidebar": true,
-          "sidebar_style": "style_1",
+          "sidebar_style": "style_2",
           "show_sidebar": "left",
           "enable_categories": true,
           "title_categories": "Categories | Categories",
-          "style_categories": "style_little",
+          "style_categories": "style_main_menu",
           "link_list": "",
           "enable_product": true,
           "title_product": "Featured Products | Featured Products",
@@ -3048,6 +3048,51 @@
           "border_bg_style_new": "#e0e0e1",
           "bg_color_arrow": "#8c8c8c",
           "color_arrow": "#ffffff"
+        }
+      },
+      "recently-viewed-products-skin-1170": {
+        "type": "recently-viewed-products-skin-1170",
+        "settings": {
+          "display_recently_viewed_products": true,
+          "recently_viewed_products_title": "Recently Viewed Products",
+          "number_of_recently_viewed_products": "8"
+        }
+      },
+      "collection-header": {
+        "type": "collection-header",
+        "settings": {
+          "display_collection_image": true,
+          "collection_header_style": "style_1",
+          "display_collection_des": true,
+          "color_wrapper": "#202020",
+          "bg_color_content": "#fff",
+          "border_color_content": "#bcbcbc",
+          "height_img": "240px",
+          "enable_sub": false,
+          "sub_title": "Jump to:"
+        }
+      },
+      "collection-template-express-order": {
+        "type": "collection-template-express-order",
+        "settings": {
+          "collection_results_per_page": "12",
+          "pro_image": "&nbsp;",
+          "pro_name": "Product",
+          "pro_price": "Price",
+          "pro_quantity": "Qty",
+          "pro_variant_options": "Options",
+          "btn_1_bg_color": "#232323",
+          "btn_1_border_color": "#232323",
+          "btn_1_text_color": "#fff",
+          "btn_2_bg_color": "#fff",
+          "btn_2_border_color": "#323232",
+          "btn_2_text_color": "#232323",
+          "btn_3_bg_color": "#fff",
+          "btn_3_border_color": "#e6e6e6",
+          "btn_3_text_color": "#232323",
+          "btn_4_bg_color": "#69c69c",
+          "btn_4_border_color": "#69c69c",
+          "btn_4_text_color": "#fff"
         }
       }
     },

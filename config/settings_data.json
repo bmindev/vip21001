@@ -18,6 +18,7 @@
     "breadcrumb_text_transform": "capitalize",
     "page_title_font_size": "20",
     "page_title_text_align": "left",
+    "style_product_grid": "style_product_grid_2",
     "enable_sidebar_multiple_choice": true,
     "product_name_text_transform": "none",
     "product_name_text_align": "center",
@@ -1569,13 +1570,22 @@
       "sidebar-section": {
         "type": "sidebar-section",
         "blocks": {
-          "1543314984589": {
+          "bc105c84-cf4c-4423-82ed-6c78c91dddc9": {
             "type": "menu",
             "settings": {
               "enable": true,
               "title": "Categories",
               "style_categories": "style_little",
-              "link_list": "sidebar"
+              "link_list": "collection"
+            }
+          },
+          "bb879ff5-dc6e-4346-996f-23fb0bb4e0ca": {
+            "type": "menu",
+            "settings": {
+              "enable": true,
+              "title": "Brand",
+              "style_categories": "style_little",
+              "link_list": "brand"
             }
           },
           "1543315002517": {
@@ -1591,7 +1601,6 @@
             "type": "image",
             "settings": {
               "enable": true,
-              "image": "shopify:\/\/shop_images\/sidebar-1-compressor.jpg",
               "link": "shopify:\/\/collections\/cosmopolis"
             }
           },
@@ -1599,7 +1608,6 @@
             "type": "image",
             "settings": {
               "enable": true,
-              "image": "shopify:\/\/shop_images\/sidebar-2-compressor.jpg",
               "link": "shopify:\/\/collections\/blaz-ro"
             }
           },
@@ -1613,7 +1621,8 @@
           }
         },
         "block_order": [
-          "1543314984589",
+          "bc105c84-cf4c-4423-82ed-6c78c91dddc9",
+          "bb879ff5-dc6e-4346-996f-23fb0bb4e0ca",
           "1543315002517",
           "1543315033286",
           "1543315049567",
@@ -1715,7 +1724,6 @@
             "type": "image",
             "settings": {
               "main_pr_look": "dempus-lortis-cosmo-sapiendo",
-              "image_1": "shopify:\/\/shop_images\/16-compressor.jpg",
               "lb_product_1_1": "",
               "top_position_1_1": "10",
               "left_position_1_1": "10",
@@ -1734,7 +1742,6 @@
               "dots_color_1_3": "#ffffff",
               "dots_bg_color_1_3": "#323232",
               "dots_shadow_color_1_3": "#ffffff",
-              "image_2": "shopify:\/\/shop_images\/16b-compressor.jpg",
               "lb_product_2_1": "",
               "top_position_2_1": "10",
               "left_position_2_1": "10",
@@ -1753,7 +1760,6 @@
               "dots_color_2_3": "#ffffff",
               "dots_bg_color_2_3": "#323232",
               "dots_shadow_color_2_3": "#ffffff",
-              "image_3": "shopify:\/\/shop_images\/16-compressor.jpg",
               "lb_product_3_1": "",
               "top_position_3_1": "10",
               "left_position_3_1": "10",

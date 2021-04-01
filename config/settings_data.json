@@ -1010,12 +1010,30 @@
               "megamenu_items_3": "Collections"
             }
           },
-          "1542796773039": {
-            "type": "style_4",
+          "7121733e-8a67-4631-a259-2f83cb889575": {
+            "type": "style_2",
             "settings": {
-              "megamenu_items_4": "Demo",
-              "banner_first_style_4": "shopify:\/\/shop_images\/vip_bag.jpg",
-              "link_banner_first_style_4": "shopify:\/\/products\/artemis-cabin"
+              "megamenu_items_2": "Catalog"
+            }
+          },
+          "13527ed6-e5e9-41e1-b60f-17aafc61f949": {
+            "type": "style_1",
+            "settings": {
+              "megamenu_items_1": "Catalog",
+              "title_featured_product": "Featured Products",
+              "featured_product": "cardinal-medium",
+              "banner_first_style_1": "shopify:\/\/shop_images\/vip_bag.jpg",
+              "link_banner_first_style_1": "shopify:\/\/products\/cardinal-medium"
+            }
+          },
+          "678c3576-0e5f-4209-a2e3-7b2cb67ddc4e": {
+            "type": "style_1",
+            "settings": {
+              "megamenu_items_1": "Catalog",
+              "title_featured_product": "Featured Products",
+              "featured_product": "artemis-cabin",
+              "banner_first_style_1": "shopify:\/\/shop_images\/vip_bag.jpg",
+              "link_banner_first_style_1": "shopify:\/\/products\/artemis-cabin"
             }
           }
         },
@@ -1023,7 +1041,9 @@
           "1542706946591",
           "1542772636356",
           "1542783537505",
-          "1542796773039"
+          "7121733e-8a67-4631-a259-2f83cb889575",
+          "13527ed6-e5e9-41e1-b60f-17aafc61f949",
+          "678c3576-0e5f-4209-a2e3-7b2cb67ddc4e"
         ],
         "settings": {
           "display_fixtop_menu": true,

@@ -986,6 +986,26 @@
       "navigation": {
         "type": "navigation",
         "blocks": {
+          "678c3576-0e5f-4209-a2e3-7b2cb67ddc4e": {
+            "type": "style_1",
+            "settings": {
+              "megamenu_items_1": "Collection",
+              "title_featured_product": "Featured Products",
+              "featured_product": "artemis-cabin",
+              "banner_first_style_1": "shopify:\/\/shop_images\/vip_bag.jpg",
+              "link_banner_first_style_1": "shopify:\/\/products\/artemis-cabin"
+            }
+          },
+          "13527ed6-e5e9-41e1-b60f-17aafc61f949": {
+            "type": "style_1",
+            "settings": {
+              "megamenu_items_1": "Collection",
+              "title_featured_product": "Featured Products",
+              "featured_product": "cardinal-medium",
+              "banner_first_style_1": "shopify:\/\/shop_images\/vip_bag.jpg",
+              "link_banner_first_style_1": "shopify:\/\/products\/cardinal-medium"
+            }
+          },
           "1542706946591": {
             "type": "style_1",
             "settings": {
@@ -994,59 +1014,15 @@
               "featured_product": "dinterdum-pretium-condimento-1",
               "link_banner_first_style_1": "shopify:\/\/collections\/all"
             }
-          },
-          "1542772636356": {
-            "type": "style_2",
-            "settings": {
-              "megamenu_items_2": "New In",
-              "link_banner_first_style_2": "shopify:\/\/collections\/cosmopolis",
-              "link_banner_second_style_2": "shopify:\/\/collections\/all",
-              "link_banner_third_style_2": "shopify:\/\/collections\/suito"
-            }
-          },
-          "1542783537505": {
-            "type": "style_3",
-            "settings": {
-              "megamenu_items_3": "Collections"
-            }
-          },
-          "7121733e-8a67-4631-a259-2f83cb889575": {
-            "type": "style_2",
-            "settings": {
-              "megamenu_items_2": "Catalog"
-            }
-          },
-          "13527ed6-e5e9-41e1-b60f-17aafc61f949": {
-            "type": "style_1",
-            "settings": {
-              "megamenu_items_1": "Catalog",
-              "title_featured_product": "Featured Products",
-              "featured_product": "cardinal-medium",
-              "banner_first_style_1": "shopify:\/\/shop_images\/vip_bag.jpg",
-              "link_banner_first_style_1": "shopify:\/\/products\/cardinal-medium"
-            }
-          },
-          "678c3576-0e5f-4209-a2e3-7b2cb67ddc4e": {
-            "type": "style_1",
-            "settings": {
-              "megamenu_items_1": "Catalog",
-              "title_featured_product": "Featured Products",
-              "featured_product": "artemis-cabin",
-              "banner_first_style_1": "shopify:\/\/shop_images\/vip_bag.jpg",
-              "link_banner_first_style_1": "shopify:\/\/products\/artemis-cabin"
-            }
           }
         },
         "block_order": [
-          "1542706946591",
-          "1542772636356",
-          "1542783537505",
-          "7121733e-8a67-4631-a259-2f83cb889575",
+          "678c3576-0e5f-4209-a2e3-7b2cb67ddc4e",
           "13527ed6-e5e9-41e1-b60f-17aafc61f949",
-          "678c3576-0e5f-4209-a2e3-7b2cb67ddc4e"
+          "1542706946591"
         ],
         "settings": {
-          "display_fixtop_menu": true,
+          "display_fixtop_menu": false,
           "horizontal_linklist": "main-menu",
           "alignment": "left",
           "bg_menu": "#232323",
@@ -1060,7 +1036,7 @@
           "color_menu_lv3": "#3c3c3c",
           "hover_color_mnu_lv3": "#0688e2",
           "font_size_mnu_lv3": "12px",
-          "enable_sale": true,
+          "enable_sale": false,
           "lb_sale": "Sale",
           "sale_item": "Collections",
           "bg_lb_sale": "#ef6454",
@@ -1076,8 +1052,8 @@
           "bg_lb_hot": "#ffbb49",
           "color_lb_hot": "#ffffff",
           "display_megamenu": true,
-          "bg_style_new": "#eaeaea",
-          "bg_color_arrow": "#8c8c8c",
+          "bg_style_new": "#b05d5d",
+          "bg_color_arrow": "#ffe8e8",
           "color_arrow": "#ffffff"
         }
       },

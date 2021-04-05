@@ -50,29 +50,6 @@
                 
                 {% if section.settings.footer_newsletter_enable or section.settings.footer_social_enable %}
                 <div class="col-12 col-md-12 col-lg-6 col-xl-5 footer-col-right">
-                    {% if section.settings.footer_social_enable %}
-                    <div class="footer-social{% if settings.header_layout == 'vertical' %} enable-color{% endif %}">
-                        {% if section.settings.footer_social_title != blank %}
-                        <h3 class="social-title foot-title">
-                        {% render 'multilang' with section.settings.footer_social_title %}
-                        </h3>
-                        {% endif %}
-                        
-                        <div class="groups-block">
-                        {% render 'social-media' %} 
-
-                        {% if section.settings.fb_like_code != blank %}
-                        <div class="fb-like-code">
-                          {% render 'multilang' with section.settings.fb_like_code_text %}   
-                          {% assign first = section.settings.fb_like_code | split: '<scrip' | first %}
-                          {% assign last = section.settings.fb_like_code | split: 'ript>' | last %}
-                          {{first}} {{last}}
-                        </div>
-                        {% endif %}
-                        </div>
-                    </div>
-                    {% endif %}
-                
                     {%if section.settings.footer_newsletter_enable %}
                     <div class="footer-newsletter">
                         {% if section.settings.footer_newsletter_title != blank %}
@@ -90,6 +67,28 @@
                         {% render 'homepage-block-newsletter' %}
                     </div>
                     {% endif %}
+                    {% if section.settings.footer_social_enable %}
+                      <div class="footer-social{% if settings.header_layout == 'vertical' %} enable-color{% endif %}">
+                          {% if section.settings.footer_social_title != blank %}
+                          <h3 class="social-title foot-title">
+                          {% render 'multilang' with section.settings.footer_social_title %}
+                          </h3>
+                          {% endif %}
+
+                          <div class="groups-block">
+                          {% render 'social-media' %} 
+
+                          {% if section.settings.fb_like_code != blank %}
+                          <div class="fb-like-code">
+                            {% render 'multilang' with section.settings.fb_like_code_text %}   
+                            {% assign first = section.settings.fb_like_code | split: '<scrip' | first %}
+                            {% assign last = section.settings.fb_like_code | split: 'ript>' | last %}
+                            {{first}} {{last}}
+                          </div>
+                          {% endif %}
+                          </div>
+                      </div>
+                      {% endif %}
                 </div>
                 {% endif %}
             </div>    

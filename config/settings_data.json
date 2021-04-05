@@ -187,11 +187,11 @@
     "social_twitter_link": "http:\/\/twitter.com\/shopify",
     "social_vimeo_link": "",
     "social_instagram_link": "http:\/\/instagram.com\/shopify",
-    "social_google_plus_link": "http:\/\/plus.google.com\/+shopify",
-    "social_pinterest_link": "https:\/\/pinterest.com\/shopify",
+    "social_google_plus_link": "",
+    "social_pinterest_link": "",
     "social_tumblr_link": "",
-    "social_snapchat_link": "https:\/\/www.snapchat.com\/add\/shopify",
-    "social_youtube_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
     "body_bg": "#ffffff",
     "body_color": "#3c3c3c",
     "link_color": "#0688e2",
@@ -1063,21 +1063,28 @@
           "1541579674639": {
             "type": "footer_link",
             "settings": {
-              "footer_title": "Shop",
-              "footer_linklist": ""
+              "footer_title": "Brands",
+              "footer_linklist": "brand"
             }
           },
           "1541579687499": {
             "type": "footer_link",
             "settings": {
-              "footer_title": "Information",
-              "footer_linklist": ""
+              "footer_title": "Categories",
+              "footer_linklist": "collection"
             }
           },
           "1541579706355": {
             "type": "footer_link",
             "settings": {
-              "footer_title": "Customer Service",
+              "footer_title": "Other links",
+              "footer_linklist": ""
+            }
+          },
+          "a124db00-2a27-46b2-90f6-5d69ee55cbf4": {
+            "type": "footer_link",
+            "settings": {
+              "footer_title": "Services and warranty",
               "footer_linklist": ""
             }
           }
@@ -1085,7 +1092,8 @@
         "block_order": [
           "1541579674639",
           "1541579687499",
-          "1541579706355"
+          "1541579706355",
+          "a124db00-2a27-46b2-90f6-5d69ee55cbf4"
         ],
         "settings": {
           "bg_footer_img": "none",
@@ -1107,15 +1115,15 @@
           "bg_newsletter_button_color": "#3b3b3b",
           "newsletter_button_color": "#ffffff",
           "footer_social_enable": true,
-          "footer_social_title": "Stay Connected",
-          "fb_like_code_text": "<span>LIKE US <i>on <\/i> FACEBOOK<\/span>",
-          "fb_like_code": "<div id=\"fb-root\"><\/div>\n<script async=\"\" defer crossorigin=\"anonymous\" src=\"https:\/\/connect.facebook.net\/en_US\/sdk.js#xfbml=1&version=v8.0\" nonce=\"\"><\/script>\n<div class=\"fb-like\" data-href=\"https:\/\/www.facebook.com\/pages\/Halothemes-Premium-Magento-Themes\/469058089834105\" data-layout=\"button_count\" data-action=\"like\" data-show-faces=\"true\" data-share=\"true\"><\/div>",
+          "footer_social_title": "Follow us",
+          "fb_like_code_text": "",
+          "fb_like_code": "",
           "social_icon_color": "#141414",
           "social_icon_bg_color": "#ffffff",
           "bg_footer_bottom_color": "#232323",
           "footer_bottom_color": "#969696",
           "footer_address_code": "© 2020 Ella Demo. All Rights Reserved. Ecommerce Software by Shopify.<br><a href=\"https:\/\/www.halothemes.com\/template_category\/shopify-templates\/\" title=\"Shopify Themes\">Shopify Themes<\/a> by <a href=\"http:\/\/halothemes.com\/\" title=\"HaloThemes.com\">HaloThemes.com<\/a>.",
-          "show_payment_icons": true,
+          "show_payment_icons": false,
           "payment_display_visa": true,
           "payment_display_visa_electron": false,
           "payment_display_american_express": true,
@@ -2509,6 +2517,7 @@
       },
       "1541566560488": {
         "type": "home-instagram",
+        "disabled": true,
         "blocks": {
           "1585729380684": {
             "type": "instagram",

@@ -1122,7 +1122,7 @@
           "social_icon_bg_color": "#ffffff",
           "bg_footer_bottom_color": "#232323",
           "footer_bottom_color": "#969696",
-          "footer_address_code": "© 2020 Ella Demo. All Rights Reserved. Ecommerce Software by Shopify.<br><a href=\"https:\/\/www.halothemes.com\/template_category\/shopify-templates\/\" title=\"Shopify Themes\">Shopify Themes<\/a> by <a href=\"http:\/\/halothemes.com\/\" title=\"HaloThemes.com\">HaloThemes.com<\/a>.",
+          "footer_address_code": "© 2021. All Rights Reserved.",
           "show_payment_icons": false,
           "payment_display_visa": true,
           "payment_display_visa_electron": false,
@@ -2894,11 +2894,11 @@
       "header-02": {
         "type": "header-02",
         "settings": {
-          "display_header_top": true,
+          "display_header_top": false,
           "top_message_text": "Mid-Season Sale Up to 70% OFF.",
           "bg_header_top": "#ffe8e8",
           "text_header_top_color": "#b05d5d",
-          "brand_type": "text",
+          "brand_type": "image",
           "brand_text": "",
           "logo_max_width": 50,
           "logo_text_color": "#000000",
@@ -2909,8 +2909,8 @@
           "search_border_color": "#cbcbcb",
           "bg_header_bottom_color": "#ffffff",
           "header_bottom_link_color": "#646464",
-          "free_shipping_text_1": "Free Express Shipping for all orders",
-          "free_shipping_text_2": "Free In-store returns",
+          "free_shipping_text_1": "",
+          "free_shipping_text_2": "",
           "bg_cart_color": "#ffffff",
           "cart_color": "#646464"
         }

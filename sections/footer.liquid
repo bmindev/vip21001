@@ -50,7 +50,14 @@
                 
                 {% if section.settings.footer_newsletter_enable or section.settings.footer_social_enable %}
                 <div class="col-12 col-md-12 col-lg-6 col-xl-5 footer-col-right">
-                    {%if section.settings.footer_newsletter_enable %}
+                   	 <div class="footer-newsletter footer-help-line-number">
+                       <h3 class="newsletter-des foot-title">
+                         <span>Toll free help line no:</span>   
+                       </h3>
+                       <a href="callto:18001022256">1800 102 2256</a>
+                        
+                    </div>
+                  	{%if section.settings.footer_newsletter_enable %}
                     <div class="footer-newsletter">
                         {% if section.settings.footer_newsletter_title != blank %}
                         <h3 class="newsletter-title foot-title">
@@ -117,7 +124,17 @@
                 </div>
                 {% else %}
                 <div>
-                {{ section.settings.footer_address_code | split: '[lang2]' | first }}
+                  <div class="row">
+                    <div class="col-lg-9 text-uppercase">
+                      	{{ section.settings.footer_address_code | split: '[lang2]' | first }} 
+                    </div>                    
+                    <div class="col-lg-3">
+                    	CORPORATE WEBSITE: <a href="">vipindusrties.in</a>
+                    </div>
+
+                  </div>
+                  
+
                 </div>
                 {% endif %}
             </address>

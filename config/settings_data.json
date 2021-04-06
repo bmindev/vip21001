@@ -2166,8 +2166,8 @@
           "1548643747526"
         ],
         "settings": {
-          "display_someone-purchased": true,
-          "display_someone-purchased_mb": true,
+          "display_someone-purchased": false,
+          "display_someone-purchased_mb": false,
           "show_someone-purchased": "right",
           "someone_speed": "7000",
           "text": "Someone recently bought a",

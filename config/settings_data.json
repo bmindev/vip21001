@@ -181,7 +181,7 @@
     "promotion_text_2": "Mid-season sale up to 70% off.  <a href=\"collections\/all\">Show now<\/a>",
     "promotion_text_3": "Free shipping, 30 Days Returns and 2 year Warranty",
     "btt_text": "Top",
-    "enable_compare_product": false,
+    "enable_compare_product": true,
     "enable_compare_color": false,
     "social_facebook_link": "http:\/\/facebook.com\/shopify",
     "social_twitter_link": "http:\/\/twitter.com\/shopify",

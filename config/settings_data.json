@@ -1085,7 +1085,7 @@
             "type": "footer_link",
             "settings": {
               "footer_title": "Other links",
-              "footer_linklist": ""
+              "footer_linklist": "other-links"
             }
           },
           "a124db00-2a27-46b2-90f6-5d69ee55cbf4": {
@@ -1110,7 +1110,7 @@
           "bg_footer_repeat": "repeat",
           "bg_footer_attachment": "scroll",
           "footer_title_color": "#ffffff",
-          "footer_link_color": "#969696",
+          "footer_link_color": "#e6e7e8",
           "footer_link_hover_color": "#ffffff",
           "bg_footer_line_color": "#3b3b3b",
           "footer_newsletter_enable": true,

@@ -1,5 +1,6 @@
 <style>
   .site-footer {
+    
     {% if section.settings.bg_footer_color != '' %}
       background: {{ section.settings.bg_footer_color }};
     {% endif %}
@@ -16,7 +17,8 @@
       background-attachment: {{ section.settings.bg_footer_attachment }};
     {% endif %}	
   }
-  
+  .site-footer .footer-top{ width: 80%; margin: 0 auto; }
+  .footer-bottom{ background-color: #2C3539 !important; border-top: 2px solid #5F727B !important; width: 80%; margin: 0 auto; }
   .site-footer .newsletter .input-group-field {
   	background-color: {{ section.settings.bg_newsletter_color }};
     color: {{ section.settings.newsletter_color }};
@@ -53,9 +55,10 @@
   
   .site-footer,
   .foot-title {
+    
     color: {{ section.settings.footer_title_color }}; 
   }
-
+ 
   {% if settings.header_layout == 'vertical' %}
   .header-vertical-tpl .foot-title{
       border-bottom: 1px solid {{ section.settings.bg_footer_line_color }}; 

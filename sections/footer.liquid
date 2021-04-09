@@ -5,8 +5,8 @@
 <footer class="site-footer footer-default" role="contentinfo" {% if section.settings.fb_like_code != blank %}data-loader-script="{{url}}"{% endif %}>
     {% if section.blocks.size > 0 or section.settings.footer_newsletter_enable or section.settings.footer_social_enable %}
     <div class="footer-top">       
-        <div class="container">
-            <div class="row">
+        <div class="container p-0">
+            <div class="row no-gutters">
                 {% if section.blocks.size > 0 %}
                 <div class="col-12 col-md-12{% if section.settings.footer_newsletter_enable or section.settings.footer_social_enable %} col-lg-6 col-xl-7 footer-col-left{% else %} col-lg-12 col-xl-12{% endif %}">
                     <div class="row">
@@ -105,9 +105,9 @@
     
     {% if section.settings.footer_address_code != blank or section.settings.show_payment_icons %}
     <div class="footer-bottom">
-        <div class="container">
+        <div class="container p-0">
             {% if settings.header_layout == 'vertical' %}
-            <div class="row{% if section.settings.footer_address_code != blank and section.settings.show_payment_icons %} justify-content-lg-between{% endif %}"> 
+            <div class="row no-gutters {% if section.settings.footer_address_code != blank and section.settings.show_payment_icons %} justify-content-lg-between{% endif %}"> 
                 {% if section.settings.footer_address_code != blank %}
                 <div class="col-12{% if section.settings.show_payment_icons %} col-lg-6{% endif %}">
                 {% endif %}

@@ -15,7 +15,7 @@
     endfor
 -%}
 
-<section class="home-slideshow {% if check_video or section.blocks.size == 1 %}hasvideo{% endif %}" id="slideshow-{{section.id}}" 
+<section class="home-slideshow top-banner-slideshow  {% if check_video or section.blocks.size == 1 %}hasvideo{% endif %}" id="slideshow-{{section.id}}" 
 {% if section.blocks.size > 1 %}data-loader-script="{% if check_video %}{{ 'halo.slide-show-hasvideo.js' | asset_url }}{% else %}{{ 'halo.slide-show.js' | asset_url }}{% endif %}"{% endif %}>
     <div class="{% if section.settings.layout == 'default' %}container{% elsif section.settings.layout == 'padd_60' %}container-padd60{% else %}container-fluid{% endif %}">
         <div class="row">
@@ -344,6 +344,8 @@
         #slideshow-{{section.id}} {
             margin-bottom: {{ margin_bottom }}px;
         }
+      .top-banner-slideshow{ width: 95%; margin: 0 auto; }
+      .top-banner-slideshow .item, .lookbook-slideshow .item{ max-height: 88vh; }
     }
 
     @media (min-width: 768px) {

@@ -18,7 +18,7 @@
     {% endif %}	
   }
   .site-footer .footer-top{ width: 80%; margin: 0 auto; }
-  .footer-bottom{ background-color: #2C3539 !important; border-top: 2px solid #5F727B !important; width: 80%; margin: 0 auto; }
+  .footer-bottom{ background-color: #2C3539 !important; border-top: 2px solid #5F727B !important; width: 80%; margin: 0 auto; font-weight: 600; }
   .site-footer .newsletter .input-group-field {
   	background-color: {{ section.settings.bg_newsletter_color }};
     color: {{ section.settings.newsletter_color }};
@@ -26,21 +26,23 @@
   }
   
   .site-footer .newsletter ::-webkit-input-placeholder {
-    color: {{ section.settings.newsletter_color }};
+    color: {{ section.settings.newsletter_color }} ; opacity: 0.7; 
   }
   
   .site-footer .newsletter ::-moz-placeholder {
-    color: {{ section.settings.newsletter_color }};
+    color: {{ section.settings.newsletter_color }}; opacity: 0.7;
   }
   
   .site-footer .newsletter :-ms-input-placeholder {
-    color: {{ section.settings.newsletter_color }};
+    color: {{ section.settings.newsletter_color }}; opacity: 0.7; 
   }
   
   .site-footer .newsletter :-moz-placeholder {
-    color: {{ section.settings.newsletter_color }};
+    color: {{ section.settings.newsletter_color }}; opacity: 0.7;
   }
-  
+  .site-footer .newsletter .input-group-field{
+  	color: {{ section.settings.newsletter_color }}; 
+  }
   .site-footer .newsletter .btn {
   	background-color: {{ section.settings.bg_newsletter_button_color }};
     border-color: {{ section.settings.bg_newsletter_button_color }};
@@ -73,6 +75,7 @@
   .site-footer a:hover {
     color: {{ section.settings.footer_link_hover_color }}; 
   }
+  .site-footer .help-line-number{ font-size: 30px; margin-top: 15px;}
   
   .site-footer .foot-link>span:before {
   	background-color: {{ section.settings.footer_link_hover_color }}; 

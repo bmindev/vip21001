@@ -149,6 +149,24 @@
         background-color: {{ bg_lb_hot }};
         color: {{ color_lb_hot }};
     }
+  
+/*   	custom css */
+   .wrapper_header_04 .cart-icon svg, .wrapper_header_vertical .cart-icon svg{
+      	stroke-width: 0;
+   	}
+  	.wrapper_header_04 .appentMb{ 
+      	-ms-flex: 0 0 auto;
+    	flex: 0 0 auto;
+  	}
+  	.wrapper_header_04 .icon-search svg{
+    	stroke: none;
+  	}
+  	.header-04 .search-bar{
+      border-color: #000;
+  	}
+  .wrapper_header_04 .wishlist:before, .wrapper_header_04 .lang-currency-groups:before, .wrapper_header_04 .locator-icon:after{
+  		background-color: #ACACAC;
+  	}
 
     @media (min-width:1200px) {
         .site-nav .menu-lv-1 > a,
@@ -275,9 +293,7 @@
       	    background-color: transparent; position: relative; top: auto !important;
     		color: #000; min-width: 40px; right: auto !important; font-size: 15px;
       }
-      .wrapper_header_04 .cart-icon svg, .wrapper_header_vertical .cart-icon svg{
-      	stroke-width: 0;
-      }
+     
     }
 
     @media (max-width:1199px) {

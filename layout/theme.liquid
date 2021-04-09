@@ -48,7 +48,8 @@
   {% if settings.favicon != blank %}
   <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
   {% endif %}
-  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <!-- Styles -->
   {% render 'css-variables' %}
   {% render 'head_styles' %}

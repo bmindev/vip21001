@@ -1,6 +1,18 @@
 {% render 'style-header-04' %}
 
 <header class="site-header header-04" role="banner">
+  {% if section.settings.display_header_top and section.settings.top_message_text != blank %}
+    <div class="header-top">
+        <div class="container">
+            <div class="top-message">
+                <p>
+                    {% render 'multilang' with section.settings.top_message_text %}
+                </p>
+               
+            </div>    
+        </div>
+    </div>
+    {% endif %}
     <a href="#" class="icon-nav close-menu-mb" title="Menu Mobile Icon" data-menu-mb-toogle>
         <span class="icon-line"></span>
     </a>
@@ -226,8 +238,37 @@
 {% schema %}
     {
         "name": "Header 04",
-        "settings": [            
+        "settings": [    
+ 			{
+                "type": "header",
+                "content": "Header Top"
+            },
             {
+                "type": "checkbox",
+                "id": "display_header_top",
+                "label": "Display Header Top?",
+                "default": true
+            },
+            {
+                "type": "textarea",
+                "id": "top_message_text",
+                "label": "Top Message Text",
+                "default": "Mid-Season Sale Up to 70% OFF."
+            },
+            {
+                "type": "color",
+                "id": "bg_header_top",
+                "label": "Background Color",
+                "default": "#ffe8e8"
+            },
+            {
+                "type": "color",
+                "id": "text_header_top_color",
+                "label": "Text Color",
+                "default": "#b05d5d"
+            },
+            
+			{
                 "type": "header",
                 "content": "Logo"
             },

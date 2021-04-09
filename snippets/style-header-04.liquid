@@ -1,6 +1,7 @@
 <style>
     {% comment %} /* Header Top*/ {% endcomment %}
 
+
     {% assign bg_header_top =  section.settings.bg_header_top %}
     {% assign text_header_top_color = section.settings.text_header_top_color %}
 
@@ -19,7 +20,28 @@
   
   	{% assign logo_color = section.settings.logo_text_color %}
 
-    .header-logo a.logo-title {
+    
+  	.header-logo a.logo-title {
+      color: {{ logo_color }};
+    }
+  
+    .header-top {
+        background-color: {{ bg_header_top }};
+        color: {{ text_header_top_color }};
+    }
+    
+    .header-top a {
+        color: {{ text_header_top_color }};
+    }
+    
+    .header-top .top-message p a:hover {
+        border-bottom-color: {{ text_header_top_color }};
+    }
+    
+    .header-top .close:hover {
+        color: {{ text_header_top_color }};
+    }
+  	.header-logo a.logo-title {
       color: {{ logo_color }};
     }
          

@@ -242,7 +242,42 @@
 
         .site-nav .icon_hot:before {
             border-top-color: {{ bg_lb_hot }};
-        }      
+        }   
+      
+/*       custom css */
+      
+      
+      .wrapper_header_04 .locator-icon:after{
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 22px;
+        right: 0;
+        top: 50%;
+        -moz-transform: translateY(-12px);
+        -o-transform: translateY(-12px);
+        -ms-transform: translateY(-12px);
+        -webkit-transform: translateY(-12px);
+        transform: translateY(-12px);
+        background: var(--color_slick_arrow);
+      }
+      .wrapper_header_04 .acc-links{
+      	padding: 2px 21px 4px;
+      }
+      .wrapper_header_04 .locator-icon{
+        padding-right: 21px;
+      }
+      .wrapper_header_04 .wishlist{
+        margin-left: 0;
+      }
+      .wrapper_header_04 .cart-icon{ width: 100px; }
+      .cart-icon .cartCount{
+      	    background-color: transparent; position: relative;
+    		color: #000;
+      }
+      .wrapper_header_04 .cart-icon svg, .wrapper_header_vertical .cart-icon svg{
+      	stroke-width: 0;
+      }
     }
 
     @media (max-width:1199px) {

@@ -33,7 +33,7 @@
     .header-top a {
         color: {{ text_header_top_color }};
     }
-    
+  	.header-top .top-message p { font-size: 15px; font-weight: bold; }
     .header-top .top-message p a:hover {
         border-bottom-color: {{ text_header_top_color }};
     }
@@ -170,12 +170,29 @@
 
   .wrapper_header_04 .acc-links{
   	font-family: 'Open Sans', sans-serif;
+/*     font-family: 'BonbonLightW00'; */
+  }
+  .wrapper_header_04 .site-nav .menu-lv-1>a{ font-weight: 600; text-transform: uppercase;     }
+  .wrapper_header_04 .site-nav .menu-lv-1>a:after{ 
+  	content: "\f107";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #000;
+    font-size: 18px;
+    position: absolute;
+  	top: 13px;
+    right: -17px;
   }
   
     @media (min-width:1200px) {
+      .wrapper-navigation{ width: 100%; }
+      .site-nav { margin-left: 4%; }
         .site-nav .menu-lv-1 > a,
         .site-nav .menu-mb-title {
-            font-size: {{ font_size_mnu_lv1 }};    
+            font-size: {{ font_size_mnu_lv1 }}; 
         }
         
         .site-nav .menu-lv-2 > a,

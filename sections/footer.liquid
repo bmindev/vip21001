@@ -9,7 +9,7 @@
             <div class="row no-gutters justify-content-between">
                 {% if section.blocks.size > 0 %}
                 <div class="col-12 col-md-12{% if section.settings.footer_newsletter_enable or section.settings.footer_social_enable %} col-lg-6 col-xl-8{% else %} col-lg-12 col-xl-12{% endif %}">
-                    <div class="row">
+                    <div class="row no-gutters custom-footer-col">
                         {% case section.blocks.size %}
                         {% when 1 %}
                         {%- assign column_size = 'col-12' -%}
@@ -22,7 +22,7 @@
                         {% endcase %}
 
                         {% for block in section.blocks %}
-                        <div class="col-footer {{ column_size }}">
+                        <div class="col-footer ">
                         {% if block.settings.footer_title != blank %}
                         <h3 class="foot-title dropdow-mb">
                             {% render 'multilang' with block.settings.footer_title %}
@@ -58,9 +58,9 @@
                         
                     </div>
                   	{%if section.settings.footer_newsletter_enable %}
-                    <div class="footer-newsletter">
+                    <div class="footer-newsletter my-5">
                         {% if section.settings.footer_newsletter_title != blank %}
-                        <h3 class="newsletter-title foot-title">
+                        <h3 class="newsletter-title foot-title mb-0">
                         {% render 'multilang' with section.settings.footer_newsletter_title %}
                         </h3>
                         {% endif %}
@@ -75,9 +75,9 @@
                     </div>
                     {% endif %}
                     {% if section.settings.footer_social_enable %}
-                      <div class="footer-social{% if settings.header_layout == 'vertical' %} enable-color{% endif %}">
+                      <div class="mb-0 footer-social{% if settings.header_layout == 'vertical' %} enable-color{% endif %}">
                           {% if section.settings.footer_social_title != blank %}
-                          <h3 class="social-title foot-title">
+                          <h3 class="social-title foot-title mb-0">
                           {% render 'multilang' with section.settings.footer_social_title %}
                           </h3>
                           {% endif %}
@@ -114,7 +114,7 @@
             {% endif %}
 
             {% if section.settings.footer_address_code != blank %}
-            <address>
+            <address class="mb-0">
                 {% if settings.enable_multilang %}
                 <div class="lang1">
                 {{ section.settings.footer_address_code | split: '[lang2]' | first }}

@@ -17,9 +17,9 @@
       background-attachment: {{ section.settings.bg_footer_attachment }};
     {% endif %}	
   }
-  .site-footer .footer-top{ width: 80%; margin: 0 auto; }
+  .site-footer .footer-top{ width: 80%; margin: 0 auto; padding: 65px 0 35px; }
   .footer-bottom{ background-color: #2C3539 !important; border-top: 2px solid #5F727B !important; width: 80%; margin: 0 auto; font-weight: 600; }
-  .site-footer .newsletter .input-group-field { min-width: auto;
+  .site-footer .newsletter .input-group-field { min-width: 80%; padding: 10px 15px 10px;
   	background-color: {{ section.settings.bg_newsletter_color }};
     color: {{ section.settings.newsletter_color }};
     border-color: {{ section.settings.newsletter_border_color }};
@@ -63,7 +63,7 @@
 		font-size: 30px; color: #B9BFC2; padding: 0 10px;
   
   }
-  .site-footer .newsletter .input-group-field{ margin-right: 0; border-right: 0}
+  .site-footer .newsletter .input-group-field{ margin-right: 0; border-right: 0; }
   .site-footer,
   .foot-title {
     
@@ -89,19 +89,20 @@
   .site-footer .foot-link>span:before {
   	background-color: {{ section.settings.footer_link_hover_color }}; 
   }
-
+  .footer-social .social-icons{ width: 100%; }
   .footer-social li a {
   	color: {{ section.settings.social_icon_color }}; 
     background-color: {{ section.settings.social_icon_bg_color }};
+   
   }
-  
+  .footer-social li{  margin-right: 5%; margin-bottom: 0; } 
   .footer-bottom {
   	background-color: {{ section.settings.bg_footer_bottom_color }}; 
     {% unless settings.header_layout == 'vertical' %}  
     border-top: 1px solid {{ section.settings.bg_footer_line_color }};
     {% endunless %} 
   }
-  
+
   .footer-bottom,
   .footer-bottom address,
   .footer-bottom address a {
@@ -112,6 +113,10 @@
   	color: {{ section.settings.footer_bottom_color }}; 
   }
   
+  .custom-footer-col .col-footer{ width: 18%;}
+  .custom-footer-col .col-footer:last-child{ width: 33%;}
+    
+
   @media (max-width: 767px) {
     .footer-top .col-footer .dropdow-mb {
       border-bottom: 1px solid {{ section.settings.bg_footer_line_color }}; 

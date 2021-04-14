@@ -85,7 +85,7 @@
     color: {{ section.settings.footer_link_hover_color }}; 
   }
   .site-footer .help-line-number{ font-size: 30px; margin-top: 15px;}
-  
+  .site-footer .foot-link{font-size: 14px;}
   .site-footer .foot-link>span:before {
   	background-color: {{ section.settings.footer_link_hover_color }}; 
   }
@@ -113,13 +113,18 @@
   	color: {{ section.settings.footer_bottom_color }}; 
   }
   
-  .custom-footer-col .col-footer{ width: 18%;}
-  .custom-footer-col .col-footer:last-child{ width: 33%;}
-    
+  
+  .custom-footer-col .col-footer:last-child ul li:first-child:before{content: 'For Customer:'; display: block; text-decoration: underline; font-size: 14px;}
+  .custom-footer-col .col-footer:last-child ul li:nth-child(4){ margin: 3rem 0 0;}
+  .custom-footer-col .col-footer:last-child ul li:nth-child(4):before{content: 'For Office Use'; display: block; text-decoration: underline; font-size: 14px;}
 
   @media (max-width: 767px) {
     .footer-top .col-footer .dropdow-mb {
       border-bottom: 1px solid {{ section.settings.bg_footer_line_color }}; 
     }
+  }
+  @media (min-width: 1199px) {
+  .custom-footer-col .col-footer{ width: 18%;}
+  .custom-footer-col .col-footer:last-child{ width: 33%;}
   }
 </style>

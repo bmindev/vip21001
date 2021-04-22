@@ -3002,25 +3002,16 @@
       "header-04": {
         "type": "header-04",
         "blocks": {
-          "65e3b3d4-cd05-4d8c-a793-3592c70f522b": {
-            "type": "style_1",
+          "7544cdd2-9187-4f19-86fd-a35d55021c15": {
+            "type": "style_4",
             "settings": {
-              "megamenu_items_1": "Catalog",
-              "title_featured_product": "Featured Products",
-              "featured_product": ""
-            }
-          },
-          "5d6bb02a-e24b-447a-acd5-0c9194c2146b": {
-            "type": "style_2",
-            "settings": {
-              "megamenu_items_2": "Catalog",
-              "banner_first_style_2": "shopify:\/\/shop_images\/vip_bag.jpg"
+              "megamenu_items_4": "Brands",
+              "banner_first_style_4": "shopify:\/\/shop_images\/vip_bag.jpg"
             }
           }
         },
         "block_order": [
-          "65e3b3d4-cd05-4d8c-a793-3592c70f522b",
-          "5d6bb02a-e24b-447a-acd5-0c9194c2146b"
+          "7544cdd2-9187-4f19-86fd-a35d55021c15"
         ],
         "settings": {
           "display_header_top": true,

@@ -44,18 +44,23 @@ More info on linklists:
     {% capture cap_select_page %}select_page_{{ i }}{% endcapture %}
 
     {% capture cap_banner_first_style %}banner_first_style_{{ i }}{% endcapture %}
+  {% capture cap_logo_banner_first_style %}logo_banner_first_style_{{ i }}{% endcapture %}
     {% capture cap_link_banner_first_style %}link_banner_first_style_{{ i }}{% endcapture %}
 
     {% capture cap_banner_second_style %}banner_second_style_{{ i }}{% endcapture %}
+  {% capture cap_logo_banner_second_style %}logo_banner_second_style_{{ i }}{% endcapture %}
     {% capture cap_link_banner_second_style %}link_banner_second_style_{{ i }}{% endcapture %}
 
     {% capture cap_banner_third_style %}banner_third_style_{{ i }}{% endcapture %}
+  {% capture cap_logo_banner_third_style %}logo_banner_third_style_{{ i }}{% endcapture %}
     {% capture cap_link_banner_third_style %}link_banner_third_style_{{ i }}{% endcapture %}
 
     {% capture cap_banner_four_style %}banner_four_style_{{ i }}{% endcapture %}
+  {% capture cap_logo_banner_four_style %}logo_banner_four_style_{{ i }}{% endcapture %}
     {% capture cap_link_banner_four_style %}link_banner_four_style_{{ i }}{% endcapture %}
 
     {% capture cap_banner_five_style %}banner_five_style_{{ i }}{% endcapture %}
+  {% capture cap_logo_banner_five_style %}logo_banner_five_style_{{ i }}{% endcapture %}
     {% capture cap_link_banner_five_style %}link_banner_five_style_{{ i }}{% endcapture %}
 
     {% if block.settings[cap_megamenu_item] != blank %}
@@ -72,18 +77,23 @@ More info on linklists:
             {%- assign featured_product_limit_all = block.settings.featured_product_limit_all -%}
 
             {%- assign banner_first_style = block.settings[cap_banner_first_style] -%}
+  			{%- assign logo_banner_first_style = block.settings[cap_logo_banner_first_style] -%}
             {%- assign link_banner_first_style = block.settings[cap_link_banner_first_style] -%}
 
             {%- assign banner_second_style = block.settings[cap_banner_second_style] -%}
+  			{%- assign logo_banner_second_style = block.settings[cap_logo_banner_second_style] -%}
             {%- assign link_banner_second_style = block.settings[cap_link_banner_second_style] -%}
 
             {%- assign banner_third_style = block.settings[cap_banner_third_style] -%}
+  			{%- assign logo_banner_third_style = block.settings[cap_logo_banner_third_style] -%}
             {%- assign link_banner_third_style = block.settings[cap_link_banner_third_style] -%}
 
             {%- assign banner_four_style = block.settings[cap_banner_four_style] -%}
+  			{%- assign logo_banner_four_style = block.settings[cap_logo_banner_four_style] -%}
             {%- assign link_banner_four_style = block.settings[cap_link_banner_four_style] -%}
 
             {%- assign banner_five_style = block.settings[cap_banner_five_style] -%}
+  			{%- assign logo_banner_five_style = block.settings[cap_logo_banner_five_style] -%}
             {%- assign link_banner_five_style = block.settings[cap_link_banner_five_style] -%}
 
             {%- assign skin_style = block.settings[cap_skin_style] -%}
@@ -176,14 +186,19 @@ More info on linklists:
                   				product: product,
                   				banner_first_style: banner_first_style,
                   				link_banner_first_style: link_banner_first_style,
+                  				logo_banner_first_style: logo_banner_first_style,
                   				banner_second_style: banner_second_style,
                   				link_banner_second_style: link_banner_second_style,
+                  				logo_banner_second_style: logo_banner_second_style,
                   				banner_third_style: banner_third_style,
                                 link_banner_third_style: link_banner_third_style,
+                  				logo_banner_third_style: logo_banner_third_style,
                                 banner_four_style: banner_four_style,
                                 link_banner_four_style: link_banner_four_style,
+                  				logo_banner_four_style: logo_banner_four_style,
                                 banner_five_style: banner_five_style,
                                 link_banner_five_style: link_banner_five_style,
+                  				logo_banner_five_style: logo_banner_five_style,
                                 skin_style: skin_style,
                                 select_page: select_page,
                                 title_brand: title_brand,

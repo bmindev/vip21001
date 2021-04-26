@@ -5,6 +5,7 @@ More info on linklists:
 {% endcomment %}
 
 <ul class="site-nav text-uppercase">
+  <div class=" mega-menu-overlay"></div>
     {% if search.terms != blank and template contains 'search' %}
         {% assign hide_menu_load = false %}
         {% assign menu = linklists[search.terms].links %}

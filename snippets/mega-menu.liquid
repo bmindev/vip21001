@@ -175,17 +175,9 @@
             </li>
         </ul>
         {% for l in linklists[link_child].links %}
-        <div class="menu-lv-2 col-12 col5 inner{% if linklists[link_child] != empty %} dropdown{% endif %}">
+        <div class="d-flex justify-content-between align-items-center menu-lv-2 col-12 col-xl-6 inner{% if linklists[link_child] != empty %} dropdown{% endif %}">
             <!-- Menu level 2 -->
-            <a {%if linklists[l.handle] != empty %}class="menu__moblie"{% endif %} href="{{ l.url }}" class="current">
-                {% render 'multilang' with l.title %}
-
-                {% if linklists[l.handle] != empty %}
-                <span class="icon-dropdown" data-toggle-menu-mb>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                </span>
-                {% endif %}
-            </a>
+          
 
             {% case forloop.index  %}
                 {% when 1 %}
@@ -219,6 +211,15 @@
                         </a>
                     {% endif %}
             {% endcase %}
+            <a {%if linklists[l.handle] != empty %}class="menu__moblie"{% endif %} href="{{ l.url }}" class="current w-50">
+                {% render 'multilang' with l.title %}
+
+                {% if linklists[l.handle] != empty %}
+                <span class="icon-dropdown" data-toggle-menu-mb>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </span>
+                {% endif %}
+            </a>
 
             {% if linklists[l.handle] != empty %}
             <div class="sub-menu-mobile menu-mb-translate">

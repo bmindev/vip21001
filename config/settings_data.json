@@ -3002,16 +3002,26 @@
       "header-04": {
         "type": "header-04",
         "blocks": {
-          "7544cdd2-9187-4f19-86fd-a35d55021c15": {
+          "952ede8c-7c42-4612-a96f-e059a620df64": {
+            "type": "style_3",
+            "settings": {
+              "megamenu_items_3": "Brands",
+              "banner_first_style_3": "shopify:\/\/shop_images\/Mask_Group_125.png",
+              "banner_second_style_3": "shopify:\/\/shop_images\/Mask_Group_124.png",
+              "banner_third_style_3": "shopify:\/\/shop_images\/Mask_Group_128.png",
+              "banner_four_style_3": "shopify:\/\/shop_images\/Mask_Group_129.png"
+            }
+          },
+          "0b8e22ae-1401-409d-909d-e764a4f6ef0e": {
             "type": "style_4",
             "settings": {
-              "megamenu_items_4": "Brands",
-              "banner_first_style_4": "shopify:\/\/shop_images\/vip_bag.jpg"
+              "megamenu_items_4": "categories"
             }
           }
         },
         "block_order": [
-          "7544cdd2-9187-4f19-86fd-a35d55021c15"
+          "952ede8c-7c42-4612-a96f-e059a620df64",
+          "0b8e22ae-1401-409d-909d-e764a4f6ef0e"
         ],
         "settings": {
           "display_header_top": true,

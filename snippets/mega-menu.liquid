@@ -175,35 +175,35 @@
             </li>
         </ul>
         {% for l in linklists[link_child].links %}
-        <div class="d-flex justify-content-between align-items-center menu-lv-2 col-12 col-xl-6 p-3 inner{% if linklists[link_child] != empty %} dropdown{% endif %}">
+        <div class="d-flex justify-content-between align-items-center menu-lv-2 col-12 col-xl-6 inner{% if linklists[link_child] != empty %} dropdown{% endif %}">
             <!-- Menu level 2 -->
           
 
             {% case forloop.index  %}
                 {% when 1 %}
                     {% if banner_first_style != blank %}
-                        <a class="brand-container d-flex align-items-center menu__moblie current" href="{{ link_banner_first_style }}" title="">
+                        <a class="brand-container ml-3 mt-3 mb-3 d-flex align-items-center menu__moblie current" href="{{ link_banner_first_style }}" title="">
                             <img data-srcset="{{ banner_first_style | img_url : '210x' }}" alt="" {% render 'lazyload' %} />
-                          	<img data-srcset="{{ logo_banner_first_style | img_url : '210x' }}" alt="" {% render 'lazyload' %} />
+                          	<img data-srcset="{{ logo_banner_first_style | img_url : '210x' }}" alt="" {% render 'lazyload' %} class="brand-logo-img p-2" />
                         </a>
                     {% endif %}
                 {% when 2 %}
                     {% if banner_second_style != blank %}
-                        <a class="brand-container d-flex align-items-center menu__moblie current" href="{{ link_banner_second_style }}" title="">
+                        <a class="brand-container mr-3  mt-3 mb-3 d-flex align-items-center menu__moblie current" href="{{ link_banner_second_style }}" title="">
                             <img data-srcset="{{ banner_second_style | img_url : '210x' }}" alt="" {% render 'lazyload' %} />
                           	<img data-srcset="{{ logo_banner_second_style | img_url : '210x' }}" alt="" {% render 'lazyload' %} />
                         </a>
                     {% endif %}
                 {% when 3 %}
                     {% if banner_third_style != blank %}
-                        <a class="brand-container d-flex align-items-center menu__moblie current" href="{{ link_banner_third_style }}" title="">
+                        <a class="brand-container ml-3 mb-3 d-flex align-items-center menu__moblie current" href="{{ link_banner_third_style }}" title="">
                             <img data-srcset="{{ banner_third_style | img_url : '210x' }}" alt="" {% render 'lazyload' %} />
                           	<img data-srcset="{{ logo_banner_third_style | img_url : '210x' }}" alt="" {% render 'lazyload' %} />
                         </a>
                     {% endif %}
                 {% when 4 %}
                     {% if banner_four_style != blank %}
-                        <a class="brand-container d-flex align-items-center menu__moblie current" href="{{ link_banner_four_style }}" title="">
+                        <a class="brand-container mr-3 mb-3 d-flex align-items-center menu__moblie current" href="{{ link_banner_four_style }}" title="">
                             <img data-srcset="{{ banner_four_style | img_url : '210x' }}" alt="" {% render 'lazyload' %} />
                           	<img data-srcset="{{ logo_banner_four_style | img_url : '210x' }}" alt="" {% render 'lazyload' %} />
                         </a>

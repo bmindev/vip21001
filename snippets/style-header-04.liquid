@@ -322,21 +322,29 @@
     		color: #000; min-width: 40px; right: auto !important; font-size: 15px;
       }
       .site-nav .menu-lv-1{ position: relative; }
+      
       .site-nav .sub-menu-mobile{
-      	width: 48vw; 
+      	width: 48vw; background-color: #fff;
         top: 90%; 
+        border: 1px solid #707070; border-radius: 7px;
         
-      } 
+      }
        .site-nav .mega-menu>.sub-menu-mobile{ 
       	box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
         padding: 0;
       }
       
       .site-nav .mega-menu .mega-banner{
-      	border: 20px solid #E6E6E6;
+/*       	border: 20px solid #E6E6E6; */
+        background: #E6E6E6;
+      }
+      .site-nav .mega-menu .mega-banner .mega-col{
+      	background: #fff;
+    	margin: 1.5rem;
+    	border-radius: 7px;
       }
       .site-nav .mega-menu .mega-banner .mega-col img{
-      	max-width: 180px;
+      	max-width: 200px; width: 100%; padding: 1rem;
       }
       .header-04 .site-nav .mega-menu .menu-lv-2>a{
       	font-size: 16px;
@@ -344,13 +352,13 @@
       .header-04 .site-nav .mega-menu .menu-lv-2>a span:hover{
       	color: #E03434;  border-bottom: 1px solid black;
       }
-      .header-04 .site-nav .mega-menu .brand-container{ width: 95%; margin: 0 auto;
-      	border: 1px solid #707070; border-radius: 7px; padding: 0;
+      .header-04 .site-nav .mega-menu .brand-container{ 
+      	border: 1px solid #707070; border-radius: 7px; padding: 0; width:100%;
       
       }
-      .site-nav .mega-menu .menu-lv-2{ margin-bottom: 0; }
-      .header-04 .site-nav .mega-menu .brand-container img:nth-child(2n){ width: 100%; max-width: 130px; padding: 1rem; }
-      .header-04 .site-nav .mega-menu .brand-container img:first-child{ padding: 0; margin: 0; }
+      .site-nav .mega-menu .style_3 .menu-lv-2{ margin-bottom: 0; }
+      .header-04 .site-nav .mega-menu .brand-container img:nth-child(2n){ width: 30%; max-width: 130px; padding: 1rem; }
+      .header-04 .site-nav .mega-menu .brand-container img:first-child{width:70%; padding: 0; margin: 0; }
       .header-04 .site-nav .mega-menu .style_4 .menu-lv-2>a:before{
         content: "\f105";
         font-family: FontAwesome;
@@ -364,11 +372,11 @@
         left: -16px;
       }
       .site-nav .mega-menu .product-title-mega-menu{
-      	font-family: 'Open Sans', sans-serif;
-        font-weight: 500;
-        text-transform: lowercase;
+      	font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        text-transform: capitalize;
         line-height: 1.2;
-        padding: 1rem 1rem 0;
+        padding: 0 1rem ;
         
       }
        .mega-menu-overlay{

@@ -175,7 +175,7 @@ More info on linklists:
 
             {% if section.settings.display_megamenu and is_megamenu %}
             <div class="site-nav-dropdown {{ block_style }}">
-                <div class="{% if block_style == 'style_6' %}container-full{% else %} container{% endif %}">
+                <div class="{% if block_style == 'style_6' %}container-full{% else %} container p-0{% endif %}">
                   	{% render 'mega-menu', 
                                 link_for_style: link,
                                 link_child: link_child, 

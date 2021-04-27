@@ -3019,7 +3019,9 @@
           "0b8e22ae-1401-409d-909d-e764a4f6ef0e": {
             "type": "style_4",
             "settings": {
-              "megamenu_items_4": "categories"
+              "megamenu_items_4": "categories",
+              "title_featured_product": "Intelligent design for professional travel.",
+              "banner_first_style_4": "shopify:\/\/shop_images\/variationColorProd301Col3_1.png"
             }
           }
         },

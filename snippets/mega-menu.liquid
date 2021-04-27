@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row no-gutters">
     {% if block_style == "style_1" %}
         <div class="col-12 {% if banner_first_style != blank or featured_product != blank %}{% if banner_first_style == blank or featured_product == blank %}col-xl-9{% else %}col-xl-7{% endif %}{% else %}col-xl-12{% endif %}">
             <ul class="hide_pc row">
@@ -257,7 +257,7 @@
         </div>
         {% endfor %}
     {% elsif block_style == "style_4" %}
-        <div class="col-12 {% if banner_first_style != blank %}col-xl-80{% else %}col-xl-12{% endif %}">
+        <div class="col-12 {% if banner_first_style != blank %}col-xl-7 p-5{% else %}col-xl-12{% endif %}">
             <ul class="hide_pc row">
                 <li class="menu-lv-2 col-12 hide_pc">
                   <a href="{{ link_for_style.url }}">
@@ -269,7 +269,7 @@
                 <div class="grid-sizer"></div>
 
                 {% for l in linklists[link_child].links %}
-                <div data-gridItem class="menu-lv-2 inner{% if linklists[link_child] != empty %} dropdown{% endif %} col-12 {% if banner_first_style != blank %}col-xl-3{% else %}col5{% endif %}">
+                <div data-gridItem class="menu-lv-2 inner{% if linklists[link_child] != empty %} dropdown{% endif %} col-12 {% if banner_first_style != blank %}col-xl-6{% else %}col5{% endif %}">
                     <!-- Menu level 2 -->
                     <a {%if linklists[l.handle] != empty %}class="menu__moblie"{% endif %} href="{{ l.url }}" class="current">
                         {% render 'multilang' with l.title %}
@@ -312,13 +312,18 @@
             </div>
         </div>
         {% if banner_first_style != blank %}
-        <div class="col-12 col5">
-            <div class="mega-banner">
+        <div class="col-12 col-xl-5">
+            <div class="mega-banner justify-content-center">
                 {% if banner_first_style != blank %}
-                <div class="mega-col col-right">
+                <div class="mega-col ">
                     <a class="animate-scale" href="{{ link_banner_first_style }}" title="">
                         <img data-srcset="{{ banner_first_style | img_url : "210x" }}" alt="" {% render 'lazyload' %} />
                     </a>
+                   	{% if title_featured_product != blank %}
+                      <h3 class=" product-title-mega-menu">
+                          {% render 'multilang' with title_featured_product %}
+                      </h3>
+                    {% endif %}
                 </div>
                 {% endif %}
             </div>

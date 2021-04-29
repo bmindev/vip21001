@@ -2351,7 +2351,7 @@
           "layout": "full",
           "margin_bottom_mb": 20,
           "margin_bottom_tab": 20,
-          "margin_bottom": 0,
+          "margin_bottom": 33,
           "style_slideshow": "style_1",
           "autoplay": true,
           "slideshow_speed": "10000",
@@ -2379,22 +2379,28 @@
           "1540984915288-0": {
             "type": "image",
             "settings": {
-              "title": "Editor’s Pick",
-              "color_title": "#ffffff"
+              "image": "shopify:\/\/shop_images\/Group_3093.png",
+              "title": "",
+              "color_title": "#ffffff",
+              "link": "shopify:\/\/collections"
             }
           },
           "1540984915288-1": {
             "type": "image",
             "settings": {
-              "title": "Shoes",
-              "color_title": "#ffffff"
+              "image": "shopify:\/\/shop_images\/Group_2873.png",
+              "title": "",
+              "color_title": "#ffffff",
+              "link": "shopify:\/\/collections"
             }
           },
           "1540985049803": {
             "type": "image",
             "settings": {
-              "title": "Accessories",
-              "color_title": "#ffffff"
+              "image": "shopify:\/\/shop_images\/Group_34010.png",
+              "title": "",
+              "color_title": "#ffffff",
+              "link": "shopify:\/\/collections"
             }
           }
         },
@@ -2411,72 +2417,6 @@
           "margin_bottom": 0,
           "font_size_title": "16px",
           "display_padding": true
-        }
-      },
-      "1541065669115": {
-        "type": "home-new-arrivals",
-        "settings": {
-          "layout": "default",
-          "new_arrivals_title": "New Arrivals",
-          "new_arrivals_des": "",
-          "title_style": "style_1",
-          "view_all": "",
-          "product_list_collection": "new-in",
-          "product_list_limit_all": 10,
-          "display_infinite_scrolling_homepage": true,
-          "collection_results_per_row1": "5",
-          "margin_bottom_mb": 40,
-          "margin_bottom_tab": 40,
-          "margin_bottom": 50
-        }
-      },
-      "1541389364083": {
-        "type": "home-custom-block-baner",
-        "blocks": {
-          "1541389364083-0": {
-            "type": "largeImg",
-            "settings": {
-              "display_parallax": false,
-              "dpl_down_arrow": false,
-              "height_img_parallax": "970px",
-              "alignment": "right",
-              "banner_heading": "Metropólis",
-              "font_size_banner_heading": "40px",
-              "color_banner_heading": "#232323",
-              "color_banner_heading_mb": "#232323",
-              "banner_sub_heading": "Artisan Florists",
-              "font_size_banner_sub_heading": "13px",
-              "color_banner_sub_heading": "#ffffff",
-              "color_banner_sub_heading_mb": "#232323",
-              "banner_des": "Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an tincidunt risus an consequat delit quisquemos.",
-              "font_size_banner_des": "12px",
-              "color_banner_des": "#232323",
-              "color_banner_des_mb": "#232323",
-              "countdown": "",
-              "banner_button": "Shop The Looks",
-              "bg_banner_button": "#232323",
-              "border_banner_button": "#232323",
-              "color_banner_button": "#ffffff",
-              "bg_banner_button_mb": "#232323",
-              "border_banner_button_mb": "#232323",
-              "color_banner_button_mb": "#ffffff",
-              "min_width_banner_button": "237px"
-            }
-          }
-        },
-        "block_order": [
-          "1541389364083-0"
-        ],
-        "settings": {
-          "layout": "full",
-          "layout_style": "layout_style_1",
-          "widget_title": "",
-          "widget_des": "",
-          "title_style": "style_1",
-          "img_align": "center",
-          "margin_bottom_mb": 25,
-          "margin_bottom_tab": 25,
-          "margin_bottom": 30
         }
       },
       "1541402822593": {
@@ -2512,58 +2452,6 @@
           "margin_bottom_mb": 35,
           "margin_bottom_tab": 40,
           "margin_bottom": 0
-        }
-      },
-      "1541414200176": {
-        "type": "home-custom-block-spotlight",
-        "blocks": {
-          "1541414200176-0": {
-            "type": "image",
-            "settings": {
-              "bg_color_column": "",
-              "image": "shopify:\/\/shop_images\/vip_bag.jpg",
-              "title": "Lorem De Dorus",
-              "des": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue an melitos. Duis tristique del ante le maliquam. Praesent murna de tellus laoreet cosmopolis.",
-              "button": "Shop Now",
-              "link": "shopify:\/\/products\/artemis-cabin",
-              "color_button": ""
-            }
-          },
-          "1541414200176-1": {
-            "type": "image",
-            "settings": {
-              "bg_color_column": "",
-              "title": "Milancelos Lanos",
-              "des": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue an melitos. Duis tristique del ante le maliquam. Praesent murna de tellus laoreet cosmopolis.",
-              "button": "Shop Now",
-              "color_button": ""
-            }
-          },
-          "1541414200176-2": {
-            "type": "image",
-            "settings": {
-              "bg_color_column": "",
-              "title": "Como A Milano",
-              "des": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue an melitos. Duis tristique del ante le maliquam. Praesent murna de tellus laoreet cosmopolis.",
-              "button": "Shop Now",
-              "color_button": ""
-            }
-          }
-        },
-        "block_order": [
-          "1541414200176-0",
-          "1541414200176-1",
-          "1541414200176-2"
-        ],
-        "settings": {
-          "layout": "default",
-          "layout_style": "layout_style_1",
-          "margin_bottom_mb": 25,
-          "margin_bottom_tab": 35,
-          "margin_bottom": 35,
-          "spotlight_block_title": "#Featured On Ella",
-          "spotlight_block_des": "",
-          "title_style": "style_1"
         }
       },
       "1541559977022": {
@@ -3676,15 +3564,98 @@
           "payment_display_sage": false,
           "payment_display_wallet": false
         }
+      },
+      "1619700198ec5c325c": {
+        "type": "home-collections",
+        "blocks": {
+          "1619700198ec5c325c-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-1.png",
+              "title": "Hard Luggage Trolleys",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": "hl-trolleys"
+            }
+          },
+          "1619700198ec5c325c-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-11.png",
+              "title": "SOFT Luggage Trolleys",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": "sl-trolleys"
+            }
+          },
+          "1619700198ec5c325c-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-13.png",
+              "title": "BACKPACKS",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": "backpacks"
+            }
+          },
+          "1619700198ec5c325c-3": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-14.png",
+              "title": "Business",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": "business"
+            }
+          },
+          "1619700198ec5c325c-4": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-15.png",
+              "title": "Duffels",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": "duffels"
+            }
+          },
+          "fe635e13-97d3-4274-92cf-b3ee24782587": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-16.png",
+              "title": "Accessories",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": "accessories"
+            }
+          }
+        },
+        "block_order": [
+          "1619700198ec5c325c-0",
+          "1619700198ec5c325c-1",
+          "1619700198ec5c325c-2",
+          "1619700198ec5c325c-3",
+          "1619700198ec5c325c-4",
+          "fe635e13-97d3-4274-92cf-b3ee24782587"
+        ],
+        "settings": {
+          "title": "",
+          "title_style": "style_1",
+          "layout": "default",
+          "bg_color": "#fff",
+          "font_size_title": "16px",
+          "collection_results_per_row": "6",
+          "btn_view_all": "",
+          "margin_bottom_mb": 0,
+          "margin_bottom_tab": 0,
+          "margin_bottom": 0
+        }
       }
     },
     "content_for_index": [
       "1540952363851",
       "1540984915288",
-      "1541065669115",
-      "1541389364083",
+      "1619700198ec5c325c",
       "1541402822593",
-      "1541414200176",
       "1541559977022",
       "1541566560488",
       "1617885159acc9e80c"

@@ -30,7 +30,7 @@
           <div class="img-box">
             {% if block.settings.image != blank %}
             {%- assign preview_img = block.settings.image -%}
-            <a href="{{ collections[block.settings.link].url }}" class="animate-scale adaptive_height" style="padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%">
+            <a href="{{ collections[block.settings.link].url }}" class=" adaptive_height" style="padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%">
               {%- assign img_url = block.settings.image | img_url: '300x', crop: 'center' -%}
               <img data-srcset="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
             </a>
@@ -44,7 +44,7 @@
           </div>
 
           {% if block.settings.title != blank %}
-          <div class="content-box">
+          <div class="content-box position-relative">
             <h3 class="banner-title" style="{% if block.settings.color_title != blank %}color: {{ block.settings.color_title }};{% endif %}">
               {% render 'multilang' with block.settings.title %}
 
@@ -80,6 +80,7 @@
     #home-collections-{{section.id}} {
         background-color: {{ section.settings.bg_color }};
     }
+  	#home-collections-{{section.id}} .banner-item .content-box { margin-top: 1.5rem; top: auto; left: auto; transform: none; }
 
     @media (max-width: 767px) {
         #home-collections-{{section.id}}  {

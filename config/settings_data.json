@@ -2426,7 +2426,7 @@
           "display_banner": false,
           "banner_is": "left",
           "banner_heading": "#CAMPAIGNS",
-          "font_size_banner_heading": "40px",
+          "font_size_banner_heading": "50px",
           "color_banner_heading": "#ffffff",
           "banner_sub_heading": "Spring Summer’08",
           "font_size_banner_sub_heading": "13px",
@@ -2441,77 +2441,17 @@
           "color_banner_button": "#232323",
           "bg_color_box_style_2": "#ffffff",
           "border_color_box_style_2": "#bcbcbc",
-          "featured_products_title": "Trending Now",
+          "featured_products_title": "New Lanches",
           "featured_products_des": "",
           "featured_products_text_link": "",
-          "color_text_link": "#ba7a2d",
-          "title_style": "style_1",
-          "show_slider_featured_collection": "milancelos",
+          "color_text_link": "#3e45a3",
+          "title_style": "style_2",
+          "show_slider_featured_collection": "new-launches",
           "slider_featured_limit_all": 20,
-          "collection_results_per_row1": "5",
+          "collection_results_per_row1": "4",
           "margin_bottom_mb": 35,
           "margin_bottom_tab": 40,
           "margin_bottom": 0
-        }
-      },
-      "1541559977022": {
-        "type": "home-brands",
-        "blocks": {
-          "1541560311488": {
-            "type": "image",
-            "settings": {
-              "title": "Loremous"
-            }
-          },
-          "1541560317185": {
-            "type": "image",
-            "settings": {
-              "title": "Isablella"
-            }
-          },
-          "1541560319232": {
-            "type": "image",
-            "settings": {
-              "title": "Loremous"
-            }
-          },
-          "1541560320472": {
-            "type": "image",
-            "settings": {
-              "title": "FERMENDS"
-            }
-          },
-          "1541560321823": {
-            "type": "image",
-            "settings": {
-              "title": "CONSEQAUR"
-            }
-          },
-          "1541560836473": {
-            "type": "image",
-            "settings": {
-              "title": "Loremous"
-            }
-          }
-        },
-        "block_order": [
-          "1541560311488",
-          "1541560317185",
-          "1541560319232",
-          "1541560320472",
-          "1541560321823",
-          "1541560836473"
-        ],
-        "settings": {
-          "layout": "default",
-          "margin_bottom_mb": 0,
-          "margin_bottom_tab": 0,
-          "margin_bottom": 0,
-          "display_brand_border": true,
-          "brand_title": "",
-          "brand_des": "",
-          "title_style": "style_1",
-          "brand_rows": "5"
         }
       },
       "1541566560488": {
@@ -3335,20 +3275,6 @@
           "color_arrow": "#ffffff"
         }
       },
-      "1617885159acc9e80c": {
-        "type": "home-brands-2",
-        "settings": {
-          "layout": "default",
-          "view_all": "",
-          "margin_bottom_mb": 0,
-          "margin_bottom_tab": 0,
-          "margin_bottom": 0,
-          "brand_title": "",
-          "brand_des": "",
-          "title_style": "style_1",
-          "brand_rows": "5"
-        }
-      },
       "footer-parallax": {
         "type": "footer-parallax",
         "settings": {
@@ -3641,7 +3567,7 @@
           "title": "",
           "title_style": "style_1",
           "layout": "default",
-          "bg_color": "#fff",
+          "bg_color": "#ffffff",
           "font_size_title": "16px",
           "collection_results_per_row": "6",
           "btn_view_all": "",
@@ -3656,9 +3582,7 @@
       "1540984915288",
       "1619700198ec5c325c",
       "1541402822593",
-      "1541559977022",
-      "1541566560488",
-      "1617885159acc9e80c"
+      "1541566560488"
     ]
   },
   "presets": {

@@ -295,7 +295,8 @@
 
 <style>
   {% assign margin_bottom =  section.settings.margin_bottom %} 
-
+  #featured-products-{{section.id}} .widget-title { font-family: 'BonbonLightW00', sans-serif; color: #3E45A3; }
+  #featured-products-{{section.id}} .widget-title .box-title { color: {{ section.settings.color_text_link }} ; font-size: 4rem; }
     @media (max-width: 767px) {
         #featured-products-{{section.id}} {
             margin-bottom: {{ section.settings.margin_bottom_mb }}px;

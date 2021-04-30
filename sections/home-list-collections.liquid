@@ -1,10 +1,10 @@
 {% if section.blocks.size > 0 %}
 <div class="home-list-collections{% unless section.settings.display_padding %} no-padding{% endunless %}" id="list-coll-{{section.id}}">
     <div class="container">
-        <div class="row list-collumn-2">
+        <div class="row ">
             {% for block in section.blocks %}
                 {% assign collection = collections[block.settings.collection] %}
-                <div class="grid-item col-12">
+                <div class="grid-item col-4">
                     {% capture collection_title %}{{ collection.title | escape }}{% endcapture %}
                     <div class="collection-item">
                         <div class="img-box banner-item">

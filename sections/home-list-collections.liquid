@@ -5,9 +5,9 @@
         <div class="row no-gutters justify-content-center">
             <div class="col-12">
                 {% if settings.enable_multilang and des contains '[lang2]' %}
-                <div class="widget-title">   
+                <div class="widget-title mb-0">   
                     <h3 class="box-title">
-                      <span class="title"> 
+                      <span class="title d-block"> 
                         {% render 'multilang' with section.settings.block_title %}
                       </span>
                     </h3>
@@ -21,9 +21,9 @@
                       </div>
                   </div>
                 {% else %}
-                 <div class="widget-title">   
+                 <div class="widget-title mb-0">   
                       <h3 class="box-title">
-                        <span class="title"> 
+                        <span class="title d-block"> 
                           {% render 'multilang' with section.settings.block_title %}
                         </span>
                       </h3>
@@ -112,6 +112,7 @@
   	.home-list-collections .widget-title .box-title{ font-family:'BonbonLightW00', sans-serif; color: #3e45a3; }
 	.home-list-collections .widget-title .box-title:before{ content: none; }
   	.home-list-collections .widget-desc{ margin-bottom: 5rem;   }
+  	.home-list-collections .collection-item .content-box  { top: auto; bottom: 4%; }
     @media (max-width: 767px) {
         #list-coll-{{section.id}} {
             margin-bottom: {{ section.settings.margin_bottom_mb }}px;

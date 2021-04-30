@@ -1,6 +1,41 @@
 {% if section.blocks.size > 0 %}
-<div class="home-list-collections{% unless section.settings.display_padding %} no-padding{% endunless %}" id="list-coll-{{section.id}}">
+<div class="custom-home-list-collection home-list-collections{% unless section.settings.display_padding %} no-padding{% endunless %}" id="list-coll-{{section.id}}">
     <div class="container">
+      {% if section.settings.block_title != blank %}
+        <div class="row no-gutters justify-content-center">
+            <div class="col-12">
+                {% if settings.enable_multilang and des contains '[lang2]' %}
+                <div class="widget-title">   
+                    <h3 class="box-title">
+                      <span class="title"> 
+                        {% render 'multilang' with section.settings.block_title %}
+                      </span>
+                    </h3>
+                  </div>
+                  <div class="widget-desc text-center">
+                      <div class="lang1">
+                          {{ section.settings.block_des }}
+                      </div>
+                      <div class="lang2">
+                          {{ section.settings.block_des }}
+                      </div>
+                  </div>
+                {% else %}
+                 <div class="widget-title">   
+                      <h3 class="box-title">
+                        <span class="title"> 
+                          {% render 'multilang' with section.settings.block_title %}
+                        </span>
+                      </h3>
+                    </div> 
+                  <div class="widget-desc text-center">
+                      {{ section.settings.block_des }}
+                  </div>
+                
+                {% endif %}               
+            </div>
+        </div>
+        {% endif %}
         <div class="row ">
             {% for block in section.blocks %}
                 {% assign collection = collections[block.settings.collection] %}
@@ -41,13 +76,13 @@
                                         </a>
                                     </h3>
 
-                                    <span class="count-products" {% if settings.enable_multilang %}data-translate="collections.general.items_with_count|count:{{collection.all_products_count}}"{% endif %} style="{% if block.settings.color != blank %}color: {{ block.settings.color }};{% endif %}">
+<!--                                     <span class="count-products" {% if settings.enable_multilang %}data-translate="collections.general.items_with_count|count:{{collection.all_products_count}}"{% endif %} style="{% if block.settings.color != blank %}color: {{ block.settings.color }};{% endif %}">
                                         {{ 'collections.general.items_with_count' | t: count: collection.all_products_count }}
-                                    </span>
+                                    </span> -->
                                 </div>
                             </div>
 
-                            <div class="action-link">
+<!--                             <div class="action-link">
                                 <a href="{{ collection.url }}" class="btn collections-btn" {% if settings.enable_multilang %}data-translate="collections.general.shop_now"{% endif %}
                                     style="{% if block.settings.bg_button != blank %}
                                             background-color:{{ block.settings.bg_button }};
@@ -60,40 +95,23 @@
                                             {% endif %}">
                                     {{ 'collections.general.shop_now' | t }}
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>  
                 </div>
             {% endfor %}
         </div>
 
-        {% if section.settings.block_des != blank %}
-        <div class="row justify-content-center">
-            <div class="col-12">
-                {% if settings.enable_multilang and des contains '[lang2]' %}
-                <div class="des text-center">
-                    <div class="lang1">
-                        {{ section.settings.block_des }}
-                    </div>
-                    <div class="lang2">
-                        {{ section.settings.block_des }}
-                    </div>
-                </div>
-                {% else %}
-                <div class="des text-center">
-                    {{ section.settings.block_des }}
-                </div>
-                {% endif %}               
-            </div>
-        </div>
-        {% endif %}
+  
     </div>
 </div>
 
 <style>
     {% assign font_size_title =  section.settings.list_collection_title_size %}
     {% assign margin_bottom =  section.settings.margin_bottom %}
-
+  	.home-list-collections .widget-title .box-title{ font-family:'BonbonLightW00', sans-serif; color: #3e45a3; }
+	.home-list-collections .widget-title .box-title:before{ content: none; }
+  	.home-list-collections .widget-desc{ margin-bottom: 5rem;   }
     @media (max-width: 767px) {
         #list-coll-{{section.id}} {
             margin-bottom: {{ section.settings.margin_bottom_mb }}px;
@@ -111,6 +129,13 @@
             font-size: {{ font_size_title }}px;
         }
     }
+  	@media (min-width: 1024px) {
+    	.custom-home-list-collection .container .row .grid-item:last-child{
+          width: 66% !IMPORTANT;
+          max-width: 66% !important;
+          flex: 0 0 66%;
+      }
+    }
     
     @media (min-width: 1200px) { 
         #list-coll-{{section.id}} {
@@ -122,6 +147,8 @@
                 margin-top: -{{ section.settings.position_absolute }};
             }
         {% endif %}
+      .home-list-collections .widget-title .box-title{ font-size: 4.5rem; text-transform: capitalize;  }
+      .home-list-collections .widget-desc{ font-size: 20px; font-weight: 600; }
     }	
 </style>
 {% endif %}
@@ -156,6 +183,15 @@
                 "id" : "position_absolute",
                 "label" : "Position Absolute - Unit % or px",
                 "default" : "5.3%"
+            },
+			{
+                "type": "header",
+                "content": "Title for Block"
+            },
+			{
+                "type": "textarea",
+                "id": "block_title",
+                "label": "Title"
             },
             {
                 "type": "header",

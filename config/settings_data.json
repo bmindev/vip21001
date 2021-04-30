@@ -3582,55 +3582,55 @@
           "3eac0d02-eb64-4c68-a0dd-84815d2a7444": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Group_3407.png",
-              "collection": "",
-              "color": "#fff",
-              "bg_button": "#fff",
-              "border_button": "#fff",
+              "image": "shopify:\/\/shop_images\/Image_245.png",
+              "collection": "day-trip-1-day",
+              "color": "#ffffff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
               "color_button": "#232323"
             }
           },
           "0e64c84a-1013-4a2d-9525-c1fae1411b71": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Group_3408.png",
-              "collection": "",
-              "color": "#fff",
-              "bg_button": "#fff",
-              "border_button": "#fff",
+              "image": "shopify:\/\/shop_images\/Image_248.png",
+              "collection": "weekend-getaways-1-2-days",
+              "color": "#ffffff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
               "color_button": "#232323"
             }
           },
           "65c71cca-d586-42be-b670-e046f19babef": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Group_3409.png",
-              "collection": "",
-              "color": "#fff",
-              "bg_button": "#fff",
-              "border_button": "#fff",
+              "image": "shopify:\/\/shop_images\/Image_300.png",
+              "collection": "short-trip-2-5-days",
+              "color": "#ffffff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
               "color_button": "#232323"
             }
           },
           "d3007e25-3978-40af-b376-469f11740957": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Group_3410.png",
-              "collection": "",
-              "color": "#fff",
-              "bg_button": "#fff",
-              "border_button": "#fff",
+              "image": "shopify:\/\/shop_images\/Image_244.png",
+              "collection": "long-trip-1-2-days",
+              "color": "#ffffff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
               "color_button": "#232323"
             }
           },
           "b20fa2cd-4490-428b-9d3e-a0e3a0b8d96e": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Group_3411.png",
-              "collection": "",
-              "color": "#fff",
-              "bg_button": "#fff",
-              "border_button": "#fff",
+              "image": "shopify:\/\/shop_images\/Image_243.png",
+              "collection": "international",
+              "color": "#ffffff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
               "color_button": "#232323"
             }
           }
@@ -3647,74 +3647,11 @@
           "display_padding": true,
           "display_absolute": false,
           "position_absolute": "5.3%",
-          "block_des": "",
+          "block_title": "Bags for every mood",
+          "block_des": "Carry The Feeling, Wherever You Go.",
           "margin_bottom_mb": 0,
           "margin_bottom_tab": 0,
           "margin_bottom": 0
-        }
-      },
-      "1619757593e3ac2d35": {
-        "type": "home-custom-sub-banner",
-        "blocks": {
-          "16197575946767ec34-0": {
-            "type": "twoImage",
-            "settings": {
-              "title_1": "Loremous",
-              "color_1": "#fff",
-              "button_1": "",
-              "bg_button_1": "#fff",
-              "border_button_1": "#fff",
-              "color_button_1": "#232323",
-              "title_2": "Cosmopolis",
-              "color_2": "#fff",
-              "button_2": "",
-              "bg_button_2": "#fff",
-              "border_button_2": "#fff",
-              "color_button_2": "#232323"
-            }
-          },
-          "16197575946767ec34-1": {
-            "type": "oneImage",
-            "settings": {
-              "title": "Special Offers",
-              "des": "Sale up to 60% off on selected items. End ins:",
-              "countdown": "2020\/01\/7 0:0:00",
-              "color": "#fff",
-              "title_2": "Special Offers",
-              "des_2": "Sale up to 60% off on selected items. End ins:",
-              "countdown_2": "2020\/01\/7 0:0:00",
-              "color_2": "#fff"
-            }
-          },
-          "16197575946767ec34-2": {
-            "type": "twoImage",
-            "settings": {
-              "title_1": "Loremous",
-              "color_1": "#fff",
-              "button_1": "",
-              "bg_button_1": "#fff",
-              "border_button_1": "#fff",
-              "color_button_1": "#232323",
-              "title_2": "Cosmopolis",
-              "color_2": "#fff",
-              "button_2": "",
-              "bg_button_2": "#fff",
-              "border_button_2": "#fff",
-              "color_button_2": "#232323"
-            }
-          }
-        },
-        "block_order": [
-          "16197575946767ec34-0",
-          "16197575946767ec34-1",
-          "16197575946767ec34-2"
-        ],
-        "settings": {
-          "font_size_title": "20px",
-          "block_des": "",
-          "margin_bottom_mb": 0,
-          "margin_bottom_tab": 0,
-          "margin_bottom": 30
         }
       }
     },
@@ -3724,8 +3661,7 @@
       "1619700198ec5c325c",
       "1541402822593",
       "1541566560488",
-      "16197575431e026629",
-      "1619757593e3ac2d35"
+      "16197575431e026629"
     ]
   },
   "presets": {

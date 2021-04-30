@@ -24,7 +24,7 @@
                     <div class="img-box">
                         {% if block.settings.image != blank %}
                             {%- assign preview_img = block.settings.image -%}
-                            <a class="animate-scale adaptive_height" href="{{ block.settings.link }}" style="padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%">
+                            <a class=" adaptive_height" href="{{ block.settings.link }}" style="padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%">
                                 {%- assign img_url = block.settings.image | img_url: '370x', crop: 'center' -%}
                                 <img data-srcset="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
                             </a>

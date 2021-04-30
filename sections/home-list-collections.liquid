@@ -1,6 +1,6 @@
 {% if section.blocks.size > 0 %}
 <div class="custom-home-list-collection home-list-collections{% unless section.settings.display_padding %} no-padding{% endunless %}" id="list-coll-{{section.id}}">
-    <div class="container">
+    <div class="container-fluid">
       {% if section.settings.block_title != blank %}
         <div class="row no-gutters justify-content-center">
             <div class="col-12">
@@ -112,7 +112,7 @@
   	.home-list-collections .widget-title .box-title{ font-family:'BonbonLightW00', sans-serif; color: #3e45a3; }
 	.home-list-collections .widget-title .box-title:before{ content: none; }
   	.home-list-collections .widget-desc{ margin-bottom: 5rem;   }
-  	.home-list-collections .collection-item .content-box  { top: auto; bottom: 4%; }
+  	.home-list-collections .collection-item .content-box  { top: auto; bottom: 4%; min-width: auto; width: 50%; }
     @media (max-width: 767px) {
         #list-coll-{{section.id}} {
             margin-bottom: {{ section.settings.margin_bottom_mb }}px;
@@ -131,7 +131,7 @@
         }
     }
   	@media (min-width: 1024px) {
-    	.custom-home-list-collection .container .row .grid-item:last-child{
+    	.custom-home-list-collection .container-fluid .row .grid-item:last-child{
           width: 66% !IMPORTANT;
           max-width: 66% !important;
           flex: 0 0 66%;
@@ -150,7 +150,14 @@
         {% endif %}
       .home-list-collections .widget-title .box-title{ font-size: 4.5rem; text-transform: capitalize;  }
       .home-list-collections .widget-desc{ font-size: 20px; font-weight: 600; }
-    }	
+     
+      #list-coll-16197575431e026629 .collection-title { font-size: 24px; } 
+     
+    }
+  
+   @media (min-width: 1600px) { 
+      	#list-coll-16197575431e026629 .collection-title { font-size: 38px; }
+      }
 </style>
 {% endif %}
 

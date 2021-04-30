@@ -1,7 +1,7 @@
 {% if section.settings.display_sub_banner and section.blocks.size > 0 %}
 <div class="home-custom-block-sub-banner home-sub-banner sub-banner-{{ section.blocks.size }}{% unless section.settings.display_padding %} no-padding{% endunless %}{% if section.settings.style_layout == 'style_2' %} style_2{% endif %}" id="custom-sub-banner-{{section.id}}">
     <div class="{% if section.settings.layout == 'default' %}container{% elsif section.settings.layout == 'padd_60' %}container-padd60{% else %}container-fluid{% endif %}">
-        <div class="row">
+        <div class="row mx-5">
             {% if section.settings.title != blank %}
             <div class="col-12">
                 <div class="widget-title{% if section.settings.title_style == 'style_2' %} not-before{% endif %}">   
@@ -353,7 +353,7 @@
 <style>
     {% assign font_size_title =  section.settings.font_size_title %}
     {% assign margin_bottom =  section.settings.margin_bottom %}
-
+  
     @media (max-width: 767px) {
         #custom-sub-banner-{{section.id}}  {
             margin-bottom: {{ section.settings.margin_bottom_mb }}px;

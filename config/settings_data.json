@@ -3649,8 +3649,119 @@
           "position_absolute": "5.3%",
           "block_title": "Bags for every mood",
           "block_des": "Carry The Feeling, Wherever You Go.",
-          "margin_bottom_mb": 0,
-          "margin_bottom_tab": 0,
+          "margin_bottom_mb": 30,
+          "margin_bottom_tab": 30,
+          "margin_bottom": 30
+        }
+      },
+      "16197771597fdc47fd": {
+        "type": "home-collections",
+        "blocks": {
+          "16197771597fdc47fd-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Mask_Group_102.png",
+              "title": "Holiday",
+              "color_title": "#ffffff",
+              "btn_shop_now": "",
+              "link": "holiday"
+            }
+          },
+          "16197771597fdc47fd-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Mask_Group_101.png",
+              "title": "Wedding",
+              "color_title": "#ffffff",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "16197771597fdc47fd-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Mask_Group_103.png",
+              "title": "Business",
+              "color_title": "#ffffff",
+              "btn_shop_now": "",
+              "link": "business"
+            }
+          },
+          "16197771597fdc47fd-3": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Mask_Group_99.png",
+              "title": "Studies",
+              "color_title": "#ffffff",
+              "btn_shop_now": "",
+              "link": "studies"
+            }
+          }
+        },
+        "block_order": [
+          "16197771597fdc47fd-0",
+          "16197771597fdc47fd-1",
+          "16197771597fdc47fd-2",
+          "16197771597fdc47fd-3"
+        ],
+        "settings": {
+          "title": "Shop by Occasion",
+          "title_style": "style_2",
+          "layout": "default",
+          "bg_color": "#ffffff",
+          "font_size_title": "16px",
+          "collection_results_per_row": "4",
+          "btn_view_all": "",
+          "margin_bottom_mb": 31,
+          "margin_bottom_tab": 32,
+          "margin_bottom": 31
+        }
+      },
+      "161977907976a25670": {
+        "type": "home-custom-block-sub-banner",
+        "blocks": {
+          "161977908019168d50-0": {
+            "type": "oneImage",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3107.png",
+              "title": "",
+              "color_title": "#fff",
+              "button": "",
+              "link": "shopify:\/\/collections",
+              "bg_button": "#fff",
+              "border_button": "#fff",
+              "color_button": "#232323"
+            }
+          },
+          "161977908019168d50-1": {
+            "type": "oneImage",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group-3412.png",
+              "title": "",
+              "color_title": "#fff",
+              "button": "",
+              "bg_button": "#fff",
+              "border_button": "#fff",
+              "color_button": "#232323"
+            }
+          }
+        },
+        "block_order": [
+          "161977908019168d50-0",
+          "161977908019168d50-1"
+        ],
+        "settings": {
+          "display_sub_banner": true,
+          "layout": "default",
+          "style_layout": "style_1",
+          "title": "",
+          "title_style": "style_1",
+          "desc": "",
+          "font_size_title": "16px",
+          "display_padding": true,
+          "block_des": "",
+          "margin_bottom_mb": 20,
+          "margin_bottom_tab": 20,
           "margin_bottom": 0
         }
       }
@@ -3661,7 +3772,9 @@
       "1619700198ec5c325c",
       "1541402822593",
       "1541566560488",
-      "16197575431e026629"
+      "16197575431e026629",
+      "16197771597fdc47fd",
+      "161977907976a25670"
     ]
   },
   "presets": {

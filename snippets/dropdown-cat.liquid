@@ -2,7 +2,6 @@
   {% for link_child_item in linklists[link_child].links %}
   <li {% if linklists[link_child_item.handle] != empty %}class="dropdown{% if link_child_item.active %} active open{% endif %}"{% endif %}>
     <a href="{{ link_child_item.url }}"{% if link_child_item.active %}class="active"{% endif %}>
-      {{ link_child_item.title }}
       {% render 'multilang' with link_child_item.title %}
     </a>
     

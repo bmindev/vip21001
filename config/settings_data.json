@@ -1700,6 +1700,14 @@
               "title": "Product Type",
               "list_tags": "Dincidunteros,\nCosmopolis,\nSolutmades,\nLoremous Comodous,"
             }
+          },
+          "c352c88c-f553-4dd9-99fc-3f31267fac1c": {
+            "type": "filter_text",
+            "settings": {
+              "enable": true,
+              "title": "Categories",
+              "list_tags": "Soft Luggage Trolley, Hard Luggage Trolley"
+            }
           }
         },
         "block_order": [
@@ -1707,16 +1715,17 @@
           "1543546574439",
           "1543546610760",
           "1543546642200",
-          "1543546687010"
+          "1543546687010",
+          "c352c88c-f553-4dd9-99fc-3f31267fac1c"
         ],
         "settings": {
           "display_sidebar": true,
           "sidebar_style": "style_1",
           "show_sidebar": "left",
-          "enable_categories": true,
+          "enable_categories": false,
           "title_categories": "Categories | Categories",
           "style_categories": "style_little",
-          "link_list": "main-menu",
+          "link_list": "sidebar-menu",
           "enable_product": true,
           "title_product": "Featured Products | Featured Products",
           "collection": "cosmopolis",

@@ -1724,6 +1724,7 @@
           "show_sidebar": "left",
           "enable_categories": true,
           "title_categories": "Categories | Brands",
+          "title_categories_1": "Brands | Brands",
           "style_categories": "style_little",
           "link_list": "sidebar-menu",
           "link_list_1": "brand",

@@ -26,8 +26,12 @@
     <div class="widget sidebar-links" data-has-collapse>
         {% if section.settings.title_categories != blank %}
         <div class="widget-title">
-            <h3 class="sidebar-title">
+            <h3 class="sidebar-title"> 
+              {% if collection.handle == 'hl-trolleys' or collection.handle == 'sl-trolleys' or collection.handle == 'backpacks' %}
                 {% render 'multilang' with section.settings.title_categories %}
+              {% else %}
+              	 {% render 'multilang' with section.settings.title_categories_1 %}
+              {% endif %}
             </h3>
         </div>
         {% endif %}
@@ -72,8 +76,7 @@
                   {% endif %}
               
               
-                {% for link in linklists[cat_link_list].links %} 
-              {{ link.active }}
+                {% for link in linklists[cat_link_list].links %}              
                 <li class="sidebar-link-lv1{% if linklists[link.handle] != empty %} dropdown{% if link.active %} open{% endif %}{% endif %}">
                     <a href="{{ link.url }}" {% if link.active %}class="active"{% endif %}>
                       
@@ -471,12 +474,17 @@
                         "label": "Only a few categories"
                     }                    
                 ]
-            },
+            },			
             {
                 "type": "link_list",
                 "id": "link_list",
                 "label": "Choose a menu",
                 "default": "main-menu"
+            },
+			{
+                "type": "text",
+                "id": "title_categories_1",
+                "label": "Title"
             },
   			{
                 "type": "link_list",

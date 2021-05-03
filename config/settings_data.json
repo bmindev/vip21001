@@ -18,6 +18,7 @@
     "breadcrumb_text_transform": "capitalize",
     "page_title_font_size": "20",
     "page_title_text_align": "left",
+    "layout_style": "layout_style_1",
     "style_product_grid": "style_product_grid_2",
     "enable_sidebar_multiple_choice": true,
     "product_name_text_transform": "none",
@@ -1715,7 +1716,7 @@
           "enable_categories": true,
           "title_categories": "Categories | Categories",
           "style_categories": "style_little",
-          "link_list": "sidebar-menu",
+          "link_list": "main-menu",
           "enable_product": true,
           "title_product": "Featured Products | Featured Products",
           "collection": "cosmopolis",
@@ -3800,6 +3801,14 @@
           "margin_bottom_mb": 40,
           "margin_bottom_tab": 40,
           "margin_bottom": 10
+        }
+      },
+      "recently-viewed-products-skin-fullwidth": {
+        "type": "recently-viewed-products-skin-fullwidth",
+        "settings": {
+          "display_recently_viewed_products": true,
+          "recently_viewed_products_title": "Recently Viewed Products",
+          "number_of_recently_viewed_products": "8"
         }
       }
     },

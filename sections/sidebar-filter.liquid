@@ -65,11 +65,18 @@
                 {%endfor%}
 
                 {% else %}
-                {% assign cat_link_list = section.settings.link_list | handleize %}
-
-                {% for link in linklists[cat_link_list].links %}
+                  {% if collection.handle == 'hl-trolleys' or collection.handle == 'sl-trolleys' or collection.handle == 'backpacks' %}            
+                    {% assign cat_link_list = section.settings.link_list | handleize %}
+                  {% else %}
+                   {% assign cat_link_list = section.settings.link_list_1 | handleize %}
+                  {% endif %}
+              
+              
+                {% for link in linklists[cat_link_list].links %} 
+              {{ link.active }}
                 <li class="sidebar-link-lv1{% if linklists[link.handle] != empty %} dropdown{% if link.active %} open{% endif %}{% endif %}">
                     <a href="{{ link.url }}" {% if link.active %}class="active"{% endif %}>
+                      
                         {% render 'multilang' with link.title %}
                     </a>
 
@@ -468,6 +475,12 @@
             {
                 "type": "link_list",
                 "id": "link_list",
+                "label": "Choose a menu",
+                "default": "main-menu"
+            },
+  			{
+                "type": "link_list",
+                "id": "link_list_1",
                 "label": "Choose a menu",
                 "default": "main-menu"
             },

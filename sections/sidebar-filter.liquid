@@ -266,6 +266,162 @@
         </div>
         {% endif %}
         {% endif %}
+      
+      	{% if collection.handle == 'hl-trolleys' or collection.handle == 'sl-trolleys' or collection.handle == 'backpacks' %}
+        {% if block.type == 'filter_text_1' %}
+        {% if block.settings.enable %}
+        <div class="widget sidebar-tags{% if block.settings.title == 'Size' %} filter-size{% endif %}">
+            {%- liquid 
+                assign tags = block.settings.list_tags | split: ','
+                assign count = 0
+                assign size_tag = 0
+                assign has_more = false
+                if current_tags != ''
+                    for t in tags
+                        assign tag = t | strip
+                        assign tag_value = tag | handleize 
+                        if current_tags contains tag
+                            assign count = count | plus: 1
+                        endif
+                        if collection.tags contains tag
+                            assign size_tag = size_tag | plus: 1
+                        endif
+                    endfor
+                    assign divi = size_tag | divided_by: 5
+                    assign module = size_tag | modulo: 5
+                    
+                    if divi > 1
+                      if block.settings.title == 'Size' and divi > 2
+                        assign has_more = true
+                      else
+                        assign has_more = true
+                      endif
+                    elsif divi == 1
+                      if module > 0 and block.settings.title != 'Size | Größe'
+                        assign has_more = true
+                      endif
+                    endif
+                endif
+            -%}
+            {% if block.settings.title != blank %}
+            <div class="widget-title">
+                <h3 class="sidebar-title">
+                    <span>{{block.settings.title}}{% if count > 0 %} ({{count}}){% endif %}</span>
+                    <a href="javascript:void(0)" class="clear text-hover" style="display:none">
+                        {{ 'collections.sidebar.clear' | t }}
+                    </a>
+                </h3>
+            </div>
+            {% endif %}
+
+            <div class="widget-content">
+                <ul class="list-tags">
+                    {%- assign count_tags = 0 -%}
+                    {% for t in tags %}
+                    {%- assign tag = t | strip -%}
+                    {%- assign tag_value = tag | handleize -%} 
+                    {% if current_tags contains tag %}
+                        <li>
+                            <input type="checkbox" value="{{ tag_value | split: '|' | first }}" checked/>
+                            <label>
+                                {{ tag | split: '|' | first }}
+                            </label>
+                        </li>
+                    {% else %}
+                        {% if collection.tags contains tag %} 
+                        {%- assign count_tags = count_tags | plus: 1 -%}
+                        <li>
+                            <input type="checkbox" value="{{ tag_value | split: '|' | first }}"/>
+                            <label>
+                                {{ tag | split: '|' | first }}
+                            </label>
+                        </li>
+                        {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+        {% endif %}
+      	{% else %}
+      	{% if block.type == 'filter_text_2' %}
+        {% if block.settings.enable %}
+        <div class="widget sidebar-tags{% if block.settings.title == 'Size' %} filter-size{% endif %}">
+            {%- liquid 
+                assign tags = block.settings.list_tags | split: ','
+                assign count = 0
+                assign size_tag = 0
+                assign has_more = false
+                if current_tags != ''
+                    for t in tags
+                        assign tag = t | strip
+                        assign tag_value = tag | handleize 
+                        if current_tags contains tag
+                            assign count = count | plus: 1
+                        endif
+                        if collection.tags contains tag
+                            assign size_tag = size_tag | plus: 1
+                        endif
+                    endfor
+                    assign divi = size_tag | divided_by: 5
+                    assign module = size_tag | modulo: 5
+                    
+                    if divi > 1
+                      if block.settings.title == 'Size' and divi > 2
+                        assign has_more = true
+                      else
+                        assign has_more = true
+                      endif
+                    elsif divi == 1
+                      if module > 0 and block.settings.title != 'Size | Größe'
+                        assign has_more = true
+                      endif
+                    endif
+                endif
+            -%}
+            {% if block.settings.title != blank %}
+            <div class="widget-title">
+                <h3 class="sidebar-title">
+                    <span>{{block.settings.title}}{% if count > 0 %} ({{count}}){% endif %}</span>
+                    <a href="javascript:void(0)" class="clear text-hover" style="display:none">
+                        {{ 'collections.sidebar.clear' | t }}
+                    </a>
+                </h3>
+            </div>
+            {% endif %}
+
+            <div class="widget-content">
+                <ul class="list-tags">
+                    {%- assign count_tags = 0 -%}
+                    {% for t in tags %}
+                    {%- assign tag = t | strip -%}
+                    {%- assign tag_value = tag | handleize -%} 
+                    {% if current_tags contains tag %}
+                        <li>
+                            <input type="checkbox" value="{{ tag_value | split: '|' | first }}" checked/>
+                            <label>
+                                {{ tag | split: '|' | first }}
+                            </label>
+                        </li>
+                    {% else %}
+                        {% if collection.tags contains tag %} 
+                        {%- assign count_tags = count_tags | plus: 1 -%}
+                        <li>
+                            <input type="checkbox" value="{{ tag_value | split: '|' | first }}"/>
+                            <label>
+                                {{ tag | split: '|' | first }}
+                            </label>
+                        </li>
+                        {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+        {% endif %}
+      	{% endif %}
         {% endfor %} 
     </div>
    
@@ -630,7 +786,53 @@
                         "info": "Separate by a comma, i.e \"Dincidunteros, Nectellus, Solutmades\"."
                     }
                 ]
-            }                      
+            } ,  
+			{
+                "type": "filter_text_1",
+                "name": "Brands",
+                "settings": [
+                {
+                "type": "checkbox",
+                "id": "enable",
+                "label": "Enable",
+                "default": true
+                },
+                {
+                "type": "text",
+                "id": "title",
+                "label": "Filter Title"
+                },
+                {
+                "type": "textarea",
+                "id": "list_tags",
+                "label": "List Tags",
+                "info": "Separate by a comma, i.e \"Dincidunteros, Nectellus, Solutmades\"."
+                }
+              ]
+            },
+			{
+                "type": "filter_text_2",
+                "name": "Categories",
+                "settings": [
+                {
+                "type": "checkbox",
+                "id": "enable",
+                "label": "Enable",
+                "default": true
+                },
+                {
+                "type": "text",
+                "id": "title",
+                "label": "Filter Title"
+                },
+                {
+                "type": "textarea",
+                "id": "list_tags",
+                "label": "List Tags",
+                "info": "Separate by a comma, i.e \"Dincidunteros, Nectellus, Solutmades\"."
+                }
+              ]
+            }           
         ]
     }
 {% endschema %}

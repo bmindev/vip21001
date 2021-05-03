@@ -1685,14 +1685,6 @@
               "list_tags": "Less than $100,\n $100 - $200,\n $200 - $400,\n Above $400,"
             }
           },
-          "1543546642200": {
-            "type": "filter_text",
-            "settings": {
-              "enable": true,
-              "title": "Brand",
-              "list_tags": "VIP, SKYBAGS"
-            }
-          },
           "1543546687010": {
             "type": "filter_text",
             "settings": {
@@ -1701,12 +1693,20 @@
               "list_tags": "Dincidunteros,\nCosmopolis,\nSolutmades,\nLoremous Comodous,"
             }
           },
-          "c352c88c-f553-4dd9-99fc-3f31267fac1c": {
-            "type": "filter_text",
+          "2b828a9c-e20c-4e28-8546-0bebd61cb05e": {
+            "type": "filter_text_1",
             "settings": {
-              "enable": false,
+              "enable": true,
+              "title": "Brand",
+              "list_tags": "VIP, SKYBAGS"
+            }
+          },
+          "bd0fe0ed-ca23-4708-8eb9-784b1609bf2d": {
+            "type": "filter_text_2",
+            "settings": {
+              "enable": true,
               "title": "Categories",
-              "list_tags": "Soft Luggage Trolley, Hard Luggage Trolley"
+              "list_tags": "Soft Luggage Trolley, Hard Luggage Trolley, Backpacks"
             }
           }
         },
@@ -1714,9 +1714,9 @@
           "1543545849973",
           "1543546574439",
           "1543546610760",
-          "1543546642200",
           "1543546687010",
-          "c352c88c-f553-4dd9-99fc-3f31267fac1c"
+          "2b828a9c-e20c-4e28-8546-0bebd61cb05e",
+          "bd0fe0ed-ca23-4708-8eb9-784b1609bf2d"
         ],
         "settings": {
           "display_sidebar": true,
@@ -1724,9 +1724,9 @@
           "show_sidebar": "left",
           "enable_categories": true,
           "title_categories": "Categories | Brands",
-          "title_categories_1": "Brands | Brands",
           "style_categories": "style_little",
           "link_list": "sidebar-menu",
+          "title_categories_1": "Brands | Brands",
           "link_list_1": "brand",
           "enable_product": true,
           "title_product": "Featured Products | Featured Products",

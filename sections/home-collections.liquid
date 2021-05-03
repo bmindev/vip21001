@@ -85,17 +85,19 @@
     }
   	#home-collections-{{section.id}} .banner-item .content-box { position: relative; margin-top: 1.5rem; top: auto; left: auto; transform: none; padding-bottom: 1rem; }
   	#home-collections-{{section.id}}.has-title .banner-item .content-box { position: absolute; bottom: 0;  }
-  	#home-collections-{{section.id}}.has-title .banner-item .content-box .banner-title { font-size: 24px; }
+  
     @media (max-width: 767px) {
         #home-collections-{{section.id}}  {
             margin-bottom: {{ section.settings.margin_bottom_mb }}px;
         }
+      #home-collections-{{section.id}} .widget-title .box-title { font-size: 5rem;}
     }
 
     @media (min-width: 768px) and (max-width: 1199px) {
         #home-collections-{{section.id}}  {
             margin-bottom: {{ section.settings.margin_bottom_tab }}px;
         }
+      #home-collections-{{section.id}} .widget-title .box-title { font-size: 4rem; }
     }
 
     @media (min-width: 1200px) {
@@ -106,8 +108,12 @@
         #home-collections-{{section.id}} {
             margin-bottom: {{ margin_bottom }}px;
         }
-      	#home-collections-{{section.id}} .widget-title .box-title { font-size: 4.5rem;  text-transform: capitalize; }
+      	#home-collections-{{section.id}} .widget-title .box-title { font-size: 5rem; font-weight: 500; text-transform: capitalize; }
+      	#home-collections-{{section.id}}.has-title .banner-item .content-box .banner-title { font-size: 28px; }
     }
+     @media (min-width: 1600px) { 
+      	#home-collections-{{section.id}}.has-title .banner-item .content-box .banner-title { font-size: 38px; }
+      }
 </style>
 {% endif %}
 

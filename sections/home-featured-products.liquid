@@ -204,7 +204,7 @@
           </div>        
         </div>
         {% endif %}
-        <div class="col-12{% if section.settings.display_banner %} col-md-12 col-lg-6 column-product{% else %} col-md-12{% endif %}">
+        <div class="col-12{% if section.settings.display_banner %} col-md-12 col-lg-6 column-product{% else %} col-md-10 m-auto{% endif %}">
           
           {% if section.settings.display_banner %}
           <div class="column-product-inner">
@@ -296,7 +296,7 @@
 <style>
   {% assign margin_bottom =  section.settings.margin_bottom %} 
   #featured-products-{{section.id}} .widget-title { font-family: 'BonbonLightW00', sans-serif; color: #3E45A3; }
-  #featured-products-{{section.id}} .widget-title .box-title { color: {{ section.settings.color_text_link }} ; font-size: 4.5rem; text-transform: capitalize;  }
+  #featured-products-{{section.id}} .widget-title .box-title { color: {{ section.settings.color_text_link }} ; font-weight:500; font-size: 5rem; text-transform: capitalize;  }
     @media (max-width: 767px) {
         #featured-products-{{section.id}} {
             margin-bottom: {{ section.settings.margin_bottom_mb }}px;

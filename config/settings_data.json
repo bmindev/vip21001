@@ -3725,11 +3725,11 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/Group_3107.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "button": "",
               "link": "shopify:\/\/collections",
-              "bg_button": "#fff",
-              "border_button": "#fff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
               "color_button": "#232323"
             }
           },
@@ -3738,10 +3738,10 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/Group-3412.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "button": "",
-              "bg_button": "#fff",
-              "border_button": "#fff",
+              "bg_button": "#ffffff",
+              "border_button": "#ffffff",
               "color_button": "#232323"
             }
           }
@@ -3764,6 +3764,41 @@
           "margin_bottom_tab": 20,
           "margin_bottom": 0
         }
+      },
+      "16200171110b55f780": {
+        "type": "home-featured-products",
+        "settings": {
+          "layout_style": "layout_style_2",
+          "display_banner": false,
+          "banner_is": "left",
+          "banner_heading": "#CAMPAIGNS",
+          "font_size_banner_heading": "40px",
+          "color_banner_heading": "#ffffff",
+          "banner_sub_heading": "Spring Summer’08",
+          "font_size_banner_sub_heading": "13px",
+          "color_banner_sub_heading": "#ffffff",
+          "banner_des": "Phasellus lorem malesuada ligula pulvinar de cosmopolis",
+          "font_size_banner_des": "12px",
+          "color_banner_des": "#ffffff",
+          "banner_button": "Shop Now",
+          "banner_button_2": "Shop Now",
+          "bg_banner_button": "#ffffff",
+          "border_banner_button": "#ffffff",
+          "color_banner_button": "#232323",
+          "bg_color_box_style_2": "#ffffff",
+          "border_color_box_style_2": "#bcbcbc",
+          "featured_products_title": "Best Sellers",
+          "featured_products_des": "",
+          "featured_products_text_link": "",
+          "color_text_link": "#3e45a3",
+          "title_style": "style_2",
+          "show_slider_featured_collection": "best-sellers",
+          "slider_featured_limit_all": 10,
+          "collection_results_per_row1": "4",
+          "margin_bottom_mb": 40,
+          "margin_bottom_tab": 40,
+          "margin_bottom": 10
+        }
       }
     },
     "content_for_index": [
@@ -3771,6 +3806,7 @@
       "1540984915288",
       "1619700198ec5c325c",
       "1541402822593",
+      "16200171110b55f780",
       "1541566560488",
       "16197575431e026629",
       "16197771597fdc47fd",

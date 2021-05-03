@@ -4,7 +4,7 @@
     "bg_body_boxed": "#f8f8f8",
     "header_layout": "04",
     "list_collections_layout": "collections_01_grid",
-    "category_layout": "express_order",
+    "category_layout": "default",
     "product_layout": "default",
     "blog_layout": "default",
     "footer_layout": "default",
@@ -1500,63 +1500,54 @@
           "1543214716857": {
             "type": "collection",
             "settings": {
-              "image": "",
               "collection": "cosmopolis"
             }
           },
           "1543214733702": {
             "type": "collection",
             "settings": {
-              "image": "",
               "collection": "suito"
             }
           },
           "1543214800120": {
             "type": "collection",
             "settings": {
-              "image": "",
               "collection": "milancelos"
             }
           },
           "1543214818887": {
             "type": "collection",
             "settings": {
-              "image": "",
               "collection": "blazero"
             }
           },
           "1543214834303": {
             "type": "collection",
             "settings": {
-              "image": "",
               "collection": "glamos"
             }
           },
           "1543214844672": {
             "type": "collection",
             "settings": {
-              "image": "",
               "collection": "metropolis"
             }
           },
           "1543214860592": {
             "type": "collection",
             "settings": {
-              "image": "",
               "collection": "valkyrio"
             }
           },
           "1543214872428": {
             "type": "collection",
             "settings": {
-              "image": "",
               "collection": "scarvero"
             }
           },
           "1543214881800": {
             "type": "collection",
             "settings": {
-              "image": "",
               "collection": "congue"
             }
           }
@@ -1629,6 +1620,15 @@
               "title": "Custom Block",
               "quote": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.<\/p>\n<p>There are many similar sample content placeholders across the store. All editable from admin panel.<\/p>"
             }
+          },
+          "352a0d23-0cd2-40f2-9d70-0b2ccc1a2a0d": {
+            "type": "menu",
+            "settings": {
+              "enable": true,
+              "title": "",
+              "style_categories": "style_show_all",
+              "link_list": "main-menu"
+            }
           }
         },
         "block_order": [
@@ -1637,7 +1637,8 @@
           "1543315002517",
           "1543315033286",
           "1543315049567",
-          "1543315088462"
+          "1543315088462",
+          "352a0d23-0cd2-40f2-9d70-0b2ccc1a2a0d"
         ],
         "settings": {
           "display_sidebar": true,
@@ -1688,7 +1689,7 @@
             "settings": {
               "enable": true,
               "title": "Brand",
-              "list_tags": "Sodling,\nTomorrow,\nPaul Smith,\nMango,\nDonatello,\nFrench Connection,\nGANTT,\nJimmy Choo,\nBenjamin Button,\nAnna,"
+              "list_tags": "VIP, SKYBAGS"
             }
           },
           "1543546687010": {
@@ -1709,12 +1710,12 @@
         ],
         "settings": {
           "display_sidebar": true,
-          "sidebar_style": "style_2",
+          "sidebar_style": "style_1",
           "show_sidebar": "left",
           "enable_categories": true,
           "title_categories": "Categories | Categories",
-          "style_categories": "style_main_menu",
-          "link_list": "",
+          "style_categories": "style_little",
+          "link_list": "sidebar-menu",
           "enable_product": true,
           "title_product": "Featured Products | Featured Products",
           "collection": "cosmopolis",
@@ -2836,6 +2837,7 @@
               "megamenu_items_3": "Brands",
               "banner_first_style_3": "shopify:\/\/shop_images\/Mask_Group_125.png",
               "logo_banner_first_style_3": "shopify:\/\/shop_images\/Group_2595.png",
+              "link_banner_first_style_3": "shopify:\/\/collections\/vip",
               "banner_second_style_3": "shopify:\/\/shop_images\/Mask_Group_124.png",
               "logo_banner_second_style_3": "shopify:\/\/shop_images\/Skybags_Logo_01_Blue_Background_Move_in_Style.png",
               "banner_third_style_3": "shopify:\/\/shop_images\/Mask_Group_128.png",
@@ -3016,7 +3018,7 @@
           "collection_header_style": "style_1",
           "display_collection_des": true,
           "color_wrapper": "#202020",
-          "bg_color_content": "#fff",
+          "bg_color_content": "#ffffff",
           "border_color_content": "#bcbcbc",
           "height_img": "240px",
           "enable_sub": false,
@@ -3034,16 +3036,16 @@
           "pro_variant_options": "Options",
           "btn_1_bg_color": "#232323",
           "btn_1_border_color": "#232323",
-          "btn_1_text_color": "#fff",
-          "btn_2_bg_color": "#fff",
+          "btn_1_text_color": "#ffffff",
+          "btn_2_bg_color": "#ffffff",
           "btn_2_border_color": "#323232",
           "btn_2_text_color": "#232323",
-          "btn_3_bg_color": "#fff",
+          "btn_3_bg_color": "#ffffff",
           "btn_3_border_color": "#e6e6e6",
           "btn_3_text_color": "#232323",
           "btn_4_bg_color": "#69c69c",
           "btn_4_border_color": "#69c69c",
-          "btn_4_text_color": "#fff"
+          "btn_4_text_color": "#ffffff"
         }
       },
       "header-05": {

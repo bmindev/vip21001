@@ -1719,7 +1719,7 @@
           "bd0fe0ed-ca23-4708-8eb9-784b1609bf2d"
         ],
         "settings": {
-          "display_sidebar": true,
+          "display_sidebar": false,
           "sidebar_style": "style_1",
           "show_sidebar": "left",
           "enable_categories": true,

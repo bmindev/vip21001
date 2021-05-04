@@ -78,6 +78,12 @@
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   {% endif %}
 
+
+<!--begin-boost-pfs-filter-css-->
+  {% render 'boost-pfs-style' %}
+<!--end-boost-pfs-filter-css-->
+
+
 </head>
 
     {% if settings.layout_body == 'full' %}    
@@ -192,5 +198,9 @@
     
     {% render 'recently-viewed-products'%}
     <div class="wrapper-overlay"></div>
+
+<!--begin-boost-pfs-js-->
+  {% render 'boost-pfs' %}
+<!--end-boost-pfs-js-->
 </body>
 </html>

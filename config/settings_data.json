@@ -1642,7 +1642,7 @@
           "352a0d23-0cd2-40f2-9d70-0b2ccc1a2a0d"
         ],
         "settings": {
-          "display_sidebar": true,
+          "display_sidebar": false,
           "show_sidebar": "left"
         }
       },

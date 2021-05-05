@@ -2852,10 +2852,13 @@
               "link_banner_first_style_3": "shopify:\/\/collections\/vip",
               "banner_second_style_3": "shopify:\/\/shop_images\/Mask_Group_124.png",
               "logo_banner_second_style_3": "shopify:\/\/shop_images\/Skybags_Logo_01_Blue_Background_Move_in_Style.png",
+              "link_banner_second_style_3": "shopify:\/\/collections\/skybags",
               "banner_third_style_3": "shopify:\/\/shop_images\/Mask_Group_128.png",
               "logo_banner_third_style_3": "shopify:\/\/shop_images\/Group_3382.png",
+              "link_banner_third_style_3": "shopify:\/\/collections\/aristocrat",
               "banner_four_style_3": "shopify:\/\/shop_images\/Mask_Group_129.png",
-              "logo_banner_four_style_3": "shopify:\/\/shop_images\/Group_3383.png"
+              "logo_banner_four_style_3": "shopify:\/\/shop_images\/Group_3383.png",
+              "link_banner_four_style_3": "shopify:\/\/collections\/carlton"
             }
           },
           "0b8e22ae-1401-409d-909d-e764a4f6ef0e": {
@@ -3820,6 +3823,11 @@
           "display_recently_viewed_products": true,
           "recently_viewed_products_title": "Recently Viewed Products",
           "number_of_recently_viewed_products": "8"
+        }
+      },
+      "alireviews-widget-46514": {
+        "type": "alireviews-widget-46514",
+        "settings": {
         }
       }
     },

@@ -1498,74 +1498,18 @@
       "list-collections-template": {
         "type": "list-collections-template",
         "blocks": {
-          "1543214716857": {
+          "8682d6f5-c2d8-4a8d-9868-b063e847d0da": {
             "type": "collection",
             "settings": {
-              "collection": "cosmopolis"
-            }
-          },
-          "1543214733702": {
-            "type": "collection",
-            "settings": {
-              "collection": "suito"
-            }
-          },
-          "1543214800120": {
-            "type": "collection",
-            "settings": {
-              "collection": "milancelos"
-            }
-          },
-          "1543214818887": {
-            "type": "collection",
-            "settings": {
-              "collection": "blazero"
-            }
-          },
-          "1543214834303": {
-            "type": "collection",
-            "settings": {
-              "collection": "glamos"
-            }
-          },
-          "1543214844672": {
-            "type": "collection",
-            "settings": {
-              "collection": "metropolis"
-            }
-          },
-          "1543214860592": {
-            "type": "collection",
-            "settings": {
-              "collection": "valkyrio"
-            }
-          },
-          "1543214872428": {
-            "type": "collection",
-            "settings": {
-              "collection": "scarvero"
-            }
-          },
-          "1543214881800": {
-            "type": "collection",
-            "settings": {
-              "collection": "congue"
+              "collection": "all"
             }
           }
         },
         "block_order": [
-          "1543214716857",
-          "1543214733702",
-          "1543214800120",
-          "1543214818887",
-          "1543214834303",
-          "1543214844672",
-          "1543214860592",
-          "1543214872428",
-          "1543214881800"
+          "8682d6f5-c2d8-4a8d-9868-b063e847d0da"
         ],
         "settings": {
-          "list_collection_results_per_row": "3",
+          "list_collection_results_per_row": "4",
           "list_collection_title_size": "20",
           "style_categories": "style_little"
         }

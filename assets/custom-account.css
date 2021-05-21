@@ -1,25 +1,25 @@
-.account-page.custom-acc-page{ border-top: 1px solid #06A89C; margin-top: 1.5rem; font-family: 'Open Sans', sans-serif; }
-.dashboard-sidebar .nav-link{ font-size: 15px; font-family: 'Open Sans', sans-serif; color: #393939; padding-left: 0; border-radius: 0; border-bottom: 1px solid #2FB6AC; margin-bottom: 0.5rem; }
+
+.dashboard-sidebar .nav-link{ font-size: 15px; font-weight: 600;  color: #393939; padding-left: 0; border-radius: 0; border-bottom: 1px solid #C3C3C3; margin-bottom: 0.5rem; }
   
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: transparent !important; color: #2FB6AC !important; font-weight: 600;
+    background-color: transparent !important; color: #E50A19 !important; font-weight: 700;
 }
-.account-page.custom-acc-page .breadcrumb{ font-family: 'Open Sans', sans-serif; }
-.account-page.custom-acc-page .breadcrumb a{ font-size: 16px; color: #06A89C; text-transform: uppercase; } 
-.account-page.custom-acc-page .breadcrumb span{ font-size: 16px; color: #161616; }
-.account-page.custom-acc-page .order-container { margin-bottom: 2rem; border: 1px solid #69C5BE; font-family: 'Open Sans', sans-serif; }
-.account-page.custom-acc-page .order-container .order-header{ background-color: #E1F4F2 !important; }
-.account-page.custom-acc-page .order-container .order-header p{ margin-top: 1rem; font-size: 16px; font-weight: 600; }
-.account-page.custom-acc-page .order-container .order-header p a{ text-decoration: underline; }
+
+/* .account-page.custom-acc-page .breadcrumb a{ font-size: 16px; color: #06A89C; text-transform: uppercase; }  */
+/* .account-page.custom-acc-page .breadcrumb span{ font-size: 16px; color: #161616; } */
+.account-page.custom-acc-page .order-container { margin-bottom: 2rem; border: 1px solid #C3C3C3;  }
+.account-page.custom-acc-page .order-container .order-header{ background-color: #F5F5F5 !important; }
+.account-page.custom-acc-page .order-container .order-header p{ margin-top: 1rem; font-size: 16px; font-weight: 700; }
+.account-page.custom-acc-page .order-container .order-header p a{ text-decoration: underline;  }
 .account-page.custom-acc-page .order-container .order-information{ display: block !important; }
-.account-page.custom-acc-page .order-container .order-information:not(:last-child){  border-bottom: 1px solid #2FB6AC; }
+.account-page.custom-acc-page .order-container .order-information:not(:last-child){  border-bottom: 1px solid #C3C3C3; }
 .account-page.custom-acc-page .order-container .order-information .product-title{ font-size: 18px; text-transform: uppercase; color: #161616; }
 .account-page.custom-acc-page .order-container .order-information .product-description{ font-size: 14px; }
-.account-page.custom-acc-page .order-container .order-information .product-price{ font-size: 20px; font-weight: 700; color: #06A89C; }
+.account-page.custom-acc-page .order-container .order-information .product-price{ font-size: 20px; font-weight: 700; color: #E50219; }
 .account-page.custom-acc-page .order-container .order-information .cta-links a{ font-size: 15px; color: #161616 !important; margin-right: 25px; text-decoration: underline;}
 .account-page.custom-acc-page .order-container .order-information .cta-links p{ margin-bottom: 1rem;  position: relative; }
 .account-page.custom-acc-page .order-container .order-information .cta-links p:not(:last-child) a:after{position: absolute; right: 3px; top: -3px; content: "|"; color: rgba(22,22,22,0.4); font-size: 2.5rem; }
-.account-page.custom-acc-page .order-container .order-information .buy-it-again-btn{ background-color: #009E91; color: #fff; font-weight: 700; font-size: 16px; padding: 1rem 1.5rem; display: block;}
+.account-page.custom-acc-page .order-container .order-information .buy-it-again-btn{ border-radius: 6px; background-color: #2AA30E; color: #fff; font-weight: 700; font-size: 16px; padding: 1rem 1.5rem; display: block;}
 .account-page.custom-acc-page .order-container .quantity-circle{ position: absolute; font-weight: 700; font-size: 16px;
     right: 40px;
     top: 0;
@@ -30,9 +30,9 @@
     border-radius: 100%; }
 
 
-.addresses-page.custom-acc-page .page-header .address-heading{ font-size: 20px; font-weight: 600; font-family: 'Open Sans', sans-serif; text-transform: capitalize; color: #161616;}
+.addresses-page.custom-acc-page .page-header .address-heading{ font-size: 20px; font-weight: 700;  text-transform: uppercase; color: #161616;}
 .addresses-page.custom-acc-page .page-header .address-heading a { font-size: 15px; }
-.addresses-page.custom-acc-page .customer-info label{  font-size: 14px; font-weight: 600; }
+.addresses-page.custom-acc-page .customer-info label{  font-size: 14px; font-weight: 700; }
 .addresses-page.custom-acc-page .customer-info input, select{ font-size: 15px !important; border: 1px solid #D2D2D2 !important; padding: 0.8rem !important; background: #fff !important; max-width: none;}
 .addresses-page.custom-acc-page .change-password { font-size: 14px; }
 .addresses-page.custom-acc-page .customer-info select+.icon-dropdown{ right: 18px; z-index: 10; }
@@ -53,7 +53,7 @@
 .address-links a{ text-decoration: underline;  color: #0E6AB9;}
 .address-links span{ font-weight: 500; }
 .border-top-grey{ border-top: 1px solid #D2D2D2; }
-.addresses-page.custom-acc-page .add-address-btn, .action-btn .btn[type="submit"]{ background:#009E91; border-color: #009E91; color: #fff; font-family: 'Open Sans', sans-serif; }
+.addresses-page.custom-acc-page .add-address-btn, .action-btn .btn[type="submit"]{ background:#2AA30E; border-color: #2AA30E; color: #fff; border-radius: 6px; }
 .account-page .addr{ font-size: 14px;  }
 
 .other-addreses.card{ width: 33%; }
@@ -61,16 +61,16 @@
 
 /* order details */
 
-.account-page.custom-acc-page .order-details-header{ background: #e1f4f2 !important; padding: 1.5rem; }
+.account-page.custom-acc-page .order-details-header{ background: #F5F5F5 !important; padding: 1.5rem; border-radius: 10px; }
   .account-page.custom-acc-page .order-details-info{ font-size: 14px; }
-  .account-page.custom-acc-page  a.print-btn{ font-size: 18px; font-weight: 600; color: #2680EB; text-decoration: underline; }
+  .account-page.custom-acc-page  a.print-btn{ font-size: 18px; font-weight: 700; color: #2680EB; text-decoration: underline; }
   .account-page.custom-acc-page .order-details-after:after{ content: ''; position: absolute;  width: 1px; height: 100%; background: #C3C3C3; top: 0; right: -25px; }
   .account-page.custom-acc-page .order-status-header{ font-size: 14px; }
-  .account-page.custom-acc-page .order-data .order-item{ width: 48%; border-color: #18A497 !important; }
-  .account-page.custom-acc-page .order-data .order-item p.product-title a{  font-size: 18px; color: #161616; text-transform: uppercase; }
-  .account-page.custom-acc-page .order-data .order-item .product-description { font-size: 14px; }
-  .account-page.custom-acc-page .order-data .order-item .write-review a { font-size: 14px; text-decoration: underline; color: #161616; }
-  .account-page.custom-acc-page .order-data .order-item .price { font-size: 20px; font-weight: 700; color: #19A89C;  } 
+  .account-page.custom-acc-page .order-data .order-item{ width: 48%; border-color: #C3C3C3 !important; border-radius: 8px; }
+  .account-page.custom-acc-page .order-data .order-item p.product-title a{font-weight: 700;  font-size: 18px; color: #161616; text-transform: uppercase; }
+  .account-page.custom-acc-page .order-data .order-item .product-description { font-weight: 600; font-size: 14px; }
+  .account-page.custom-acc-page .order-data .order-item .write-review a { font-size: 14px; color: #0F6AB9; font-weight: 600; }
+  .account-page.custom-acc-page .order-data .order-item .price { font-size: 20px; font-weight: 700; color: #E50219; font-weight: 700;  } 
 .account-page.custom-acc-page .invoice-details{ font-size: 13px;  }
 
 /* progress bar */
@@ -94,7 +94,7 @@
     width: 20%;
     float: left;
     position: relative;
-    font-weight: 600;
+    font-weight: 700;
    	color: #C1C1C1;
 }
 #progressbar li.active{  color: #161616; }

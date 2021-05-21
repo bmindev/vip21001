@@ -15,126 +15,111 @@
 {% endcomment %}
 
 {% layout settings.customer_layout %}
-
+{% assign uncancellable_finance_status = "refunded,partially_refunded,voided" | split:"," %}
+{% assign uncancellable_fulfillment_status = "fulfilled,partial" | split:"," %}
+  
 <div class="account-page custom-acc-page">
   <div class="container">
-    <header class="page-header">
-      <h1 {% if settings.enable_multilang %}data-translate="customer.account.title"{%endif%}>
-        {{ 'customer.account.title' | t }}
-      </h1>
-    </header>
+  {% render 'breadcrumb' %}
+    <div class="row pt-5 mt-4 px-5 justify-content-between no-gutters">
+        <div class="col-2">
+          <ul class="dashboard-sidebar nav nav-pills flex-column" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="/account"{% if settings.enable_multilang %} data-translate="customer.account.return"{% endif %} >MY ORDERS</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href=" {{ routes.root_url }}apps/order-tracking">MY ORDER TRACKING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ routes.account_addresses_url }}">ACCOUNT DETAILS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link"  href="{{ routes.account_logout_url }}">LOGOUT</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-9">
+            <div class="tab-content">
+              	<div class="tab-pane active">
+              
+                {% if customer.orders.size != 0 %}
+                <div  class="custom-account-section">
+                  {% for order in customer.orders %}
+                    <div class="order-container">
+                      <div class="order-header px-5" style="display:flex; justify-content:space-between; background-color:#a0e0db;">
+                        <p{% if settings.enable_multilang %}data-translate="customer.orders.order_number"{%endif%}>
+                          {{ 'customer.orders.order_number' | t }} {{ order.name }}  </p>
+                        <p{% if settings.enable_multilang %}data-translate="customer.orders.date"{%endif%}>
+                          {{ 'customer.orders.date' | t }} {{ order.created_at | date: format: 'month_day_year' }}  </p>
+                        <p><a href="{{ order.customer_url }}">View Order Details</a></p>
+                      </div>
+
+                      {% for line_item in order.line_items %} 
+                        <div class="order-information py-5" style="display:flex; justify-content:space-between;">
+                          <div class="row align-items-center">
+                            <div class="col-3">
+                               <div class="steps text-center">
+                            	 <p>{{ line_item.image | img_url: '200x200' | img_tag }}</p>
+                                 <div class="quantity-circle">{{ line_item.quantity }}</div>
+                          		</div>
+                            </div>
+                          	<div class="col-6">
+                            	<div class="steps">
+                                  <p class="product-title">{{ line_item.title }}</p>
+                                  <div class="product-description">
+                                  	<p>{{ line_item.product.description }}</p>
+                                  </div>
+                                     
+                                  <div class="d-flex cta-links my-4">
+                                      <p>{% if uncancellable_finance_status contains order.financial_status or uncancellable_fulfillment_status contains order.fulfillment_status or order.cancelled or order.tags contains 'cannot-cancel' %}
+                                        {% else %}
+                                        <a href="{{ order.order_status_url }}" aria-label="Cancel order {{ 'customer.orders.order_number_link' | t: number: order.name }}">Edit or Cancel</a>
+                                        {% endif %}
+                                      </p>
+                                     
+                                      <p> <a href="{{ line_item.product.url }}">Rate & Review Product</a> </p>
+									
+                                      {% if order.fulfillment_status_label == 'Fulfilled' %}
+                                      <p> <a href=" {{ routes.root_url }}apps/returns">Return & Refund</a>  </p>                    
+                                      {% endif %}
+                                      
+                                      <p><a href="{{ order.customer_url }}">Track Order</a></p>
+                                  </div>
+
+                                  <p class="product-price">{{ line_item.price | money }}</p>            
+                              	</div>
+                            </div>
+                            <div class="col-3 text-center">
+                              <div class="steps">
+                                <p> <a class="buy-it-again-btn mx-4" href="https://app.cancellable.app/reorder/{{ shop.permanent_domain }}/{{ order.id }}">BUY IT AGAIN</a></p>
+                              </div>  
+                            </div>
+                          </div>
+                      </div>
+                      {% endfor %}
+                  </div>
+                  	
+                  {% endfor %}                    
+                </div>
+                {% else %}
+                <p class="note" {% if settings.enable_multilang %}data-translate="customer.orders.none"{%endif%}>
+                  {{ 'customer.orders.none' | t }}
+                </p>
+                {% endif %}
+
+
+              </div>
+          	</div>
+        </div>  
+	</div>
     
-    <div class="grid">
-      <div class="grid-item">
-        <h4 class="box-title" {% if settings.enable_multilang %}data-translate="customer.orders.title"{%endif%}>
-          {{ 'customer.orders.title' | t }}
-        </h4>
-
-        {% if customer.orders.size != 0 %}
-        <div style="overflow-x:auto;">
-          <table class="full">
-            <thead>
-              <tr>
-                <th {% if settings.enable_multilang %}data-translate="customer.orders.order_number"{%endif%}>
-                  {{ 'customer.orders.order_number' | t }}
-                </th>
-                <th {% if settings.enable_multilang %}data-translate="customer.orders.date"{%endif%}>
-                  {{ 'customer.orders.date' | t }}
-                </th>
-                <th {% if settings.enable_multilang %}data-translate="customer.orders.payment_status"{%endif%}>
-                  {{ 'customer.orders.payment_status' | t }}
-                </th>
-                <th {% if settings.enable_multilang %}data-translate="customer.orders.fulfillment_status"{%endif%}>
-                  {{ 'customer.orders.fulfillment_status' | t }}
-                </th>
-                <th {% if settings.enable_multilang %}data-translate="customer.orders.total"{%endif%}>
-                  {{ 'customer.orders.total' | t }}
-                </th>
-              </tr>
-            </thead>
-            
-            <tbody>
-              {% for order in customer.orders %}
-              <tr>
-                <td>{{ order.name | link_to: order.customer_url }}</td>
-                <td>{{ order.created_at | date: format: 'month_day_year' }}</td>
-                <td>{{ order.financial_status_label }}</td>
-                <td>{{ order.fulfillment_status_label }}</td>
-                <td>{{ order.total_price | money }}</td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-        {% else %}
-        <p class="note" {% if settings.enable_multilang %}data-translate="customer.orders.none"{%endif%}>
-          {{ 'customer.orders.none' | t }}
-        </p>
-        {% endif %}
-      </div>
-
-      <div class="grid-item">
-        <h4 class="box-title" {% if settings.enable_multilang %}data-translate="customer.account.details"{%endif%}>
-          {{ 'customer.account.details' | t }}
-        </h4>
-
-        <h5 class="acc-name">{{ customer.name }}</h5>
-
-        {% if customer.default_address != nil %}
-        <div class="addr">
-          <span class="cus-addr">
-            {{ customer.default_address.address1 }}
-          </span>
-
-          {% if customer.default_address.address2 != "" %}
-          <span class="cus-addr">
-            {{ customer.default_address.address2 }}
-          </span>
-          {% endif %}
-
-          {% if customer.default_address.city != "" %}
-          <span class="cus-addr">
-            {{ customer.default_address.city }}
-          </span>
-          {% endif %}
-
-          {% if customer.default_address.province_code != "" %}
-          <span class="cus-addr">
-            {{ customer.default_address.province_code | upcase }}
-          </span>
-          {% endif %}
-
-          {% if customer.default_address.zip != "" %}
-          <span class="cus-addr addr-zip">
-            {{ customer.default_address.zip | upcase }}
-          </span>
-          {% endif %}
-
-          {% if customer.default_address.country != "" %}
-          <span class="cus-addr">
-            {{ customer.default_address.country }}
-          </span>
-          {% endif %}
-
-          {% if customer.default_address.phone != "" %}
-          <span class="cus-addr">
-            {{ customer.default_address.phone }}
-          </span>
-          {% endif %}
-        </div>
-        {% endif %}
-
-        <div class="action-btn">
-          <a class="btn btn-padd42" href="{{ routes.account_addresses_url }}">
-            <span {% if settings.enable_multilang %}data-translate="customer.account.view_addresses"{%endif%}>
-              {{ 'customer.account.view_addresses' | t }}
-            </span>
-            <span>
-              ({{ customer.addresses_count }})
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
+
+
+
+<style>
+  
+  
+</style>

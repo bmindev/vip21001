@@ -3776,6 +3776,23 @@
         "type": "alireviews-widget-46514",
         "settings": {
         }
+      },
+      "home-new-arrivals": {
+        "type": "home-new-arrivals",
+        "settings": {
+          "layout": "default",
+          "new_arrivals_title": "Combo Offerrs",
+          "new_arrivals_des": "",
+          "title_style": "style_1",
+          "view_all": "",
+          "product_list_collection": "combo-offers",
+          "product_list_limit_all": 15,
+          "display_infinite_scrolling_homepage": false,
+          "collection_results_per_row1": "4",
+          "margin_bottom_mb": 40,
+          "margin_bottom_tab": 40,
+          "margin_bottom": 50
+        }
       }
     },
     "content_for_index": [

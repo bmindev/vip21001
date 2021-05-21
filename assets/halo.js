@@ -202,7 +202,7 @@
             }
 
             if( body.hasClass('template-cart') ){
-                this.checkBundleProducts();
+                /*this.checkBundleProducts();*/
                 this._cartCountDown();
             }
             this.initWishListIcons();
@@ -1501,7 +1501,7 @@
                     $("#cart-item-"+productId).remove();
                     $("#sidebar-cart-item-"+productId).remove();
                     ella.doUpdateDropdownCart(cart);
-                    ella.checkBundleProducts();
+                    /*ella.checkBundleProducts();*/
                 });
             });
             btnUpdate.off('change.addCartItem').on('change.addCartItem', function (e) {
@@ -4739,7 +4739,7 @@
 
                 success: function (result) {
                     ella.getPopupShoppingCart(false);
-                    ella.checkBundleProducts();
+                    /*ella.checkBundleProducts();*/
                 },
 
                 error: function (xhr) {

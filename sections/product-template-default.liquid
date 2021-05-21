@@ -131,13 +131,7 @@ endfor
                       {% endfor %}
                     </div>
                 </div>
-                {% if settings.enable_ask_an_expert %}
-                  <div class="theme-ask" data-toggle="modal" data-target="#ask_an_expert">
-                      <h5 class="ask-an-expert-text">
-                          {% render 'multilang' with settings.ask_an_expert %}
-                      </h5>
-                  </div>
-                {% endif %}
+   
             </div>
 
             <div class="col-md-6 product-shop">
@@ -316,6 +310,7 @@ endfor
                 
 
                 <div class="prices">
+                   {% render 'wishlist-product' %}
                     {% if product.compare_at_price > product.price %}
                     <span class="compare-price">
                         {{ product.compare_at_price_max | money }}
@@ -490,10 +485,10 @@ endfor
                           <input type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.unavailable"{%endif%} id="product-add-to-cart" disabled value="{{ 'products.product.unavailable' | t }}" >
                           {% endif %}
 
-                          {% render 'wishlist-product' %}
+                         
 
                           {% if section.settings.display_product_detail_share %}
-                            <a class="icon-share" href="javascript:void(0)">{% render 'icon-share' %}</a>
+<!--                             <a class="icon-share" href="javascript:void(0)">{% render 'icon-share' %}</a> -->
                           {% endif %}
                         </div>
 
@@ -513,8 +508,17 @@ endfor
                             {{ form | payment_button }}
                         {% endif %}
                         </div>
-
-                        <div class="wrapper-social-popup">
+                 		{% if settings.enable_ask_an_expert %}
+                        <div class="theme-ask">
+                            
+                              <button type="button"  id="ask-an-exper-btn" class="btn ask-an-exper-btn w-100">
+                                <span>Ask An Expert</span>
+<!--                                 {% render 'multilang' with settings.ask_an_expert %} -->
+                          	  </button>
+                          
+                        </div>
+                      {% endif %}
+                       <div class="wrapper-social-popup">
                           <div class="title-close">
                             <p class="social-title">{{ 'products.product.copy_link' | t }}</p>
                             {% render 'icon-close' %}
@@ -523,7 +527,7 @@ endfor
                           {% if section.settings.display_product_detail_share %}
                             {% render 'share' with product %}
                           {% endif %}
-                        </div>
+                        </div> 
                     </div>
                 {% else %}
                     <div class="groups-btn">
@@ -546,18 +550,26 @@ endfor
                           <input type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.unavailable"{%endif%} id="product-add-to-cart" disabled value="{{ 'products.product.unavailable' | t }}" >
                           {% endif %}
 
-                          {% render 'wishlist-product' %}
 
                           {% if section.settings.display_product_detail_share %}
-                            <a class="icon-share" href="javascript:void(0)">{% render 'icon-share' %}</a>
+<!--                             <a class="icon-share" href="javascript:void(0)">{% render 'icon-share' %}</a> -->
                           {% endif %}
                         </div>
 
                         {% if section.settings.enable_payment_button and current_variant.available %}
                         {{ form | payment_button }}
                         {% endif %}
+                        {% if settings.enable_ask_an_expert %}
+                          <div class="theme-ask">
 
-                        <div class="wrapper-social-popup">
+                            <button type="button"  id="ask-an-exper-btn" class="btn ask-an-exper-btn w-100">
+                              <span>Ask An Expert</span>
+  <!--                                 {% render 'multilang' with settings.ask_an_expert %} -->
+                          	  </button>
+                          
+                        </div>
+                      {% endif %}
+                       <div class="wrapper-social-popup">
                           <div class="title-close">
                             <p class="social-title">{{ 'products.product.copy_link' | t }}</p>
                             {% render 'icon-close' %}

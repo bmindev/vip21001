@@ -88,7 +88,7 @@
     "enable_notify_form": true,
     "ajax_popup_cart": "upsell",
     "cart_popup_related_title": "YOU MAY ALSO LIKE",
-    "show_shipping_calculator": true,
+    "show_shipping_calculator": false,
     "shipping_calculator_heading": "Get shipping estimates | Holen Versand Schätzungen",
     "shipping_calculator_default_country": "United States",
     "redirect_button": "link_to",
@@ -194,18 +194,18 @@
     "social_snapchat_link": "",
     "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
     "body_bg": "#ffffff",
-    "body_color": "#3c3c3c",
+    "body_color": "#494949",
     "link_color": "#0688e2",
     "link_color_hover": "#232323",
     "bg_color_lazyload": "#f6f8f9",
     "breadcrumb_color": "#999999",
     "page_title_color": "#232323",
-    "btn_1_bg_color": "#232323",
-    "btn_1_border_color": "#232323",
+    "btn_1_bg_color": "#2aa30e",
+    "btn_1_border_color": "#2aa30e",
     "btn_1_text_color": "#ffffff",
-    "btn_2_bg_color": "#ffffff",
-    "btn_2_border_color": "#232323",
-    "btn_2_text_color": "#232323",
+    "btn_2_bg_color": "#e2e3e5",
+    "btn_2_border_color": "#e2e3e5",
+    "btn_2_text_color": "#323232",
     "btn_3_bg_color": "#e95144",
     "btn_3_border_color": "#e95144",
     "btn_3_text_color": "#ffffff",
@@ -1343,7 +1343,10 @@
       "cart-template": {
         "type": "cart-template",
         "settings": {
-          "cart_notes": true
+          "cart_notes": true,
+          "secure_text": "Secure Shopping Guarantee.",
+          "cart_countdown_enable": false,
+          "time_countdown": 30
         }
       },
       "faq-page": {
@@ -1833,7 +1836,7 @@
       "cart-best-sellers": {
         "type": "cart-best-sellers",
         "settings": {
-          "show_cart_best_sellers_product": true,
+          "show_cart_best_sellers_product": false,
           "title": "Best Sellers",
           "show_slider_featured_collection": "suito",
           "slider_featured_limit_all": 10,

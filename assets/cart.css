@@ -1,0 +1,82 @@
+.cart-template{ border-top: 1px solid #06A89C; margin-top: 1.5rem; }
+  
+  .cart-page-header h1{  font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 20px; width: 50%;}
+  .cart-page-header a{  vertical-align: middle; font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 18px; width: 50%; color: #161616;}
+  .cart-page-header a svg{ vertical-align: middle; }
+  .cart-template .free_shipping_progress{ margin-top: 7px; }
+  .cart-template .free_shipping_massage1{ margin-bottom: 35px; font-family: 'Open Sans', sans-serif; }
+  
+  .progress_shipping{ background-color: #F5F5F5 !important; border-radius: 10px; }
+  .progress_shipping .progress-meter{ font-family: 'Open Sans',sans-serif; background-color: #169A8E !important; background-image: none !important; border-radius: 10px; }
+  
+  .order-summary-container{ border: 1px solid #C3C3C3 !important; margin-bottom: 0 !important; }
+  .cart-template .wrapper-cart-template .cart-list .cart-product-item{border: 1px solid #C3C3C3 !important;  }
+  .cart-template .cart-form .cart-header{ font-size: 16px; font-weight: 600; font-family: 'Open Sans', sans-serif; padding: 1rem 1.5rem; background-color: #F5F5F5;}
+  .cart-template .cart-form .cart-header>*.cart--title, .cart-template .cart-form .cart-list .details>*.cart--title{ width: 100%; }
+  .cart-template .cart-form .cart-header>*{ font-size: 16px; font-weight: 600; }
+  .cart-template .cart-form .cart--title .cart--info{ padding-left: 40px;  }
+  .cart-template .wrapper-cart-template .cart-list .product-name{ text-transform: uppercase; font-family: 'Open Sans', sans-serif; font-size: 19px; }
+  .cart-template .wrapper-cart-template .cart-list .description p{ font-family: 'Open Sans', sans-serif; font-size: 14px; }
+  .cart-template .cart-form .cart--title .product-img{ width: 175px; }
+  .cart-template .wrapper-cart-template .cart-thumb img{ width: 175px; }
+  
+  #dcodeOuterWrapper{ margin: 2rem 0 1.5rem; }
+  
+  input#dcodeInput{ width: 72%; border: 1px solid #C3C3C3; padding: 0.7rem; border-radius: 7px; margin-right: 2%; font-size: 14px; font-family: 'Open Sans', sans-serif; }
+  button#dcodeSubmit { font-size: 14px; font-family: 'Open Sans', sans-serif; font-weight: 600;
+    width: 25%;
+    padding: 0.7rem;
+    background: #169A8E;
+    color: white;
+    border: 0;
+    border-radius: 7px;
+}
+  
+   .cart-form .total .label span, .dcode-total-label{ font-size: 16px !important; font-weight: 600; font-family: 'Open Sans', sans-serif; } 
+  .cart-template .wrapper-cart-template .input-full{font-size: 14px; font-family: 'Open Sans', sans-serif;  }
+  .cart-form .total{ flex-wrap: wrap; }
+  .cart-template .wrapper-cart-template .add-comments span, input[type="checkbox"]+label, .checkbox-group a{ font-size: 16px;  font-family: 'Open Sans', sans-serif; }
+  
+  .cart-form .total span.saso-cart-original-total .price, .dcodeTotalValue .dcode-total-value{ color: #19A89C; text-align: right; font-size: 18px; font-weight: 700; font-family: 'Open Sans', sans-serif;}
+  
+  .cart-template .wrapper-cart-template .btn-actions .btn-checkout{ font-size: 14px; font-weight: 600; font-family: 'Open Sans', sans-serif; border-radius: 7px !important; padding: 0.7rem !important; }
+  .cart-template .cart-form .cart-cta a{color: #161616; display: inline-flex; border: 1px solid #1AA79B; width: auto; font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 600; font-style: normal; text-transform: uppercase; padding: 1rem 3rem; }
+  .cart-template .cart-form .cart-cta a svg{ stroke: none; top: 0; padding-right: 8px; }
+  
+  .cart-template .wrapper-cart-template .cart-list .quantity label{ font-size: 15px; font-family: 'Open Sans', sans-serif; font-style: normal;
+    color: #161616;
+    text-transform: uppercase; }
+  
+  .cart-template .cart-form .cart-cta a.whislist-added{ background-color: #169A8E; color: #ffffff; }
+  
+  .cart-template .grouped-bottom{ border-top: 0; margin-top: 0; padding-top: 0; }
+  
+  .refund-policy .show-refund-policy{ cursor: pointer !important;  color: #19A89C !important; text-decoration: underline !important; font-family: 'Open Sans', sans-serif; font-size: 18px; }
+  .refund-policy .refund-policy-text {  font-family: 'Open Sans', sans-serif; font-size: 14px; margin-top: 1.2rem; }
+  
+  .refund-policy .show-refund-policy svg{ display: none; height: 10px; width: 10px; stroke: none; margin-left: 1rem; vertical-align: top; }
+  .refund-policy.policy-open .show-refund-policy svg{ display: inline-block; }
+  
+  .cart-template .right-col .total{ border-bottom: 0; margin-bottom: 0; }
+  .cart-template .right-col .total span{ width: 50%; }
+  .cart-template .right-col .total span.saso-cart-original-total{ text-align: right; }
+  .cart-template .right-col #dcodeInfo { padding: 0 1.5rem;
+    border: 1px solid #C3C3C3 !important;
+    border-top: 0 !important;
+    padding-top: 23px;
+   font-family: 'Open Sans', sans-serif;
+    margin-top: 0 !Important;
+  }
+  .cart-template .right-col .dcodeTable{ width: 100%; max-width: none; }
+  .cart-template .right-col  .dcodeTable td { width: 100%; }
+ 
+  .cart-template .cart-form .cart--price .price-box{ font-size: 20px !important; font-style: normal; font-weight: 600; font-family: 'Open Sans', sans-serif; color: #169A8E;  } 
+  
+  .cart-template .wrapper-cart-template .cart-list .qty-group{ max-width: 165px; }
+  .product-shop .qty-group, .cart-form .cart-list .qty-group, .product-shop .qty-group .button.minus, .product-shop .qty-group .button.plus{ border-color: #161616; }
+  .qty-group .button:before, .qty-group .button:after, .qty-group .button:before, .qty-group .button:after{ background-color:#161616;  }
+  .product-shop .qty-group input[name="quantity"], .product-shop .qty-group input[name="group_quantity"]{ font-size: 20px; font-weight: 700; }
+  .cart-form .cart-list .qty-group .button{ height: 44px; width: 37px }
+  .cart-template .wrapper-cart-template .cart-list .qty-group input[name="updates[]"]{ font-size: 20px; font-weight: 700; }
+  
+  .cart-template .cart-form .cart--title .cart--info .size{  color: #161616; }

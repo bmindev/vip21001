@@ -42,7 +42,7 @@
     "product_image_resize": true,
     "product_image_crop": true,
     "product_image_height": "130",
-    "show_vendor": true,
+    "show_vendor": false,
     "display_product_reviews": true,
     "display_item_size": true,
     "display_item_swatch": true,

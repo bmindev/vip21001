@@ -531,34 +531,37 @@ endfor
                     </div>
                 {% else %}
                     <div class="groups-btn">
-                        <div class="groups-btn-tree {% if section.settings.display_product_detail_share or settings.enable_wishlist %}margin-button{% endif %}">
-                          {% if current_variant.available %}
-                        
-                        	{% if current_variant.inventory_management %}
-                        	{% assign first_inventory = current_variant.inventory_quantity %}
-                        
-                          {% if first_inventory > 0 %}
-                          <input data-btn-addToCart type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{%endif%} id="product-add-to-cart" value="{{ 'products.product.add_to_cart' | t }}" data-form-id="#add-to-cart-form">
-                          {% else %}
-                          <input data-btn-addToCart type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.pre_order"{%endif%} id="product-add-to-cart" value="{{ 'products.product.pre_order' | t }}" data-form-id="#add-to-cart-form">
-                          {% endif %}
-                        	{% else %}
-                          <input data-btn-addToCart type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{%endif%} id="product-add-to-cart" value="{{ 'products.product.add_to_cart' | t }}" data-form-id="#add-to-cart-form">
-                        	{% endif %}
-                        
-                          {% else %}
-                          <input type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.unavailable"{%endif%} id="product-add-to-cart" disabled value="{{ 'products.product.unavailable' | t }}" >
-                          {% endif %}
+                        <div class="groups-btn-tree row {% if section.settings.display_product_detail_share or settings.enable_wishlist %}margin-button{% endif %}">
+                          <div class="col-6">
+                            {% if current_variant.available %}
 
+                              {% if current_variant.inventory_management %}
+                              {% assign first_inventory = current_variant.inventory_quantity %}
 
-                          {% if section.settings.display_product_detail_share %}
-<!--                             <a class="icon-share" href="javascript:void(0)">{% render 'icon-share' %}</a> -->
-                          {% endif %}
+                            {% if first_inventory > 0 %}
+                            <input data-btn-addToCart type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{%endif%} id="product-add-to-cart" value="{{ 'products.product.add_to_cart' | t }}" data-form-id="#add-to-cart-form">
+                            {% else %}
+                            <input data-btn-addToCart type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.pre_order"{%endif%} id="product-add-to-cart" value="{{ 'products.product.pre_order' | t }}" data-form-id="#add-to-cart-form">
+                            {% endif %}
+                              {% else %}
+                            <input data-btn-addToCart type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{%endif%} id="product-add-to-cart" value="{{ 'products.product.add_to_cart' | t }}" data-form-id="#add-to-cart-form">
+                              {% endif %}
+
+                            {% else %}
+                            <input type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.unavailable"{%endif%} id="product-add-to-cart" disabled value="{{ 'products.product.unavailable' | t }}" >
+                            {% endif %}
+                          </div>
+						  <div class="col-6">
+                            {% if section.settings.display_product_detail_share %}
+  <!--                             <a class="icon-share" href="javascript:void(0)">{% render 'icon-share' %}</a> -->
+                            {% endif %}
+                            {% if section.settings.enable_payment_button and current_variant.available %}
+                            {{ form | payment_button }}
+                            {% endif %}
+                          </div>
                         </div>
 
-                        {% if section.settings.enable_payment_button and current_variant.available %}
-                        {{ form | payment_button }}
-                        {% endif %}
+
 
                           <div class="theme-ask">
 

@@ -486,7 +486,11 @@ endfor
                           {% endif %}
 
                          
-
+                          <div class="btn-checkout show"> 
+                            {% if section.settings.enable_payment_button and current_variant.available %}
+                                {{ form | payment_button }}
+                            {% endif %}
+                          </div>
                           {% if section.settings.display_product_detail_share %}
 <!--                             <a class="icon-share" href="javascript:void(0)">{% render 'icon-share' %}</a> -->
                           {% endif %}
@@ -503,12 +507,8 @@ endfor
                             </a>
                             {% endif %}
                         </div>
-                        <div class="btn-checkout show"> 
-                        {% if section.settings.enable_payment_button and current_variant.available %}
-                            {{ form | payment_button }}
-                        {% endif %}
-                        </div>
-                 		{% if settings.enable_ask_an_expert %}
+                      
+                 		
                         <div class="theme-ask">
                             
                               <button type="button"  id="ask-an-exper-btn" class="btn ask-an-exper-btn w-100">
@@ -517,7 +517,7 @@ endfor
                           	  </button>
                           
                         </div>
-                      {% endif %}
+                     
                        <div class="wrapper-social-popup">
                           <div class="title-close">
                             <p class="social-title">{{ 'products.product.copy_link' | t }}</p>
@@ -559,7 +559,7 @@ endfor
                         {% if section.settings.enable_payment_button and current_variant.available %}
                         {{ form | payment_button }}
                         {% endif %}
-                        {% if settings.enable_ask_an_expert %}
+
                           <div class="theme-ask">
 
                             <button type="button"  id="ask-an-exper-btn" class="btn ask-an-exper-btn w-100">
@@ -568,7 +568,7 @@ endfor
                           	  </button>
                           
                         </div>
-                      {% endif %}
+                    
                        <div class="wrapper-social-popup">
                           <div class="title-close">
                             <p class="social-title">{{ 'products.product.copy_link' | t }}</p>

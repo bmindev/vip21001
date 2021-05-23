@@ -138,7 +138,13 @@ endfor
                 <h1 class="product-title">
                     {% render 'multilang' with product.title %}
                 </h1>
-
+  				<div class="d-flex align-items-end product-write-review-container mb-4">
+                  <div product-id="{{ product.id }}" class="alr-display-review-badge"></div> 
+                  <div class="px-2">|</div>
+                  <div><a class="product-write-review">Write a review</a></div>
+               
+              	</div>
+                 
                 {% if section.settings.display_product_reviews or section.settings.show_sold_in %}
                 <div class="group_item">
                     {% if section.settings.display_product_reviews %}
@@ -156,6 +162,36 @@ endfor
                     {% endif %}
                 </div>
                 {% endif %}
+              
+                <div class="prices d-flex align-items-center justify-content-between">
+                   	<div>
+                      {% if product.compare_at_price > product.price %}
+                      <span class="compare-price">
+                          {{ product.compare_at_price_max | money }}
+                      </span>
+                      <span class="price on-sale" itemprop="price">
+                          {{ product.price | money }}
+                      </span>
+                      {% else %}
+                      <span class="price" itemprop="price">
+                          {{ product.price | money }}
+                      </span>
+                      {% endif %}
+                      <input type="hidden" id="product_regular_price" name="product_regular_price" value="{{ product.price }}">
+                      <span class="d-block tax-note">Price Incl. Of All Taxes</span>
+                    </div>
+                  	<div>
+                  
+                      <a class="wishlist custom-wishlist-btn" data-icon-wishlist href="#" data-product-handle="{{ product.handle }}" data-id="{{ product.id }}">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14.545" height="13.333" viewBox="0 0 14.545 13.333">
+                            <path id="iconmonstr-favorite-4" d="M3.806,1A3.663,3.663,0,0,0,0,4.753c0,2.825,3.376,5.713,7.272,9.58,3.9-3.867,7.272-6.755,7.272-9.58a3.654,3.654,0,0,0-3.8-3.746,3.96,3.96,0,0,0-3.47,1.962A3.955,3.955,0,0,0,3.806,1Z" transform="translate(0 -1)" fill="#707070"/>
+                          </svg> Add to Wishlist
+                      </a>
+
+                  	</div>
+                  	
+                </div>
+
 
                 {% if section.settings.display_vendor or section.settings.display_availability or section.settings.display_product_sku or section.settings.display_product_type %}
                 <div class="product-infor">
@@ -309,23 +345,7 @@ endfor
 
                 
 
-                <div class="prices">
-                   {% render 'wishlist-product' %}
-                    {% if product.compare_at_price > product.price %}
-                    <span class="compare-price">
-                        {{ product.compare_at_price_max | money }}
-                    </span>
-                    <span class="price on-sale" itemprop="price">
-                        {{ product.price | money }}
-                    </span>
-                    {% else %}
-                    <span class="price" itemprop="price">
-                        {{ product.price | money }}
-                    </span>
-                    {% endif %}
-                  	<input type="hidden" id="product_regular_price" name="product_regular_price" value="{{ product.price }}">
-                </div>
-
+              
                 {% if product.description contains '[countdown]' %}
                 {% assign des = product.description | split:'[/countdown]' | last %}
                 {% if des contains '[custom tab]'%}
@@ -986,6 +1006,18 @@ endfor
     $('.model-viewer-click').click(function(){
       $(this).parent().find('.shopify-model-viewer-ui__button').hide();
     })
+    
+    $('#ask-an-exper-btn').click(function(){ 
+		$('#wa-chat-btn-root').trigger('click');
+    });
+    
+
+    $(".product-write-review").click(function() {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#shopify-section-alireviews-widget-46514").offset().top
+      }, 500);
+	});
+    
   })
 </script>
 

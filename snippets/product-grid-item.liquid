@@ -43,6 +43,9 @@
       {% render 'product-label' with product as product, serial: serial %}
 
       {% comment %} Use for productGrid {% endcomment %}
+      <div class="product-hover-overlay">
+      
+      </div>
       <div class="product-des abs-center">
         {% render 'wishlist-product' with product as product %}
 
@@ -192,3 +195,19 @@
     </div>
   </div>
 </div>
+
+<style>
+
+ .product-item .product-top:hover .product-image{ border: 1px solid #161616;   }
+    .quickview-button:hover{ color: #91CBC7; }
+    .product-item .action{ margin-left: 0; margin-right: 0; max-width: none; width: 65%; }
+    .product-item .wishlist { margin-left: 1rem; margin-bottom: 0; }
+  .product-hover-overlay{ background-color: rgba(255,255,255,0.5) ; visibility: hidden;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+  .product-item .product-top:hover .product-hover-overlay{ visibility: visible; }
+    
+</style>

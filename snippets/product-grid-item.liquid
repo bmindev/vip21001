@@ -47,24 +47,29 @@
       
       </div>
       <div class="product-des abs-center">
+        {% if settings.display_item_size %}
+        <div class="hover-sizes">
+          <p class="mb-3">AVAILABLE SIZES</p>
+          {% render 'items-size' with product as product %}
+        </div>
+        
+        {% endif %}
         {% render 'wishlist-product' with product as product %}
 
-        {% if settings.display_button %}
-        <div class="action">
-          {% render 'add-to-cart-form', product: product, sold_out: sold_out, id: 'grid-product-form-', position: position, sectionId: sectionId %}
-        </div>
-        {% endif %}
+      
 
         {% if settings.display_product_reviews %}
         <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
         {% endif %}
       </div>
 
-      {% if settings.display_item_size or settings.enable_quick_view %}
+     
       <div class="product-des abs-bottom">
-        {% if settings.display_item_size %}
-        {% render 'items-size' with product as product %}
-        {% endif %}
+          {% if settings.display_button %}
+            <div class="action">
+              {% render 'add-to-cart-form', product: product, sold_out: sold_out, id: 'grid-product-form-', position: position, sectionId: sectionId %}
+            </div>
+       	 {% endif %}
 
         {% if settings.enable_quick_view %}
         <a class="quickview-button" href="javascript:void(0)" id="{{ product.handle }}" title="{{ 'products.product.quick_view' | t }}" {% if settings.enable_multilang %}data-translate="products.product.quick_view" translate-item="title"{% endif %}>
@@ -74,7 +79,7 @@
         </a>
         {% endif %}
       </div>
-      {% endif %}
+    
     </div>
 
     {% comment %} Use for productGrid {% endcomment %}
@@ -198,16 +203,40 @@
 
 <style>
 
- .product-item .product-top:hover .product-image{ border: 1px solid #161616;   }
+ .product-item .product-top:hover .product-image{    }
     .quickview-button:hover{ color: #91CBC7; }
     .product-item .action{ margin-left: 0; margin-right: 0; max-width: none; width: 65%; }
     .product-item .wishlist { margin-left: 1rem; margin-bottom: 0; }
-  .product-hover-overlay{ background-color: rgba(255,255,255,0.5) ; visibility: hidden;
+  .product-hover-overlay{ background-color: rgba(255,255,255,0.8) ; visibility: hidden; border: 1px solid #161616; border-radius: 8px;
     position: absolute;
-    z-index: 100;
+    z-index: 2;
     top: 0;
     width: 100%;
     height: 100%; }
   .product-item .product-top:hover .product-hover-overlay{ visibility: visible; }
-    
+  
+  .product-item .product-des.abs-center .hover-sizes p{ color: #E50219; font-weight: 600; font-size: 16px;   }
+  .product-item .product-des.abs-center .hover-sizes .sizes-list li{ display: block; }
+  .product-item .product-des.abs-center .hover-sizes .sizes-list li a{ font-size: 16px; color: #000000; border: 0; margin-bottom: 3px; text-transform: uppercase; border-radius: 0; background: transparent; }
+  .product-item .product-des.abs-bottom .action{ width: 90%; margin: 0 auto; }
+   .product-item .product-des.abs-bottom .action a{
+  	background: #09609B;
+    margin-bottom: 0.5rem;
+    border-radius: 7px;
+    padding: 11px 20px 10px !important;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+  
+   }
+  .product-item .product-des.abs-bottom{ bottom: 15px; } 
+  .product-item .product-des.abs-bottom .quickview-button{
+  	width: 90%;
+    margin: 0 auto;
+    background: #161616;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 7px;
+    padding: 12px 20px;
+  }
 </style>

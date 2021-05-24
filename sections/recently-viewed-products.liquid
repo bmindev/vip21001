@@ -127,22 +127,37 @@
                     </strong>
                   {{/if}}
                 </div>
-                
+                <div class="product-hover-overlay">
+      
+      			</div>
                 <div class="product-des abs-center">
                     {% endraw %}
-                    {% if settings.enable_wishlist %}
-                    {% raw %}
-                    <a class="wishlist" data-icon-wishlist href="#" data-product-handle="${handle}" data-id="${id}">
-                          {% endraw %}
-                          {% render 'icon-heart-2' %}
-                          {% raw %}
-                    </a>
-                    {% endraw %}
-                    {% endif %} 
+                   {% if settings.display_item_size %}
+                    <div class="hover-sizes">
+                      <p class="mb-3">AVAILABLE SIZES</p>
+                      {% render 'items-size' with product as product %}
+                    </div>
+
+                    {% endif %}
+                    {% render 'wishlist-product' with product as product %}
                     {% raw %}
                     
                     {% endraw %}
-                    {% if settings.display_button %}
+              
+                    {% raw %}
+                                                    
+                    {% endraw %}
+                    {% if settings.display_product_reviews %}
+                    {% raw %}
+                    <span class="shopify-product-reviews-badge" data-id="${id}"></span>
+                    {% endraw %}
+                    {% endif %}
+                    {% raw %}
+                </div>
+                
+                <div class="product-des abs-bottom">
+                {% endraw %}
+                      {% if settings.display_button %}
                     {% raw %}
                     <div class="action">
                         <form action="{% endraw %}{{ routes.cart_url }}{% raw %}/add" method="post" class="variants" id="recently-${id}" data-id="product-actions-${id}" enctype="multipart/form-data">
@@ -328,19 +343,6 @@
                     </div>
                     {% endraw %}
                     {% endif %}
-                    {% raw %}
-                                                    
-                    {% endraw %}
-                    {% if settings.display_product_reviews %}
-                    {% raw %}
-                    <span class="shopify-product-reviews-badge" data-id="${id}"></span>
-                    {% endraw %}
-                    {% endif %}
-                    {% raw %}
-                </div>
-                
-                <div class="product-des abs-bottom">
-                {% endraw %}
                 {% if settings.enable_quick_view %}
                 {% raw %}
                   <a class="quickview-button" href="javascript:void(0)" id="${handle}">

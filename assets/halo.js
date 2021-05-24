@@ -697,7 +697,7 @@
                                                 return this.slidesToShow = 5;
                                             }
                                             else {
-                                                return this.slidesToShow = 2;
+                                                return this.slidesToShow = 4;
                                             }
                                         }
                                     },

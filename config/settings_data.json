@@ -2642,7 +2642,7 @@
         "type": "product-recommendations",
         "settings": {
           "display_related_products": true,
-          "related_products_title": "Related Products",
+          "related_products_title": "You Might Also Like",
           "number_of_related_products": "8"
         }
       },
@@ -3783,7 +3783,7 @@
           "layout": "default",
           "new_arrivals_title": "Combo Offerrs",
           "new_arrivals_des": "",
-          "title_style": "style_1",
+          "title_style": "style_2",
           "view_all": "",
           "product_list_collection": "combo-offers",
           "product_list_limit_all": 15,

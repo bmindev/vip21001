@@ -130,7 +130,7 @@
                         <input type="number" id="updates_{{ item.id }}" name="updates[]" value="{{ item.quantity }}" inputmode="numeric" pattern="[0-9]*" {% if item.variant.inventory_management != null and item.variant.inventory_quantity > 0 %} data-line="{{ item.variant.inventory_quantity }}"{% endif %} min="1" class="update-cart--template">
                         <a href="#" data-plus-quantity class="plus button"></a>
                       </div>
-                      <div class="mr-4 cart-cta margin-button product-wishlist">
+                      <div id="cart-wishlist" class="mr-4 cart-cta margin-button product-wishlist">
                             <a class=" mb-0" data-icon-wishlist="" href="#" data-product-handle="{{ item.product.handle }}" data-id="{{ item.id }}">
                             	move to wishlist
                             </a>
@@ -420,7 +420,7 @@
     color: #161616;
     text-transform: uppercase; }
   
-  .cart-template .cart-form .cart-cta a.whislist-added{ background-color: #169A8E; color: #ffffff; }
+  .cart-template .cart-form .cart-cta a.whislist-added{ background-color: #3A84DF; color: #ffffff; }
   
   .cart-template .grouped-bottom{ border-top: 0; margin-top: 0; padding-top: 0; }
   

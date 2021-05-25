@@ -32,6 +32,12 @@
         compareArr = JSON.parse(localStorage.getItem('compareArr'));
     };
 
+  $('#cart-wishlist').click(function(){
+  
+  	 $(".cart-cta .remove").trigger("click");
+  })  
+  
+  
     doc.ready(function () {
         iconNav = $('[data-menu-mb-toogle]'),
         dropdownCart = $('#dropdown-cart'),

@@ -1,4 +1,4 @@
-<header class="collection-header collection-header-sections {% if section.settings.collection_header_style == 'style_2' %}layout-header--style2{% endif %}">
+<header class="mb-5 collection-header collection-header-sections {% if section.settings.collection_header_style == 'style_2' %}layout-header--style2{% endif %}">
     <div class="relative">
         {% if section.settings.display_collection_image %}
     
@@ -29,7 +29,7 @@
             </div>
             {% endif %}
         </div>
-        {% endif %}
+        {% else %}
         
         <div class="collection-wrapper page-header {% unless collection.description contains 'img' or section.settings.collection_image != blank %}collection-static{% endunless %}">
             <div class="{% if settings.category_layout == "full_with" or template.suffix == 'fullwidth' %}container-padd60{% else %}container container-regular{% endif %}">
@@ -61,6 +61,8 @@
               {% endif %}
             </div>    
         </div>
+      {% endif %}
+      
     </div>
     {% if section.settings.enable_sub and linklists[collection.handle] != blank %}
     <div class="sub-collection">

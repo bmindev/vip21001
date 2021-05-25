@@ -1596,8 +1596,8 @@
       "collection-template-default": {
         "type": "collection-template-default",
         "settings": {
-          "display_collection_image": true,
-          "display_collection_des": true,
+          "display_collection_image": false,
+          "display_collection_des": false,
           "limited_view": true,
           "view_as_enable": false,
           "sort_enable": true,
@@ -1675,15 +1675,16 @@
           "link_list": "sidebar-menu",
           "title_categories_1": "Brands | Brands",
           "link_list_1": "brand",
-          "enable_product": true,
+          "enable_product": false,
           "title_product": "Featured Products | Featured Products",
           "collection": "cosmopolis",
           "limit": "5",
           "enable_img_1": true,
+          "image_img_1": "shopify:\/\/shop_images\/Group_3406.png",
           "link_img_1": "shopify:\/\/collections\/blaz-ro",
-          "enable_img_2": true,
+          "enable_img_2": false,
           "link_img_2": "shopify:\/\/collections\/congu",
-          "enable_custom_block": true,
+          "enable_custom_block": false,
           "title_custom_block": "Custom Block | Custom Block",
           "quote_custom_block": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.<\/p><p>There are many similar sample content placeholders across the store. All editable from admin panel.<\/p>"
         }
@@ -2978,11 +2979,11 @@
         "settings": {
           "display_collection_image": true,
           "collection_header_style": "style_1",
-          "display_collection_des": true,
+          "display_collection_des": false,
           "color_wrapper": "#202020",
           "bg_color_content": "#ffffff",
           "border_color_content": "#bcbcbc",
-          "height_img": "240px",
+          "height_img": "450px",
           "enable_sub": false,
           "sub_title": "Jump to:"
         }
@@ -3811,10 +3812,34 @@
       },
       "list-collections-02-template": {
         "type": "list-collections-02-template",
+        "blocks": {
+          "c068e86e-e81d-424e-b37a-ad13d7c88e4b": {
+            "type": "collection",
+            "settings": {
+              "collection": "all",
+              "display_countdow": false,
+              "title": "Special Offers",
+              "des": "Sale up to 60% off on selected items. End ins:",
+              "countdown": "2020\/01\/7 0:0:00",
+              "color": "#fff"
+            }
+          }
+        },
+        "block_order": [
+          "c068e86e-e81d-424e-b37a-ad13d7c88e4b"
+        ],
         "settings": {
           "list_collection_title_size": "30",
           "style_categories": "style_show_all",
           "bg_color": "#fafafa"
+        }
+      },
+      "list-collections-full-template": {
+        "type": "list-collections-full-template",
+        "settings": {
+          "list_collection_results_per_row": "3",
+          "list_collection_title_size": "20",
+          "style_categories": "style_show_all"
         }
       }
     },

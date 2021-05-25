@@ -30,6 +30,7 @@
   .product-shop .prices .tax-note { font-size: 12px; font-weight: 600; color:#707070; margin-top: 10px; }
   .product-shop .prices .compare-price {font-size: 16px;  }
   
+  .product-shop .product-infor{ border-top: 1px solid #E2E3E5; padding-top: 14px; }
   .product-shop .product-infor label{ font-weight: 600; font-size: 14px;  }
   .product-shop .product-infor span{ font-weight: 600; font-size: 14px; color: #707070; }
   .product-shop .product-infor .vendor-product a{ color: #707070 !important; }
@@ -95,8 +96,8 @@
   #rbz-zipcode-check-section{ padding-top: 0; padding-bottom: 10px; }
   #pw-app-modal-zipcode-input { padding-top: 0 !important; } 
   #rbz-zipcode-input{ text-align: left !important; display: flex; }
-  #rbz-zipcode-input input { max-width: none !important; border-top: 0; border-left: 0; border-right: 0;  border-bottom: 1px solid #000; width: 47%; margin-right: 7%;} 
-  #rbz-zipcode-input #zipcode-input-submit-button { font-weight: 600 !important;padding: 0 !important;   text-align: left; color: #C92323 !important; cursor: pointer; border-bottom: 1px solid #000; min-width: auto !important; border-radius: 0; margin-left: -10px; }
+  #rbz-zipcode-input input { color: #7B7B7B !important; font-size: 14px !important;  padding: 0; text-transform: capitalize; font-weight: 600; max-width: none !important; border-top: 0; border-left: 0; border-right: 0;  border-bottom: 1px solid #000; width: 47%; margin-right: 7%;} 
+  #rbz-zipcode-input #zipcode-input-submit-button {font-size: 14px !important;   font-weight: 600 !important; padding: 0 !important;   text-align: left; color: #C92323 !important; cursor: pointer; border-bottom: 1px solid #000; min-width: auto !important; border-radius: 0; margin-left: -10px; }
   #pw-app-server-error{ text-align: left !important; color: #C92323 !important; font-size: 13px !important; margin: 1rem 0 0 !important;}
   #rbz-app-title-text{text-align: left !important; font-size: 16px !important; color: #000000 !important; font-weight: 600 !important; text-transform: capitalize  !important; }
   
@@ -108,10 +109,10 @@
   	margin-right: 0;
   }
   
-  .product-shop .shopify-payment-button button.shopify-payment-button__button{ background-color: #2AA30E;  border-radius: 8px; color: #fff; border: 0;  font-size: 16px; font-weight: 600; padding: 1.3rem !important; margin-bottom: 10px !important; }
-  .product-shop .groups-btn #product-add-to-cart, .product-shop .groups-btn .product-add-to-cart{  background-color: #09609B; border-radius: 8px;   color: #fff;  border: 0; font-size: 16px; font-weight: 600; padding: 1.3rem !important; margin-bottom: 10px !important;}
-  .product-shop .groups-btn #product-add-to-cart:hover, .product-shop .groups-btn .product-add-to-cart:hover{}
-  .ask-an-exper-btn{ background-color: #fff; color: #000; border: 1px solid #000;  font-size: 16px; font-weight: 600; padding: 1.3rem !important;
+  .product-shop .shopify-payment-button button.shopify-payment-button__button{ border-color: #3A84DF; border-radius: 8px; font-size: 16px; font-weight: 600; padding: 1.3rem !important; margin-bottom: 10px !important; }
+  .product-shop .groups-btn #product-add-to-cart, .product-shop .groups-btn .product-add-to-cart{ border-radius: 8px; border-width:1px; font-size: 16px; font-weight: 600; padding: 1.3rem !important; margin-bottom: 10px !important;}
+  .product-shop .groups-btn #product-add-to-cart:hover, .product-shop .groups-btn .product-add-to-cart:hover{ background-color: #E2E3E5; color: #000; border-color: #000;}
+  .ask-an-exper-btn{ border-radius: 8px; background-color: #fff; color: #000; border: 1px solid #000;  font-size: 16px; font-weight: 600; padding: 1.3rem !important; text-transform: capitalize;
   	   
   }
   .ask-an-exper-btn:hover{ color: #009E91; }
@@ -142,8 +143,10 @@
     background-position: center;
     vertical-align: middle;  }
   
+  .product-shop .quantity{ margin-bottom: 30px; border-top: 1px solid #E2E3E5; padding-top: 15px; }
+  
   .product-shop  .qty-group{ max-width: 165px; border-radius: 8px; }
-  .product-shop .shopify-product-form label{ font-size: 15px; color: #161616; text-transform: uppercase; }
+  .product-shop .shopify-product-form label{ font-size: 14px; color: #161616; font-weight: 600; }
   .product-shop .qty-group, .product-shop .qty-group .button.minus, .product-shop .qty-group .button.plus{ border-color: #161616; }
   .qty-group .button:before, .qty-group .button:after, .qty-group .button:before, .qty-group .button:after{ background-color:#161616;  }
   .product-shop .qty-group input[name="quantity"], .product-shop .qty-group input[name="group_quantity"]{ font-size: 20px; font-weight: 700; }
@@ -154,8 +157,12 @@
   
   .product-shop .qty-group .button{ height: 44px; width: 42px; background: #E2E3E5; }
   
-  .product-shop .shopify-payment-button button.shopify-payment-button__button:hover{ background: #009E91 !important; color: #161616;}
+  .product-shop .shopify-payment-button button.shopify-payment-button__button:hover{ background: transparent !important;  border-color: #161616; color: #161616;}
   
+  #product-variants{ border-top: 1px solid #E2E3E5;
+    border-bottom: 1px solid #E2E3E5;
+    padding-top: 20px;
+  }
   .product-shop .swatch .header{ font-size: 15px; font-weight: 600; color: #161616; }
   .product-shop .swatch .header span:first-child{ text-transform: uppercase; }
   .product-shop .swatch .header [data-option-select] { color: #161616; }
@@ -199,11 +206,12 @@
 .tabs__product-page .list-tabs .tab-title:last-child .tab-links{ border-top-right-radius: 7px;  border-bottom-right-radius: 7px;}
 .tabs__product-page .list-tabs .tab-links:after, .tabs__product-page .list-tabs .tab-links:before{ content: none ; }
 .tabs__product-page .list-tabs .tab-links.active{ background-color: #E6E7E8; }
-
+ 
+  .swatch .swatch-element label{ padding: 4px; border: 0; }
   
  .swatch .swatch-element:not(.color) label:after{ content: none; }
   
- .swatch .swatch-element:not(.color) label{ border-color: #B9B9B9; border-radius: 8px;
+ .swatch .swatch-element:not(.color) label{ border: 1px solid; border-color: #B9B9B9; border-radius: 8px;
     min-width: 97px;
     min-height: 38px;
     padding: 6px;

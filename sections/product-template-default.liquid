@@ -20,7 +20,7 @@ endfor
 
         <div class="row mt-4 product_top{% if section.settings.show_tab == 'horizontal' or section.settings.show_tab == 'horizontal_center' %} horizontal-tabs{% else %} vertical-tabs has-sticky-product-img{% endif %}">
           <div class="col-12 col-lg-10 m-auto">
-            <div class="row justify-content-between">
+            <div class="row justify-content-between mb-5">
             	<div class="col-md-6 product-photos" data-more-view-product>
                 <div {% if section.settings.show_tab == 'vertical' %} data-sticky-product-img{% endif %} class="product-img-box{% if section.settings.style_moreview == 'horizontal' %} horizontal-moreview{% elsif section.settings.style_moreview == 'left_vertical' %} left-vertical-moreview vertical-moreview{% else %} right-vertical-moreview vertical-moreview{% endif %}{% if settings.product_image_border%} grid-item-border{% endif %}">
                     <div style="position: relative;" class="wrapper-images">
@@ -459,6 +459,7 @@ endfor
                     {% endif %}
                 </div>
                 {% endif %}
+               <div id="rbz-zipcode-check-section"></div>
               
                 {% if current_variant.available and section.settings.display_qty %}
                 <div class="quantity">
@@ -484,7 +485,7 @@ endfor
                 </div>
                 {% endif %}
               
-              <div id="rbz-zipcode-check-section"></div>
+             
 
 
 
@@ -559,6 +560,14 @@ endfor
                     <div class="groups-btn">
                         <div class="groups-btn-tree row {% if section.settings.display_product_detail_share or settings.enable_wishlist %}margin-button{% endif %}">
                           <div class="col-6">
+                            {% if section.settings.display_product_detail_share %}
+  <!--                             <a class="icon-share" href="javascript:void(0)">{% render 'icon-share' %}</a> -->
+                            {% endif %}
+                            {% if section.settings.enable_payment_button and current_variant.available %}
+                            {{ form | payment_button }}
+                            {% endif %}
+                          </div>
+                          <div class="col-6">
                             {% if current_variant.available %}
 
                               {% if current_variant.inventory_management %}
@@ -577,14 +586,7 @@ endfor
                             <input type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.unavailable"{%endif%} id="product-add-to-cart" disabled value="{{ 'products.product.unavailable' | t }}" >
                             {% endif %}
                           </div>
-						  <div class="col-6">
-                            {% if section.settings.display_product_detail_share %}
-  <!--                             <a class="icon-share" href="javascript:void(0)">{% render 'icon-share' %}</a> -->
-                            {% endif %}
-                            {% if section.settings.enable_payment_button and current_variant.available %}
-                            {{ form | payment_button }}
-                            {% endif %}
-                          </div>
+						
                         </div>
 
 

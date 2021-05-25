@@ -210,6 +210,15 @@
 {% comment %} sc_discountbox include {% endcomment %}
 {% include 'sc-discount-app' %}
 {% comment %} end of sc_discountbox include {% endcomment %}
-
+<script type="text/javascript">
+  (function() {
+    window.scThemeConfig = {
+      cartDiscountSelector: { path: '.order-summary-container', type: 1 },
+      ajaxDicountSelector: { path: '#dropdown-cart .summary', type: 0 },
+      cartTotalSelector: { path: '.saso-cart-original-total .price', type: 0 },
+      ajaxTotalSelector: { path: '#dropdown-cart .summary .total .price', type: 0 },
+    };
+  })();
+</script>
 </body>
 </html>

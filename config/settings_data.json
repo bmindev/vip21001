@@ -3,7 +3,7 @@
     "layout_body": "full",
     "bg_body_boxed": "#f8f8f8",
     "header_layout": "04",
-    "list_collections_layout": "collections_01_grid",
+    "list_collections_layout": "collections_02_list",
     "category_layout": "default",
     "product_layout": "default",
     "blog_layout": "default",
@@ -1160,7 +1160,7 @@
       "recently-viewed-products": {
         "type": "recently-viewed-products",
         "settings": {
-          "display_recently_viewed_products": true,
+          "display_recently_viewed_products": false,
           "recently_viewed_products_title": "Recently Viewed Products",
           "number_of_recently_viewed_products": "10"
         }
@@ -1599,7 +1599,7 @@
           "display_collection_image": true,
           "display_collection_des": true,
           "limited_view": true,
-          "view_as_enable": true,
+          "view_as_enable": false,
           "sort_enable": true,
           "collection_results_per_row": "4",
           "collection_results_per_page": "24"
@@ -3792,6 +3792,29 @@
           "margin_bottom_mb": 40,
           "margin_bottom_tab": 40,
           "margin_bottom": 50
+        }
+      },
+      "list-collections-03-template": {
+        "type": "list-collections-03-template",
+        "settings": {
+          "list_collection_results_per_row": "3",
+          "style_categories": "style_show_all"
+        }
+      },
+      "list-collections_mansory-template": {
+        "type": "list-collections_mansory-template",
+        "settings": {
+          "list_collection_results_per_row": "2",
+          "list_collection_title_size": "20",
+          "style_categories": "style_show_all"
+        }
+      },
+      "list-collections-02-template": {
+        "type": "list-collections-02-template",
+        "settings": {
+          "list_collection_title_size": "30",
+          "style_categories": "style_show_all",
+          "bg_color": "#fafafa"
         }
       }
     },

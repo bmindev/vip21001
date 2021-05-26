@@ -1,5 +1,5 @@
 <style>
-  .product-label{ top: 6px; right: 6px; }
+  .product-label{ top: 6px; right: 6px; z-index: 1; }
  
     .quickview-button:hover{ color: #91CBC7; }
   
@@ -10,7 +10,7 @@
   
   .product-item .action{ margin-left: 0; margin-right: 0; max-width: none; width: 65%; }
   .product-item .wishlist { margin-left: 1rem; margin-bottom: 0; }
-  .product-hover-overlay{ background-color: rgba(255,255,255,0.8) ; visibility: hidden; border: 1px solid #161616; border-radius: 8px;
+  .product-hover-overlay{ background-color: rgba(255,255,255,0.85) ; visibility: hidden; border: 1px solid #161616; border-radius: 8px;
     position: absolute;
     z-index: 2;
     top: 0;
@@ -48,4 +48,5 @@
     border-radius: 7px;
     padding: 12px 20px;
   }
+  .products-grid .grid-item:not(.grid-item-mansory) .product-image{ padding: 1rem; } 
 </style>

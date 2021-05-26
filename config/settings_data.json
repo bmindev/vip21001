@@ -136,7 +136,7 @@
     "popular_products_search_title": "Popular Products",
     "popular_products_collection": "new-in",
     "popular_products_limit": 3,
-    "display_popup_newsletter": true,
+    "display_popup_newsletter": false,
     "when_to_show": "all_the_time",
     "popup_newsletter_expire": "2",
     "popup_newsletter_delay": "20",
@@ -2138,7 +2138,7 @@
       "GDPR-modal": {
         "type": "GDPR-modal",
         "settings": {
-          "display_gdpr": true,
+          "display_gdpr": false,
           "show_gdp": "left",
           "bg_color": "#141414",
           "text_color": "#ffffff",

@@ -36,7 +36,7 @@ var boostPFSTemplate = {
 											'<div class="product-des abs-center">' +
 												'{{itemWishlist}}' +
 												'{{itemAddToCart}}' +
-												'{{itemReviews}}' +
+												
 											'</div>' +
 											'<div class="product-des abs-bottom">' +
 												'{{itemSizeSwatches}}' +

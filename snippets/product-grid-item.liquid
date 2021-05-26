@@ -33,8 +33,10 @@
 -%}
 
 <div class="inner product-item{% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %}" data-product-id="product-{{ product.id }}" data-json-product='{"id": {{product.id}},"handle": "{{product.handle}}","media": {{product.media | json}},"variants": {{ product.variants | json }}}'>
-  <div class="inner-top">
+  <div class="inner-top position-relative">
+   
     <div class="product-top">
+       <div class="product-hover-overlay"></div>
       <div class="product-image{% if product.images.size > 1 and settings.image_swap %} image-swap{% endif %}">
         <a href="{{ product.url | within: collection }}" class="product-grid-image adaptive_height" data-collections-related="{{ routes.collections_url }}/{{collection.handle}}?view=related" {% unless settings.product_image_resize %}style="padding-top: {{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100 }}%"{% endunless %}>
           {% render 'image-size', product: product, img: url %}
@@ -44,9 +46,7 @@
       {% render 'product-label' with product as product, serial: serial %}
 
       {% comment %} Use for productGrid {% endcomment %}
-      <div class="product-hover-overlay">
-      
-      </div>
+
       <div class="product-des abs-center">
         {% if settings.display_item_size %}
         <div class="hover-sizes">

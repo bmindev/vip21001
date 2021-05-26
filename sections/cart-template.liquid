@@ -399,16 +399,17 @@
   .sc_simple-container .sc_code-btn input[type=button], button#dcodeSubmit { font-size: 14px;  font-weight: 600;
     width: 25%;
     padding: 0.7rem;
-    background: #169A8E;
+   
     color: white;
     border: 0;
     border-radius: 7px;
+    border-color: rgb(58, 132, 223) !important;
 }
   
    .cart-form .total .label span, .dcode-total-label{ font-size: 16px !important; font-weight: 700; } 
   .cart-template .wrapper-cart-template .input-full{font-size: 14px; }
   .cart-form .total{ flex-wrap: wrap; }
-  .cart-template .wrapper-cart-template .add-comments span, input[type="checkbox"]+label, .checkbox-group a{ font-size: 16px;}
+  .cart-template .wrapper-cart-template .add-comments span, input[type="checkbox"]+label, .checkbox-group a{ font-size: 16px; color: #161616;}
   
   .cart-form .total span.saso-cart-original-total .price, .dcodeTotalValue .dcode-total-value{ color: #E50A19; text-align: right; font-size: 18px; font-weight: 700;}
   
@@ -440,6 +441,13 @@
   
     margin-top: 0 !Important;
   }
+  
+  .scDiscount{ font-family: 'Montserrat', sans-serif; } 
+  .scDiscount.scright>div>div {
+    display: flex;
+    flex-direction: column-reverse;
+}
+  
   .cart-template .right-col .dcodeTable{ width: 100%; max-width: none; }
   .cart-template .right-col  .dcodeTable td { width: 100%; }
  

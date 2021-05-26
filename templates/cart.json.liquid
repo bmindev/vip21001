@@ -35,11 +35,11 @@
           </span> 
         </div>
         
-        <div class="btn-actions">
-          <a class="btn btn-continue sa" {% if settings.redirect_button == 'go_back' %}href="javascript:void(0)" onclick="window.history.back();"{% elsif settings.redirect_button == 'link_to' %} href="{{ settings.link_to_redirect }}"{% else %}href="javascript:void(0)" id="reload_page1"{% endif %} {% if settings.enable_multilang %}data-translate="cart.ajax_cart.continue_shopping"{% endif %}>
+        <div class="btn-actions my-3">
+          <a class="btn cta-btn btn-continue sa" {% if settings.redirect_button == 'go_back' %}href="javascript:void(0)" onclick="window.history.back();"{% elsif settings.redirect_button == 'link_to' %} href="{{ settings.link_to_redirect }}"{% else %}href="javascript:void(0)" id="reload_page1"{% endif %} {% if settings.enable_multilang %}data-translate="cart.ajax_cart.continue_shopping"{% endif %}>
             {{ 'cart.ajax_cart.continue_shopping' | t }}
           </a>
-          <a class="btn btn-view-cart" href="{{ routes.cart_url }}" {% if settings.enable_multilang %}data-translate="cart.general.view_cart"{% endif %}>
+          <a class="btn cta-btn btn-view-cart" href="{{ routes.cart_url }}" {% if settings.enable_multilang %}data-translate="cart.general.view_cart"{% endif %}>
             {{ 'cart.general.view_cart' | t }}
           </a>
 
@@ -78,15 +78,15 @@
       </div>
       <ul class="cart-list">
         {% for item in cart.items %}
-        <li data-product-id="{{ item.variant.id }}">
-          <div class="details"> 
-            <div class="cart-thumb">
+        <li class="flex-wrap" data-product-id="{{ item.variant.id }}">
+          <div class="w-100 details row justify-content-between align-items-center"> 
+            <div class="cart-thumb col-3">
               <a class="product-img" href="{{ item.url }}">
                 <img src="{{ item | img_url: '160x' }}"  alt="{{ item.title | escape }}" />
               </a>
             </div>
 
-            <div class="cart-title">
+            <div class="cart-title col-9">
               <a href="{{ item.url }}" class="product-name">
                 {% render 'multilang' with item.product.title %}
               </a>
@@ -101,9 +101,9 @@
                 <small>
                   {{ item.variant.title }}
                 </small>
-                <a href="JavaScript:void(0);" class="product-details__edit" data-cart-edit aria-label="link" data-url="{{item.url}}&view=cart_edit" data-id="{{item.id}}" data-quantity="{{ item.quantity }}">
+<!--                 <a href="JavaScript:void(0);" class="product-details__edit" data-cart-edit aria-label="link" data-url="{{item.url}}&view=cart_edit" data-id="{{item.id}}" data-quantity="{{ item.quantity }}">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 48 48" width="144px" height="144px"><path d="M 10.5 6 C 7.468 6 5 8.468 5 11.5 L 5 36 C 5 39.309 7.691 42 11 42 L 22.605469 42 C 22.858469 41.042 23.225516 39.759 23.728516 38 L 11 38 C 9.897 38 9 37.103 9 36 L 9 16 L 39 16 L 39 22.521484 C 39.427 22.340484 39.8615 22.188422 40.3125 22.107422 C 40.7065 22.036422 41.102859 21.992953 41.505859 22.001953 C 42.015859 22.001953 42.515 22.067641 43 22.181641 L 43 11.5 C 43 8.468 40.532 6 37.5 6 L 10.5 6 z M 13.5 20 A 1.50015 1.50015 0 1 0 13.5 23 L 15.5 23 A 1.50015 1.50015 0 1 0 15.5 20 L 13.5 20 z M 21.5 20 C 20.672 20 20 20.671 20 21.5 C 20 22.329 20.672 23 21.5 23 L 34.5 23 C 35.328 23 36 22.329 36 21.5 C 36 20.671 35.328 20 34.5 20 L 21.5 20 z M 41.498047 24 C 41.224047 24.001 40.946969 24.025172 40.667969 24.076172 C 39.783969 24.235172 38.939563 24.696156 38.226562 25.410156 L 26.427734 37.208984 C 26.070734 37.565984 25.807969 38.011141 25.667969 38.494141 L 24.097656 43.974609 C 24.025656 44.164609 23.993 44.365406 24 44.566406 C 24.013 44.929406 24.155594 45.288406 24.433594 45.566406 C 24.710594 45.843406 25.067688 45.986 25.429688 46 C 25.630688 46.007 25.834391 45.975344 26.025391 45.902344 L 31.505859 44.332031 C 31.988859 44.192031 32.431062 43.930266 32.789062 43.572266 L 44.589844 31.773438 C 45.303844 31.060437 45.764828 30.216031 45.923828 29.332031 C 45.973828 29.053031 45.997047 28.775953 45.998047 28.501953 C 46.001047 27.307953 45.540687 26.179312 44.679688 25.320312 C 43.820687 24.460313 42.692047 23.998 41.498047 24 z M 13.5 26 A 1.50015 1.50015 0 1 0 13.5 29 L 15.5 29 A 1.50015 1.50015 0 1 0 15.5 26 L 13.5 26 z M 21.5 26 C 20.672 26 20 26.671 20 27.5 C 20 28.329 20.672 29 21.5 29 L 31.808594 29 L 34.779297 26.027344 C 34.688297 26.010344 34.596 26 34.5 26 L 21.5 26 z M 13.5 32 A 1.50015 1.50015 0 1 0 13.5 35 L 15.5 35 A 1.50015 1.50015 0 1 0 15.5 32 L 13.5 32 z M 21.5 32 C 20.672 32 20 32.671 20 33.5 C 20 34.329 20.672 35 21.5 35 L 25.808594 35 L 28.808594 32 L 21.5 32 z"/></svg>
-                </a>
+                </a> -->
                 {% endunless %}
                 {% endif %}
               </div>
@@ -123,41 +123,44 @@
                 {% endfor %}
               </div>
               {% endif %}
+              <div class="cart-price p-0">
+                <div class="price-box ">
+                      <span>
+                        {{ item.price | money }}
+                      </span>
+                    </div>
+              	</div>
+                <div class="d-flex w-100 align-items-center mt-3">           
+
+                  <div class="cart-quantity p-0">
+                    <div class="qty-group  mr-4">
+                      <a href="#" data-minus-quantity-cart class="minus button"></a>
+                      <input type="text" data-qtt-id="quantity__{{ product.id }}" data-quantity-input name="quantity" value="{{ item.quantity }}"{% if item.variant.inventory_quantity <= item.quantity %} disabled{% endif %}>
+                      <a href="#" data-plus-quantity-cart class="plus button{% if item.variant.inventory_quantity == item.quantity %} disabled{% endif %}"></a>
+                    </div>
+                  </div>
+
+      <!--             <div class="cart-line-price">
+                    <div class="price-box">
+                      <span>
+                        {{ item.line_price | money }}
+                      </span>
+                    </div>
+                  </div>                     -->
+
+                  <div class="cart-remove cart-cta">
+                    <a href="{{ routes.cart_url }}/change?line={{ forloop.index }}&amp;quantity=0" title="Remove this item" data-id="{{ item.id }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12.134" height="12.134" viewBox="0 0 12.134 12.134">
+                          <path id="close_1_" data-name="close (1)" d="M8.069,6.068l3.754-3.754a1.061,1.061,0,0,0,0-1.5l-.5-.5a1.061,1.061,0,0,0-1.5,0L6.068,4.066,2.314.311a1.061,1.061,0,0,0-1.5,0l-.5.5a1.061,1.061,0,0,0,0,1.5L4.066,6.068.312,9.821a1.061,1.061,0,0,0,0,1.5l.5.5a1.061,1.061,0,0,0,1.5,0L6.068,8.069l3.754,3.754a1.061,1.061,0,0,0,1.5,0l.5-.5a1.061,1.061,0,0,0,0-1.5Zm0,0" fill="#e50a19"/>
+                      	</svg> Remove
+                    </a>
+                  </div>
+                </div>
               
+         
             </div>
           </div>
-          
-          <div class="flex_row">           
-            <div class="cart-price">
-              <div class="price-box">
-                <span>
-                  {{ item.price | money }}
-                </span>
-              </div>
-            </div>
-
-            <div class="cart-quantity">
-              <div class="qty-group">
-                <a href="#" data-minus-quantity-cart class="minus button"></a>
-                <input type="text" data-qtt-id="quantity__{{ product.id }}" data-quantity-input name="quantity" value="{{ item.quantity }}"{% if item.variant.inventory_quantity <= item.quantity %} disabled{% endif %}>
-                <a href="#" data-plus-quantity-cart class="plus button{% if item.variant.inventory_quantity == item.quantity %} disabled{% endif %}"></a>
-              </div>
-            </div>
-
-            <div class="cart-line-price">
-              <div class="price-box">
-                <span>
-                  {{ item.line_price | money }}
-                </span>
-              </div>
-            </div>                    
-
-            <div class="cart-remove">
-              <a href="{{ routes.cart_url }}/change?line={{ forloop.index }}&amp;quantity=0" title="Remove this item" data-id="{{ item.id }}">
-                {% render 'icon-close' %}
-              </a>
-            </div>
-          </div>
+  
         </li>
         {% endfor %}
       </ul>
@@ -199,3 +202,40 @@
         inputTrigger.trigger('click');
     });
 </script>
+<style>
+  
+  .cart-popup-content .product-name, .product-title{ font-size: 14px; }
+  .cart-popup-content .cart-form .cart-list .cart-thumb img{ width: 95%; margin: 0 auto; } 
+  .cart-popup-content .cart-form .cart-cta a{color: #161616; display: inline-flex; border: 1px solid #161616; width: auto; font-size: 16px; font-weight: 600; font-style: normal; text-transform: uppercase; padding: 1.6rem 2rem; border-radius: 8px; }
+  .cart-popup-content .cart-form .cart-cta a svg{ stroke: none; top: 0; padding-right: 8px; }
+ 
+ .cart-popup-content .qty-group{ max-width: 165px; border-radius: 8px;  border-color: #161616 !important;  }
+  .cart-popup-content .shopify-product-form label{ font-size: 14px; color: #161616; font-weight: 600; }
+ .cart-popup-content .qty-group, .product-shop .qty-group .button.minus, .product-shop .qty-group .button.plus{ border-color: #161616; }
+ .cart-popup-content .qty-group .button:before, .qty-group .button:after, .qty-group .button:before, .qty-group .button:after{ background-color:#161616;  }
+  .cart-popup-content .qty-group input[name="quantity"], .product-shop .qty-group input[name="group_quantity"]{ font-size: 20px; font-weight: 700; }
+  .qty-group .button{ height: 38px; }
+  
+  .cart-popup-content .qty-group .plus.button{ border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-color: #161616; } 
+  .cart-popup-content .qty-group .minus.button{ border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-color: #161616;}
+  
+  .cart-popup-content .qty-group .button{ height: 38px; width: 42px; background: #E2E3E5; }
+  
+    .cart-popup-content .cart-form .cart-price .price-box {
+      font-size: 16px !important;
+      font-style: normal;
+      font-weight: 600;
+    
+      color: #E50219;
+  }
+  .cart-form .box-title{  color: #161616; font-weight: 600; }
+  .checkbox-group label{ color: #161616; font-size: 14px; }
+   .checkbox-group a{  color: #161616 !important;;  font-size: 14px !important; }
+  .ajax-success-modal .cart-popup-content .cart-des{ margin-bottom: 10px; }
+  .cart-popup-coll-related .widget-title .box-title{   color: #E50219; }
+  .cart-popup-content .cart-form .total .label{ color: #161616; font-size: 18px !important; font-weight: 600; }
+  .cart-popup-content .cart-form .total .price{ color: #161616; font-size: 18px !important; font-weight: 600; }
+  .cart-popup-content .btn-actions a.btn.cta-btn{  padding: 0.7rem  !important; border-color: #3a84df !important; }
+  .cart-popup-content .btn-actions a.btn.cta-btn:hover{  border-color: #161616 !important; background-color: #fff; color: #000;  } 
+  .cart-popup-content .btn-actions a.btn.btn-checkout{ padding: 0.7rem  !important; }
+</style>

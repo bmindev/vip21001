@@ -127,10 +127,10 @@
           {% endif %}
         {% endif %}
       </div>
-
-      {% if settings.display_item_swatch %}
+		
+<!--       {% if settings.display_item_swatch %}
       {% render 'item-swatch', product: product, option_color_swatch: option_color_swatch, downcased_option: option_name, product_option: product_option, index: index %}
-      {% endif %}
+      {% endif %} -->
     </div>
 
     {% comment %} Use for productList {% endcomment %}
@@ -187,10 +187,10 @@
         {% endif %}
       </div>
 
-      {% if settings.display_item_swatch %}
+<!--       {% if settings.display_item_swatch %}
       {% render 'item-swatch', product: product, option_color_swatch: option_color_swatch, downcased_option: option_name, product_option: product_option, index: index %}
       {% endif %}
-
+ -->
       {% if settings.display_button %}
       <div class="action">
         {% render 'add-to-cart-form', product: product, sold_out: sold_out, id: 'list-product-form', list: 'list', position: position, sectionId: sectionId %}

@@ -29,7 +29,7 @@
     "enable_hover_product_image": true,
     "use_color_swatch": true,
     "option_color_swatch": "Color",
-    "color_swatch_style": "variant",
+    "color_swatch_style": "normal",
     "enable_checkbox": true,
     "checkbox_text": "I agree with the",
     "terms_conditions_content": "<p><strong>What is Lorem Ipsum?<\/strong><\/p><p><\/p><p><strong>Lorem Ipsum<\/strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#x27;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br\/><strong>Why do we use it?<\/strong><br\/>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#x27;Content here, content here&#x27;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#x27;lorem ipsum&#x27; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).<\/p>",
@@ -2402,7 +2402,7 @@
           "color_banner_button": "#232323",
           "bg_color_box_style_2": "#ffffff",
           "border_color_box_style_2": "#bcbcbc",
-          "featured_products_title": "New Lanches",
+          "featured_products_title": "New Launches",
           "featured_products_des": "",
           "featured_products_text_link": "",
           "color_text_link": "#3e45a3",
@@ -2983,7 +2983,7 @@
           "color_wrapper": "#202020",
           "bg_color_content": "#ffffff",
           "border_color_content": "#bcbcbc",
-          "height_img": "450px",
+          "height_img": "522px",
           "enable_sub": false,
           "sub_title": "Jump to:"
         }
@@ -3782,7 +3782,7 @@
         "type": "home-new-arrivals",
         "settings": {
           "layout": "default",
-          "new_arrivals_title": "Combo Offerrs",
+          "new_arrivals_title": "Combo Offers",
           "new_arrivals_des": "",
           "title_style": "style_2",
           "view_all": "",
@@ -3821,7 +3821,7 @@
               "title": "Special Offers",
               "des": "Sale up to 60% off on selected items. End ins:",
               "countdown": "2020\/01\/7 0:0:00",
-              "color": "#fff"
+              "color": "#ffffff"
             }
           }
         },

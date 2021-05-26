@@ -52,7 +52,7 @@ var boostPFSTemplate = {
 											'<a class="product-title" href="{{itemUrl}}">{{itemTitleMultilang}}</a>' +
 											'<div class="price-box">{{itemPrice}}</div>' +
 											'<a href="{{itemUrl}}" style="text-decoration: none;"></a>' +
-											'{{itemColorSwatches}}' +
+										
 										'</div>' +
 										// Product Detail
 										'<div class="product-details">' +

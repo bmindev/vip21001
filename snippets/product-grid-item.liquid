@@ -80,11 +80,57 @@
         </a>
         {% endif %}
       </div>
+         
+<!--       <div class="wrapper-compare">
+        {% if settings.show_vendor %}
+          <div class="product-vendor">
+            {{ product.vendor | link_to_vendor }}
+          </div>
+        {% endif %}
+        {% if settings.enable_compare_product and template == 'collection' %}
+          {% render 'compare-product' with product as product %}
+        {% endif %}
+      </div> -->
+
+      <a class="product-title {% if select != blank %}change-text{% endif %}" href="{{ product.url | within: collection }}">
+        {% render 'multilang' with product.title %}
+<!--         {% if select != blank %}<span data-change-title> - {{ select }}</span>{% endif %} -->
+      </a>
+
+      <div class="price-box">
+        {% if on_sale %}
+        <div class="price-sale">
+          {% if settings.enable_quick_shop %}
+            <span class="old-price" data-compare-price-grid>{{ product.variants[0].compare_at_price | money }}</span>
+            <span class="special-price" data-price-grid>{{ product.variants[0].price | money }}</span>
+          {% else %}
+            <span class="old-price" >{{ product.compare_at_price_min | money }}</span>
+            <span class="special-price">
+              {% if product.price_varies %}{% render 'varies_from' %}{% endif %}{{ product.price_min | money }}
+            </span>
+          {% endif %}
+        </div>
+        {% else %}
+          {% if settings.enable_quick_shop %}
+          <div class="price-regular">
+            <span data-price-grid>{{ product.variants[0].price | money }}</span>
+          </div>
+          {% else %}
+          <div class="price-regular">
+            <span>{% if product.price_varies %}{% render 'varies_from' %}{% endif %}{{ product.price_min | money }}</span>
+          </div>
+          {% endif %}
+        {% endif %}
+      </div>
+		
+<!--       {% if settings.display_item_swatch %}
+      {% render 'item-swatch', product: product, option_color_swatch: option_color_swatch, downcased_option: option_name, product_option: product_option, index: index %}
+      {% endif %} -->
     
     </div>
 
     {% comment %} Use for productGrid {% endcomment %}
-    <div class="product-bottom">
+    <div class="product-bottom" style="display: none;">
       
       <div class="wrapper-compare">
         {% if settings.show_vendor %}
@@ -132,6 +178,8 @@
       {% render 'item-swatch', product: product, option_color_swatch: option_color_swatch, downcased_option: option_name, product_option: product_option, index: index %}
       {% endif %} -->
     </div>
+    
+    
 
     {% comment %} Use for productList {% endcomment %}
     <div class="product-details">

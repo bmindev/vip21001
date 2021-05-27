@@ -32,9 +32,9 @@
         compareArr = JSON.parse(localStorage.getItem('compareArr'));
     };
 
-    $('#cart-wishlist').click(function(){
+    $('#cart-wishlist a').click(function(){
 		
-       $(this).parent().find(".cart-cta .remove").trigger("click");
+       $(this).parent().parent().find(".cart-cta .remove").trigger("click");
       
     })  
   

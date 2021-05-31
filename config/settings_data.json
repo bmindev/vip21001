@@ -2156,7 +2156,7 @@
             "type": "image",
             "settings": {
               "dpl_slide_img": true,
-              "image_slide": "shopify:\/\/shop_images\/Group_2953_654e43c7-aa96-4ace-afe6-7742d2af5b42.png",
+              "image_slide": "shopify:\/\/shop_images\/slider-1_8be3842a-bb46-481c-ace5-86aeb001c533.png",
               "style_content": "style_1",
               "alignment": "right",
               "text_alignment": "right",
@@ -2206,7 +2206,7 @@
             "type": "image",
             "settings": {
               "dpl_slide_img": true,
-              "image_slide": "shopify:\/\/shop_images\/Group_2951_1.png",
+              "image_slide": "shopify:\/\/shop_images\/slider-3_61712a8c-3896-4cd3-af70-7bcfd0864d02.png",
               "style_content": "style_1",
               "alignment": "right",
               "text_alignment": "center",
@@ -2256,7 +2256,7 @@
             "type": "image",
             "settings": {
               "dpl_slide_img": true,
-              "image_slide": "shopify:\/\/shop_images\/Mask_Group_93.png",
+              "image_slide": "shopify:\/\/shop_images\/slider-2.png",
               "style_content": "style_1",
               "alignment": "left",
               "text_alignment": "center",
@@ -2340,7 +2340,7 @@
           "1540984915288-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Group_3093.png",
+              "image": "shopify:\/\/shop_images\/Group_3092.png",
               "title": "",
               "color_title": "#ffffff",
               "link": "shopify:\/\/collections"
@@ -2349,7 +2349,7 @@
           "1540984915288-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Group_2873.png",
+              "image": "shopify:\/\/shop_images\/Group_2873_cd18781d-a765-4f08-99cb-7cd2b8d0c219.png",
               "title": "",
               "color_title": "#ffffff",
               "link": "shopify:\/\/collections"
@@ -2358,7 +2358,7 @@
           "1540985049803": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Group_34010.png",
+              "image": "shopify:\/\/shop_images\/Group_3533.png",
               "title": "",
               "color_title": "#ffffff",
               "link": "shopify:\/\/collections"

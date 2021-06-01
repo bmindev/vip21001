@@ -1,89 +1,3 @@
-
-<!-- BEGIN USF -->
-{% case section.settings.collection_results_per_row %}
-{% when '1' %}
-    {%- assign grid_item_width = 'col-12' -%}
-	{%- assign rows = 'products-list' -%}
-
-  {% when '2' %}
-    {%- assign grid_item_width = 'col-6' -%}
-	{%- assign rows = 'products-grid' -%}
-
-  {% when '3' %}
-    {%- assign grid_item_width = 'col-6 col-md-4' -%}
-	{%- assign rows = 'products-grid' -%}
-
-  {% when '4' %}
-    {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3' -%}
-	{%- assign rows = 'products-grid' -%}
-
-  {% when '5' %}
-    {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col5' -%}
-	{%- assign rows = 'products-grid' -%}
-{% endcase %}
-
-{% capture default_grid %}
-{% if cart.attributes.pagination != blank and cart.attributes.pagination %}
-{% assign product_per_page = cart.attributes.pagination %}
-{% else %}
-{% assign product_per_page = section.settings.collection_results_per_page %}
-{% endif %}
-
-{% paginate collection.products by product_per_page %}
-  <div class="product-collection {{ rows }} row">
-    {% if collection.products_count > 0 %}  
-    {% for product in collection.products %}
-    <div class="grid-item {{ grid_item_width }} {% if settings.product_image_border%}grid-item-border {% endif %}">   
-      {% include 'product-grid-item' %}
-    </div>
-    {% endfor %}
-    {% else %}
-    <p class="col-12 text-center" {% if settings.enable_multilang %}data-translate="collections.general.no_matches"{% endif %}>
-      {{ 'collections.general.no_matches' | t }}
-    </p>
-    {% endif %}
-  </div>
-{%- endpaginate -%} 
-{% endcapture %}
-
-
-
-<script>
-  	window._usfSectionSettings  = { 
-      show_banner_1: {{section.settings.show_banner_1 | json}},
-      link_banner_1: {{section.settings.link_banner_1 | json}},
-      img_banner1: {{section.settings.img_banner1 | json}},
-      show_banner_2: {{section.settings.show_banner_2 | json}},
-      link_banner_2: {{section.settings.link_banner_2 | json}},
-      img_banner2: {{section.settings.img_banner2 | json}},
-      show_banner_3: {{section.settings.show_banner_3 | json}},
-      link_banner_3: {{section.settings.link_banner_3 | json}},
-      img_banner3: {{section.settings.img_banner3 | json}},
-      show_banner_4: {{section.settings.show_banner_4 | json}},
-      link_banner_4: {{section.settings.link_banner_4 | json}},
-      img_banner4: {{section.settings.img_banner4 | json}},
-    }
-    
-    window._usfGlobalSettings = {
-      type_label_sale: {{settings.type_label_sale|  json}},
-      enable_quick_view: {{settings.enable_quick_view|  json}},
-      product_image_border: {{settings.product_image_border|  json}},
-      image_swap: {{settings.image_swap|  json}},
-      show_vendor: {{settings.show_vendor|  json}}
-    }
-    window.collectionLayout = 'default';
-  	window.grid_item_width = {{grid_item_width | json}}
-    window.rows = {{rows|json}}
-</script>
-<div data-section-id="{{ section.id }}" data-section-type="collection-template">
-  {% include 'collection-header' %}
-  
-  {% include 'toolbar' %}
-  <div id="usf_container"></div>
-</div>
-<!-- END USF -->
-
-{% comment %}USF
 {% if cart.attributes.pagination != blank and cart.attributes.pagination %}
 {% assign product_per_page = cart.attributes.pagination %}
 {% else %}
@@ -149,8 +63,6 @@
 {% endpaginate %}   
 
 
-
-USF{% endcomment %}
 {% schema %}
   {
     "name": "Collection Default",

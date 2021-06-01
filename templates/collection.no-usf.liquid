@@ -1,0 +1,35 @@
+{% if settings.category_layout == "default" %} 
+
+	{% render 'collection-default-no-usf' %}
+
+{% elsif settings.category_layout == "right_sidebar" %}
+
+	{% render 'collection-right-sidebar-no-usf' %}
+
+{% elsif settings.category_layout == "full_with" %}
+
+	{% render 'collection-fullwidth-no-usf' %}
+
+{% elsif settings.category_layout == "with_banner" %}
+
+	{% render 'collection-with-banner-no-usf' %}
+
+{% elsif settings.category_layout == "mansory" %}
+
+	{% render 'collection-mansory-no-usf' %}
+
+{% elsif settings.category_layout == "express_order" %}
+
+	{% render 'collection-express-order-no-usf' %}
+
+{% elsif settings.category_layout == "no_sidebar" %}
+
+	{% render 'collection-no-sidebar-no-usf' %}
+
+{% elsif settings.category_layout == "skin_1" %}
+
+	{% render 'collection-skin-1' %}
+	{% unless settings.layout_style == 'layout_style_flower' %}
+		{% section 'home-custom-block-spotlight' %}
+	{% endunless %}
+{% endif %}

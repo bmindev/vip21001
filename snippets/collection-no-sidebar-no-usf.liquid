@@ -1,35 +1,5 @@
-
-<!-- BEGIN USF -->
-
-<div class="collection-template collection-template-no-sidebar">
-    <div class="container">
-        {% include 'breadcrumb' %}
-    </div>
-
-    <div class="halo-collection-content">
-        <div class="bg-header-page">
-            <div class="container">
-                <div class="page-header text-center">
-                    <h1>
-                        {% include 'multilang' with collection.title %}
-                    </h1>
-                </div>
-            </div>            
-        </div>
-
-     
-        <div class="container">
-            {% section 'collection-template-no-sidebar' %}
-
-            {% section 'recently-viewed-products' %}
-        </div>        
-    </div>
-</div>
-<!-- END USF -->
-
-{% comment %}USF
 {% if settings.layout_style == 'layout_style_fullwidth' %}
-<div class="collection-template collection-template-no-sidebar">
+<div class="collection-template collection-template-no-sidebar-no-usf">
     {% section 'collection-header' %}
     <div class="container">
         {% render 'breadcrumb' %}
@@ -41,13 +11,13 @@
             </div>
         </div>
         <div class="container">
-            {% section 'collection-template-no-sidebar' %}
+            {% section 'collection-template-no-sidebar-no-usf' %}
         </div>        
     </div>
     {% section 'home-custom-block-baner' %}
 </div>
 {% else %}
-<div class="collection-template collection-template-no-sidebar">
+<div class="collection-template collection-template-no-sidebar-no-usf">
     <div class="container">
         {% render 'breadcrumb' %}
     </div>
@@ -70,7 +40,7 @@
         </div>
 
         <div class="container">
-            {% section 'collection-template-no-sidebar' %}
+            {% section 'collection-template-no-sidebar-no-usf' %}
 
             {% if settings.style_product_grid == 'style_product_grid_2' %}
               {% section 'recently-viewed-products-skin-1170' %}
@@ -83,4 +53,3 @@
     </div>
 </div>
 {% endif %}
-USF{% endcomment %}

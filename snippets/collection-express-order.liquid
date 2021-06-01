@@ -1,3 +1,27 @@
+
+<!-- BEGIN USF -->
+<div class="collection-template collection-template-express-order translate-filter-pc">
+    <div class="reverse-mb">
+        {% section 'collection-header' %}
+        
+        <div class="container-fluid">
+            {% include 'breadcrumb' %}
+        </div>
+    </div>
+        
+    <div class="container-fluid">
+        <div class="halo-collection-content">
+            <div class="row">        
+                {% section 'collection-template-express-order' %}
+            </div>
+            
+            {% section 'recently-viewed-products' %}
+        </div>   
+    </div>
+</div>
+<!-- END USF -->
+
+{% comment %}USF
 <div class="collection-template collection-template-express-order translate-filter-pc">
     <div class="reverse-mb">
         {% section 'collection-header' %}
@@ -22,3 +46,4 @@
         </div>   
     </div>
 </div>
+USF{% endcomment %}

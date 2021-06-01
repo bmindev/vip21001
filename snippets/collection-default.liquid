@@ -1,3 +1,21 @@
+
+<!-- BEGIN USF -->
+<div class="collection-template collection-template-default">
+  <div class="container">
+  	{% render 'breadcrumb' %}
+    
+    <div class="halo-collection-content">
+      <div class="row">
+        {% section 'collection-template-default' %}
+      </div>
+      
+      {% section 'recently-viewed-products' %}
+    </div>   
+  </div>
+</div>
+<!-- END USF -->
+
+{% comment %}USF
 <div class="collection-template collection-template-default">
   <div class="container">
   	{% render 'breadcrumb' %}
@@ -16,3 +34,4 @@
     </div>   
   </div>
 </div>
+USF{% endcomment %}

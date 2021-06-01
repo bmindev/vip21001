@@ -54,14 +54,19 @@
               		</div>
                   
                 </div>
+                
+                {% if customer.tags contains 'oxi_social_login' %}
+                	   {% comment %} Social login will not show password {% endcomment %}       
+                {% else %}          
                 <div class="col-6">
                   <div class="form-group">
                     <label for="">PASSWORD</label>
                     <input disabled type="password" value="FakePSW" >
                   </div>
-                  <a class="d-block text-right link-blue text-underline change-password" href="#remodal_forgot_password">Change Password</a>
+                  <a class="d-block text-right link-blue text-underline change-password" href="#oxipopup_forgot_password">Change Password</a>
                  
                 </div>
+                {% endif %}
 
               </div>
               

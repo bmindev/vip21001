@@ -512,11 +512,13 @@ endfor
                                 {% endif %}
                               </div>
                           	{% else %}
-                            <div class="col-6 btn-login"> 
-                              <a class=""  href="{{ routes.account_login_url }}" {% if settings.enable_multilang %}data-translate="customer.login.login"{% endif %}>
-                                  Login
-                                </a>
-                          	</div>
+                              {% if current_variant.available %}
+                                <div class="col-6 btn-login"> 
+                                  <a class=""  href="{{ routes.account_login_url }}" {% if settings.enable_multilang %}data-translate="customer.login.login"{% endif %}>
+                                      Login
+                                    </a>
+                                </div>                              
+                              {% endif %}
                           	{% endif %}
                           {% endif %}
                             {% if section.settings.display_product_detail_share %}

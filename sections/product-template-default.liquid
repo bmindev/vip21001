@@ -513,8 +513,8 @@ endfor
                               </div>
                           	{% else %}
                               {% if current_variant.available %}
-                                <div class="col-6 btn-login"> 
-                                  <a class=""  href="{{ routes.account_login_url }}" {% if settings.enable_multilang %}data-translate="customer.login.login"{% endif %}>
+                                <div class="col-6"> 
+                                  <a class="product-login" id="product-login"  href="{{ routes.account_login_url }}" {% if settings.enable_multilang %}data-translate="customer.login.login"{% endif %}>
                                       Login
                                     </a>
                                 </div>                              

@@ -504,11 +504,21 @@ endfor
                             {% endif %}
                         </div> -->
                         <div class="groups-btn-tree row {% if section.settings.display_product_detail_share or settings.enable_wishlist %}margin-button{% endif %}">
-                          	<div class="col-6 btn-checkout"> 
-                              {% if section.settings.enable_payment_button and current_variant.available %}
-                                  {{ form | payment_button }}
-                              {% endif %}
-                            </div>
+                          {% if shop.customer_accounts_enabled %}
+                            {% if customer %}
+                             <div class="col-6 btn-checkout"> 
+                                {% if section.settings.enable_payment_button and current_variant.available %}
+                                    {{ form | payment_button }}
+                                {% endif %}
+                              </div>
+                          	{% else %}
+                            <div class="col-6 btn-login"> 
+                              <a class=""  href="{{ routes.account_login_url }}" {% if settings.enable_multilang %}data-translate="customer.login.login"{% endif %}>
+                                  Login
+                                </a>
+                          	</div>
+                          	{% endif %}
+                          {% endif %}
                             {% if section.settings.display_product_detail_share %}
   <!--                             <a class="icon-share" href="javascript:void(0)">{% render 'icon-share' %}</a> -->
                             {% endif %}

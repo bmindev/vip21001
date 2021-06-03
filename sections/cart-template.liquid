@@ -279,7 +279,10 @@
         <span class="saso-cart-total"></span>
  
       </div> -->
+      
       <div class="btn-actions">
+        {% if shop.customer_accounts_enabled %}
+      	{% if customer %}
         {% if settings.enable_checkbox %}
           <div class="checkbox-group ">
             <input class="conditions" type="checkbox" name="conditions">
@@ -296,11 +299,16 @@
         {% else %}
           <input class="btn btn-checkout bg-green " type="submit"  name="checkout" value="{{ 'cart.general.button_checkout' | t }}">
         {% endif %}
-<!--         <a class="btn btn-continue" {% if settings.redirect_button == 'go_back' %}href="javascript:void(0)" onclick="window.history.back();"{% elsif settings.redirect_button == 'link_to' %} href="{{ settings.link_to_redirect }}"{% else %}href="javascript:void(0)" id="reload_page"{% endif %}>
-          {{ 'cart.ajax_cart.continue_shopping' | t }}
-        </a> -->
+        {% else %}
+          <div class="">
+            <a class="btn"  href="{{ routes.account_login_url }}" {% if settings.enable_multilang %}data-translate="customer.login.login"{% endif %}>
+              Login
+            </a>             
+          </div>
+        {% endif %}
+        {% endif %}
         {% if additional_checkout_buttons %}
-        <div>{{ content_for_additional_checkout_buttons }}</div>
+        	<div>{{ content_for_additional_checkout_buttons }}</div>
         {% endif %}
       </div>
     </div>

@@ -122,7 +122,9 @@
         </span> 
       </div>
     </div>
-
+    
+	{% if shop.customer_accounts_enabled %}
+    {% if customer %}
     {% if settings.enable_checkbox %}
     <div class="checkbox-group mt-4">
       <input class="conditions" type="checkbox" name="conditions">
@@ -134,8 +136,7 @@
             {{ settings.terms_conditions_text_link }}
         </a>
       {% endif %}
-    </div>
-    
+    </div>   
     <div class="actions">
       <button class="btn btn-checkout show" onclick="window.location='{{ routes.cart_url | split: '/cart' | first }}/checkout'" {% if settings.enable_multilang %}data-translate="cart.general.checkout"{% endif %}>
         {{ 'cart.general.checkout' | t }}
@@ -153,6 +154,17 @@
         {{ 'cart.general.view_cart' | t }}
       </a>      
     </div>
+    {% endif %}
+    {% else %}
+      <div class="actions"> 
+        <a class="btn btn-view-cart btn-login"  href="{{ routes.account_login_url }}" {% if settings.enable_multilang %}data-translate="customer.login.login"{% endif %}>
+          Login
+        </a>
+        <a class="btn btn-view-cart" href="{{ routes.cart_url }}" {% if settings.enable_multilang %}data-translate="cart.general.view_cart"{% endif %}>
+          {{ 'cart.general.view_cart' | t }}
+      	</a>   
+      </div> 
+    {% endif %}
     {% endif %}
 
     {% unless settings.header_layout == 'default' %}
@@ -200,6 +212,7 @@
   #dropdown-cart .d-flex .text{ text-align: right; }
   #dropdown-cart .actions .btn{ font-family: 'Open Sans', sans-serif; }
   #dropdown-cart .actions .btn-checkout{ background-color: #fff !important;  border-color:  #000 !important;}
+  #dropdown-cart .actions .btn-login{ margin-right: 1rem;}
 </style>
 
 

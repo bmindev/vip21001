@@ -42,7 +42,7 @@
           <a class="btn cta-btn btn-view-cart" href="{{ routes.cart_url }}" {% if settings.enable_multilang %}data-translate="cart.general.view_cart"{% endif %}>
             {{ 'cart.general.view_cart' | t }}
           </a>
-          {% if shop.customer_accounts_enabled %}
+<!--           {% if shop.customer_accounts_enabled %}
           {% if customer %}
           {% if settings.enable_checkbox %}
             <div class="checkbox-group">
@@ -72,7 +72,7 @@
             </div> 
           {% endif %}
           {% endif %}
-          
+           -->
           {% if additional_checkout_buttons %}
           <div>{{ content_for_additional_checkout_buttons }}</div>
           {% endif %}

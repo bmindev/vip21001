@@ -42,7 +42,8 @@
           <a class="btn cta-btn btn-view-cart" href="{{ routes.cart_url }}" {% if settings.enable_multilang %}data-translate="cart.general.view_cart"{% endif %}>
             {{ 'cart.general.view_cart' | t }}
           </a>
-
+          {% if shop.customer_accounts_enabled %}
+          {% if customer %}
           {% if settings.enable_checkbox %}
             <div class="checkbox-group">
               <input class="conditions" type="checkbox" name="conditions">
@@ -62,6 +63,14 @@
              <a class="btn btn-checkout" href="{{ routes.cart_url | split: '/cart' | first }}/checkout" {% if settings.enable_multilang %}data-translate="cart.general.button_checkout"{% endif %}>
               {{ 'cart.general.button_checkout' | t }}
             </a> 
+          {% endif %}
+          {% else %}
+            <div class=""> 
+              <a class="btn cta-btn"  href="{{ routes.account_login_url }}" {% if settings.enable_multilang %}data-translate="customer.login.login"{% endif %}>
+                Login
+              </a>
+            </div> 
+          {% endif %}
           {% endif %}
           
           {% if additional_checkout_buttons %}

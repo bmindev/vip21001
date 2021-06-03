@@ -1,12 +1,12 @@
 {% case section.settings.collection_results_per_row %}
   {% when '4' %}
-    {%- assign column_size = 'col-6 col-md-4 col-lg-3' -%}
+    {%- assign column_size = 'col-6 col-md-6 mb-4 mb-lg-0 col-lg-3' -%}
     {%- assign rows = 'four-items' -%}
   {% when '5' %}
-    {%- assign column_size = 'col-6 col-md-4 col-lg-3 col5' -%}
+    {%- assign column_size = 'col-6 col-md-6 mb-4 mb-lg-0 col-lg-3 col5' -%}
     {%- assign rows = 'five-items' -%}
   {% when '6' %}
-    {%- assign column_size = 'col-6 col-md-4 col-lg-3 col-xl-2' -%}
+    {%- assign column_size = 'col-6 col-md-6 mb-4 mb-lg-0 col-lg-3 col-xl-2' -%}
     {%- assign rows = 'six-items' -%}
 {% endcase %}
 
@@ -25,7 +25,7 @@
 
     <div class="row collections-slider {{ rows }}" data-home-collections-slider data-rows="{{ section.settings.collection_results_per_row }}">
       {% for block in section.blocks %}
-      <div class="item {{ column_size }}">
+      <div class=" {{ column_size }}">
         <div class="collections-banner banner-item">
           <div class="img-box">
             {% if block.settings.image != blank %}
@@ -90,7 +90,7 @@
         #home-collections-{{section.id}}  {
             margin-bottom: {{ section.settings.margin_bottom_mb }}px;
         }
-      #home-collections-{{section.id}} .widget-title .box-title { font-size: 5rem;}
+      #home-collections-{{section.id}} .widget-title .box-title { font-size: 3.5rem;}
     }
 
     @media (min-width: 768px) and (max-width: 1199px) {
@@ -100,6 +100,10 @@
       #home-collections-{{section.id}} .widget-title .box-title { font-size: 4rem; }
     }
 
+   @media (max-width: 1199px) {
+     
+   
+   }
     @media (min-width: 1200px) {
         #home-collections-{{section.id}} .banner-title {
             font-size: {{ font_size_title }};

@@ -35,7 +35,7 @@
                         <ul>
                             {% for link in linklists[footer_linklist].links %}
                             <li>
-                            <a href="{{ link.url}}" title="{{ link.title }}" class="foot-link">
+                            <a target="_blank" href="{{ link.url}}" title="{{ link.title }}" class="foot-link">
                                 {% render 'multilang' with link.title %}
                             </a>
                             </li>

@@ -23,7 +23,7 @@
     </div>
     {% endif %}
 
-    <div class="row collections-slider {{ rows }}" data-home-collections-slider data-rows="{{ section.settings.collection_results_per_row }}">
+    <div class="row custom-collection collections-slider {{ rows }}" data-home-collections-slider data-rows="{{ section.settings.collection_results_per_row }}">
       {% for block in section.blocks %}
       <div class=" {{ column_size }}">
         <div class="collections-banner banner-item">
@@ -101,7 +101,11 @@
     }
 
    @media (max-width: 1199px) {
-     
+/*      .home-collections .custom-collection.collections-slider{
+     	flex-wrap: wrap;
+    	overflow-x: hidden;
+     } */
+     .home-collections .collections-slider .item{ margin-right: 0; }
    
    }
     @media (min-width: 1200px) {

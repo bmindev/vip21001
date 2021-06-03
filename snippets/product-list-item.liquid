@@ -77,7 +77,7 @@
       </div>
       {% endif %}
 
-      <a class="product-title" href="{{ product.url | within: collection }}">
+      <a class="product-title" href="{{ sproduct.url | within: collection }}">
         {% render 'multilang' with product.title %}
       </a>
 {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}

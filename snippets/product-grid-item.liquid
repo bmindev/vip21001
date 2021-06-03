@@ -80,7 +80,7 @@
         </a>
         {% endif %}
       </div>
-         
+     {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}    
 <!--       <div class="wrapper-compare">
         {% if settings.show_vendor %}
           <div class="product-vendor">
@@ -147,7 +147,7 @@
         {% render 'multilang' with product.title %}
 <!--         {% if select != blank %}<span data-change-title> - {{ select }}</span>{% endif %} -->
       </a>
-
+{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
       <div class="price-box">
         {% if on_sale %}
         <div class="price-sale">
@@ -178,7 +178,7 @@
       {% render 'item-swatch', product: product, option_color_swatch: option_color_swatch, downcased_option: option_name, product_option: product_option, index: index %}
       {% endif %} -->
     </div>
-    
+    {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
     
 
     {% comment %} Use for productList {% endcomment %}
@@ -193,7 +193,7 @@
         {% render 'multilang' with product.title %}
         {% if select != blank %}<span data-change-title> - {{ select }}</span>{% endif %}
       </a>
-
+{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
       {% if settings.display_product_reviews %}
       <span class="shopify-product-reviews-badge" data-id="{{ product.id }}" style="min-height: 20px; display: block; margin-bottom: 9px;"></span>
       {% endif %}

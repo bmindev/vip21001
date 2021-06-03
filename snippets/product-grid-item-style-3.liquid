@@ -129,7 +129,7 @@
       </div>
 
     </div>
-
+{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
     {% comment %} Use for productList {% endcomment %}
     {% if template contains 'collection' or check_product == true %} 
     <div class="product-details">
@@ -147,7 +147,7 @@
       {% if settings.display_product_reviews %}
       <span class="shopify-product-reviews-badge" data-id="{{ product.id }}" style="min-height: 20px; display: block; margin-bottom: 9px;"></span>
       {% endif %}
-
+{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
       <div class="short-description">
         {% if product.description contains '[countdown]' %}
         {% assign des = product.description | split:'[/countdown]' | last %}
@@ -200,3 +200,4 @@
     {% endif %}
   </div>
 </div>
+{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}

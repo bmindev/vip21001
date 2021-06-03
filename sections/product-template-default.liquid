@@ -706,7 +706,7 @@ endfor
                 {% if customer.orders_count != 0 %}
                 {% assign avgOrderValue = customer.total_spent  | divided_by: customer.orders_count | divided_by:100 %}
                 {% endif %}
-
+{% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product %}
                 <div data-section-id="46514" data-section-type="widget-box" style="padding-top: 0; padding-bottom: 0;">
                   <div id="shopify-ali-review-widget" product-id="{{ product.id }}">
                     <div class="shop_info" shop-id="55487529165" shop-name="vip-luggage2021.myshopify.com" style="display: none;">

@@ -36,10 +36,10 @@
             </div>
         </div>
         {% endif %}
-        <div class="row ">
+        <div class="row">
             {% for block in section.blocks %}
                 {% assign collection = collections[block.settings.collection] %}
-                <div class="grid-item col-4">
+                <div class="grid-item col-6 col-lg-4">
                     {% capture collection_title %}{{ collection.title | escape }}{% endcapture %}
                     <div class="collection-item">
                         <div class="img-box banner-item">
@@ -117,6 +117,9 @@
         #list-coll-{{section.id}} {
             margin-bottom: {{ section.settings.margin_bottom_mb }}px;
         }
+      .home-list-collections .grid-item:last-of-type{ max-width: 100%; width: 100%; flex: 0 0 100%; }
+      .home-list-collections .collection-item .content-box{ width: 100%; }  
+      .home-list-collections .widget-title .box-title{ font-size: 3.5rem; }
     }
 
     @media (min-width: 768px) and (max-width: 1199px) {
@@ -124,6 +127,9 @@
             margin-bottom: {{ section.settings.margin_bottom_tab }}px;
         }
       .home-list-collections .widget-title .box-title{ font-size: 5rem; }
+      .home-list-collections .grid-item:last-of-type{ max-width: 100%; width: 100%; flex: 0 0 100%; }
+      
+      
     }
 
     @media (min-width: 768px) {

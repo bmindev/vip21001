@@ -19,15 +19,20 @@
 <div class="account-page addresses-page custom-acc-page">
   <div class="modal-overlay" id="addr_modal" style="display: none;"></div>
   <div class="container">
+    <div class="breadcrumb mb-4 ">
+      <a href="/" data-translate="general.breadcrumbs.home">Home</a>  
+      <span class="arrow">
+        /
+      </span>
+      <span>My Account</span>
+	</div>
      <div class="row pt-5 mt-4 px-5 justify-content-between no-gutters">
         <div class="col-2">
           <ul class="dashboard-sidebar nav nav-pills flex-column" id="myTab" role="tablist">
             <li class="nav-item">
               <a class="nav-link" href="/account"{% if settings.enable_multilang %} data-translate="customer.account.return"{% endif %} >MY ORDERS</a>
             </li>
-             <li class="nav-item">
-              <a class="nav-link" href=" {{ routes.root_url }}apps/order-tracking">MY ORDER TRACKING</a>
-            </li>
+          
             <li class="nav-item">
               <a class="nav-link active" href="{{ routes.account_addresses_url }}">ACCOUNT DETAILS</a>
             </li>
@@ -41,7 +46,7 @@
           <div class="row">
             <div class="col-10">
             
-             <header class="page-header">
+             <header class="page-header mt-0">
                 <h1 class="address-heading mb-4" {% if settings.enable_multilang %}data-translate="customer.account.title"{% endif %}>
                   Account Information <a href="" class="link-blue text-underline">Edit</a>
                 </h1>

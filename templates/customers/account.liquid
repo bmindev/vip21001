@@ -27,8 +27,8 @@
       </span>
       <span>My Orders</span>
 	</div>
-    <div class="row pt-5 mt-4 px-5 justify-content-between no-gutters">
-        <div class="col-2">
+    <div class="row pt-5 mt-4 px-lg-5 justify-content-between no-gutters">
+        <div class="col-12 col-lg-2">
           <ul class="dashboard-sidebar nav nav-pills flex-column" id="myTab" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" href="/account"{% if settings.enable_multilang %} data-translate="customer.account.return"{% endif %} >MY ORDERS</a>
@@ -43,7 +43,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-9">
+        <div class="col-12 col-lg-9">
             <div class="tab-content">
               	<div class="tab-pane active">
               
@@ -51,31 +51,31 @@
                 <div  class="custom-account-section">
                   {% for order in customer.orders %}
                     <div class="order-container">
-                      <div class="order-header px-5" style="display:flex; justify-content:space-between; background-color:#a0e0db;">
-                        <p{% if settings.enable_multilang %}data-translate="customer.orders.order_number"{%endif%}>
-                          {{ 'customer.orders.order_number' | t }} {{ order.name }}  </p>
-                        <p{% if settings.enable_multilang %}data-translate="customer.orders.date"{%endif%}>
+                      <div class="order-header px-4 px-lg-5 py-4 py-md-2 d-flex justify-content-between flex-column flex-md-row" style="background-color:#a0e0db;">
+                        <p class="my-1" {% if settings.enable_multilang %}data-translate="customer.orders.order_number"{%endif%}>
+                          {{ 'customer.orders.order_number' | t }} {{ order.name }}  </p> 
+                        <p class="my-1" {% if settings.enable_multilang %}data-translate="customer.orders.date"{%endif%}>
                           {{ 'customer.orders.date' | t }} {{ order.created_at | date: format: 'month_day_year' }}  </p>
-                        <p><a href="{{ order.customer_url }}">View Order Details</a></p>
+                        <p class="my-1"><a href="{{ order.customer_url }}">View Order Details</a></p>
                       </div>
 
                       {% for line_item in order.line_items %} 
-                        <div class="order-information py-5" style="display:flex; justify-content:space-between;">
-                          <div class="row align-items-center">
-                            <div class="col-3">
+                        <div class="order-information pt-2 pb-5 pt-md-5 pb-md-5" style="display:flex; justify-content:space-between;">
+                          <div class="row align-items-center no-gutters">
+                            <div class="col-12 col-md-3 px-4 px-lg-0">
                                <div class="steps text-center">
                             	 <p>{{ line_item.image | img_url: '200x200' | img_tag }}</p>
                                  <div class="quantity-circle">{{ line_item.quantity }}</div>
                           		</div>
                             </div>
-                          	<div class="col-6">
+                          	<div class="col-12 col-md-6 px-4 px-lg-0">
                             	<div class="steps">
                                   <p class="product-title">{{ line_item.title }}</p>
                                   <div class="product-description">
                                   	<p>{{ line_item.product.description }}</p>
                                   </div>
                                      
-                                  <div class="d-flex cta-links my-4">
+                                  <div class="d-flex flex-column flex-xl-row cta-links my-1 my-xl-4">
                                       <p>{% if uncancellable_finance_status contains order.financial_status or uncancellable_fulfillment_status contains order.fulfillment_status or order.cancelled or order.tags contains 'cannot-cancel' %}
                                         {% else %}
                                         <a href="{{ order.order_status_url }}" aria-label="Cancel order {{ 'customer.orders.order_number_link' | t: number: order.name }}">Edit or Cancel</a>
@@ -88,14 +88,14 @@
                                       <p> <a href=" {{ routes.root_url }}apps/returns">Return & Refund</a>  </p>                    
                                       {% endif %}
                                       
-                                      <p><a href="{{ order.customer_url }}">Track Order</a></p>
+                                      <p><a href="{{ order.customer_url }}#orderStatusBar">Track Order</a></p>
                                   </div>
 
-                                  <p class="product-price">{{ line_item.price | money }}</p>            
+                                  <p class="product-price mt-2 mt-lg-0">{{ line_item.price | money }}</p>            
                               	</div>
                             </div>
-                            <div class="col-3 text-center">
-                              <div class="steps">
+                            <div class="col-12 col-md-3 text-center">
+                              <div class="steps mt-5 mt-lg-0">
                                 <p> <a class="buy-it-again-btn mx-4" href="https://app.cancellable.app/reorder/{{ shop.permanent_domain }}/{{ order.id }}">BUY IT AGAIN</a></p>
                               </div>  
                             </div>

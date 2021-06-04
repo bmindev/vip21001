@@ -16,8 +16,8 @@
 {% layout settings.customer_layout %}
 <div class="container account-page custom-acc-page">
   {% render 'breadcrumb' %}
-      <div class="row pt-5 mt-4 px-5 justify-content-between no-gutters">
-        <div class="col-2">
+      <div class="row pt-5 px-xl-5 mt-4 justify-content-between no-gutters">
+        <div class="col-12 col-lg-2">
           <ul class="dashboard-sidebar nav nav-pills flex-column" id="myTab" role="tablist">
             <li class="nav-item">
               <a class="nav-link " href="/account"{% if settings.enable_multilang %} data-translate="customer.account.return"{% endif %} >MY ORDERS</a>
@@ -32,7 +32,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-9">
+        <div class="col-12 col-lg-9">
             <div class="tab-content">
               	<div class="tab-pane active">
 <!--                     <header class="page-header">
@@ -45,7 +45,7 @@
 
                       <div class="">
                         <div class="order-details-header   no-gutters row justify-content-between align-items-start">
-                          <div class="col-8 order-details-after">
+                          <div class="col-12 col-lg-8 order-details-after">
                             <div class="d-flex justify-content-between order-details-info">
                               <div class="m-0 p-0">
                                 <p class=" border-0 mb-0" {% if settings.enable_multilang %}data-translate="customer.order.title|name:{{order.name}}"{%endif%}>{{ 'customer.order.title' | t: name: order.name }}</p>
@@ -119,36 +119,36 @@
                             </div>
                           </div>
                           
-                          <div class="col-4 text-center print-btn-container">
+                          <div class="col-12 col-lg-4 mt-5 mt-lg-0 text-lg-center print-btn-container">
                           	<a class="print-btn mb-4" type='button' id='btn-mp-print' target='_blank' href='/apps/invoice-printer/print/EWhyN3AkM3PkRUEePedo/{{ order.id | times: 354 }}'>Download Invoice</a>
                            	<div class="invoice-details"> 
-                              <div class="row ml-5 mr-3 mb-3">
+                              <div class="row ml-lg-5 mr-lg-3 mb-3">
                                   <div class="col-6 text-left" {% if settings.enable_multilang %}data-translate="customer.order.subtotal"{%endif%}>{{ 'customer.order.subtotal' | t }}</div>
                                   <div class="col-6 text-right">{{ order.subtotal_price | money }}</div>
                                 </div>
 
                                 {% for discount in order.discounts %}
-                                <div class="row ml-5 mr-3 mb-3 order_summary discount">
+                                <div class="row ml-lg-5 mr-lg-3 mb-3 order_summary discount">
                                   <div class="col-6 text-left">{{ discount.code }} <span {% if settings.enable_multilang %}data-translate="customer.order.discount"{%endif%}>{{ 'customer.order.discount' | t }}</span></div>
                                   <div class="col-6 text-right">{{ discount.savings | money }}</div>
                                 </div>
                                 {% endfor %}
 
                                 {% for shipping_method in order.shipping_methods %}
-                                <div class="row ml-5 mr-3 mb-3">
+                                <div class="row ml-lg-5 mr-lg-3 mb-3">
                                   <div  class="col-6 text-left"><span {% if settings.enable_multilang %}data-translate="customer.order.shipping"{%endif%}>{{ 'customer.order.shipping' | t }}</span> ({{ shipping_method.title }})</div>
                                   <div class="col-6 text-right">{{ shipping_method.price | money }}</div>
                                 </div>
                                 {% endfor %}
 
                                 {% for tax_line in order.tax_lines %}
-                                <div class="row ml-5 mr-3 mb-3">
+                                <div class="row ml-lg-5 mr-lg-3 mb-3">
                                   <div class="col-6 text-left"><span {% if settings.enable_multilang %}data-translate="customer.order.tax"{%endif%}>{{ 'customer.order.tax' | t }}</span> ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)</div>
                                   <div class="col-6 text-right">{{ tax_line.price | money }}</div>
                                 </div>
                                 {% endfor %}
 
-                                <div class="row ml-5 mr-3 mb-3 mt-4">
+                                <div class="row ml-lg-5 mr-lg-3 mb-3 mt-4">
                                   <div class="col-6 text-left"><strong {% if settings.enable_multilang %}data-translate="customer.order.total"{%endif%}>{{ 'customer.order.total' | t }}</strong></div>
                                   <div class="col-6 text-right"><strong>{{ order.total_price | money }} {{ order.currency }}</strong></div>
                                 </div>

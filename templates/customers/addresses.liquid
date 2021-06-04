@@ -19,16 +19,16 @@
 <div class="account-page addresses-page custom-acc-page">
   <div class="modal-overlay" id="addr_modal" style="display: none;"></div>
   <div class="container">
-    <div class="breadcrumb mb-4 ">
+    <div class="breadcrumb mt-4 mt-lg-0 mb-4 ">
       <a href="/" data-translate="general.breadcrumbs.home">Home</a>  
       <span class="arrow">
         /
       </span>
       <span>My Account</span>
 	</div>
-     <div class="row pt-5 mt-4 px-5 justify-content-between no-gutters">
-        <div class="col-2">
-          <ul class="dashboard-sidebar nav nav-pills flex-column" id="myTab" role="tablist">
+     <div class="row pt-lg-5 mt-4 px-xl-5 justify-content-between no-gutters">
+        <div class="col-12 col-lg-2">
+          <ul class="d-none d-lg-flex  dashboard-sidebar nav nav-pills flex-column" id="myTab" role="tablist">
             <li class="nav-item">
               <a class="nav-link" href="/account"{% if settings.enable_multilang %} data-translate="customer.account.return"{% endif %} >MY ORDERS</a>
             </li>
@@ -42,9 +42,18 @@
             </li>
           </ul>
         </div>
-        <div class="col-9">
+        <div class="col-12 col-lg-9">
+          <div class="d-block d-lg-none mb-2 dropdown show account-dropdown">
+            <a class="pl-0 btn btn-secondary dropdown-toggle"  href="/account"{% if settings.enable_multilang %} data-translate="customer.account.return"{% endif %} role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            	MY ACCOUNT
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="nav-link" href="/account"{% if settings.enable_multilang %} data-translate="customer.account.return"{% endif %} >MY ORDERS</a>
+              <a class="nav-link"  href="{{ routes.account_logout_url }}">LOGOUT</a>
+            </div>
+          </div>
           <div class="row">
-            <div class="col-10">
+            <div class="col-12 col-lg-10">
             
              <header class="page-header mt-0">
                 <h1 class="address-heading mb-4" {% if settings.enable_multilang %}data-translate="customer.account.title"{% endif %}>
@@ -52,7 +61,7 @@
                 </h1>
               </header>
               <div class="row customer-info">
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                   	<div class="form-group">
                       <label for="">EMAIL ID</label>
                       <input disabled type="text" id="" class="address_form"  value="{{ customer.email }}" autocapitalize="words">
@@ -63,7 +72,7 @@
                 {% if customer.tags contains 'oxi_social_login' %}
                 	   {% comment %} Social login will not show password {% endcomment %}       
                 {% else %}          
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                   <div class="form-group">
                     <label for="">PASSWORD</label>
                     <input disabled type="password" value="FakePSW" >
@@ -79,21 +88,21 @@
 
          
 
-          <div class="col-10">
+          <div class="col-12 col-lg-10">
 			<div class="add-edit-addr address-modal" id="add_address" style="display: none;">
               {% form 'customer_address', customer.new_address %}
               <h4 class="box-title"{% if settings.enable_multilang %} data-translate="customer.addresses.add_new"{% endif %}>
                 {{ 'customer.addresses.add_new' | t }}
               </h4>
               <div class="row customer-info">
-                <div class="form-group col-6">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_first_name_new" {% if settings.enable_multilang %}data-translate="customer.addresses.first_name"{% endif %}>
                     {{ 'customer.addresses.first_name' | t }}
                   </label>
                   <input type="text" id="address_first_name_new" class="address_form" name="address[first_name]" value="{{form.first_name}}" autocapitalize="words">
                 </div>
 
-                <div class="form-group col-6">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_last_name_new" {% if settings.enable_multilang %}data-translate="customer.addresses.last_name"{% endif %}>
                     {{ 'customer.addresses.last_name' | t }}
                   </label>
@@ -101,13 +110,13 @@
                 </div>
               </div>
               <div class="row customer-info">
-                <div class="form-group col-6">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_company_new" {% if settings.enable_multilang %}data-translate="customer.addresses.company"{% endif %}>
                     {{ 'customer.addresses.company' | t }}
                   </label>
                   <input type="text" id="address_company_new" class="address_form" name="address[company]" value="{{form.company}}" autocapitalize="words">
                 </div>
-                <div class="form-group col-6">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_phone_new" {% if settings.enable_multilang %}data-translate="customer.addresses.phone"{% endif %}>
                     {{ 'customer.addresses.phone' | t }}
                   </label>
@@ -130,14 +139,14 @@
                 </div>
               </div>
               <div class="row customer-info">
-                <div class="form-group col-6">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_city_new" {% if settings.enable_multilang %}data-translate="customer.addresses.city"{% endif %}>
                     {{ 'customer.addresses.city' | t }}
                   </label>
                   <input type="text" id="address_city_new" class="address_form" name="address[city]" value="{{form.city}}" autocapitalize="words">
                 </div>
 
-                <div class="form-group col-6" style="position: relative;">
+                <div class="form-group col-12 col-lg-6" style="position: relative;">
                   <label for="address_country_new" {% if settings.enable_multilang %}data-translate="customer.addresses.country"{% endif %}>
                     {{ 'customer.addresses.country' | t }}
                   </label>
@@ -158,7 +167,7 @@
                   </span>
                 </div>
 
-                <div class="form-group col-6">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_zip_new" {% if settings.enable_multilang %}data-translate="customer.addresses.zip"{% endif %}>
                     {{ 'customer.addresses.zip' | t }}
                   </label>
@@ -184,7 +193,7 @@
             </div>
           </div>
 
-          <div class="col-10 d-flex flex-wrap align-items-start">
+          <div class="col-12 col-lg-10 d-flex flex-wrap align-items-start">
 
      
             {% for address in customer.addresses %}
@@ -200,13 +209,13 @@
                     </h1>
                   </header>
                   <div class="row customer-info mb-3">
-                      <div class="col-6">
+                      <div class="col-12 col-lg-6">
                         <div class="form-group">
                           <label  for="">FIRST NAME </label>
                           <input disabled type="text" id="" class="address_form" name="address[first_name]" value="{{ address.first_name }}" autocapitalize="words">
                         </div>
                       </div>
-                      <div class="col-6">
+                      <div class="col-12 col-lg-6">
                         <div class="form-group">
                           <label for="">LAST NAME </label>
                           <input disabled type="text" id="" class="address_form" name="address[last_name]" value="{{ address.last_name }}" autocapitalize="words">
@@ -215,7 +224,7 @@
                   </div>  
 
                   <div class="row customer-info mb-3">
-                      <div class="col-6">
+                      <div class="col-12 col-lg-6">
                         <div class="form-group">
                           <label for="">MOBILE </label>
                           <input disabled type="text" id="" class="address_form" name="address[phone]" value="{{ address.phone }}" autocapitalize="words">
@@ -224,7 +233,7 @@
 
                   </div>
                    <div class="row customer-info mb-3">
-                      <div class="col-12">
+                      <div class="col-12 col-lg-6">
                         <div class="form-group">
                           <label for="">ADDRESS 1 </label>
                           <input disabled type="text" id="" class="address_form" name="address[address1]" value="{{ address.address1 }}" autocapitalize="words">
@@ -232,7 +241,7 @@
                       </div>
                   </div>
                   <div class="row customer-info mb-3">
-                      <div class="col-12">
+                      <div class="col-12 col-lg-6">
                         <div class="form-group">
                           <label for="">ADDRESS 2 </label>
                           <input disabled type="text" id="" class="address_form" name="address[address2]" value="{{ address.address2 }}" autocapitalize="words">
@@ -240,13 +249,13 @@
                       </div>
                   </div> 
                   <div class="row customer-info mb-3">
-                      <div class="col-6">
+                      <div class="col-12 col-lg-6">
                         <div class="form-group">
                           <label for="">CITY</label>
                           <input disabled type="text" id="" class="address_form" name="address[city]" value="{{ address.city }}" autocapitalize="words">
                         </div>
                       </div>
-                      <div class="col-6">
+                      <div class="col-12 col-lg-6">
                         <div class="form-group">
                           <label for="">PINCODE</label>
                           <input disabled type="text" id="" class="address_form" name="address[zip]" value="{{ address.zip }}" autocapitalize="words">
@@ -254,13 +263,13 @@
                       </div>
                   </div>  
                    <div class="row customer-info mb-3">
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                       <div class="form-group">
                          <label>STATE</label>
                          <input disabled type="text" id="" class="address_form" name="address[province]" value="{{ address.province }}" autocapitalize="words">
                       </div>
                     </div>
-                   	<div class="col-6">
+                   	<div class="col-12 col-lg-6">
                       <div class="form-group">
                        <label>COUNTRY</label>
                         <input disabled type="text" id="" class="address_form" name="address[country]" value="{{ address.country }}" autocapitalize="words">
@@ -461,6 +470,10 @@
   </div>
 </div>
 
+<style>
+  
+  .dropdown-toggle::after{ content: url({{ 'down-arrow.png' | asset_url }}) !important; position: absolute; right: 27px; border: 0 !important;}
+</style>
 
 <script>
   // Initialize observers on address selectors

@@ -20,16 +20,16 @@
   
 <div class="account-page custom-acc-page">
   <div class="container">
-  	<div class="breadcrumb mb-4 ">
+  	<div class="breadcrumb mt-4 mt-lg-0 mb-4 ">
       <a href="/" data-translate="general.breadcrumbs.home">Home</a>  
       <span class="arrow">
         /
       </span>
       <span>My Orders</span>
 	</div>
-    <div class="row pt-5 mt-4 px-lg-5 justify-content-between no-gutters">
+    <div class="row pt-lg-5 mt-4 px-lg-5 justify-content-between no-gutters">
         <div class="col-12 col-lg-2">
-          <ul class="dashboard-sidebar nav nav-pills flex-column" id="myTab" role="tablist">
+          <ul class="d-none d-lg-flex  dashboard-sidebar nav nav-pills flex-column" id="myTab" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" href="/account"{% if settings.enable_multilang %} data-translate="customer.account.return"{% endif %} >MY ORDERS</a>
             </li>
@@ -44,6 +44,15 @@
           </ul>
         </div>
         <div class="col-12 col-lg-9">
+            <div class="d-block d-lg-none mb-2 dropdown show account-dropdown">
+              <a class="pl-0 btn btn-secondary dropdown-toggle"  href="/account"{% if settings.enable_multilang %} data-translate="customer.account.return"{% endif %} role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  MY ORDERS
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="nav-link" href="{{ routes.account_addresses_url }}">ACCOUNT DETAILS</a>
+                <a class="nav-link"  href="{{ routes.account_logout_url }}">LOGOUT</a>
+              </div>
+            </div>
             <div class="tab-content">
               	<div class="tab-pane active">
               
@@ -122,8 +131,8 @@
 </div>
 
 
-
 <style>
   
-  
+  .dropdown-toggle::after{ content: url({{ 'down-arrow.png' | asset_url }}) !important; position: absolute; right: 27px; border: 0 !important;}
 </style>
+  

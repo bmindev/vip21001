@@ -243,11 +243,11 @@
   .account-page.custom-acc-page .order-data .order-item{ width: 98.5%; margin: 0 auto;}
   .other-addreses.card{ width: 47%; }
   
-  .account-dropdown a.btn{ padding-left: 0 !important; width: 100%; background: transparent !important; text-align: left; font-size: 15px; font-weight: 700; font-family: 'Open Sans', sans-serif; 
+  .account-dropdown a.btn{ padding-left: 0 !important; width: 100%; background: transparent !important; text-align: left; font-size: 15px; font-weight: 700; 
     border: 0;
-    border-bottom: 1px solid #18A497 !important;
-    color: #2FB6AC !important; }
-  .account-dropdown .dropdown-menu{ width: 100%; font-size: 15px; margin: 0; box-shadow: 2px 3px 3px rgb(0 0 0 / 30%); border: 0;}
+    border-bottom: 1px solid #C3C3C3 !important;
+    color: #CB2026 !important; }
+  .account-dropdown .dropdown-menu{ width: 100%; font-size: 15px; font-weight: 600; margin: 0; box-shadow: 2px 3px 3px rgb(0 0 0 / 30%); border: 0;}
   .account-dropdown .dropdown-menu a{ padding: 1rem 0.5rem; color: #161616 !important;  }
   .account-dropdown a.btn:focus{ box-shadow: none !important; }
   .account-dropdown .dropdown-menu a:not(:last-child){border-bottom: 1px solid #d8d8d8 !important; }

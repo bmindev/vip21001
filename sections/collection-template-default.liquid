@@ -28,7 +28,7 @@
 {% else %}
 {% assign product_per_page = section.settings.collection_results_per_page %}
 {% endif %}
-
+{% render 'breadcrumb' %}
 {% paginate collection.products by product_per_page %}
   <div class="product-collection {{ rows }} row">
     {% if collection.products_count > 0 %}  

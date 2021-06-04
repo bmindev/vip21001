@@ -90,7 +90,9 @@
         {% render 'multilang' with product.title %}
         {% if select != blank %}<span data-change-title> - {{ select }}</span>{% endif %}
       </a>
+     {% if template == 'collections' %}
 {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
+{% endif %}
       <div class="price-box">
         {% if on_sale %}
         <div class="price-sale">
@@ -147,7 +149,9 @@
       {% if settings.display_product_reviews %}
       <span class="shopify-product-reviews-badge" data-id="{{ product.id }}" style="min-height: 20px; display: block; margin-bottom: 9px;"></span>
       {% endif %}
+     {% if template == 'collections' %}
 {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
+{% endif %}
       <div class="short-description">
         {% if product.description contains '[countdown]' %}
         {% assign des = product.description | split:'[/countdown]' | last %}

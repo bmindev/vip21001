@@ -80,8 +80,8 @@
         </a>
         {% endif %}
       </div>
-     {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}    
-<!--       <div class="wrapper-compare">
+
+      <!--       <div class="wrapper-compare">
         {% if settings.show_vendor %}
           <div class="product-vendor">
             {{ product.vendor | link_to_vendor }}
@@ -96,7 +96,9 @@
         {% render 'multilang' with product.title %}
 <!--         {% if select != blank %}<span data-change-title> - {{ select }}</span>{% endif %} -->
       </a>
+     {% if template == 'collections' %}
 {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
+{% endif %}
       <div class="price-box">
         {% if on_sale %}
         <div class="price-sale">
@@ -147,7 +149,10 @@
         {% render 'multilang' with product.title %}
 <!--         {% if select != blank %}<span data-change-title> - {{ select }}</span>{% endif %} -->
       </a>
+      
+      {% if template == 'collections' %}
 {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
+{% endif %}
       <div class="price-box">
         {% if on_sale %}
         <div class="price-sale">
@@ -178,7 +183,7 @@
       {% render 'item-swatch', product: product, option_color_swatch: option_color_swatch, downcased_option: option_name, product_option: product_option, index: index %}
       {% endif %} -->
     </div>
-    {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
+
     
 
     {% comment %} Use for productList {% endcomment %}
@@ -193,7 +198,9 @@
         {% render 'multilang' with product.title %}
         {% if select != blank %}<span data-change-title> - {{ select }}</span>{% endif %}
       </a>
+     {% if template == 'collections' %}
 {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
+{% endif %}
       {% if settings.display_product_reviews %}
       <span class="shopify-product-reviews-badge" data-id="{{ product.id }}" style="min-height: 20px; display: block; margin-bottom: 9px;"></span>
       {% endif %}
@@ -248,12 +255,8 @@
       {% render 'wishlist-product' with product as product %}
     </div>
   
-{% comment %}Start automatically added Judge.me widget{% endcomment %}
-  <div class="product-bottom">
-    {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+
   </div>
-{% comment %}End automatically added Judge.me widget{% endcomment %}
-</div>
 </div>
 
 

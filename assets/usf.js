@@ -1,4 +1,4 @@
-/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 6/1/2021 6:13:14 AM*/
+/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 6/4/2021 6:41:26 AM*/
 /* Begin custom theme code */
 // define templates for the theme
 var _usfFilterBodyTemplate = /*inc_begin_filter-body*/
@@ -276,6 +276,7 @@ usf.templates = {
     <div :class="'inner product-item' + (isSoldOut ? ' sold-out' : '')" :data-product-id="'product-' + product.id">
         <div class="inner-top">
             <div class="product-top">
+            <div class="product-hover-overlay"></div>
                 <div :class="'product-image' + (hoverImageUrl ? ' image-swap' : '')">
                     <a :href="productUrl" @click="onItemClick" @mouseover="onItemHover" @mouseleave="onItemLeave" class="product-grid-image" data-collections-related="/collections/all?view=related">
                         <img :src="_usfGetScaledImageUrl(scaledSelectedImageUrl,'300')" :alt="product.title" class="images-one lazyload" :data-src="_usfGetScaledImageUrl(scaledSelectedImageUrl,'800')" :data-srcie="_usfGetScaledImageUrl(scaledSelectedImageUrl,'300')" :data-srcief="_usfGetScaledImageUrl(scaledSelectedImageUrl,'400')" :data-widths="'[' + _usfImageWidths.join(',') + ']'" :data-aspectratio="selectedImage.width/selectedImage.height" data-sizes="auto">
@@ -289,18 +290,41 @@ usf.templates = {
                 </div>
                 <!-- sale badge -->
                 <div class="product-label">
-                    <strong class="label sale-label" v-if="hasDiscount && usf.settings.search.showSale && !isSoldOut" v-html="loc.sale"></strong>
+                    <strong class="label sale-label" v-if="hasDiscount && usf.settings.search.showSale && !isSoldOut" >-{{ salePercent }}%</strong>
                     <strong class="label sold-out-label" v-if="isSoldOut && usf.settings.search.showSoldOut" v-html="loc.soldOut"></strong>
                     <br>
                 </div>
                 <div class="product-des abs-center">
+                <div class="hover-sizes">
+                    <p class="mb-1">AVAILABLE SIZES</p>
+                    <ul class="sizes-list" v-html="sizeLists(product)"></ul>
+                </div>
                     <!--wishlist-->
-                    <a class="wishlist" data-icon-wishlist="" href="#" :data-product-handle="product.urlName" :data-id="product.id">
-                        <i class="fa fa-heart" aria-hidden="true"></i>
-                        <span class="wishlist-text text-hover" data-translate="wishlist.general.add_to_wishlist">Add to Wish List</span>
+                    <a class="wishlist" data-icon-wishlist href="#" :data-product-handle="product.urlName" :data-id="product.id">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95.388" height="87.526" viewBox="0 0 95.388 87.526">
+                            <defs>
+                            <filter id="Path_25879" x="0" y="0" width="95.388" height="87.526" filterUnits="userSpaceOnUse">
+                                <feOffset dy="3" input="SourceAlpha"></feOffset>
+                                <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+                                <feFlood flood-opacity="0.424"></feFlood>
+                                <feComposite operator="in" in2="blur"></feComposite>
+                                <feComposite in="SourceGraphic"></feComposite>
+                            </filter>
+                            </defs>
+                            <g id="Group_2786" data-name="Group 2786" transform="translate(11.574 8.565)">
+                            <g transform="matrix(1, 0, 0, 1, -11.57, -8.56)" filter="url(#Path_25879)">
+                                <path id="Path_25879-2" data-name="Path 25879" d="M735.69,587.364a.96.96,0,0,0,.533-.162c13.815-9.176,26.978-24.926,26.978-24.926s18.479-20.534,1.171-34.24c-16.539-13.1-28.687,3-28.687,3h-.064s-12.148-16.094-28.687-3c-17.309,13.706,1.171,34.24,1.171,34.24s13.182,15.772,27.008,24.946a.847.847,0,0,0,.469.142Z" transform="translate(-687.96 -514.34)" fill="#e50219" stroke="#fff" stroke-width="5"></path>
+                            </g>
+                            </g>
+                        </svg>
                     </a>
                     <!-- Wishlist -->
                     <usf-plugin name="searchResultsProductWishList" :data="pluginData"></usf-plugin>
+                   
+                    <!-- Product review -->
+                    <usf-plugin name="searchResultsProductReview" :data="pluginData"></usf-plugin>
+                </div>
+                <div class="product-des abs-bottom">
                     <!--action-->
                     <div class="action">
                         <form :action="usf.platform.baseUrl + '/cart/add'" method="post" class="variants" :id="'grid-product-form--' + product.id" :data-id="'product-actions-' + product.id" enctype="multipart/form-data">
@@ -313,17 +337,11 @@ usf.templates = {
                             <button v-if="isSoldOut" class="btn add-to-cart-btn" type="submit" disabled="disabled" data-translate="products.product.unavailable">Unavailable</button>
                         </form>
                     </div>
-                    <!-- Product review -->
-                    <usf-plugin name="searchResultsProductReview" :data="pluginData"></usf-plugin>
-                </div>
-                <div class="product-des abs-bottom">
-                    <!--size list-->
-                    <ul class="sizes-list" v-html="sizeLists(product)"></ul>
-                    <!--quick view-->
                     <a v-if="_usfGlobalSettings.enable_quick_view" class="quickview-button" href="javascript:void(0)" :id="product.urlName" title="Quick View" data-translate="products.product.quick_view" translate-item="title">
                         <span data-translate="products.product.quick_view" v-html="loc.quickView"></span>
                     </a>
                 </div>
+            
             </div>
             <div class="product-bottom">
                 <!--vendor-->

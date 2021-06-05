@@ -253,8 +253,13 @@
   .account-dropdown .dropdown-menu a:not(:last-child){border-bottom: 1px solid #d8d8d8 !important; }
   
 }
+@media screen and (max-width: 992px) {
+
+  .address-modal{ left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%);  -ms-transform: translateX(-50%);  }
+}
 
 @media screen and (max-width: 640px) {
   .other-addreses.card{ width: 100%; }
    .account-page.custom-acc-page .order-container .quantity-circle{ right: 89px; top: 15px; }
+  .address-modal{ width: 95%; }
 }

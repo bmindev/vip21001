@@ -348,32 +348,32 @@
               </h4>
               <div class="row customer-info">
 
-                <div class="form-group col-6">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_first_name_{{form.id}}" {% if settings.enable_multilang %}data-translate="customer.addresses.first_name"{% endif %}>{{ 'customer.addresses.first_name' | t }}</label>
                   <input type="text" id="address_first_name_{{form.id}}" class="address_form" name="address[first_name]" value="{{form.first_name}}" autocapitalize="words">
                 </div>
 
-                <div class="form-group col-6">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_last_name_{{form.id}}" {% if settings.enable_multilang %}data-translate="customer.addresses.last_name"{% endif %}>{{ 'customer.addresses.last_name' | t }}</label>
                   <input type="text" id="address_last_name_{{form.id}}" class="address_form" name="address[last_name]" value="{{form.last_name}}" autocapitalize="words">
                 </div>
 
               </div>
               <div class="row customer-info">
-                <div class="form-group col-6">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_company_{{form.id}}" {% if settings.enable_multilang %}data-translate="customer.addresses.company"{% endif %}>
                     {{ 'customer.addresses.company' | t }}
                   </label>
                   <input type="text" id="address_company_{{form.id}}" class="address_form" name="address[company]" value="{{form.company}}" autocapitalize="words">
                 </div>
 
-                <div class="form-group col-6">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_phone_{{form.id}}" {% if settings.enable_multilang %}data-translate="customer.addresses.phone"{% endif %}>
                     {{ 'customer.addresses.phone' | t }}
                   </label>
                   <input type="tel" id="address_phone_{{form.id}}" class="address_form" name="address[phone]" value="{{form.phone}}" placeholder="555-555-1234">
                 </div>
-                <div class="form-group col-12">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_address1_{{form.id}}" {% if settings.enable_multilang %}data-translate="customer.addresses.address1"{% endif %}>
                     {{ 'customer.addresses.address1' | t }}
                   </label>
@@ -381,7 +381,7 @@
                 </div>
               </div> 
               <div class="row customer-info">
-                <div class="form-group col-12">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_address2_{{form.id}}" {% if settings.enable_multilang %}data-translate="customer.addresses.address2"{% endif %}>
                     {{ 'customer.addresses.address2' | t }}
                   </label>
@@ -389,14 +389,14 @@
                 </div>
               </div>
               <div class="row customer-info">
-                <div class="form-group col-6">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_city_{{form.id}}" {% if settings.enable_multilang %}data-translate="customer.addresses.city"{% endif %}>
                     {{ 'customer.addresses.city' | t }}
                   </label>
                   <input type="text" id="address_city_{{form.id}}" class="address_form" name="address[city]" value="{{form.city}}" autocapitalize="words">
                 </div>
 
-                <div class="form-group col-6" style="position: relative;">
+                <div class="form-group col-12 col-lg-6" style="position: relative;">
                   <label for="address_country_{{form.id}}" {% if settings.enable_multilang %}data-translate="customer.addresses.country"{% endif %}>{{ 'customer.addresses.country' | t }}</label>
                   <select id="address_country_{{form.id}}" name="address[country]" data-default="{{form.country}}">{{ country_option_tags }}</select>
                   <span class="icon-dropdown">
@@ -405,7 +405,7 @@
                 </div>
               </div>
               <div class="row customer-info">
-                <div class="form-group col-6" id="address_province_container_{{form.id}}" style="position: relative;">
+                <div class="form-group col-12 col-lg-6" id="address_province_container_{{form.id}}" style="position: relative;">
                   <label for="address_province_{{form.id}}" {% if settings.enable_multilang %}data-translate="customer.addresses.province"{% endif %}>{{ 'customer.addresses.province' | t }}</label>
                   <select id="address_province_{{form.id}}" class="address_form" name="address[province]" data-default="{{form.province}}"></select>
                   <span class="icon-dropdown">
@@ -413,7 +413,7 @@
                   </span>
                 </div>
 
-                <div class="form-group col-6">
+                <div class="form-group col-12 col-lg-6">
                   <label for="address_zip_{{form.id}}" {% if settings.enable_multilang %}data-translate="customer.addresses.zip"{% endif %}>
                     {{ 'customer.addresses.zip' | t }}
                   </label>

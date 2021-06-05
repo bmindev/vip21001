@@ -82,15 +82,17 @@
     {% endif %}
     {% if shop.customer_accounts_enabled %}
     <div class="acc-mb svg-mb">
-      <a href="#" title="User Icon" class="icon-user" data-user-mobile-toggle>
-        {% if settings.header_layout == '05' or settings.header_layout == '07' %}
-          {% render 'icons8-male-user' %}
-        {% elsif settings.header_layout == '06' %}
-          {% render 'icon-user-2' %}
-        {% else %}
-          {% render 'icon-user' %}
-        {% endif %}
-      </a>
+     	<div class="customer-links text-uppercase">
+          {% if customer %}
+          <a  class="acc-links acc-title" href="{{ routes.account_url }}"{% if settings.enable_multilang %} data-translate="customer.account.title"{% endif %}>
+            {{ 'customer.account.title' | t }}
+          </a>
+          {% else %}                                       
+          <a  class="acc-links acc-sign-in" id="customer_login_link" href="{{ routes.account_login_url }}" {% if settings.enable_multilang %}data-translate="customer.login.sign_in"{% endif %}>
+            {{ 'customer.login.sign_in' | t }}
+          </a>
+          {% endif %}                                 
+      </div>
     </div>
     {% endif %}
     <div class="cart-icon svg-mb">

@@ -141,16 +141,17 @@ endfor
                     {% render 'multilang' with product.title %}
                 </h1>
   				<div class="d-flex align-items-end product-write-review-container mb-4">
-                  <div product-id="{{ product.id }}" class="alr-display-review-badge"></div> 
+                  {% comment %}Start automatically added Judge.me widget{% endcomment %}
+                  {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+                  {% comment %}End automatically added Judge.me widget{% endcomment %}
                   <div class="px-2">|</div>
                   <div><a class="product-write-review">Write a review</a></div>
                
               	</div>
                  
                 
-{% comment %}Start automatically added Judge.me widget{% endcomment %}
-  {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
-{% comment %}End automatically added Judge.me widget{% endcomment %}
+
+              
 {% if section.settings.display_product_reviews or section.settings.show_sold_in %}
                 <div class="group_item">
                     {% if section.settings.display_product_reviews %}

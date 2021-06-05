@@ -334,8 +334,8 @@
                     settings: {
                       slidesToShow: 2,
                       slidesToScroll: 2,
-                      dots: true,
-                      arrows: false,
+                      dots: false,
+                      arrows: true,
                     }
                   },
                   {
@@ -352,8 +352,8 @@
                     settings: {
                       slidesToShow: 2,
                       slidesToScroll: 2,
-                      dots: true,
-                      arrows: false,
+                      dots: false,
+                      arrows: true,
                     }
                   },
                   {
@@ -361,8 +361,8 @@
                     settings: {
                       slidesToShow: 2,
                       slidesToScroll: 2,
-                      dots: true,
-                      arrows: false,
+                      dots: false,
+                      arrows: true,
                     }
                   }
                 ]
@@ -730,8 +730,8 @@
                             {
                                 breakpoint: 1200,
                                 settings: {
-                                    dots: true,
-                                    arrows: false,
+                                   dots: false,
+                      				arrows: true,
                                     vertical: false,
                                     get slidesToShow() {
                                         if(self.hasClass('has-banner')) {
@@ -764,8 +764,8 @@
                             {
                                 breakpoint: 992,
                                 settings: {
-                                    dots: true,
-                                    arrows: false,
+                                    dots: false,
+                      				arrows: true,
                                     vertical: false,
                                     get slidesToShow() {
                                         if(gridItemWidth >= 3) {
@@ -788,9 +788,10 @@
                                 settings: {
                                     slidesToShow: 2,
                                     slidesToScroll: 2,
-                                    arrows: false,
+                                    dots: false,
+                      				arrows: true,
                                     vertical: false,
-                                    dots: true
+                                  
                                 }
                             }
                         ]
@@ -989,8 +990,8 @@
                                                     {
                                                         breakpoint: 1200,
                                                         settings: {
-                                                            dots: true,
-                                                            arrows: false,
+                                                           dots: false,
+                      										arrows: true,
                                                             vertical: false,
                                                             get slidesToShow() {
                                                                 if(self.hasClass('has-banner')) {
@@ -1023,8 +1024,8 @@
                                                     {
                                                         breakpoint: 992,
                                                         settings: {
-                                                            dots: true,
-                                                            arrows: false,
+                                                           dots: false,
+                      										arrows: true,
                                                             vertical: false,
                                                             get slidesToShow() {
                                                                 if(gridItemWidth >= 3) {
@@ -1055,9 +1056,10 @@
                                                         settings: {
                                                             slidesToShow: 2,
                                                             slidesToScroll: 2,
-                                                            arrows: false,
-                                                            vertical: false,
-                                                            dots: true
+                                                            dots: false,
+                                                          	arrows: true,
+                                                            vertical: false
+                                                            
                                                         }
                                                     }
                                                 ]
@@ -2489,8 +2491,8 @@
                                 settings: {
                                     slidesToShow: 2,
                                     slidesToScroll: 2,
-                                    arrows: false,
-                                    dots: true
+                                    dots: false,
+                      				arrows: true,
                                 }
                             }
                         ]

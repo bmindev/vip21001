@@ -187,7 +187,7 @@ endfor
                       <input type="hidden" id="product_regular_price" name="product_regular_price" value="{{ product.price }}">
                       <span class="d-block tax-note">Price Incl. Of All Taxes</span>
                     </div>
-                  	<div>
+                  	<div class="d-none d-md-block">
                   
                       <a class="wishlist custom-wishlist-btn" data-icon-wishlist href="#" data-product-handle="{{ product.handle }}" data-id="{{ product.id }}">
                           <svg xmlns="http://www.w3.org/2000/svg" width="14.545" height="13.333" viewBox="0 0 14.545 13.333">
@@ -464,6 +464,17 @@ endfor
                     {% endif %}
                 </div>
                 {% endif %}
+              
+              <div class=" d-md-none my-5">
+                  
+                <a class="wishlist custom-wishlist-btn" data-icon-wishlist href="#" data-product-handle="{{ product.handle }}" data-id="{{ product.id }}">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14.545" height="13.333" viewBox="0 0 14.545 13.333">
+                    <path id="iconmonstr-favorite-4" d="M3.806,1A3.663,3.663,0,0,0,0,4.753c0,2.825,3.376,5.713,7.272,9.58,3.9-3.867,7.272-6.755,7.272-9.58a3.654,3.654,0,0,0-3.8-3.746,3.96,3.96,0,0,0-3.47,1.962A3.955,3.955,0,0,0,3.806,1Z" transform="translate(0 -1)" fill="#707070"/>
+                  </svg> Add to Wishlist
+                </a>
+
+              </div>
+                  	
                <div id="rbz-zipcode-check-section"></div>
               
                 {% if current_variant.available and section.settings.display_qty %}
@@ -511,14 +522,14 @@ endfor
                         <div class="groups-btn-tree row {% if section.settings.display_product_detail_share or settings.enable_wishlist %}margin-button{% endif %}">
                           {% if shop.customer_accounts_enabled %}
                             {% if customer %}
-                             <div class="col-6 btn-checkout"> 
+                             <div class="col-12 col-md-6 btn-checkout"> 
                                 {% if section.settings.enable_payment_button and current_variant.available %}
                                     {{ form | payment_button }}
                                 {% endif %}
                               </div>
                           	{% else %}
                               {% if current_variant.available %}
-                                <div class="col-6"> 
+                                <div class="col-12 col-md-6"> 
                                   <a class="product-login" id="product-login"  href="{{ routes.account_login_url }}" {% if settings.enable_multilang %}data-translate="customer.login.login"{% endif %}>
                                       Login
                                     </a>
@@ -529,7 +540,7 @@ endfor
                             {% if section.settings.display_product_detail_share %}
   <!--                             <a class="icon-share" href="javascript:void(0)">{% render 'icon-share' %}</a> -->
                             {% endif %}
-                            <div class="col-6">
+                            <div class="col-12 col-md-6">
                               {% if current_variant.available %}
                                   {% if current_variant.inventory_management %}
                                   {% assign first_inventory = current_variant.inventory_quantity %}
@@ -575,7 +586,7 @@ endfor
                 {% else %}
                     <div class="groups-btn">
                         <div class="groups-btn-tree row {% if section.settings.display_product_detail_share or settings.enable_wishlist %}margin-button{% endif %}">
-                          <div class="col-6">
+                          <div class="col-12 col-md-6">
                             {% if section.settings.display_product_detail_share %}
   <!--                             <a class="icon-share" href="javascript:void(0)">{% render 'icon-share' %}</a> -->
                             {% endif %}
@@ -583,7 +594,7 @@ endfor
                             {{ form | payment_button }}
                             {% endif %}
                           </div>
-                          <div class="col-6">
+                          <div class="col-12 col-md-6">
                             {% if current_variant.available %}
 
                               {% if current_variant.inventory_management %}

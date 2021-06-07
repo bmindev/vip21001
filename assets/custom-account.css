@@ -206,9 +206,9 @@
 .remodal .remodal-legend{ font-size: 14px; color: #161616;  }
 .remodal-form-label { font-size: 14px !important; color: #707070; margin-bottom: 8px !important; display: block; }
 .remodal-form-input{ height: 45px !important; border: 1px solid #D2D2D2 !important; }
-.remodal-submit{ font-weight: 700 !important; text-tansform: uppercase; font-size: 15px !important; background-color: #009E91!important; padding: 12px 20px !important;  }
+.remodal-submit{ font-weight: 700 !important; text-tansform: uppercase; font-size: 15px !important; background-color: #09609B !important; padding: 12px 20px !important;  }
 .remodal p { text-align: left; }
-
+.remodal-close:before, a.close-sl_modal:before{ top: 10px !important; right: 12px !important; left: auto !important; font-size: 50px !important; color: #161616 !important; }
 
 .breadcrumb { 
   background-color: #F2F2F2 !important;

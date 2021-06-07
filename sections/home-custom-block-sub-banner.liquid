@@ -1,5 +1,5 @@
 {% if section.settings.display_sub_banner and section.blocks.size > 0 %}
-<div class="home-custom-block-sub-banner home-sub-banner sub-banner-{{ section.blocks.size }}{% unless section.settings.display_padding %} no-padding{% endunless %}{% if section.settings.style_layout == 'style_2' %} style_2{% endif %}" id="custom-sub-banner-{{section.id}}">
+<div class="home-custom-block-sub-banner kkkk home-sub-banner sub-banner-{{ section.blocks.size }}{% unless section.settings.display_padding %} no-padding{% endunless %}{% if section.settings.style_layout == 'style_2' %} style_2{% endif %}" id="custom-sub-banner-{{section.id}}">
     <div class="{% if section.settings.layout == 'default' %}container{% elsif section.settings.layout == 'padd_60' %}container-padd60{% else %}container-fluid{% endif %}">
         <div class="row mx-lg-5">
             {% if section.settings.title != blank %}
@@ -389,6 +389,13 @@
     {% endunless%}
 </style>
 {% endif %}
+<script>
+  	
+  $('#custom-sub-banner-161977907976a25670 .one_Image:last-child .img-box').click(function (e) {
+  		e.preventDefault();
+       $('.wrapper-newsletter').show();
+   	});
+</script>
 
 
 {% schema %}

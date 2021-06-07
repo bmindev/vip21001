@@ -287,9 +287,17 @@
   
 .product-template-default #shopify-section-home-new-arrivals .inner-top {  background-color: #fff; padding-bottom: 1rem; border-radius: 8px; }
   
-    @media (max-width: 767px){
+  @media (max-width: 767px){
+    
+    #shopify-section-home-new-arrivals .widget-product{ width: 100% !important; }
+    #product-recommendations { width: 100% !important; }
+    
     .product-template-default{ margin-top: 0; }
     .breadcrumb{ font-size: 16px; padding-left: 1.5rem; width: 100% !important; }
+    
+    .recently-viewed-products .widget-title h3, .related-products .widget-title h3, #shopify-section-home-new-arrivals .widget-title h3{ font-size: 3.5rem; }
+    .recently-viewed-products .widget-title .box-title, .related-products .widget-title .box-title{ font-size: 3.5rem; }
+    
       
     .cbb-frequently-bought-title { margin-bottom: 0 !important; }
     .cbb-frequently-bought-products{ flex-wrap: wrap; }

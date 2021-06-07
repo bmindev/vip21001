@@ -5,7 +5,7 @@
 
 
 {% unless template == 'index' %}
-<div class="breadcrumb mb-4 {% if settings.layout_style == 'layout_style_1170' or settings.layout_style == 'layout_style_flower' %}layout-breadcrumb--skin1{% endif %}">
+<div class="breadcrumb mt-3 mt-lg-0 mb-4 {% if settings.layout_style == 'layout_style_1170' or settings.layout_style == 'layout_style_flower' %}layout-breadcrumb--skin1{% endif %}">
   {% if settings.display_breadcrumb %}
   <a href="{{ routes.cart_url | split: 'cart' | first }}" data-translate="general.breadcrumbs.home">{{ 'general.breadcrumbs.home' | t }}</a>  
   {% if template contains 'product' %} 

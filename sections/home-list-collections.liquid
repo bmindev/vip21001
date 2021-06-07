@@ -109,25 +109,32 @@
 <style>
     {% assign font_size_title =  section.settings.list_collection_title_size %}
     {% assign margin_bottom =  section.settings.margin_bottom %}
-  	.home-list-collections .widget-title .box-title{ font-family:'BonbonLightW00', sans-serif; color: #3A84DF !important; margin-bottom: 0; }
+  	.home-list-collections .widget-title .box-title{ font-family:'BonbonLightW00', sans-serif; color: #3A84DF !important; margin-bottom: 0; text-transform: capitalize; font-weight: 500; }
 	.home-list-collections .widget-title .box-title:before{ content: none; }
   	.home-list-collections .widget-desc{ margin-bottom: 5rem;   }
   	.home-list-collections .collection-item .content-box  { top: auto; bottom: 4%; min-width: auto; width: 50%; }
-    @media (max-width: 767px) {
+    .home-list-collections .widget-desc{ font-size: 22px; color: #707070;  }
+   
+  @media (max-width: 767px) {
         #list-coll-{{section.id}} {
             margin-bottom: {{ section.settings.margin_bottom_mb }}px;
         }
       .home-list-collections .grid-item:last-of-type{ max-width: 100%; width: 100%; flex: 0 0 100%; }
       .home-list-collections .collection-item .content-box{ width: 100%; }  
-      .home-list-collections .widget-title .box-title{ font-size: 3.5rem; }
+      .home-list-collections .widget-title .box-title{ font-size: 3.5rem; text-transform: capitalize; font-weight: 500; }
       .home-list-collections .widget-desc{ font-size: 18px; font-weight: 600; margin-bottom: 3rem; }
-    }
+      .home-list-collections .collection-item .content-box{ bottom: -4%; width: 80%; }
+      .home-list-collections .collection-title {
+        font-size: 14px;
+        line-height: 1.2;
+      }
+  }
 
     @media (min-width: 768px) and (max-width: 1199px) {
         #list-coll-{{section.id}} {
             margin-bottom: {{ section.settings.margin_bottom_tab }}px;
         }
-      .home-list-collections .widget-title .box-title{ font-size: 5rem; }
+      .home-list-collections .widget-title .box-title{ font-size: 4rem; }
       .home-list-collections .grid-item:last-of-type{ max-width: 100%; width: 100%; flex: 0 0 100%; }
       
       
@@ -158,7 +165,7 @@
             }
         {% endif %}
       .home-list-collections .widget-title .box-title{  font-size: 5rem; font-weight: 500; text-transform: capitalize;  }
-      .home-list-collections .widget-desc{ font-size: 22px; color: #707070;  }
+    
      
       #list-coll-16197575431e026629 .collection-title { font-size: 28px; } 
      

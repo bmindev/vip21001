@@ -77,7 +77,7 @@
     {% assign font_size_title =  section.settings.font_size_title %}
     {% assign margin_bottom =  section.settings.margin_bottom %}
 	#home-collections-{{section.id}} .widget-title .box-title { 
-      font-family: 'BonbonLightW00', sans-serif;
+      font-family: 'BonbonLightW00', sans-serif; font-weight: 500; text-transform: capitalize; 
      
     }
     #home-collections-{{section.id}} {
@@ -108,8 +108,9 @@
         #home-collections-{{section.id}}  {
             margin-bottom: {{ section.settings.margin_bottom_mb }}px;
         }
-      #home-collections-{{section.id}} .widget-title .box-title { font-size: 3.5rem;}
+      #home-collections-{{section.id}} .widget-title .box-title { font-size: 3.5rem; text-transform: capitalize; font-weight: 500; }
       .custom-collection  .banner-item .banner-title{ font-size: 12px; }
+      .row.custom-collection.collections-slider.four-items  .banner-item .banner-title{ font-size: 21px; font-weight: 700; }
       
     }
       

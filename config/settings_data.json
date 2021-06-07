@@ -1599,7 +1599,7 @@
         "settings": {
           "display_collection_image": false,
           "display_collection_des": false,
-          "limited_view": true,
+          "limited_view": false,
           "view_as_enable": false,
           "sort_enable": true,
           "collection_results_per_row": "4",

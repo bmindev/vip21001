@@ -7,7 +7,7 @@
   {% render 'breadcrumb' %}
 {% else %}
   {% render 'breadcrumb' %}
-  <header class="page-header mt-5 mx-5">
+  <header class="page-header mt-5 mx-2 mx-xl-5">
     <h1>
       {{ 'cart.general.title' | t }} 
     </h1>
@@ -16,8 +16,8 @@
 
 {% if cart.item_count > 0 %}
   {% if settings.enable_free_shipping_message %}
-      <div class="free_shipping_progress mx-5"></div>
-      <div class="free_shipping_massage1 mx-5"></div>
+      <div class="free_shipping_progress mx-2 mx-xl-5"></div>
+      <div class="free_shipping_massage1 mx-2 mx-xl-5"></div>
   {% endif %}
   {% if section.settings.cart_countdown_enable %}
       <div class="cart__count_down alert alert-warning text-center" role="alert">
@@ -29,7 +29,7 @@
   {% endif %}
 {% endif %}
 {% if cart.item_count > 0 %}
-<form class="cart-form wrapper-cart-template mx-5" action="{{ routes.cart_url }}" method="post" novalidate>
+<form class="cart-form wrapper-cart-template mx-2 mx-xl-5" action="{{ routes.cart_url }}" method="post" novalidate>
   <div class="left-col cart_items">
     
 <!--     <div class="cart-header">
@@ -88,7 +88,7 @@
                 {% endif %}
                
                 
-                <div class="cart--price h-desktop">
+<!--                 <div class="cart--price h-desktop">
                       <div class="price-box">
                         <span>
                           <span class="saso-cart-item-price" data-key="{{item.key}}">{{ item.price | money }}</span>
@@ -100,8 +100,8 @@
                       <a class="remove remove-mobile" href="{{ routes.cart_url }}/change?line={{ forloop.index }}&amp;quantity=0" data-id="{{ item.id }}">
                           {% render 'icon-close' %}
                       </a>
-                    </div>
-                	<div class="cart--price h-mobile">
+                    </div> -->
+                	<div class="cart--price">
                       <div class="price-box">
                         <span>
                           {{ item.price | money }}
@@ -137,7 +137,7 @@
       
                       </div>
                   
-                     <div class="mr-4 cart-cta cart--remove h-mobile">
+                     <div class="mr-4 cart-cta cart--remove">
                           <a class="remove position-relative" href="{{ routes.cart_url }}/change?line={{ forloop.index }}&amp;quantity=0" data-id="{{ item.id }}">
                               <svg xmlns="http://www.w3.org/2000/svg" width="12.134" height="12.134" viewBox="0 0 12.134 12.134">
                                   <path id="close_1_" data-name="close (1)" d="M8.069,6.068l3.754-3.754a1.061,1.061,0,0,0,0-1.5l-.5-.5a1.061,1.061,0,0,0-1.5,0L6.068,4.066,2.314.311a1.061,1.061,0,0,0-1.5,0l-.5.5a1.061,1.061,0,0,0,0,1.5L4.066,6.068.312,9.821a1.061,1.061,0,0,0,0,1.5l.5.5a1.061,1.061,0,0,0,1.5,0L6.068,8.069l3.754,3.754a1.061,1.061,0,0,0,1.5,0l.5-.5a1.061,1.061,0,0,0,0-1.5Zm0,0" fill="#e50a19"/>
@@ -474,4 +474,9 @@
   .cart-template .wrapper-cart-template .cart-list .qty-group input[name="updates[]"]{ font-size: 20px; font-weight: 700; width: 65px; }
   
   .cart-template .cart-form .cart--title .cart--info .size{  color: #161616; }
+  
+  @media (max-width: 768px) {
+  .cart-template .cart-form .cart-header>*.cart--title, .cart-template .cart-form .cart-list .details>*.cart--title{ width: 100% !important; }
+  
+  }
 </style>  

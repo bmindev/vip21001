@@ -1069,10 +1069,10 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "1541579674639": {
+          "7b6cf856-b9e9-4b05-9a0a-c2cff806f462": {
             "type": "footer_link",
             "settings": {
-              "footer_title": "Brands",
+              "footer_title": "Brand",
               "footer_linklist": "brand"
             }
           },
@@ -1099,7 +1099,7 @@
           }
         },
         "block_order": [
-          "1541579674639",
+          "7b6cf856-b9e9-4b05-9a0a-c2cff806f462",
           "1541579687499",
           "1541579706355",
           "a124db00-2a27-46b2-90f6-5d69ee55cbf4"

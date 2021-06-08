@@ -93,7 +93,7 @@
                                      
                                       <p> <a href="{{ line_item.product.url }}">Rate & Review Product</a> </p>
 									
-                                      {% if order.fulfillment_status_label == 'Fulfilled' %}
+                                      {% if order.tags contains "delivered"  %}
                                       <p> <a href=" {{ routes.root_url }}apps/returns">Return & Refund</a>  </p>                    
                                       {% endif %}
                                       

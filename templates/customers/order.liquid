@@ -135,8 +135,10 @@
                           </div>
                           
                           <div class="col-12 col-lg-4 mt-5 mt-lg-0 text-lg-center print-btn-container">
-                          	<a class="print-btn mb-4" type='button' id='btn-mp-print' target='_blank' href='/apps/invoice-printer/print/EWhyN3AkM3PkRUEePedo/{{ order.id | times: 354 }}'>Download Invoice</a>
-                           	<div class="invoice-details"> 
+                          	{% if order.tags contains 'confirmed' or order.fulfillment_status == 'fulfilled' %}
+                            	<a class="print-btn mb-4" type='button' id='btn-mp-print' target='_blank' href='/apps/invoice-printer/print/EWhyN3AkM3PkRUEePedo/{{ order.id | times: 354 }}'>Download Invoice</a>
+                           	{% endif %}
+                            <div class="invoice-details"> 
                               <div class="row ml-lg-5 mr-lg-3 mb-3">
                                   <div class="col-6 text-left" {% if settings.enable_multilang %}data-translate="customer.order.subtotal"{%endif%}>{{ 'customer.order.subtotal' | t }}</div>
                                   <div class="col-6 text-right">{{ order.subtotal_price | money }}</div>
@@ -269,26 +271,30 @@
                         </div>
                         
                         
-                         <div class="progress-track mt-5">
+                         <div id="orderStatusBar" class="progress-track mt-5">
                            <h4>Shipping Information</h4>
                             <ul id="progressbar">
-                                <li class="step0 active " id="step1">
+                                <li class="step0 {% if order.fulfillment_status == 'unfulfilled' or order.fulfillment_status == 'fulfilled' %}active{% endif %}" id="step1">
                                   <span class="mt-4 mb-2">Ordered</span>
-                                  <span class="date">May 14, 2021</span>
+<!--                                   <span class="date">May 14, 2021</span> -->
                               	</li>
-                              	<li class="step0 active text-center" id="step2">
+                              	<li class="step0 text-center {% if order.fulfillment_status == 'fulfilled' or order.tags contains 'confirmed' or order.tags contains 'Ready_To_Ship' or order.tags contains 'shipped' or order.tags contains 'out_for_delivery' or order.tags contains 'delivered' %}active{% endif %}" id="step2">
+                                  <span class="mt-4 mb-2">Order Confirmed</span>
+<!--                                   <span class="date">May 17, 2021</span> -->
+                              	</li>
+                              	<li class="step0 text-center {% if order.tags contains 'Ready_To_Ship' or order.tags contains 'shipped' or order.tags contains 'out_for_delivery' or order.tags contains 'delivered' %}active{% endif %}" id="step2">
                                   <span class="mt-4 mb-2">Ready To Ship</span>
-                                  <span class="date">May 17, 2021</span>
+<!--                                   <span class="date">May 17, 2021</span> -->
                               	</li>
-                                <li class="step0 active text-center" id="step3">
+                                <li class="step0 text-center {% if order.tags contains 'shipped' or order.tags contains 'out_for_delivery' or order.tags contains 'delivered' %}active{% endif %}" id="step3">
                                   <span class="mt-4 mb-2">In Transit</span>
-                                  <span class="date">May 20, 2021</span>
+<!--                                   <span class="date">May 20, 2021</span> -->
                               	</li>
-                                <li class="step0 text-right" id="step4"><span id="three">
+                                <li class="step0 text-right {% if order.tags contains 'out_for_delivery' or order.tags contains 'delivered' %}active{% endif %}" id="step4"><span id="three">
                                   <span class="mt-4 mb-2">Out for Delivery</span>
                                   <span class="date"></span>
-                                </li>
-                              <li class="step0 text-right" id="step5">
+                                </li> 
+                              <li class="step0 text-right {% if order.tags contains 'delivered' %}active{% endif %}" id="step5">
                                 <span class="mt-4 mb-2">Delivered</span>
                                 <span class="date"></span>
                               </li>

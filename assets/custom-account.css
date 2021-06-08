@@ -5,6 +5,7 @@
     background-color: transparent !important; color: #E50A19 !important; font-weight: 700;
 }
 
+/* .account-page.custom-acc-page .breadcrumb{ font-family: 'Open Sans', sans-serif; } */
 /* .account-page.custom-acc-page .breadcrumb a{ font-size: 16px; color: #06A89C; text-transform: uppercase; }  */
 /* .account-page.custom-acc-page .breadcrumb span{ font-size: 16px; color: #161616; } */
 .account-page.custom-acc-page .order-container { margin-bottom: 2rem; border: 1px solid #C3C3C3;  }
@@ -91,7 +92,7 @@
 #progressbar li {
     list-style-type: none;
     font-size: 16px;
-    width: 20%;
+    width: 16%;
     float: left;
     position: relative;
     font-weight: 700;

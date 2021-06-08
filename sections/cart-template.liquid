@@ -475,7 +475,12 @@
   
   .cart-template .cart-form .cart--title .cart--info .size{  color: #161616; }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1300px) {
+  
+  .cart-cta, .cart-template .wrapper-cart-template .cart-list .qty-group{ margin-bottom: 1.5rem;}
+  
+  }
+    @media (max-width: 1024px) {
     .cart-template .cart-form .cart--title .cart--info{ padding-left: 10px; }
     .cart-template .cart-form .cart-header>*.cart--title, .cart-template .cart-form .cart-list .details>*.cart--title{
       width: 100% !important; 
@@ -486,7 +491,13 @@
     .cart-template .wrapper-cart-template .cart-list .qty-group{ border: 1px solid #161616; margin-bottom: 0; }
     .cart-template .wrapper-cart-template .cart-list .qty-group input[name="updates[]"]{ border: 0; }
     .cart-template .cart-form .cart-cta a { padding: 1rem 1rem; }
-    .cart-cta{ margin-top: 1rem; }
+    .cart-cta, .cart-template .wrapper-cart-template .cart-list .qty-group{ margin-bottom: 1.5rem;}
   
+  }
+  @media (max-width: 768px) {
+    .cart-template .cart-form .cart-cta a {  width: 100%; }
+    .cart-cta{ margin-top: 1rem; width: 100%; }
+    .cart-cta, .cart-template .wrapper-cart-template .cart-list .qty-group{ margin-bottom: 0;}
+     
   }
 </style>  

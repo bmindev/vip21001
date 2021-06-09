@@ -136,7 +136,7 @@
                           
                           <div class="col-12 col-lg-4 mt-5 mt-lg-0 text-lg-center print-btn-container">
                           	{% if order.tags contains 'confirmed' or order.fulfillment_status == 'fulfilled' %}
-                            	<a class="print-btn mb-4" type='button' id='btn-mp-print' target='_blank' href='/apps/invoice-printer/print/EWhyN3AkM3PkRUEePedo/{{ order.id | times: 354 }}'>Download Invoice</a>
+                            	<a class="print-btn mb-4" type='button' id='btn-mp-print' target='_blank' href='https://demo.brandmoversindia.in/vipbags-rubicon/download_invoice.php?order_id={{ order.id }}'>Download Invoice</a>
                            	{% endif %}
                             <div class="invoice-details"> 
                               <div class="row ml-lg-5 mr-lg-3 mb-3">

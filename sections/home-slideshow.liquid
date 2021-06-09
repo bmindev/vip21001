@@ -246,7 +246,7 @@
                 </div>
                 {% if check_video == false and section.blocks.size > 1 %}
                 {%- if dots == 'true' or section.settings.arrow_active -%}
-                <div class="slide-action {% if section.settings.style_slideshow == 'style_2' %}style_2{% endif %}">
+                <div class="slide-action hide {% if section.settings.style_slideshow == 'style_2' %}style_2{% endif %}">
                     {%- if dots == 'true' -%}
                     <ul class="slick-dots">
                         {% for block in section.blocks %}
@@ -290,6 +290,8 @@
 </section>
 
 <style>
+   .home-slideshow:not(.hasvideo) [data-init-slideshow][data-fade=true] .item{ opacity: 1 !important; }
+  
     {% assign arrow_color =  section.settings.arrow_color %}
     {% assign arrow_border_color =  section.settings.arrow_border_color %}
     {% assign margin_bottom =  section.settings.margin_bottom %}

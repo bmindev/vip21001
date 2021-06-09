@@ -139,7 +139,7 @@
                       </span>
                     </div>
               	</div>
-                <div class="d-flex w-100 align-items-center mt-3">           
+                <div class="d-flex flex-column align-items-start flex-md-row w-100 align-items-md-center mt-3">           
 
                   <div class="cart-quantity p-0">
                     <div class="qty-group  mr-4">
@@ -247,4 +247,11 @@
   .cart-popup-content .btn-actions a.btn.cta-btn{  padding: 0.7rem  !important; border-color: #3a84df !important; }
   .cart-popup-content .btn-actions a.btn.cta-btn:hover{  border-color: #161616 !important; background-color: #fff; color: #000;  } 
   .cart-popup-content .btn-actions a.btn.btn-checkout{ padding: 0.7rem  !important; }
+  
+    @media (max-width: 640px){
+    .cart-popup-content .cart-form .cart-cta a{ padding: 1.6rem 1.7rem; }
+    .cart-popup-coll-related .widget-title .box-title{ font-size: 23px !important; }
+    .cart-popup-content .product-name, .product-title { font-size: 14px !important; max-width: 170px;  }
+    .cart-popup-content .product-bottom .product-name, .cart-popup-content .product-bottom .product-title{  margin: 0 auto; }
+  }
 </style>

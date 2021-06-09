@@ -911,6 +911,7 @@ endfor
             if (variant.available) {
                 if (variant.inventory_management != null) {
 //                     productInventory.find('span').text(window.inventory_text.in_stock);
+                  productInventory.find('span').html( inventoryQuantity + '<span>' + ' '+  window.inventory_text.in_stock + '</span>');
                 }
                 else {
                     productInventory.find('span').text(window.inventory_text.many_in_stock);

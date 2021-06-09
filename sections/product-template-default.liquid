@@ -20,7 +20,7 @@ endfor
 
         <div class="row mt-4 product_top{% if section.settings.show_tab == 'horizontal' or section.settings.show_tab == 'horizontal_center' %} horizontal-tabs{% else %} vertical-tabs has-sticky-product-img{% endif %}">
           <div class="col-12 col-lg-10 m-auto">
-            <div class="row justify-content-between pb-5 mb-5">
+            <div class="row justify-content-between pb-xl-5 mb-xl-5">
             	<div class="col-md-6 product-photos" data-more-view-product>
                 <div {% if section.settings.show_tab == 'vertical' %} data-sticky-product-img{% endif %} class="product-img-box{% if section.settings.style_moreview == 'horizontal' %} horizontal-moreview{% elsif section.settings.style_moreview == 'left_vertical' %} left-vertical-moreview vertical-moreview{% else %} right-vertical-moreview vertical-moreview{% endif %}{% if settings.product_image_border%} grid-item-border{% endif %}">
                     <div style="position: relative;" class="wrapper-images">
@@ -1076,8 +1076,12 @@ endfor
     
 
     $(".product-write-review").click(function() {
+//       alert("hi");
+//       $('html, body').animate({
+//         scrollTop: $("#judgeme_product_reviews").offset().top
+//       }, 2000);
       $([document.documentElement, document.body]).animate({
-        scrollTop: $("#shopify-section-alireviews-widget-46514").offset().top
+        scrollTop: $(".jdgm-rev-widg__title").offset().top
       }, 500);
 	});
     

@@ -30,14 +30,20 @@
                         {% endif %}
                         
                         {%- assign footer_linklist = block.settings.footer_linklist -%}
-                        
+               
                         {% if linklists[footer_linklist].links.size > 0 %}
                         <ul>
                             {% for link in linklists[footer_linklist].links %}
                             <li>
-                            <a target="_blank" href="{{ link.url}}" title="{{ link.title }}" class="foot-link">
-                                {% render 'multilang' with link.title %}
-                            </a>
+                              {% if footer_linklist == 'for-customer' %}
+                                <a target="_blank" href="{{ link.url}}" title="{{ link.title }}" class="foot-link">
+                                    {% render 'multilang' with link.title %}
+                                </a>
+                              {% else %}
+                                <a target="" href="{{ link.url}}" title="{{ link.title }}" class="foot-link">
+                                    {% render 'multilang' with link.title %}
+                                </a>
+                              {% endif %}
                             </li>
                             {% endfor %}
                         </ul>

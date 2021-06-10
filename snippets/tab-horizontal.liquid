@@ -100,13 +100,19 @@
             </div>
             {% else %}
             <div>
-              <p>Premium polycarbonate
-                5-year international warranty
-                Anti-theft zipper
-                Dual wheels
-                Spacious
-                Combination lock </p>
                 {{ des | split: '[lang2]' | first }}
+            </div>
+          	<div class="row">
+                <div class="col-6">
+                  <p>Premium polycarbonate</p>
+                  <p>5-year international warranty</p>
+                  <p>Anti-theft zipper</p>
+              	</div>
+                <div class="col-6">
+                  <p>Dual wheels</p>
+                  <p>Spacious</p>
+                  <p>Combination lock</p>
+                </div>
             </div>
             {% endif %}
 
@@ -125,7 +131,7 @@
             </div>
             <div class="tab-content {% if tab2_active%}active{% endif %}" data-TabContent id="collapse-tab2">
                 <div id="shopify-product-reviews" data-id="{{product.id}}">
-                    {{ product.metafields.spr.reviews }}                 
+                    {{ product.metafields.spr.reviews }}
                 </div>
             </div>
         {% endif %}

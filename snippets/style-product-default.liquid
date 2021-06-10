@@ -46,6 +46,8 @@
   a.custom-wishlist-btn svg{ stroke: none; vertical-align: middle;}
    a.custom-wishlist-btn.whislist-added svg path{ fill: #E50219; } 
   
+  
+  
   .product-write-review-container{ font-size: 16px; font-weight: 600; }
   .product-write-review-container #alireview-review-widget-badge span:last-child{ 
   	font-size: 16px;  text-decoration: underline;
@@ -169,8 +171,19 @@
    }
   
   
-  .sk-compare-btn-wrapper .sk-btn-filled{ background-color: #E2E3E5; color: #000000; border-color: #E2E3E5; font-weight: 600; border-radius: 8px; font-size: 15px; font-family: 'Montserrat', sans-serif; text-transform: uppercase; min-width: auto !important;  padding: 8px 16px !important;}
-  .sk-compare-btn-wrapper .sk-btn-filled:before{ content: "";
+    input.SPCMP_Add[type='button'].new_SPCMP_Btn, input.SPCMP_Add[type='button'].new_SPCMP_Btn{ background-color: #E2E3E5 !important; color: #000000 !important; 
+      border-color: #E2E3E5 !important; font-weight: 600 !important; border-radius: 8px !important; font-size: 15px !important;
+      font-family: 'Montserrat', sans-serif !important; text-transform: uppercase !important; min-width: auto !important;  padding: 8px 16px !important;
+      position: absolute;
+      width: auto;
+      top: -400px;
+      right: 0;
+    }
+  
+    input.SPCMP_Add[type='button'].new_SPCMP_Btn, input.SPCMP_Add[type='button'].new_SPCMP_Btn:hover {
+      width: auto !important;
+    }
+    input.SPCMP_Add[type='button'].new_SPCMP_Btn:before, input.SPCMP_Add[type='button'].new_SPCMP_Btn:before{ content: "";
     background: url("{{ 'arrow-1.png' | asset_url }}");
     display: inline-block;
     height: 25px; width: 25px; margin-right: 5px;
@@ -307,6 +320,9 @@
   
   .product-shop .prices { font-size: 25px; }
     a.custom-wishlist-btn{ font-size: 12px; padding: 1.2rem 1rem; }
+    
+    #rbz-zipcode-input input{ width: 79%; }
+    input.SPCMP_Add[type='button'].new_SPCMP_Btn, input.SPCMP_Add[type='button'].new_SPCMP_Btn{ top: -88px !important; font-size: 12px !important;}
   }
   
   @media (max-width: 767px){

@@ -6,7 +6,7 @@
     {%- assign column_size = 'col-4 col-md-3 mb-4 mb-md-0 col-lg-2 col-xl-3' -%}
     {%- assign rows = 'five-items' -%}
   {% when '6' %}
-    {%- assign column_size = 'col-4 col-md-3 mb-4 mb-md-0 col-lg-2 col-xl-3' -%}
+    {%- assign column_size = 'col-4 mob-custom-col col-md-3 mb-4 mb-md-0 col-lg-2 col-xl-3' -%}
     {%- assign rows = 'six-items' -%}
 {% endcase %}
 
@@ -111,6 +111,8 @@
       #home-collections-{{section.id}} .widget-title .box-title { font-size: 3.5rem; text-transform: capitalize; font-weight: 500; }
       .custom-collection  .banner-item .banner-title{ font-size: 12px; }
       .row.custom-collection.collections-slider.four-items  .banner-item .banner-title{ font-size: 21px; font-weight: 700; }
+      .custom-collection.six-items .mob-custom-col{ flex: 0 0 29%; max-width: 29%; padding-right: 5px; padding-left: 5px;  }
+      .custom-collection.six-items { padding-left: 0; padding-bottom: 10px; }
       
     }
       

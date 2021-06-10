@@ -34,8 +34,7 @@
   
     setTimeout( function(){
       
-      
-      $('.product-wishlist a').each(function(index, obj){
+      $('#cart-wishlist a').each(function(index, obj){
         if($(obj).hasClass('whislist-added')){
           $(obj).html('Added to Wishlist');		
           
@@ -51,9 +50,7 @@
     $('#cart-wishlist a').click(function(e){
       
       if($(this).hasClass('whislist-added')){
-        alert('hi');
          e.preventDefault();
-        
       
       } else{
         
@@ -5532,13 +5529,13 @@
 
                 productHTML += '<div class="" data-wishlist-added="wishlist-'+product.id+'">';
                 productHTML += '<div class="inner product-item row mb-5  p-4 align-items-center " data-product-id="product-'+product.handle+'">';
-                productHTML += '<div class="col-3 col-img"><div class="product-image">';
+                productHTML += '<div class="col-10 col-xl-3 col-img"><div class="product-image">';
                 productHTML +='<a href="'+product.url+'" class="product-grid-image" data-collections-related="/collections/all?view=related">';
                 if (product.featured_image) {
                     productHTML += '<img src="'+product.featured_image+'" alt="'+product.featured_image.alt+'">';
                 }
                 productHTML += '</a></div></div>';
-                productHTML += '<div class="col-8 ">';
+                productHTML += '<div class="col-12 col-xl-8 ">';
                 productHTML += '<div class="">';
                 productHTML += '<a class="product-title" href="'+product.url+'" title="'+product.title+'">'+product.title+'</a>';
                	productHTML += '<div class="product-desc">';

@@ -100,6 +100,12 @@
             </div>
             {% else %}
             <div>
+              <p>Premium polycarbonate
+                5-year international warranty
+                Anti-theft zipper
+                Dual wheels
+                Spacious
+                Combination lock </p>
                 {{ des | split: '[lang2]' | first }}
             </div>
             {% endif %}
@@ -119,7 +125,7 @@
             </div>
             <div class="tab-content {% if tab2_active%}active{% endif %}" data-TabContent id="collapse-tab2">
                 <div id="shopify-product-reviews" data-id="{{product.id}}">
-                    {{ product.metafields.spr.reviews }}
+                    {{ product.metafields.spr.reviews }}                 
                 </div>
             </div>
         {% endif %}
@@ -142,6 +148,7 @@
                 {% else %}
                     {% assign des = section.settings.custom_tab_content_1 %}
                     <div>
+                      <img src="https://cdn.shopify.com/s/files/1/0554/8752/9165/files/Dimension.png?v=1623317066" alt="Girl in a jacket" width="700" height="800">
                         {{ des }}
                     </div>
                 {% endif %}

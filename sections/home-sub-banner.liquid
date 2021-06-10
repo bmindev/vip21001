@@ -1,7 +1,7 @@
 {% if section.settings.display_sub_banner and section.blocks.size > 0 %}
 <div class="home-sub-banner sub-banner-{{ section.blocks.size }}{% unless section.settings.display_padding %} no-padding{% endunless %}" id="sub-banner-{{section.id}}">
     <div class="{% if section.settings.layout == 'default' %}container{% else %}container-fluid{% endif %}">
-        <div class="row">
+        <div class="row mobile-slider">
             {% for block in section.blocks %}
             
             {% case section.blocks.size %}
@@ -79,6 +79,8 @@
     }	
 </style>
 {% endif %}
+
+
 
 
 {% schema %}

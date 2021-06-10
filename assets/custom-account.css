@@ -252,6 +252,7 @@
   .account-dropdown .dropdown-menu a{ padding: 1rem 0.5rem; color: #161616 !important;  }
   .account-dropdown a.btn:focus{ box-shadow: none !important; }
   .account-dropdown .dropdown-menu a:not(:last-child){border-bottom: 1px solid #d8d8d8 !important; }
+   #progressbar li{ font-size: 10px; line-height: 1.1; }
   
 }
 @media screen and (max-width: 992px) {

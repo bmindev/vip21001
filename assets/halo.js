@@ -31,10 +31,37 @@
     if (compareArr.length) {
         compareArr = JSON.parse(localStorage.getItem('compareArr'));
     };
+  
+    setTimeout( function(){
+      
+      
+      $('.product-wishlist a').each(function(index, obj){
+        if($(obj).hasClass('whislist-added')){
+          $(obj).html('Added to Wishlist');		
+          
+        }
+        
+      });
+      
 
-    $('#cart-wishlist a').click(function(){
+    },1000);
+  
+  
+
+    $('#cart-wishlist a').click(function(e){
+      
+      if($(this).hasClass('whislist-added')){
+        alert('hi');
+         e.preventDefault();
+        
+      
+      } else{
+        
+         $(this).parent().parent().find(".cart-cta .remove").trigger("click");
+      
+      }
 		
-       $(this).parent().parent().find(".cart-cta .remove").trigger("click");
+      
       
     })  
   

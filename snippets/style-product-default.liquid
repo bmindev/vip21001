@@ -275,6 +275,7 @@
     border-color: var(--border_1);
     border: 1px solid var(--border_1);
     color: var(--border_1);
+    text-transform: uppercase !important;
   
   } 
   .product-login:hover{
@@ -287,13 +288,25 @@
 }
   
 .product-template-default #shopify-section-home-new-arrivals .inner-top {  background-color: #fff; padding-bottom: 1rem; border-radius: 8px; }
-  @media (max-width: 1199px){
+  @media (max-width: 1400px){
   
-    .custom-wishlist-btn{ width: 100%; display: block; }
+    .custom-wishlist-btn{ display: block; }
     .product-shop .prices .on-sale{ display: block; }
   
   }
   
+  @media (max-width: 1199px){
+  
+  .custom-wishlist-btn{ display: inline-block; width: auto; }
+    .product-shop .prices .on-sale{ display: block; }
+    .cbb-frequently-bought-form { padding-top: 11%;}
+  }
+  
+  @media (max-width: 959px){
+  
+  .product-shop .prices { font-size: 25px; }
+    a.custom-wishlist-btn{ font-size: 12px; padding: 1.2rem 1rem; }
+  }
   
   @media (max-width: 767px){
     
@@ -410,7 +423,7 @@
       
     #rbz-zipcode-input input{ width: 83%;  }
       
-    a.custom-wishlist-btn{ display: block; width: 48%; }  
+/*     a.custom-wishlist-btn{ display: block; width: 48%; }   */
     .sk-compare-btn-wrapper { top: 502px; right: auto; left: 50%; }
     .sk-compare-btn-wrapper .sk-btn-filled{ padding: 11px 8px !important; font-size: 13px; max-width: 160px; text-align: center; width: 135%; }
       

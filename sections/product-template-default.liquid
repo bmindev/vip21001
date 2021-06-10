@@ -19,8 +19,8 @@ endfor
         {% assign variantCount = product.variants | size %}
 
         <div class="row mt-4 product_top{% if section.settings.show_tab == 'horizontal' or section.settings.show_tab == 'horizontal_center' %} horizontal-tabs{% else %} vertical-tabs has-sticky-product-img{% endif %}">
-          <div class="col-12 col-lg-10 m-auto">
-            <div class="row justify-content-between pb-xl-5 mb-xl-5">
+          <div class="col-12  col-xl-10 m-auto">
+            <div class="row justify-content-between pb-md-5 mb-xl-5">
             	<div class="col-md-6 product-photos" data-more-view-product>
                 <div {% if section.settings.show_tab == 'vertical' %} data-sticky-product-img{% endif %} class="product-img-box{% if section.settings.style_moreview == 'horizontal' %} horizontal-moreview{% elsif section.settings.style_moreview == 'left_vertical' %} left-vertical-moreview vertical-moreview{% else %} right-vertical-moreview vertical-moreview{% endif %}{% if settings.product_image_border%} grid-item-border{% endif %}">
                     <div style="position: relative;" class="wrapper-images">
@@ -192,7 +192,8 @@ endfor
                       <a class="wishlist custom-wishlist-btn" data-icon-wishlist href="#" data-product-handle="{{ product.handle }}" data-id="{{ product.id }}">
                           <svg xmlns="http://www.w3.org/2000/svg" width="14.545" height="13.333" viewBox="0 0 14.545 13.333">
                             <path id="iconmonstr-favorite-4" d="M3.806,1A3.663,3.663,0,0,0,0,4.753c0,2.825,3.376,5.713,7.272,9.58,3.9-3.867,7.272-6.755,7.272-9.58a3.654,3.654,0,0,0-3.8-3.746,3.96,3.96,0,0,0-3.47,1.962A3.955,3.955,0,0,0,3.806,1Z" transform="translate(0 -1)" fill="#707070"/>
-                          </svg> Add to Wishlist
+                          </svg> 
+                        <span>Add to Wishlist</span>
                       </a>
 
                   	</div>
@@ -470,7 +471,8 @@ endfor
                 <a class="wishlist custom-wishlist-btn" data-icon-wishlist href="#" data-product-handle="{{ product.handle }}" data-id="{{ product.id }}">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14.545" height="13.333" viewBox="0 0 14.545 13.333">
                     <path id="iconmonstr-favorite-4" d="M3.806,1A3.663,3.663,0,0,0,0,4.753c0,2.825,3.376,5.713,7.272,9.58,3.9-3.867,7.272-6.755,7.272-9.58a3.654,3.654,0,0,0-3.8-3.746,3.96,3.96,0,0,0-3.47,1.962A3.955,3.955,0,0,0,3.806,1Z" transform="translate(0 -1)" fill="#707070"/>
-                  </svg> Add to Wishlist
+                  </svg> 
+                  <span>Add to Wishlist</span>
                 </a>
 
               </div>
@@ -1066,6 +1068,18 @@ endfor
 </script>
 <script>
   $(document).ready(function(){
+    
+    setTimeout( function(){
+    	  if($('.custom-wishlist-btn').hasClass('whislist-added')){
+         $('.custom-wishlist-btn span').html('Remove from Wishlist');
+
+         } else{
+           $('.custom-wishlist-btn span').html('Add to Wishlist');
+         }
+    
+    }, 1000);
+   
+    
     $('.model-viewer-click').click(function(){
       $(this).parent().find('.shopify-model-viewer-ui__button').hide();
     })
@@ -1074,7 +1088,16 @@ endfor
 		$('#wa-chat-btn-root').trigger('click');
     });
     
-
+   $('.custom-wishlist-btn').click(function(){ 
+     if($(this).hasClass('whislist-added')){
+     	$(this).find('span').html('Add to Wishlist');
+     
+     } else{
+       $(this).find('span').html('Remove from Wishlist');
+     }
+    });
+    
+    
     $(".product-write-review").click(function() {
 //       alert("hi");
 //       $('html, body').animate({

@@ -734,3 +734,43 @@
             });
   })
 </script>
+
+<style>
+  .quickview-tpl .product-shop .product-title a, .product-shop .product-infor label{ color: #161616 !important;  }  
+  .quickview-tpl .swatch .header{ color: #161616 !important; }
+   .swatch .swatch-element label{ padding: 4px; border: 0; }
+  
+ .swatch .swatch-element:not(.color) label:after{ content: none; }
+  
+ .swatch .swatch-element:not(.color) label{ border: 1px solid; border-color: #B9B9B9; border-radius: 8px;
+    min-width: 97px;
+    min-height: 38px;
+    padding: 6px;
+    color: #ACACAC;
+    font-weight: 600 !important;
+
+ }
+  .swatch .swatch-element:not(.color).soldout label{ text-decoration: line-through; }
+  .swatch .swatch-element:not(.color) input:checked+label{ background-color: #161616; color: #fff;  border-color: #161616;}
+  
+  .product-shop .swatch .header{ font-size: 14px;  }
+  .product-shop .swatch .header [data-option-select]{ font-weight: 600; }
+  .swatch .swatch-element .bgImg{ border: 3px solid white; }
+  
+  .product-shop .quantity{ margin-bottom: 30px; border-top: 1px solid #E2E3E5; padding-top: 15px; }
+  
+  .product-shop  .qty-group{ max-width: 165px; border-radius: 8px; }
+  .product-shop .shopify-product-form label{ font-size: 14px; color: #161616; font-weight: 600; }
+  .product-shop .qty-group, .product-shop .qty-group .button.minus, .product-shop .qty-group .button.plus{ border-color: #161616; }
+  .qty-group .button:before, .qty-group .button:after, .qty-group .button:before, .qty-group .button:after{ background-color:#161616;  }
+  .product-shop .qty-group input[name="quantity"], .product-shop .qty-group input[name="group_quantity"]{ font-size: 20px; font-weight: 700; }
+  .qty-group .button{ height: 38px; }
+  
+  .product-shop .qty-group .plus.button{ border-top-right-radius: 8px; border-bottom-right-radius: 8px;} 
+  .product-shop .qty-group .minus.button{ border-top-left-radius: 8px; border-bottom-left-radius: 8px;}
+  
+  .product-shop .qty-group .button{ height: 44px; width: 42px; background: #E2E3E5; }
+  .product-shop .swatch .header [data-option-select]{ color: #161616; }
+  
+  .product-shop .prices{ color: #cb2026; }
+</style>

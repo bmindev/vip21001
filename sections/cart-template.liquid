@@ -301,7 +301,7 @@
         {% endif %}
         {% else %}
           <div class="">
-            <a class="btn"  href="{{ routes.account_login_url }}" {% if settings.enable_multilang %}data-translate="customer.login.login"{% endif %}>
+            <a class="btn cart-login-btn"  href="{{ routes.account_login_url }}" {% if settings.enable_multilang %}data-translate="customer.login.login"{% endif %}>
               Login
             </a>             
           </div>
@@ -387,7 +387,7 @@
   .cart-template .free_shipping_massage1{ margin-bottom: 35px; }
   
   .progress_shipping{ background-color: #F5F5F5 !important; border-radius: 10px; }
-  .progress_shipping .progress-meter{  background-color: #2AA31A !important; background-image: none !important; border-radius: 10px; }
+  .progress_shipping .progress-meter{  background-color: #2AA31A ; background-image: none !important; border-radius: 10px; }
   
   .order-summary-container{ border: 1px solid #C3C3C3 !important; margin-bottom: 0 !important; }
   .order-summary-container .cart-header .cart--title{ font-weight: 700; } 
@@ -421,7 +421,8 @@
   
   .cart-form .total span.saso-cart-original-total .price, .dcodeTotalValue .dcode-total-value{ color: #E50A19; text-align: right; font-size: 18px; font-weight: 700;}
   
-  .cart-template .wrapper-cart-template .btn-actions .btn-checkout{ color: #fff; border-color: #3A84DF; background-color: #3A84DF; font-size: 16px; font-weight: 600; border-radius: 7px !important; padding: 1rem 0.7rem !important; }
+  .cart-template .wrapper-cart-template .btn-actions .btn-checkout, .cart-login-btn{ color: #fff; border-color: #3A84DF; background-color: #3A84DF; font-size: 16px; font-weight: 600; border-radius: 7px !important; padding: 1rem 0.7rem !important; border-color: transparent !important; }
+  .cart-template .wrapper-cart-template .btn-actions .btn-checkout:hover, .cart-login-btn:hover{ border-color: #161616 !important; }
   .cart-template .cart-form .cart-cta a{ background-color: #E2E3E5; color: #161616; display: inline-flex; border-radius: 8px; border: 1px solid #E2E3E5; width: auto; font-size: 16px; font-weight: 600; font-style: normal; text-transform: uppercase; padding: 1rem 2rem; }
   .cart-template .cart-form .cart-cta a svg{ stroke: none; top: 0; padding-right: 8px; }
   
@@ -471,6 +472,7 @@
   
   
   .cart-form .cart-list .qty-group .button{ height: 44px; width: 42px; background: #E2E3E5; }
+  
   .cart-template .wrapper-cart-template .cart-list .qty-group input[name="updates[]"]{ font-size: 20px; font-weight: 700; width: 65px; }
   
   .cart-template .cart-form .cart--title .cart--info .size{  color: #161616; }

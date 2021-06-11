@@ -192,7 +192,7 @@
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-    background: #2F9F1E;
+    background: #3A84DF;
 }
 
 
@@ -252,7 +252,7 @@
   .account-dropdown .dropdown-menu a{ padding: 1rem 0.5rem; color: #161616 !important;  }
   .account-dropdown a.btn:focus{ box-shadow: none !important; }
   .account-dropdown .dropdown-menu a:not(:last-child){border-bottom: 1px solid #d8d8d8 !important; }
-   #progressbar li{ font-size: 10px; line-height: 1.1; }
+/*    #progressbar li{ font-size: 10px; line-height: 1.1; } */
   
 }
 @media screen and (max-width: 992px) {
@@ -264,4 +264,16 @@
   .other-addreses.card{ width: 100%; }
    .account-page.custom-acc-page .order-container .quantity-circle{ right: 89px; top: 15px; }
   .address-modal{ width: 95%; }
+    #orderStatusBar{ margin-left: 1rem; }
+  #progressbar li{ float: none; min-height: 85px; width: 50%;}
+  #progressbar li:after{ height: 80px; width: 2px; left: 8px; }
+  #progressbar #step2:before, #progressbar #step3:before, #progressbar #step4:before, #progressbar #step5:before{ margin-left: 0; }
+  #progressbar li:nth-child(1):after{ margin: 0; }
+  #progressbar li:nth-child(3):after, #progressbar li:nth-child(4):after{ float: none; width: 2px; }
+  #progressbar li:nth-child(4):after{ width: 2px; margin: 0; }
+  #progressbar li:last-child:after{ content: none; }
+  #progressbar li span{ margin: 0 !important; position: absolute; left: 32px; top: 0; text-align: left !important; }
+  #progressbar li span#three{ width: 100%; left: 0; }
+  #progressbar li span.date{ margin-top: 2rem !important; }
+  
 }

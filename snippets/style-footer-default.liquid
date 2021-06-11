@@ -118,12 +118,20 @@
   .custom-footer-col .col-footer:last-child ul li:nth-child(4){ margin: 3rem 0 0;}
   .custom-footer-col .col-footer:last-child ul li:nth-child(4):before{content: 'For Office Use'; display: block; text-decoration: underline; font-size: 14px;}
 
+  @media (max-width: 1199px) {
+    .site-footer .footer-top, .footer-bottom{ width: 98%; }
+    .site-footer .col-footer{ width: 25%; }
+  
+  }
   @media (max-width: 767px) {
     .footer-top .col-footer .dropdow-mb {
       border-bottom: 1px solid {{ section.settings.bg_footer_line_color }}; 
     }
     .custom-footer-col .col-footer{ width: 100%; }
     .footer-bottom{ text-align: left !important; }
+    .site-footer .footer-top, .footer-bottom{ width: 90%; }
+    .site-footer .help-line-number{ font-weight: 700; }
+    .footer-top .col-footer .dropdow-mb { border-bottom: 1px solid #AAB1B4; }
   }
   @media (min-width: 1199px) {
   .custom-footer-col .col-footer{ width: 18%;}

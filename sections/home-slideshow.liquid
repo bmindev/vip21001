@@ -329,7 +329,9 @@
         background: {{ section.settings.bg_video }};
         opacity: {{ section.settings.bg_overlay_opacity | divided_by: 100.00 }};
     }
-
+    @media (max-width: 1199px) {
+      .home-slideshow .item img{ padding: 0.7rem; border-radius: 20px; }
+    }
     @media (max-width: 767px) {
         #slideshow-{{section.id}} {
             margin-bottom: {{ section.settings.margin_bottom_mb }}px;

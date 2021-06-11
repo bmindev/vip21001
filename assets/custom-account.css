@@ -266,7 +266,7 @@
   .address-modal{ width: 95%; }
     #orderStatusBar{ margin-left: 1rem; }
   #progressbar li{ float: none; min-height: 85px; width: 50%;}
-  #progressbar li:after{ height: 80px; width: 2px; left: 8px; }
+  #progressbar li:after{ height: 82px; width: 2px; left: 8px; }
   #progressbar #step2:before, #progressbar #step3:before, #progressbar #step4:before, #progressbar #step5:before{ margin-left: 0; }
   #progressbar li:nth-child(1):after{ margin: 0; }
   #progressbar li:nth-child(3):after, #progressbar li:nth-child(4):after{ float: none; width: 2px; }

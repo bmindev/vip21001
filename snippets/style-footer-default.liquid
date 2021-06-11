@@ -113,7 +113,8 @@
   	color: {{ section.settings.footer_bottom_color }}; 
   }
   
-  
+  .site-footer .newsletter .input-group-field, .site-footer .newsletter .custom-submit-btn{ background-color: rgba(0,0,0,0.20) }
+  .site-footer .help-line-number{ font-weight: 700; opacity: 0.79; }
   .custom-footer-col .col-footer:last-child ul li:first-child:before{content: 'For Customer:'; display: block; text-decoration: underline; font-size: 14px;}
   .custom-footer-col .col-footer:last-child ul li:nth-child(4){ margin: 3rem 0 0;}
   .custom-footer-col .col-footer:last-child ul li:nth-child(4):before{content: 'For Office Use'; display: block; text-decoration: underline; font-size: 14px;}
@@ -130,8 +131,26 @@
     .custom-footer-col .col-footer{ width: 100%; }
     .footer-bottom{ text-align: left !important; }
     .site-footer .footer-top, .footer-bottom{ width: 90%; }
-    .site-footer .help-line-number{ font-weight: 700; }
+
     .footer-top .col-footer .dropdow-mb { border-bottom: 1px solid #AAB1B4; }
+    .site-footer { background: #243841; }
+    .site-footer .footer-top{ padding: 10px 0 35px; }
+    .site-footer .footer-social{ margin-bottom: 5rem !important; }
+    .site-footer .newsletter .input-group-field { min-width: 88%; }
+    .site-footer .social-icons a{ width: 57px; height: 57px; }
+    .footer-social .social-icons {
+      width: 92%;
+      display: flex;
+      justify-content: space-between;
+	}
+    .fa-lg {
+      font-size: 2.333333em;
+      line-height: 5rem;
+      vertical-align: -13%;
+	}
+    .custom-mob-order{
+    	display: flex; flex-direction: column-reverse;
+    }
   }
   @media (min-width: 1199px) {
   .custom-footer-col .col-footer{ width: 18%;}

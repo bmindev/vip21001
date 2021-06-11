@@ -8,8 +8,25 @@
         <div class="container p-0">
             <div class="row no-gutters justify-content-between">
                 {% if section.blocks.size > 0 %}
-                <div class="col-12 col-md-12{% if section.settings.footer_newsletter_enable or section.settings.footer_social_enable %} col-lg-8 col-xl-8{% else %} col-lg-12 col-xl-12{% endif %}">
-                    <div class="row no-gutters custom-footer-col">
+                <div class="col-12 col-md-12 mb-4 mb-lg-0{% if section.settings.footer_newsletter_enable or section.settings.footer_social_enable %} col-lg-8 col-xl-8{% else %} col-lg-12 col-xl-12{% endif %}">
+                  {%if section.settings.footer_newsletter_enable %}
+                    <div class="footer-newsletter my-5 d-md-none">
+                        {% if section.settings.footer_newsletter_title != blank %}
+                        <h3 class="newsletter-title foot-title mb-0">
+                        {% render 'multilang' with section.settings.footer_newsletter_title %}
+                        </h3>
+                        {% endif %}
+
+                        {% if section.settings.footer_newsletter_des != blank %}
+                            <p class="newsletter-des">
+                                {% render 'multilang' with section.settings.footer_newsletter_des %}
+                            </p>
+                        {% endif %}
+                        
+                        {% render 'homepage-block-newsletter' %}
+                    </div>
+                    {% endif %}
+                  	<div class="row no-gutters custom-footer-col">
                         {% case section.blocks.size %}
                         {% when 1 %}
                         {%- assign column_size = 'col-12' -%}
@@ -55,8 +72,8 @@
                 {% endif %}
                 
                 {% if section.settings.footer_newsletter_enable or section.settings.footer_social_enable %}
-                <div class="col-12 col-md-12 col-lg-3 col-xl-3">
-                   	 <div class="footer-newsletter footer-help-line-number">
+                <div class="col-12 col-md-12 col-lg-3 col-xl-3 custom-mob-order">
+                   	 <div class="footer-newsletter footer-help-line-number ">
                        <h3 class="newsletter-des foot-title">
                          <span>Toll free help line no:</span>   
                        </h3>

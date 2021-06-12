@@ -33,7 +33,7 @@
     <span class="lang1">{{ product.title | split: '|' | first }}</span>
     <span class="lang2">{{ product.title | split: '|' | last }}</span>
   	{% else %}
-  	<span>{{ product.title | split: '|' | first }}</span>
+  	<span>{{ product.title | split: '|' | first | uppercase }}</span>
     {% endif %}
   
   {% elsif template contains 'collection' and collection.handle %}
@@ -143,7 +143,7 @@
 
 <style>
   
-.breadcrumb{ background-color: #F2F2F2 !important; padding: 1.3rem 1rem !important; border-radius: 10px; }
-.breadcrumb a{  font-size: 16px; color: #161616; font-weight: 600 !important; text-transform: uppercase;  }
-  .breadcrumb span{ font-size: 16px; color: #161616; font-weight: 700 !important;   }
+.breadcrumb{ background-color: #F2F2F2 !important; padding: 1rem 1rem !important; border-radius: 10px; }
+.breadcrumb a{  font-size: 14px; color: #161616; font-weight: 600 !important; text-transform: uppercase;  }
+  .breadcrumb span{ font-size: 14px; color: #161616; font-weight: 700 !important;   }
 </style>

@@ -4299,6 +4299,10 @@
                     ella.hideLoading();
                 }
             });
+          
+          setTimeout(function(){
+            window.location.reload();
+          },200);
         },
 
         toggleVariantsForExpressOrder: function () {

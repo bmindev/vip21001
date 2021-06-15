@@ -1197,15 +1197,12 @@
       "contact-template": {
         "type": "contact-template",
         "settings": {
-          "display_google_map": true,
-          "google_map_code": "<iframe src=\"https:\/\/maps.google.com\/maps?f=q&source=s_q&hl=vi&geocode=&q=4+Nguy%E1%BB%85n+%C4%90%C3%ACnh+chi%E1%BB%83u,+%C4%90a+Kao,+Qu%E1%BA%ADn+1&aq=&sll=37.0625,-95.677068&sspn=41.903538,86.572266&ie=UTF8&hq=&hnear=4+Nguy%E1%BB%85n+%C4%90%C3%ACnh+Chi%E1%BB%83u,+%C4%90a+Kao,+Qu%E1%BA%ADn+1,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam&t=m&ll=10.797518,106.700377&spn=0.014754,0.071197&z=15&iwloc=A&output=embed\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" width=\"100%\" height=\"350\"><\/iframe>",
           "contact_title": "DROP US A LINE | Schreiben Sie uns",
           "contact_text_desc": "Have a question or comment? Use the form below to send us a message or contact us by mail at:",
           "contact_your_name": "",
           "contact_phone_number": "",
           "contact_your_email": "",
-          "display_location": true,
-          "location_code": "<h4>Store Information<\/h4>\n<p>We'd love to hear from you - please use the form to send us your message or ideas. Or simply pop in for a cup of fresh tea and a cookie:<\/p>\n<p class=\"addr\">8808 Ave Dermentum, Onsectetur Adipiscing<br>Tortor Sagittis, CA 880986,<br>United States\n<\/p>\n\n<p class=\"addr\">Email: <a href=\"mailto:support@halothemes.com\">support@halothemes.com<\/a><br>Toll-free: <strong>1-888-699-8900<\/strong><\/p><div class=\"open-hours\">\n<strong>Opening Hours:<\/strong>\n<br>Monday to Saturday: 9am - 10pm\n<br>Sundays: 10am - 6pm\n<p><\/p>\n<\/div>"
+          "display_location": true
         }
       },
       "lookbook": {
@@ -1857,7 +1854,7 @@
           "custom_tab_content_1": "",
           "display_custom_tab_2": true,
           "custom_tab_title_2": "Return Policy",
-          "custom_tab_content_2": "<p>For shipping and returns, please click here<a href=\"https:\/\/vip-luggage2021.myshopify.com\/pages\/faqs\"> FAQ<\/a>\n<\/p>",
+          "custom_tab_content_2": "<p>For shipping and returns, please click here<a href=\"https:\/\/vip-luggage2021.myshopify.com\/pages\/faq\"> FAQ<\/a>\n<\/p>",
           "display_custom_tab_3": false,
           "custom_tab_title_3": "Custom Tab 3",
           "custom_tab_content_3": "Custom Tab Content 3",

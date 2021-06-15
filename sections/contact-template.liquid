@@ -10,46 +10,80 @@
   Google Map
 {% endcomment %}
 
-<div class="contact-us-page">
-  {% if section.settings.display_google_map %}
-  <div class="map">
-    {% if section.settings.google_map_code != blank %}
-    {{ section.settings.google_map_code }}
-    {% endif %}
-  </div>
-  {% endif %}
-  
-  <div class="container">
-  	{% render 'breadcrumb' %}
-    
-    <header class="page-header">
-      <h1>
+         
+
+<div class="contact-us-page"> 
+  <div class="container mt-2 mt-lg-4">
+ 
+  <!--    
+    <header class="page-heading">
+      {% if settings.enable_multilang and section.settings.contact_title contains '|' %}
+      <h2 class="lang1">
         {{ section.settings.contact_title | split: '|' | first }}
-      </h1>
-      <span class="line"></span>
+      </h2>
+      <h2 class="lang2">
+        {{ section.settings.contact_title | split: '|' | last }}
+      </h2>
+      {% else %}
+      <h2>
+        {{ section.settings.contact_title | split: '|' | first }}
+      </h2>
+      {% endif %}
+      {% render 'multilang-block' with section.settings.contact_text_desc, class:'des' %}
     </header> 
     
     {% if page.content != blank %}
     <div class="rte">
       {{ page.content }}
     </div>
-    {% endif %}
+    {% endif %} -->
     
-    <div class="wrapper">
+    <div class="container pt-lg-4">
+      {% render 'breadcrumb' %}
+      <div class="row mt-4">
+        <div class="col-12 col-md-3  contact-us-left-links">
+          <p>Select Query Type</p>
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Product Related Queries </a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Order Related Queries</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Business Enquiries</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Media Enquiries</a>
+          </div>
+         
+        </div>
+        <div class="col-12 col-md-9">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            	{formbuilder:48008}
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+  				{formbuilder:48009}
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            	{formbuilder:48010}
+            </div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            	{formbuilder:48011}
+            </div>
+          </div>
+        
+        </div>
+      </div>
+      	
+     
+    </div>
+    
+    <div class="wrapper d-none">
       <div class="row">
         <div class="col-md-7 col-lg-8 col-xl-7 form-contact">     
-          {% if settings.enable_multilang %}
-          <div class="lang1 des">
-            {{ section.settings.contact_text_desc | split: '[lang2]' | first }}
+          <div class="form-heading">
+            <h3 class="title">
+              {% render 'multilang' with section.settings.form_title%}
+            </h3>
+            <p>
+              {% render 'multilang' with section.settings.form_subtitle %}
+            </p>  
           </div>
-          <div class="lang2 des">
-            {{ section.settings.contact_text_desc | split: '[lang2]' | last }}
-          </div>
-          {% else %}
-          <div class="des">
-            {{ section.settings.contact_text_desc | split: '[lang2]' | first }}
-          </div>
-          {% endif %}
           
           {% form 'contact' %}
 
@@ -110,21 +144,36 @@
         </div>
         
         {% if section.settings.display_location %}
-        <div class="col-md-5 col-lg-4 col-xl-3 offset-xl-2">
-          {% if section.settings.location_code != blank %}
-          {% if settings.enable_multilang %}
-          <div class="location lang1">
-            {{ section.settings.location_code | split: '|' | first }}
-          </div>
-          <div class="location lang2">
-            {{ section.settings.location_code | split: '|' | last }}
-          </div>
-          {% else %}
-          <div class="location">
-            {{ section.settings.location_code | split: '|' | first }}
-          </div>
+        <div class="col-md-5 info">
+          <div class="inner">
+          {% if section.settings.top_title != '' and section.settings.top_content != '' %}
+            <div class="info-block top-content">
+              {% if section.settings.top_title != '' %}
+                <h3 class="title">
+                  {% render 'multilang' with section.settings.top_title %}
+                </h3>
+                {% if section.settings.top_content != '' %}
+                  {% render 'multilang-block' with section.settings.top_content, class: 'info-content'  %}
+                {% endif %}
+              {% endif %}
+              <a href="mailto:{{section.settings.email}}" class="btn">
+                {% render 'multilang' with section.settings.email_button %}
+              </a>
+            </div>
           {% endif %}
+          {% if section.settings.bot_content != '' and section.settings.bot_title != '' %}
+            <div class="info-block">
+            {% if section.settings.bot_title != '' %}
+              <h3 class="title">
+                {% render 'multilang' with section.settings.bot_title %}
+              </h3>
+            {% endif %}
+            {% if section.settings.bot_content != '' %}
+              {% render 'multilang-block' with section.settings.bot_content, class: 'info-content' %}
+            {% endif %}
           {% endif %}
+            </div>
+          </div>
         </div>
         {% endif %}
       </div>     
@@ -132,22 +181,131 @@
   </div>    
 </div>
 
+<style>
+  .contact-us-page{ border-top: 1px solid #06A89C; margin-top: 0.7rem; font-family: 'Open Sans', sans-serif; }
+  .page-heading {
+    text-align: center;
+    position: relative;
+    width:70%;
+    margin:0 auto;
+    margin-bottom: 55px;
+  }
+  .page-heading:before {
+    content: none;
+    display:block;
+    width: 30%;
+    max-width: 315px;
+    height:1px;
+    background-color: #a6a6a6;
+    position: absolute;
+    bottom:0;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .page-heading h2{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 30px;
+    margin-bottom: 22px;
+  }
+  .page-heading .des{
+    padding-bottom: 18px;
+    margin-bottom: 0px;
+  }
+  .form-contact{
+    padding-top:40px;
+  }
+  .form-heading{
+    margin-bottom:25px;
+  }
+  .form-heading h3.title{
+    font-size: {{settings.body_font_size | plus: 2}}px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 26px;
+  }
+  .contact-form input[type="text"],.contact-form input[type="tel"],.contact-form input[type="email"],.contact-us-page .form-group textarea{
+    max-width:630px;
+  }
+  .info .inner{
+    background-color: {{section.settings.background_color}};
+    padding:40px 55px;
+  }
+  .info .top-content{
+    margin-bottom: 50px;
+  }
+  .info h3.title{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: {{settings.body_font_size | plus:2}}px;
+    letter-spacing: 0.05em;
+    margin-bottom: 25px;
+  }
+  .info .info-content{
+    line-height: {{settings.body_font_size | plus:12}}px;
+  }
+  .info .top-content .info-content{
+    margin-bottom: 25px;
+  }
+   .info .top-content .btn{
+    background-color: {{section.settings.email_button_bgc}};
+    color: {{section.settings.email_button_txtc}};
+    border-color: {{section.settings.email_button_bdc}};
+    margin-top: 0;
+  }
+  .info .top-content .btn:hover{
+    background-color: {{section.settings.email_button_bgc_h}};
+    color: {{section.settings.email_button_txtc_h}};
+    border-color: {{section.settings.email_button_bdc_h}};
+  }
+  
+  .contact-us-left-links{  font-size: 14px; font-weight: 700; border-right: 1px solid #D8D8D8; }
+  .contact-us-left-links p{  text-transform: uppercase; margin-bottom: 0.2rem; border-bottom: 1px solid #D8D8D8; padding-bottom: 1.2rem; }
+  .contact-us-left-links .nav-link{ padding: 1.2rem 1rem 1.2rem 0; font-size: 15px; position: relative;
+    border-bottom: 1px solid #D8D8D8; color: #161616;
+    border-radius: 0 !important; }
+  
+  .globo-form-app.boxed-layout { max-width: 800px !important; border: 1px solid #D8D8D8; box-shadow: none; }
+  .globo-form-app .globo-form-control{ padding: 0 10px; margin-bottom: 2rem; }
+  .globo-form-app .globo-label, .globo-form-app .globo-form-control label.globo-label, .globo-form-app .globo-form-control label.globo-label span.label-content{ text-align: left; margin-bottom: 0.5rem; }
+  .globo-form-app .globo-form-control .help-block.error{ text-align: left; }
+  .globo-form-app .message+.footer{ margin-top: 15px; }  
+  .globo-form-app .footer button.submit, .globo-form-app .footer button.action.loading .spinner{ font-size: 16px; padding: 11px 40px; text-transform: uppercase; }
+  .nav-pills .nav-link:after{ font-family: FontAwesome; position: absolute; right: 20px; font-size: 20px;
+    content: "\f105"; }
+  
+  @media (max-width: 1024px){
+    .contact-us-page{ margin-top: 0;}
+  
+  }
+  
+  @media (max-width: 991px){
+    .info .inner{
+      padding:40px 20px;
+    }
+    .page-heading h2{
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 767px){
+    .page-heading h2{
+      font-size: 20px;
+    }
+  }
+</style>
+
 
 {% schema %}
     {
     "name": "Contact Page",
+    "class":"contact-template-2",
     "settings": [
-      {
-        "type": "checkbox",
-        "id": "display_google_map",
-        "label": "Display Google Map?",
-        "default": true
-      },
-      {
-        "type": "textarea",
-        "id": "google_map_code",
-        "label": "Google Map Code"
-      },
       {
         "type": "text",
         "id": "contact_title",
@@ -157,8 +315,23 @@
       {
         "type": "textarea",
         "id": "contact_text_desc",
-        "label": "Text Description",
-        "info":"Use [lang2] to separate multiple language"
+        "label": "Text Description"
+      },
+      {
+        "type": "header",
+        "content": "Contact Form"
+      },
+      {
+        "type": "text",
+        "id": "form_title",
+        "label": "Form Title",
+        "default":"Send us an email:"
+      },
+      {
+        "type": "text",
+        "id": "form_subtitle",
+        "label": "Form Subtitle",
+        "default":"ASK US ANYTHING! WE'LL GET BACK TO YOU WITHIN 24-48 HOURS."
       },
       {
         "type": "text",
@@ -176,15 +349,100 @@
         "label": "Placeholder text in Your Email"
       },
       {
+        "type": "header",
+        "content": "Store Info"
+      },
+      {
         "type": "checkbox",
         "id": "display_location",
-        "label": "Display Location?",
-        "default": true
+        "label": "Display Info",
+        "default": true 
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#fafafa" 
+      },
+      {
+        "type": "paragraph",
+        "content": "Top Content"
+      },
+      {
+        "type": "text",
+        "id": "top_title",
+        "label": "Title",
+        "default": "Chat with us:" 
       },
       {
         "type": "textarea",
-        "id": "location_code",
-        "label": "Location Code"
+        "id": "top_content",
+        "label": "Content",
+        "default": "IF YOU HAVE AN ISSUE OR QUESTION THAT REQUIRES IMMEDIATE ASSISTANCE, YOU CAN CLICK BELOW TO CHAT LIVE WITH A CUSTOMER SERVICE REPRESENTATIVE. IF WE AREN'T AVAILABLE, DROP US AN EMAIL TO THE LEFT AND WE'LL RESPOND WITHIN 24-48 HOURS.",
+        "info":"Use [lang2] to separate multiple language" 
+      },
+      {
+        "type": "text",
+        "id": "email_button",
+        "label": "Email Button",
+        "default": "Message us" 
+      },
+      {
+        "type": "text",
+        "id": "email",
+        "label": "Email"
+      },
+      {
+        "type": "color",
+        "id": "email_button_bgc",
+        "label": "Email Button Backgoround Color",
+        "default": "rgba(250,250,250,0)" 
+      },
+      {
+        "type": "color",
+        "id": "email_button_txtc",
+        "label": "Email Button Text Color",
+        "default": "#232323" 
+      },
+      {
+        "type": "color",
+        "id": "email_button_bdc",
+        "label": "Email Button Border Color",
+        "default": "#232323" 
+      },
+      {
+        "type": "color",
+        "id": "email_button_bgc_h",
+        "label": "Email Button Backgoround Color Hover",
+        "default": "#232323" 
+      },
+      {
+        "type": "color",
+        "id": "email_button_txtc_h",
+        "label": "Email Button Text Color Hover",
+        "default": "#fff" 
+      },
+      {
+        "type": "color",
+        "id": "email_button_bdc_h",
+        "label": "Email Button Border Color Hover",
+        "default": "#232323" 
+      },
+      {
+        "type": "paragraph",
+        "content": "Bottom Content"
+      },
+      {
+        "type": "text",
+        "id": "bot_title",
+        "label": "Title",
+        "default": "Chat with us:" 
+      },
+      {
+        "type": "textarea",
+        "id": "bot_content",
+        "label": "Content",
+        "info":"Use [lang2] to separate multiple language"
       }
     ]
   }

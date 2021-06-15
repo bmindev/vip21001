@@ -65,11 +65,15 @@
    #product-recommendations, #shopify-section-product-recommendations {
         width: 80%;
     }
+	@media (max-width: 768px){
+		#product-recommendations .related-products .slick-arrow.slick-next{ right: 39%; }
+		#product-recommendations .related-products .slick-arrow.slick-prev{ left: 39%; }
+	}
 
-  @media (max-width: 640px){
-
-	#product-recommendations .related-products .slick-arrow.slick-next{ right: 34%; } #product-recommendations .related-products .slick-arrow.slick-prev{ left: 34%; }
-}
+  	@media (max-width: 640px){
+		#product-recommendations .related-products .slick-arrow.slick-next{ right: 34%; }
+		#product-recommendations .related-products .slick-arrow.slick-prev{ left: 34%; }
+	}
 
 
 {% endstyle %}

@@ -1357,8 +1357,8 @@
           "1507878888245": {
             "type": "text",
             "settings": {
-              "question_faqs": "Will your template be fully compatible with Shopify?",
-              "answer_faqs": "Yes it is."
+              "question_faqs": "1. Are there any shipping and delivery charges for the orders? -",
+              "answer_faqs": "Delivery is free of charge for all our customers, all across India. However, we do charge for international deliveries, depending on the location."
             }
           },
           "1507879452149": {
@@ -1374,118 +1374,21 @@
               "question_faqs": "What I have to do when I need your support?",
               "answer_faqs": "<p>To save your time and reach our support quickly, please follow below steps:\n<\/p><p>1\/ Create a staff account for us (with Themes permission and Settings permission) <a href=\"http:\/\/docs.shopify.com\/manual\/settings\/account\/staff-members\" target=\"_blank\" style=\"color: #e66f65;\" rel=\"noopener noreferrer\">http:\/\/docs.shopify.com\/manual\/settings\/account\/staff-members<\/a><\/p>\n<p>2\/ Capture screenshot or video for the issue you get.<\/p>\n<p>3\/ Specify which template and version you are using.<\/p>\n<p>4\/ Describe clearly how to reproduce the issue.<\/p>\n<p>5\/ Send all information (staff account, screenshot, video, template name and version, description of the issues, link) to <a href=\"mailto:support@halothemes.com\" target=\"_blank\" style=\"color: #e66f65;\" rel=\"noopener noreferrer\">support@halothemes.com<\/a><\/p>\n<p><\/p>"
             }
-          },
-          "1507879518615": {
-            "type": "text",
-            "settings": {
-              "question_faqs": "Would assistance be available to upload the template if needed?",
-              "answer_faqs": "Yes, we will assist you to install the template if needed"
-            }
-          },
-          "1507879528740": {
-            "type": "text",
-            "settings": {
-              "question_faqs": "Do you guys offer customisation services for your themes?",
-              "answer_faqs": "Yes, we do. Please send your customisation requests to support@halothemes.com, we will give you our quote. Thank you."
-            }
-          },
-          "1507879543697": {
-            "type": "text",
-            "settings": {
-              "question_faqs": "Can I turn on\/off Item Animation \/ Effect if item on theme?",
-              "answer_faqs": "Yes. You can turn on\/off the animation in the Setting page."
-            }
-          },
-          "1507879557094": {
-            "type": "text",
-            "settings": {
-              "question_faqs": "Can I turn on\/off some blocks on the page?",
-              "answer_faqs": "Yes. You can turn on\/off almost any blocks on the page (featured products, slideshow, banners, related products, recent products,...)."
-            }
-          },
-          "1507879567640": {
-            "type": "text",
-            "settings": {
-              "question_faqs": "I want to have the dropdown cart displayed automatically every time clients hover over it (instead of clicking on it). Is it possible?",
-              "answer_faqs": "Yes, we have a setting for you to switch between these two options: Display on Hover and Display on Click."
-            }
-          },
-          "1507879577808": {
-            "type": "text",
-            "settings": {
-              "question_faqs": "What is included in the theme package?",
-              "answer_faqs": "The theme package includes Theme source, Photoshop design files and manual guide."
-            }
-          },
-          "1507879582861": {
-            "type": "text",
-            "settings": {
-              "question_faqs": "I notice that the images used in the theme are all portrait. Will that be a problem if I use square images for our products? How will they be displayed in the theme?",
-              "answer_faqs": "That is not a problem. You just need to modify the width\/height ratio in theme settings."
-            }
-          },
-          "1507879597073": {
-            "type": "text",
-            "settings": {
-              "question_faqs": "Does the theme support image resizing and cropping?",
-              "answer_faqs": "Yes. Normally, the theme will resize images to a default size (based on your width\/height ratio setting). We also have Crop setting if you don’t want to scale the image."
-            }
-          },
-          "1507879608326": {
-            "type": "text",
-            "settings": {
-              "question_faqs": "Can I add borders around our product images?",
-              "answer_faqs": "Yes, you can. You can also set image border colours."
-            }
-          },
-          "1507879613494": {
-            "type": "text",
-            "settings": {
-              "question_faqs": "Can I have multi level menu?",
-              "answer_faqs": "Yes, you can. Just simply follow the instructions in our Manual Guide, you will be able to easily create a multi-level menu."
-            }
-          },
-          "1507879626512": {
-            "type": "text",
-            "settings": {
-              "question_faqs": "Do you guys provide customer support during weekends \/ holidays?",
-              "answer_faqs": "Normally we don't provide support during weekends, except for urgent cases. In these cases, you only need to mark “Urgent” in your email, we will get back to you ASAP."
-            }
-          },
-          "1507879632829": {
-            "type": "text",
-            "settings": {
-              "question_faqs": "Does the theme support Variant Image?",
-              "answer_faqs": "Yes, it does. Please check it out here to see how it works: <a href=\"https:\/\/new-ella.myshopify.com\/products\/dinterdum-pretium-condimento?variant=16867481452642\">https:\/\/new-ella.myshopify.com\/products\/dinterdum-pretium-condimento?variant=16867481452642<\/a>"
-            }
           }
         },
         "block_order": [
           "1507878888245",
           "1507879452149",
-          "1507879511326",
-          "1507879518615",
-          "1507879528740",
-          "1507879543697",
-          "1507879557094",
-          "1507879567640",
-          "1507879577808",
-          "1507879582861",
-          "1507879597073",
-          "1507879608326",
-          "1507879613494",
-          "1507879626512",
-          "1507879632829"
+          "1507879511326"
         ],
         "settings": {
-          "des_faqs": "Below FAQ are some common concerns of our clients before purchasing the theme, if you have other questions, please just send it to <a href=\"mailto:support@halothemes.com\" target=\"_blank\">support@halothemes.com<\/a>",
-          "contact_text": "Unable to find satisfactory answers ?",
-          "contact_link_text": "Contact Support",
-          "contact_link": "https:\/\/www.halothemes.com\/",
+          "des_faqs": "",
+          "contact_text": "",
+          "contact_link_text": "",
           "icon_faqs": "Question",
           "bg_icon_qs": "#ef6454",
           "color_icon_qs": "#ffffff",
-          "bg_question": "#fafafa",
+          "bg_question": "#f3f3f3",
           "color_question": "#323232",
           "font_size_qs": "12",
           "bg_question_acitve": "#232323",
@@ -1496,8 +1399,8 @@
           "color_question_answer": "#3c3c3c",
           "font_size_answer": "12",
           "color_question_link": "#0688e2",
-          "icon_show": "Show",
-          "icon_hide": "Hide"
+          "icon_show": "+",
+          "icon_hide": "-"
         }
       },
       "list-collections-template": {

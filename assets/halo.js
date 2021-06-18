@@ -5731,6 +5731,7 @@
 
                     wishListsArr.push(ProductHandle);
                     localStorage.setItem('items', JSON.stringify(wishListsArr));
+                  
                 } else {
                     self.removeClass('whislist-added');
                     if($('.style_product_grid_3').length) {
@@ -5766,7 +5767,7 @@
             for (var i = 0; i < wishListItems.length; i++) {
                 var icon = $('[data-product-handle="'+ wishListItems[i] +'"]');
                 icon.addClass('whislist-added');
-          
+
                 if($('.style_product_grid_3').length) {
                     icon.find('.wishlist-text').text(window.inventory_text.remove_wishlist_1);
                 } else {

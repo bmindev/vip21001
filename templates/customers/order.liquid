@@ -136,7 +136,7 @@
                           
                           <div class="col-12 col-lg-4 mt-5 mt-lg-0 text-lg-center print-btn-container">
                           	{% if order.tags contains 'confirmed' or order.fulfillment_status == 'fulfilled' %}
-                            	<a class="print-btn mb-4" type='button' id='btn-mp-print' target='_blank' href='https://demo.brandmoversindia.in/vipbags-rubicon/download_invoice.php?order_id={{ order.id }}'>Download Invoice</a>
+                            	<a class="print-btn mb-4" type='button' id='btn-mp-print' target='_blank' href='https://demo.brandmoversindia.in/vipbags-rubicon/download_invoice.php?order_id={{ order.id }}'><img class="mr-3" src="{{ 'print.png' | asset_url }}">Download Invoice</a>
                            	{% endif %}
                             <div class="invoice-details"> 
                               <div class="row ml-lg-5 mr-lg-3 mb-3">
@@ -282,22 +282,28 @@
                                   <span class="mt-4 mb-2">Order Confirmed</span>
 <!--                                   <span class="date">May 17, 2021</span> -->
                               	</li>
-                              	<li class="step0 text-center {% if order.tags contains 'Ready_To_Ship' or order.tags contains 'shipped' or order.tags contains 'out_for_delivery' or order.tags contains 'delivered' %}active{% endif %}" id="step2">
+                              	<li class="step0 text-center {% if order.tags contains 'Ready_To_Ship' or order.tags contains 'Shipped' or order.tags contains 'out_for_delivery' or order.tags contains 'delivered' or order.tags contains 'RTO' %}active{% endif %}" id="step2">
                                   <span class="mt-4 mb-2">Ready To Ship</span>
 <!--                                   <span class="date">May 17, 2021</span> -->
                               	</li>
-                                <li class="step0 text-center {% if order.tags contains 'shipped' or order.tags contains 'out_for_delivery' or order.tags contains 'delivered' %}active{% endif %}" id="step3">
+                                <li class="step0 text-center {% if order.tags contains 'Shipped' or order.tags contains 'out_for_delivery' or order.tags contains 'delivered' or order.tags contains 'RTO' %}active{% endif %}" id="step3">
                                   <span class="mt-4 mb-2">In Transit</span>
 <!--                                   <span class="date">May 20, 2021</span> -->
                               	</li>
-                                <li class="step0 text-right {% if order.tags contains 'out_for_delivery' or order.tags contains 'delivered' %}active{% endif %}" id="step4"><span id="three">
+                              	{% if order.tags contains 'RTO' %}
+                                    <li class="step0 text-right {% if order.tags contains 'RTO' %}active{% endif %}" id="step4">
+                                      <span class="mt-4 mb-2">Return</span>
+                                      <span class="date"></span>
+                                    </li> 
+                                 {% endif %}
+                              <li class="step0 text-right {% if order.tags contains 'out_for_delivery' or order.tags contains 'delivered' %}active{% endif %}" id="step4"><span id="three"></span>
                                   <span class="mt-4 mb-2">Out for Delivery</span>
                                   <span class="date"></span>
                                 </li> 
-                              <li class="step0 text-right {% if order.tags contains 'delivered' %}active{% endif %}" id="step5">
-                                <span class="mt-4 mb-2">Delivered</span>
-                                <span class="date"></span>
-                              </li>
+                                <li class="step0 text-right {% if order.tags contains 'delivered' %}active{% endif %}" id="step5">
+                                  <span class="mt-4 mb-2">Delivered</span>
+                                  <span class="date"></span>
+                                </li>
                             </ul>
                         </div>
                         

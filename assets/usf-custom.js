@@ -978,6 +978,14 @@ var onView = function (view) {
 
 
 usf.event.add('init', function () {
+  
+    usf.event.add(['sr_updated', 'sr_viewChanged', 'rerender'], function () {
+        setTimeout(function () {
+            if(window._usfElla)
+                _usfElla.initWishListIcons();
+        }, 200);
+    }); 
+
     // handle search icon
     if (usf.settings.instantSearch.online && usf.isMobile) {
         // User clicks on the input

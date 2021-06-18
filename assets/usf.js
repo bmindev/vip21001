@@ -1,4 +1,4 @@
-/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 6/4/2021 6:41:26 AM*/
+/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 6/18/2021 9:35:01 AM*/
 /* Begin custom theme code */
 // define templates for the theme
 var _usfFilterBodyTemplate = /*inc_begin_filter-body*/
@@ -980,6 +980,14 @@ var onView = function (view) {
 
 
 usf.event.add('init', function () {
+  
+    usf.event.add(['sr_updated', 'sr_viewChanged', 'rerender'], function () {
+        setTimeout(function () {
+            if(window._usfElla)
+                _usfElla.initWishListIcons();
+        }, 200);
+    }); 
+
     // handle search icon
     if (usf.settings.instantSearch.online && usf.isMobile) {
         // User clicks on the input

@@ -77,7 +77,7 @@
         doc.ajaxStop(function () {
             ella.isAjaxLoading = false;
         });
-
+		window._usfElla = ella;
         ella.init();
     });
 

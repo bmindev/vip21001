@@ -69,9 +69,9 @@
   
   .jdgm-widget.jdgm-widget{ width: 80% !important; margin: 0 auto;  font-family: 'Montserrat', sans-serif;  }
   .jdgm-all-reviews-widget, .jdgm-rev-widg{ border: 0 !important;  }
-  .jdgm-rev__author-wrapper{ position: absolute; top: 63px; left: 0; font-size: 14px; font-weight: 500;  }
+  .jdgm-rev__author-wrapper{ position: absolute; top: 63px; left: 0; font-size: 14px; font-weight: 500;  max-width: 100px;}
   .jdgm-rev__icon{ margin-right: 8%; }
-  .jdgm-rev__content{ font-size: 14px; width: 89%; float: right; }
+  .jdgm-rev__content{ font-size: 14px; width: 88%; float: right; }
   
   .jdgm-widget-actions-wrapper a{ background-color: #2356B5; padding: 1rem 2rem; color: #fff; font-size: 14px; font-weight: 700; text-transform: uppercase; border-radius: 7px; }
   
@@ -341,6 +341,9 @@
     .product-shop .prices .on-sale{ display: block; }
     .cbb-frequently-bought-form { padding-top: 11%;}
     .recently-viewed-products .widget-title .box-title, .related-products .widget-title .box-title{ font-size: 4rem; }
+    .jdgm-widget.jdgm-widget{ width: 100% !important; }
+/*     .jdgm-rev__icon { margin-right: 10.5%; }
+    .jdgm-rev__content{ width: 84%; } */
   }
   
   @media (max-width: 959px){
@@ -453,7 +456,7 @@
     	margin-right: 0; margin-bottom: 3rem;
     }
     .jdgm-rev__author-wrapper {
-    	font-size: 16px; top: auto; left: auto;
+    	font-size: 16px; top: auto; left: auto; max-width: none; text-align: center;
     }
     .jdgm-rev__content{
       font-size: 14px;
@@ -481,6 +484,7 @@
     .product-shop .prices{ font-size: 30px; }
     .product-shop .product-infor label{  font-size: 14px; }
     .product-shop .swatch .header{ font-size: 14px; }
+    .jdgm-rev__content{ width: 89%;}
   
   }
 </style>

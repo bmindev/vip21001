@@ -1,16 +1,15 @@
- $(document).ready(function(){
+$(document).ready(function(){
    setTimeout(function(){
    $(".mega-menu").hover(function(){
-      	$('.mega-menu-overlay').css("opacity", "1");
-     	$('.mega-menu-overlay').css("visibility", "visible");
+        $('.mega-menu-overlay').css("opacity", "1");
+      $('.mega-menu-overlay').css("visibility", "visible");
       }, function(){
-     	$('.mega-menu-overlay').css("opacity", "0");
-     	$('.mega-menu-overlay').css("visibility", "hidden");
+      $('.mega-menu-overlay').css("opacity", "0");
+      $('.mega-menu-overlay').css("visibility", "hidden");
     });
 
-   },2000)
-   
-          $('.mobile-slider').slick({
+   },2000);
+$('.mobile-slider').slick({
         infinite: false,
         slidesToShow: 2,
         slidesToScroll:1,

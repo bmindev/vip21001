@@ -3881,6 +3881,39 @@
           "list_collection_title_size": "20",
           "style_categories": "style_show_all"
         }
+      },
+      "162427785632cd8651": {
+        "type": "home-product-tabs",
+        "blocks": {
+          "6fcc09c7-20fd-4dc2-ab32-b82509f9b3f5": {
+            "type": "ProductTabs",
+            "settings": {
+              "title": "Womens",
+              "collection": "backpacks"
+            }
+          },
+          "dbd1e22c-1733-41f2-87c1-ab733b487bb2": {
+            "type": "ProductTabs",
+            "settings": {
+              "title": "Mens",
+              "collection": "all"
+            }
+          }
+        },
+        "block_order": [
+          "6fcc09c7-20fd-4dc2-ab32-b82509f9b3f5",
+          "dbd1e22c-1733-41f2-87c1-ab733b487bb2"
+        ],
+        "settings": {
+          "product_tabs_title": "New Arrivals",
+          "product_tabs_des": "",
+          "title_style": "style_1",
+          "collection_results_per_row": "5",
+          "tabs_style": "style_1",
+          "margin_bottom_mb": 40,
+          "margin_bottom_tab": 40,
+          "margin_bottom": 10
+        }
       }
     },
     "content_for_index": [
@@ -3892,7 +3925,8 @@
       "1541566560488",
       "16197575431e026629",
       "16197771597fdc47fd",
-      "161977907976a25670"
+      "161977907976a25670",
+      "162427785632cd8651"
     ]
   },
   "presets": {

@@ -241,7 +241,7 @@
             this.initWishListIcons();
             this.doAddOrRemoveWishlish();
 
-            if(body.hasClass('template-page') && $('.wishlist-page').length) {
+            if(true || body.hasClass('template-page') && $('.wishlist-page').length) {
                 this.initWishLists();
             };
             
@@ -5533,7 +5533,7 @@
                 var productHTML = '',
                     price_min = Shopify.formatMoney(product.price_min, window.money_format);
 
-                productHTML += '<div class="" data-wishlist-added="wishlist-'+product.id+'">';
+                productHTML += '<div class="col-12 col-lg-6" data-wishlist-added="wishlist-'+product.id+'">';
                 productHTML += '<div class="inner product-item row mb-5  p-4 align-items-center " data-product-id="product-'+product.handle+'">';
                 productHTML += '<div class="col-10 col-xl-3 col-img"><div class="product-image">';
                 productHTML +='<a href="'+product.url+'" class="product-grid-image" data-collections-related="/collections/all?view=related">';

@@ -5533,15 +5533,15 @@
                 var productHTML = '',
                     price_min = Shopify.formatMoney(product.price_min, window.money_format);
 
-                productHTML += '<div class="" data-wishlist-added="wishlist-'+product.id+'">';
+                productHTML += '<div class="col-12 col-lg-6" data-wishlist-added="wishlist-'+product.id+'">';
                 productHTML += '<div class="inner product-item row mb-5  p-4 align-items-center " data-product-id="product-'+product.handle+'">';
-                productHTML += '<div class="col-10 col-xl-3 col-img"><div class="product-image">';
+                productHTML += '<div class="col-4 col-md-3"><div class="product-image">';
                 productHTML +='<a href="'+product.url+'" class="product-grid-image" data-collections-related="/collections/all?view=related">';
                 if (product.featured_image) {
                     productHTML += '<img src="'+product.featured_image+'" alt="'+product.featured_image.alt+'">';
                 }
                 productHTML += '</a></div></div>';
-                productHTML += '<div class="col-12 col-xl-8 ">';
+                productHTML += '<div class="col-8 col-md-9">';
                 productHTML += '<div class="">';
                 productHTML += '<a class="product-title" href="'+product.url+'" title="'+product.title+'">'+product.title+'</a>';
                	productHTML += '<div class="product-desc">';
@@ -5550,8 +5550,8 @@
                 productHTML += '<div class="product-vendor">';
                 productHTML += '<a href="' + window.router + '/collections/vendors?q='+product.vendor+'" title="'+product.vendor+'">'+product.vendor+'</a></div></div>';
                 productHTML += '<div class="  "><div class="price-box">'+ price_min +'</div></div>';
-               	productHTML += '<div class="cta-container d-flex mt-4 align-items-center">';
-              	productHTML += '<div class="wishlist-add-to-cart ">';
+               	productHTML += '<div class="cta-container d-flex flex-column flex-md-row mt-4 align-items-lg-center">';
+              	productHTML += '<div class="mb-3 mb-lg-0 wishlist-add-to-cart ">';
                 productHTML += '<form action="/cart/add" method="post" class="variants" id="wishlist-product-form-' + product.id +'" data-id="product-actions-'+product.id+'" enctype="multipart/form-data">';
                
 
@@ -5567,7 +5567,7 @@
                 }
 
                 productHTML += '</form></div>';
-                productHTML += '<div class="remove-wishlist ml-3"><a class="whislist-added" href="#" data-product-handle="'+ product.handle +'" data-icon-wishlist data-id="'+ product.id +'"><svg class="closemnu" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 357 357" xml:space="preserve"><g><g><polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"></polygon></g></g></svg>Remove</a></div>';
+                productHTML += '<div class="remove-wishlist ml-md-3"><a class="whislist-added" href="#" data-product-handle="'+ product.handle +'" data-icon-wishlist data-id="'+ product.id +'"><svg class="closemnu" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 357 357" xml:space="preserve"><g><g><polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"></polygon></g></g></svg>Remove</a></div>';
                 productHTML += '</div></div>';
               	productHTML += '</div></div>';
               
@@ -5578,6 +5578,8 @@
                 var href = $('.wrapper-wishlist a.share').attr("href");
                 href += encodeURIComponent( product.title + '\nPrice: ' + price_min.replace(regex, "") + '\nLink: ' + window.location.protocol + '//' + window.location.hostname + product.url +'\n\n');
                 $('.wrapper-wishlist a.share').attr("href", href );
+              
+              console.log('kkk', product)
             });
         },
 
@@ -5754,6 +5756,7 @@
               	$('.wishlist-count').html(wishListsArr.length);
 
                 ella.setAddedForWishlistIcon(ProductHandle);
+              console.log('krutika',wishListsArr );
             });
         },
 

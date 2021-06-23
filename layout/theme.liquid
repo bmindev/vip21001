@@ -58,7 +58,13 @@
   {% render 'head_scripts' %}
 
   <!-- Header hook for plugins ================================ -->
-  {{ content_for_header }}
+  
+
+  <!-- Avada Email Marketing Script -->
+ {% include 'avada-em-setting' %}
+  <!-- /Avada Email Marketing Script -->
+
+{{ content_for_header }}
 {% render 'usf' %}
 
 

@@ -7,7 +7,7 @@
       slidesToScroll:1,
       dots: true,
       arrows: false,
-      autoplay: true,
+      autoplay: false,
       speed : 1000,
 
  

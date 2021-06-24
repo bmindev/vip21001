@@ -306,6 +306,25 @@
                                 </li>
                             </ul>
                         </div>
+                        {% if order.tags contains 'delivered' %}
+                          <div id="orderStatusBar" class="progress-track mt-5">
+                             <h4>Return Information</h4>
+                              <ul id="progressbar">
+                                <li class="step0" id="step1"><span id="return"></span>
+                                  <span class="mt-4 mb-2">Return</span>
+                                </li>
+                                <li class="step0 text-center" id="step2"><span id="product-recieved"></span>
+                                  <span class="mt-4 mb-2">Product Recieved</span>
+                                </li>
+                                <li class="step0 text-center" id="step3"><span id="qc"></span>
+                                  <span class="mt-4 mb-2">QC Success/QC Failed</span>
+                                </li>                   
+                                <li class="step0 text-right" id="step5"><span id="rr"></span>
+                                  <span class="mt-4 mb-2">Reject/Refund</span>
+                                </li>                             
+                              </ul>
+                          </div>
+                        {% endif %}
                         
                       </div>
 
@@ -321,5 +340,36 @@
   
   .dropdown-toggle::after{ content: url({{ 'down-arrow.png' | asset_url }}) !important; position: absolute; right: 27px; border: 0 !important;}
 </style>
+
+<script>
+  document.onreadystatechange = function(e)
+{
+    if (document.readyState === 'complete')
+    {
+     
+    $.get("https://demo.brandmoversindia.in/caprese-rubicon/return_request_status.php?order_id="+$("#order_id").val(), function(data, status){
+      if(data!=""){
+        if(data == 22){
+          $("#product-recieved").addClass("active");
+        } else if(data == 23){
+          $("#product-recieved,#qc").addClass("active");
+        } else if(data == 24){
+          $("#product-recieved,#qc").addClass("active");
+        } else if(data == 26){
+          $("#product-recieved,#qc").addClass("active");
+        } else if(data == 27){
+          $("#product-recieved,#qc").addClass("active");
+        } else if(data == 40){
+          $("#product-recieved,#qc,#rr").addClass("active");
+        }
+       
+      }
+     
+    });
+    }     
+};
+</script>
+
+
 
 

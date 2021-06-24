@@ -30,10 +30,9 @@
                         {% if block.settings.image_slide != blank %}
                         {%- assign img_url = block.settings.image_slide | img_url: 'master' -%}
                         <div class="adaptive_height {% if block.settings.image_slide_mb != blank %} slide-pc{% endif %}" style="padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%">
-                            <a {% if block.settings.lb_product_1 != blank or block.settings.lb_product_2 != blank or block.settings.lb_product_3 != blank %}href="javascript:void(0)"{% else %}data-href="{{ block.settings.link }}"{% endif %} class="slide-image">
-                              </a> 
-                              <img data-srcset="{{ img_url }}" alt="{{ block.settings.image_slide.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
-                            
+                            <a href="{{ block.settings.link }}" {% if block.settings.lb_product_1 != blank or block.settings.lb_product_2 != blank or block.settings.lb_product_3 != blank %}href="{{ block.settings.link }}"{% else %}data-href="{{ block.settings.link }}"{% endif %} class="slide-image">
+                                <img data-srcset="{{ img_url }}" alt="{{ block.settings.image_slide.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
+                            </a>
                         </div>
 
                         {% else %}
@@ -47,7 +46,7 @@
                         {%- assign preview_img_mb = block.settings.image_slide_mb -%}
                         {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master' -%}
                         <div class="adaptive_height slide-mobile" style="padding-top: {{ 1 | divided_by: preview_img_mb.aspect_ratio | times: 100 }}%">
-                            <a {% if block.settings.lb_product_1 != blank or block.settings.lb_product_2 != blank or block.settings.lb_product_3 != blank %}href="javascript:void(0)"{% else %}data-href="{{ block.settings.link }}"{% endif %} class="slide-image">
+                            <a {% if block.settings.lb_product_1 != blank or block.settings.lb_product_2 != blank or block.settings.lb_product_3 != blank %}href="{{ block.settings.link }}"{% else %}data-href="{{ block.settings.link }}"{% endif %} class="slide-image">
                                 <img data-srcset="{{ img_url_mb }}" alt="{{ block.settings.image_slide_mb.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
                             </a>
                         </div>

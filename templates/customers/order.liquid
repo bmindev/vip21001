@@ -291,7 +291,7 @@
 <!--                                   <span class="date">May 20, 2021</span> -->
                               	</li>
                               	{% if order.tags contains 'RTO' %}
-                                    <li class="step0 text-right {% if order.tags contains 'RTO' %}active{% endif %}" id="step4">
+                                    <li class="step0 text-center {% if order.tags contains 'RTO' %}active{% endif %}" id="step4">
                                       <span class="mt-4 mb-2">Return</span>
                                     </li> 
                               		<li class="step0 text-right" id="product-recieved-rto">
@@ -356,7 +356,7 @@
     {
      
     $.get("https://demo.brandmoversindia.in/vipbags-rubicon/return_request_status.php?order_id="+$("#order_id").val(), function(data, status){
-   console.log(data);
+   
       if(data!=""){
         if(data == 36){
           $("#product-recieved, #product-recieved-rto").addClass("active");
@@ -369,6 +369,8 @@
         } else if(data == 40){
           $("#product-recieved, #rr").addClass("active");
           $("#rr").text("Reject");
+        }  else if(data == 48){
+          $("#product-recieved-rto").addClass("active");
         }
        
       }

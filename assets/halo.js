@@ -5526,7 +5526,7 @@
             };
         },
 
-        createWishListTplItem: function(ProductHandle) {
+       createWishListTplItem: function(ProductHandle) {
             var wishListCotainer = $('[data-wishlist-container]');
 
             jQuery.getJSON(window.router + '/products/'+ProductHandle+'.js', function(product) {
@@ -5577,9 +5577,8 @@
                 var regex = /(<([^>]+)>)/ig;
                 var href = $('.wrapper-wishlist a.share').attr("href");
                 href += encodeURIComponent( product.title + '\nPrice: ' + price_min.replace(regex, "") + '\nLink: ' + window.location.protocol + '//' + window.location.hostname + product.url +'\n\n');
-                $('.wrapper-wishlist a.share').attr("href", href );
+                $('.wrapper-wishlist a.share').attr("href", href );              
               
-              console.log('kkk', product)
             });
         },
 
@@ -5756,7 +5755,7 @@
               	$('.wishlist-count').html(wishListsArr.length);
 
                 ella.setAddedForWishlistIcon(ProductHandle);
-              console.log('krutika',wishListsArr );
+              
             });
         },
 

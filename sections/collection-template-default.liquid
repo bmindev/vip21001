@@ -34,7 +34,7 @@
     {% if collection.products_count > 0 %}  
     {% for product in collection.products %}
     <div class="grid-item {{ grid_item_width }} {% if settings.product_image_border%}grid-item-border {% endif %}">   
-      {% include 'product-grid-item' %}
+      {% include 'product-grid-item'  %}
     </div>
     {% endfor %}
     {% else %}

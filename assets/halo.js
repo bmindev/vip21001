@@ -45,7 +45,7 @@
       });
       
 
-    },500);
+    },4000);
   
   
 
@@ -5761,17 +5761,16 @@
 
         initWishListIcons: function() {       
         	var wishListItems = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
-			console.log(wishListItems, 'abc'); 
             if (!wishListItems.length) {
                 return;
             }
-          var timeoutMiliseconds = $('.home-slideshow-sections').length > 0 ? 3000 : 2000;
+          
+          var timeoutMiliseconds = $('.home-slideshow-sections').length > 0 ? 4000 : 2000;
           setTimeout(function(){
             for (var i = 0; i < wishListItems.length; i++) {
                 var icon = $('[data-product-handle="'+ wishListItems[i] +'"]');
-                icon.addClass('whislist-added');
+                icon.addClass('whislist-added');             	
               if(wishListItems[i] == 'scot'){
-                console.log(icon.length, 'scot');
               }
               
                 if($('.style_product_grid_3').length) {

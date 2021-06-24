@@ -293,19 +293,28 @@
                               	{% if order.tags contains 'RTO' %}
                                     <li class="step0 text-right {% if order.tags contains 'RTO' %}active{% endif %}" id="step4">
                                       <span class="mt-4 mb-2">Return</span>
-                                      <span class="date"></span>
                                     </li> 
-                                 {% endif %}
-                              {% if order.tags contains 'RTO' %}
-                              <li class="step0 text-right {% if order.tags contains 'out_for_delivery' or order.tags contains 'delivered' or order.tags contains 'return' %}active{% endif %}" id="step4"><span id="three"></span>
-                                  <span class="mt-4 mb-2">Out for Delivery</span>
-                                  <span class="date"></span>
-                                </li> 
-                                <li class="step0 text-right {% if order.tags contains 'delivered' or order.tags contains 'return' %}active{% endif %}" id="step5">
-                                  <span class="mt-4 mb-2">Delivered</span>
-                                  <span class="date"></span>
-                                </li>
-                              {% endif %}
+                              		<li class="step0 text-right" id="step5">
+                                      <span class="mt-4 mb-2">Product Received</span>                                  
+                                    </li>
+                              		{% if order.financial_status == 'paid' %}
+                                      <li class="step0 text-right {% if order.tags contains '' %}active{% endif %}" id="step5">
+                                        <span class="mt-4 mb-2">Refund</span>
+                                        <span class="date"></span>
+                                      </li>
+                                    {% endif %}
+                                {% endif %}                              
+                                {% if order.tags contains 'RTO' %}   
+                              		{% else %}
+                              			<li class="step0 text-right {% if order.tags contains 'out_for_delivery' or order.tags contains 'delivered' or order.tags contains 'return' %}active{% endif %}" id="step4"><span id="three"></span>
+                                          <span class="mt-4 mb-2">Out for Delivery</span>
+                                          <span class="date"></span>
+                                        </li> 
+                                        <li class="step0 text-right {% if order.tags contains 'delivered' or order.tags contains 'return' %}active{% endif %}" id="step5">
+                                          <span class="mt-4 mb-2">Delivered</span>
+                                          <span class="date"></span>
+                                        </li>
+                                {% endif %}
                             </ul>
                         </div>
                         {% if order.tags contains 'return' %}
@@ -350,8 +359,11 @@
     {
      
     $.get("https://demo.brandmoversindia.in/vipbags-rubicon/return_request_status.php?order_id="+$("#order_id").val(), function(data, status){
-      console.log(data);
+   
       if(data!=""){
+        if(data == 36){
+          $("#step5").addClass("active");
+      	}
         if(data == 22){
           $("#product-recieved").addClass("active");
         } else if(data == 23){

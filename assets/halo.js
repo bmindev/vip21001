@@ -1,6 +1,6 @@
 (function ($) {
 
-  
+ 
 
   
     var body = $('body'),
@@ -5718,7 +5718,7 @@
                     ProductHandle = self.data('product-handle'),
                     idxArr = wishListsArr.indexOf(ProductHandle);
 
-                if(!self.hasClass('whislist-added')) {
+                if(!self.hasClass('whislist-added')) {                  
                     self.addClass('whislist-added');
                     if($('.style_product_grid_3').length) {
                         self.find('.wishlist-text').text(window.inventory_text.remove_wishlist_1);
@@ -5759,17 +5759,21 @@
             });
         },
 
-        initWishListIcons: function() {
+        initWishListIcons: function() {       
         	var wishListItems = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
-			
+			console.log(wishListItems, 'abc'); 
             if (!wishListItems.length) {
                 return;
             }
-
+          var timeoutMiliseconds = $('.home-slideshow-sections').length > 0 ? 3000 : 2000;
+          setTimeout(function(){
             for (var i = 0; i < wishListItems.length; i++) {
                 var icon = $('[data-product-handle="'+ wishListItems[i] +'"]');
                 icon.addClass('whislist-added');
-
+              if(wishListItems[i] == 'scot'){
+                console.log(icon.length, 'scot');
+              }
+              
                 if($('.style_product_grid_3').length) {
                     icon.find('.wishlist-text').text(window.inventory_text.remove_wishlist_1);
                 } else {
@@ -5778,6 +5782,10 @@
 
 
             };
+          }, timeoutMiliseconds);
+          
+
+            
         },
 
         setAddedForCompareIcon: function(ProductHandle) {    

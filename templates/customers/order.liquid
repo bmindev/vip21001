@@ -294,7 +294,7 @@
                                     <li class="step0 text-right {% if order.tags contains 'RTO' %}active{% endif %}" id="step4">
                                       <span class="mt-4 mb-2">Return</span>
                                     </li> 
-                              		<li class="step0 text-right" id="step5">
+                              		<li class="step0 text-right" id="product-recieved-rto">
                                       <span class="mt-4 mb-2">Product Received</span>                                  
                                     </li>
                               		{% if order.financial_status == 'paid' %}
@@ -324,14 +324,11 @@
                                 <li class="step0 {% if order.tags contains 'return' %}active{% endif %}" id="step1"><span id="return"></span>
                                   <span class="mt-4 mb-2">Return</span>
                                 </li>
-                                <li class="step0 text-center" id="step2"><span id="product-recieved"></span>
+                                <li class="step0 text-center" id="product-recieved">
                                   <span class="mt-4 mb-2">Product Recieved</span>
-                                </li>
-                                <li class="step0 text-center" id="step3"><span id="qc"></span>
-                                  <span class="mt-4 mb-2">QC Success/QC Failed</span>
-                                </li>                   
-                                <li class="step0 text-right" id="step5"><span id="rr"></span>
-                                  <span class="mt-4 mb-2">Reject/Refund</span>
+                                </li>                                              
+                                <li class="step0 text-right" id="rr">
+                                  <span class="mt-4 mb-2 " id="rr"></span>
                                 </li>                             
                               </ul>
                           </div>
@@ -359,23 +356,19 @@
     {
      
     $.get("https://demo.brandmoversindia.in/vipbags-rubicon/return_request_status.php?order_id="+$("#order_id").val(), function(data, status){
-   
+   console.log(data);
       if(data!=""){
         if(data == 36){
-          $("#step5").addClass("active");
-      	}
-        if(data == 22){
-          $("#product-recieved").addClass("active");
-        } else if(data == 23){
-          $("#product-recieved,#qc").addClass("active");
-        } else if(data == 24){
-          $("#product-recieved,#qc").addClass("active");
-        } else if(data == 26){
-          $("#product-recieved,#qc").addClass("active");
+          $("#product-recieved, #product-recieved-rto").addClass("active");
+        } else if(data == 25){
+          $("#product-recieved, #rr").addClass("active");
+          $("#rr").text("Refund");
         } else if(data == 27){
-          $("#product-recieved,#qc").addClass("active");
+          $("#product-recieved, #rr").addClass("active");
+          $("#rr").text("Reject");
         } else if(data == 40){
-          $("#product-recieved,#qc,#rr").addClass("active");
+          $("#product-recieved, #rr").addClass("active");
+          $("#rr").text("Reject");
         }
        
       }

@@ -20,11 +20,13 @@
     {% assign values = values | split: '|' | sort %}
     {% assign option_count = values | size %}
 
+<!--   {{ product.url}}?variant={{ variant.id }} -->
+  
     {% if option_count <= 4 %}
     <li class="size-item">
-<!--         <a title="{{value}}" href="{{ product.url}}?variant={{ variant.id }}"> -->
-        {{ value }}
-<!--         </a> -->
+		<a title="{{value}}" > 
+        	{{ value }}
+       	</a> 
     </li>
     {% endif %}
     {% endif %}

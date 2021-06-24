@@ -48,13 +48,14 @@
       {% comment %} Use for productGrid {% endcomment %}
 
       <div class="product-des abs-center">
+        
         {% if settings.display_item_size %}
         <div class="hover-sizes">
           <p class="mb-1">AVAILABLE SIZES</p>
           {% render 'items-size' with product as product %}
-        </div>
-        
+        </div>       
         {% endif %}
+        
         {% render 'wishlist-product' with product as product %}
       
 

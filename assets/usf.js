@@ -1,6 +1,42 @@
-/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 6/25/2021 2:59:58 AM*/
+/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 6/25/2021 4:59:31 AM*/
 /* Begin custom theme code */
 // define templates for the theme
+var usfFilesUrl;
+var _usfVariantPopup = `
+<div class="product-card__variant--popup--content">
+    <form :action="usf.platform.addToCartUrl" method="post" class="variants" :id="'swatch-grid-product-form--' + product.id + '-' + window._usfSectionId" :data-id="'product-actions-' + product.id" enctype="multipart/form-data">
+        <template v-for="(o,opt_index) in product.options">
+            <template v-if="_usfThemeSettings.use_color_swatch">
+                <usf-swatches v-if="o.name == _usfThemeSettings.option_color_swatch" :product="product" :opt="o" optIndex="opt_index"></usf-swatches>
+                <usf-sizes :product="product" v-else :opt="o" :optIndex="opt_index"></usf-sizes>
+            </template>
+
+            <div v-else class="selector-wrapper selector js product-form__item" :class="['selector-wrapper-' + (opt_index + 1)]" :data-option-index="opt_index">
+                <label class="form-label" :class="{'label--hidden': o.name == 'default'}">
+                    {{ o.name }}: <span :class="'label-value-' + opt_index">{{ selectedVariantForPrice.options[opt_index] != undefined ? o.values[selectedVariantForPrice.options[opt_index]] : o.values[0]  }}</span>
+                </label>
+                <usf-select-opt :product="product" :opt="o" :optIndex="opt_index"></usf-select-opt>
+            </div>
+
+        </template>
+        <select name="id" :id="'ProductSelect-' + product.id + '-' + window._usfSectionId" class="product-form__variants no-js">
+            <template v-for="v in product.variants" :data-sold="usf.utils.isVariantSoldOut(v)">
+                <option v-if="usf.utils.isVariantSoldOut(v)" disabled="disabled">{{ getVariantTitle(v.options,product) }} - {{ loc.soldOut }}</option>
+                <option v-else value="v.id">
+                    {{ getVariantTitle(v.options,product) }}
+                </option>
+            </template>
+        </select>
+        <div class="product-card__button_cancel_mobile">
+            <a class="btn btn-cancel" data-cancel-swatch-qs><svg aria-hidden="true" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10 fa-2x"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
+        </div>
+        <div class="product-card__button2">
+            <input type="hidden" name="quantity" value="1" />
+            <button data-btn-addToCart class="btn add-to-cart-btn" type="submit" :data-form-id="'#swatch-grid-product-form--' + product.id + '-' + window._usfSectionId" v-html="_usfSubmit"></button>
+            <a class="btn btn-cancel" data-cancel-swatch-qs v-html="_usfCancel"></a>
+        </div>
+    </form>
+</div>`;
 var _usfFilterBodyTemplate = /*inc_begin_filter-body*/
 `<!-- Range filter -->
 <div v-if="isRange" class="usf-facet-values usf-facet-range">
@@ -381,12 +417,13 @@ usf.templates = {
                     <form :action="usf.platform.baseUrl + '/cart/add'" method="post" class="variants" :id="'grid-product-form--' + product.id" :data-id="'product-actions-' + product.id" enctype="multipart/form-data">
                             <input v-if="product.variants.length == 1 && !isSoldOut" type="hidden" name="id" :value="selectedVariantForPrice.id">
                             <input v-if="product.variants.length == 1 && !isSoldOut" type="hidden" name="quantity" value="1">
-                            <button v-if="product.variants.length == 1 && !isSoldOut" data-btn-addtocart="" class="btn add-to-cart-btn" type="submit" :data-form-id="'#grid-product-form--' + product.id" data-translate="products.product.add_to_cart" v-html="loc.addToCart"></button>
+                            <button v-if="product.variants.length == 1 && !isSoldOut" data-btn-addtocart="" class="btn add-to-cart-btn" type="submit" :data-form-id="'#grid-product-form--' + product.id + '-' + window._usfSectionId" data-translate="products.product.add_to_cart" v-html="loc.addToCart"></button>
                             <a v-if="product.variants.length > 1 && !isSoldOut" class="btn" :href="productUrl" :title="product.title" data-translate="products.product.select_options">
                                 Select options
                             </a>
                             <button v-if="isSoldOut" class="btn add-to-cart-btn" type="submit" disabled="disabled" data-translate="products.product.unavailable">Unavailable</button>
                         </form>
+                        `+_usfVariantPopup+`
                 </div>
                 <!--wishlist-->
                 <a class="wishlist" data-icon-wishlist="" href="#" :data-product-handle="product.urlName" :data-id="product.id">
@@ -987,7 +1024,19 @@ usf.event.add('init', function () {
                 _usfElla.initWishListIcons();
         }, 200);
     }); 
-
+    var nodes = document.head.children;
+    for (var i = 0; i < nodes.length; i++) {
+        var n = nodes[i];
+        if (n.href && (n.href.indexOf('theme-styles.css') !== -1)) {
+            usfFilesUrl = n.href;
+            var m = usfFilesUrl.indexOf('/assets/');
+            while (usfFilesUrl[--m] !== '/');
+            while (usfFilesUrl[--m] !== '/');
+            var k = usfFilesUrl.indexOf('?v=');
+            usfFilesUrl = usfFilesUrl.substring(0, m) + "/files/";
+            break;
+        }
+    }
     // handle search icon
     if (usf.settings.instantSearch.online && usf.isMobile) {
         // User clicks on the input
@@ -1119,8 +1168,229 @@ usf.event.add('init', function () {
     }
 
     document.querySelectorAll(".quickSearchResultsWrap").forEach(e => e.parentNode.removeChild(e));
+
+
+    /**
+ * USF option component
+ * */
+ var UsfOption = {
+    props: {
+        product: Object,
+        name: String,
+        opt: Object,
+        optIndex: Number
+    },
+    data() {
+        var product = this.product;
+        var option;
+        var option_index = 0;
+        var option_with_values = [];
+        var optionRendereds = {};
+        var selectedOptionValue = '';
+        if (this.opt) {
+            option = this.opt;
+            option_index = this.optIndex
+        } else {
+            for (let i = 0; i < product.options.length; i++) {
+                var o = product.options[i];
+                if (this.name.includes(o.name)) {
+                    option_index = i;
+                    option = o;
+                    break;
+                }
+            }
+        }
+        
+        if (option) {
+            selectedOptionValue = this.$parent.selectedVariantForPrice.options[option_index] != undefined ? option.values[this.$parent.selectedVariantForPrice.options[option_index]] : '';
+            option.values.filter(o => {
+                for (let x = 0; x < product.variants.length; x++) {
+                    var v = product.variants[x];
+                    if (v.options[option_index] != undefined) {
+                        var vrOpt = option.values[v.options[option_index]];
+                        if (o === vrOpt && !optionRendereds[o]) {
+                            optionRendereds[o] = 1;
+                            option_with_values.push({
+                                value: o,
+                                image: product.images[v.imageIndex],
+                                variant: v
+                            })
+                        }
+                    }
+                }
+            })
+        }
+        return {
+            option: option,
+            option_index: option_index,
+            option_with_values: option_with_values,
+            selectedOptionValue: selectedOptionValue
+        }
+    },
+}
+usf.components.UsfOption = usf.register(UsfOption, null, 'usf-option');
+
+/**
+* select option component
+* */
+var UsfSelectOpt = {
+    mixins: [usf.components.UsfOption],
+    render(h) {
+        if (this.option_with_values.length) return h('select', {
+            class: 'single-option-selector single-option-selector-quick product-form__input form-control single-option-selector-' + window._usfSectionId
+        }, [
+            this.option_with_values.map((o, index) => {
+                return h('option',{
+                    attrs:{
+                        value: o.value,
+                        selected: this.selectedOptionValue == o.value
+                    }
+                },[o.value])
+            })
+        ])
+    }
+}
+usf.register(UsfSelectOpt, null, 'usf-select-opt');
+
+
+
+/**
+* color swatch component
+* */
+var UsfSwatches = {
+    mixins: [usf.components.UsfOption],
+    render(h) {
+        if (this.option_with_values.length) return h('div', {
+            class: 'selector-wrapper selector-wrapper-1 swatch js product-form__item option-color hide',
+            attrs:{
+                'data-option-index': 0,
+                'data-option-position': this.option_index - 1,
+            }
+        }, [
+            h('label',{
+                staticClass: 'form-label',
+                class: {
+                    'label--hidden': this.option.name == 'dafault'
+                }
+            },[this.selectedOptionValue]),
+            this.option_with_values.map((o, index) => {
+                var optHandled = _usfHandlezie(o.value);
+                var _sold = usf.utils.isVariantSoldOut(o.variant);
+                var imgCompact;
+                if(o.image)
+                    imgCompact = _usfGetOriginImgWithSize(o.image.url, 'compact');
+                return h('div',{
+                    class: `swatch-element color ${optHandled} ${usf.utils.isVariantSoldOut(o.variant) ? 'soldout' : 'available'}`,
+                    attrs:{
+                        'data-value': o.value
+                    }
+                },[
+                    h('input',{
+                        class: 'single-option-selector single-option-selector-quick single-option-selector-' + window._usfSectionId,
+                        attrs:{
+                            disabled: usf.utils.isVariantSoldOut(o.variant),
+                            type: 'radio',
+                            name: `SingleOptionSelector-${this.option_index}-${this.product.id}-${window._usfSectionId}`,
+                            'data-index': 'option' + (this.option_index + 1),
+                            value: o.value,
+                            id: `SingleOptionSelector${this.option_index}-${ o.value }-${ this.product.id }-${ window._usfSectionId }`,
+                            checked: this.selectedOptionValue == o.value
+                        }
+                    }),
+                    h('label',{
+                        attrs:{
+                            'data-toggle':'tooltip',
+                            'data-placement': 'top',
+                            'title': o.value,
+                            for: `SingleOptionSelector${this.option_index}-${ o.value }-${ this.product.id }-${ window._usfSectionId }`,
+                            'data-imge': imgCompact,
+                        },
+                        style: _usfThemeSettings.show_product_variant_img ? `background-color: ${optHandled}; background-image: url(${usfFilesUrl + optHandled + '.png'})` : `background-color: ${optHandled};`
+                    }),
+                    o.image ? h('img',{
+                        class:'lazyload',
+                        attrs:{
+                            'data-srcset':_usfGetOriginImgWithSize(o.image.url, '34x34'),
+                            'alt':'',
+                            'data-image': true
+                        }
+                    }) : null,
+                ])
+            }),
+        ])
+    }
+}
+usf.register(UsfSwatches, null, 'usf-swatches');
+
+
+/**
+* select option component
+* */
+var UsfSizes = {
+    mixins: [usf.components.UsfOption],
+    render(h) {
+        if (this.option_with_values.length) return h('div', {
+            class: 'selector-wrapper selector-wrapper-' + (this.option_index == 0 ? this.option_index + 1 : this.option_index + 2) + ' swatch js product-form__item',
+            attrs:{
+                'data-option-index' : this.option_index == 0 ?  this.option_index : this.option_index + 1
+            }
+        }, [
+            h('label',{
+                staticClass: 'form-label',
+                class: {
+                    'label--hidden': this.option.name == 'dafault'
+                }
+            },[this.selectedOptionValue]),
+
+            this.option_with_values.map((o, index) => {
+                var _sold = usf.utils.isVariantSoldOut(o.variant);
+                var optHandled = _usfHandlezie(o.value);
+                return h('div',{
+                    class: `swatch-element size ${optHandled} ${usf.utils.isVariantSoldOut(o.variant) ? 'soldout' : 'available'}`,
+                    attrs:{
+                        'data-value': o.value
+                    }
+                },[
+                    h('input',{
+                        class: 'single-option-selector single-option-selector-quick single-option-selector-' + window._usfSectionId,
+                        attrs:{
+                            disabled: usf.utils.isVariantSoldOut(o.variant),
+                            type: 'radio',
+                            name: `SingleOptionSelector-${this.option_index}-${this.product.id}-${window._usfSectionId}`,
+                            'data-index': 'option' + (this.option_index + 1),
+                            value: o.value,
+                            id: `SingleOptionSelector${this.option_index}-${ o.value }-${ this.product.id }-${ window._usfSectionId }`,
+                        }
+                    }),
+                    h('label',{
+                        attrs:{
+                            'data-toggle':'tooltip',
+                            'data-placement': 'top',
+                            'title': o.value,
+                            for: `SingleOptionSelector${this.option_index}-${ o.value }-${ this.product.id }-${ window._usfSectionId }`,
+                        },
+                    }),
+                ])
+            })
+        ])
+    }
+}
+usf.register(UsfSizes, null, 'usf-sizes');
+
+
 });
 
+
+function getVariantTitle(options, p) {
+    if(!p.options.length)
+        return 'default'
+    var arrs = [];
+    for (let i = 0; i < options.length; i++) {
+        var o = options[i];
+        arrs.push(p.options[i].values[o])
+    }
+    return arrs.join(' / ');
+}
 
 /* End custom theme code */
 /* Begin common theme code */

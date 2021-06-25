@@ -72,8 +72,9 @@
       show_vendor: {{settings.show_vendor|  json}}
     }
     window.collectionLayout = 'default';
-  	window.grid_item_width = {{grid_item_width | json}}
-    window.rows = {{rows|json}}
+  	window.grid_item_width = {{grid_item_width | json}};
+    window.rows = {{rows|json}};
+    window._usfSectionId = {{ section.id | json }};
 </script>
 <div data-section-id="{{ section.id }}" data-section-type="collection-template">
   {% include 'collection-header' %}

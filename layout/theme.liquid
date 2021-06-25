@@ -70,6 +70,8 @@
     window._usfCancel = {{ 'products.general.cancel' | t | json }};
     window._usfThemeSettings = {
       use_color_swatch: {{ settings.use_color_swatch | json }},
+      option_color_swatch: {{ settings.option_color_swatch | json }},
+      show_product_variant_img: {{ settings.show_product_variant_img | json }},
     }
   </script>
 {% render 'usf' %}

@@ -65,6 +65,13 @@
   <!-- /Avada Email Marketing Script -->
 
 {{ content_for_header }}
+  <script>
+    window._usfSubmit = {{ 'products.general.submit' | t | json }};
+    window._usfCancel = {{ 'products.general.cancel' | t | json }};
+    window._usfThemeSettings = {
+      use_color_swatch: {{ settings.use_color_swatch | json }},
+    }
+  </script>
 {% render 'usf' %}
 
 

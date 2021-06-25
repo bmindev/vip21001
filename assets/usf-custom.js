@@ -1,40 +1,75 @@
 // define templates for the theme
 var usfFilesUrl;
-var _usfVariantPopup = `
-<div class="product-card__variant--popup--content">
-    <form :action="usf.platform.addToCartUrl" method="post" class="variants" :id="'swatch-grid-product-form--' + product.id + '-' + window._usfSectionId" :data-id="'product-actions-' + product.id" enctype="multipart/form-data">
-        <template v-for="(o,opt_index) in product.options">
-            <template v-if="_usfThemeSettings.use_color_swatch">
-                <usf-swatches v-if="o.name == _usfThemeSettings.option_color_swatch" :product="product" :opt="o" optIndex="opt_index"></usf-swatches>
-                <usf-sizes :product="product" v-else :opt="o" :optIndex="opt_index"></usf-sizes>
+var _usfProductFormBk = `<form :action="usf.platform.baseUrl + '/cart/add'" method="post" class="variants" :id="'grid-product-form--' + product.id" :data-id="'product-actions-' + product.id" enctype="multipart/form-data">
+                            <input v-if="!isSoldOut" type="hidden" name="id" :value="selectedVariantForPrice.id">
+                            <input v-if="product.variants.length == 1 && !isSoldOut" type="hidden" name="quantity" value="1">
+                            <button v-if="!isSoldOut" data-btn-addtocart="" class="btn add-to-cart-btn" type="submit" :data-form-id="'#grid-product-form--' + product.id" data-translate="products.product.add_to_cart" v-html="loc.addToCart"></button>
+                            <!--<a v-if="product.variants.length > 1 && !isSoldOut" class="btn" :href="productUrl" :title="product.title" data-translate="products.product.select_options">
+                                Select options
+                            </a>-->
+                            <button v-if="isSoldOut" class="btn add-to-cart-btn" type="submit" disabled="disabled" data-translate="products.product.unavailable">Unavailable</button>
+                        </form>`;
+var _usfProductForm = `
+<form :action="usf.platform.addToCartUrl" method="post" class="variants" :id="'grid-product-form--' + product.id + '-' + window._usfSectionId" :data-id="'product-actions-' + product.id" enctype="multipart/form-data">
+    <button v-if="isSoldOut" class="btn add-to-cart-btn" type="submit" disabled="disabled" data-translate="products.product.unavailable" v-html="window._usfUnavailable"></button>
+    <template v-else>
+        <template v-if="selectedVariantForPrice.options.length">
+            <template v-if="product.options.length == 1 && _usfThemeSettings.option_color_swatch == product.options[0].name && _usfThemeSettings.use_color_swatch">
+                <input type="hidden" name="id" :value="selectedVariantForPrice.id" />
+                <input type="hidden" name="quantity" value="1" />
+                <button data-btn-addToCart class="btn add-to-cart-btn" type="submit" :data-form-id="'#grid-product-form--' + product.id + '-' + window._usfSectionId" data-translate="products.product.add_to_cart" v-html="window._usfAddToCart"></button>
             </template>
-
-            <div v-else class="selector-wrapper selector js product-form__item" :class="['selector-wrapper-' + (opt_index + 1)]" :data-option-index="opt_index">
-                <label class="form-label" :class="{'label--hidden': o.name == 'default'}">
-                    {{ o.name }}: <span :class="'label-value-' + opt_index">{{ selectedVariantForPrice.options[opt_index] != undefined ? o.values[selectedVariantForPrice.options[opt_index]] : o.values[0]  }}</span>
-                </label>
-                <usf-select-opt :product="product" :opt="o" :optIndex="opt_index"></usf-select-opt>
-            </div>
-
+            <template v-else>
+                <a v-if="_usfThemeSettings.enable_quick_shop" class="btn" :data-href="'/products/' + product.urlName" :title="product.title" data-init-quickshop tabindex v-html="window._usfAddToCart"></a>
+                <a v-else class="btn" :data-href="'/products/' + product.urlName" :title="product.title" v-html="window._usfAddToCart"></a>
+            </template>
         </template>
-        <select name="id" :id="'ProductSelect-' + product.id + '-' + window._usfSectionId" class="product-form__variants no-js">
-            <template v-for="v in product.variants" :data-sold="usf.utils.isVariantSoldOut(v)">
-                <option v-if="usf.utils.isVariantSoldOut(v)" disabled="disabled">{{ getVariantTitle(v.options,product) }} - {{ loc.soldOut }}</option>
-                <option v-else value="v.id">
-                    {{ getVariantTitle(v.options,product) }}
-                </option>
-            </template>
-        </select>
-        <div class="product-card__button_cancel_mobile">
-            <a class="btn btn-cancel" data-cancel-swatch-qs><svg aria-hidden="true" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10 fa-2x"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
-        </div>
-        <div class="product-card__button2">
+        <template v-else>
+            <input type="hidden" name="id" :value="selectedVariantForPrice.id" />
             <input type="hidden" name="quantity" value="1" />
-            <button data-btn-addToCart class="btn add-to-cart-btn" type="submit" :data-form-id="'#swatch-grid-product-form--' + product.id + '-' + window._usfSectionId" v-html="_usfSubmit"></button>
-            <a class="btn btn-cancel" data-cancel-swatch-qs v-html="_usfCancel"></a>
-        </div>
-    </form>
-</div>`;
+            <button v-if="selectedVariantForPrice.available > 0" data-btn-addToCart class="btn add-to-cart-btn" type="submit" :data-form-id="'#grid-product-form--' + product.id + '-' + window._usfSectionId" data-translate="products.product.add_to_cart" v-html="window._usfAddToCart"></button>
+            <button v-else data-btn-addToCart class="btn add-to-cart-btn" type="submit" :data-form-id="'#grid-product-form--' + product.id + '-' + window._usfSectionId" data-translate="products.product.pre_order" v-html="_usfPreorder"></button>
+        </template>
+    </template>
+</form>`;
+var _usfVariantPopup = `
+<div v-if="!isSoldOut" class="product-card__variant--popup">
+    <div class="product-card__variant--popup--content">
+        <form :action="usf.platform.addToCartUrl" method="post" class="variants" :id="'swatch-grid-product-form--' + product.id + '-' + window._usfSectionId" :data-id="'product-actions-' + product.id" enctype="multipart/form-data">
+            <template v-for="(o,opt_index) in product.options">
+                <template v-if="_usfThemeSettings.use_color_swatch">
+                    <usf-swatches v-if="o.name == _usfThemeSettings.option_color_swatch" :product="product" :opt="o" :optIndex="opt_index"></usf-swatches>
+                    <usf-sizes :product="product" v-else :opt="o" :optIndex="opt_index"></usf-sizes>
+                </template>
+
+                <div v-else class="selector-wrapper selector js product-form__item" :class="['selector-wrapper-' + (opt_index + 1)]" :data-option-index="opt_index">
+                    <label class="form-label" :class="{'label--hidden': o.name == 'default'}">
+                        {{ o.name }}: <span :class="'label-value-' + opt_index">{{ selectedVariantForPrice.options[opt_index] != undefined ? o.values[selectedVariantForPrice.options[opt_index]] : o.values[0]  }}</span>
+                    </label>
+                    <usf-select-opt :product="product" :opt="o" :optIndex="opt_index"></usf-select-opt>
+                </div>
+
+            </template>
+            <select name="id" :id="'ProductSelect-' + product.id + '-' + window._usfSectionId" class="product-form__variants no-js">
+                <template v-for="v in product.variants" :data-sold="usf.utils.isVariantSoldOut(v)">
+                    <option v-if="usf.utils.isVariantSoldOut(v)" disabled="disabled">{{ getVariantTitle(v.options,product) }} - {{ loc.soldOut }}</option>
+                    <option v-else :value="v.id">
+                        {{ getVariantTitle(v.options,product) }}
+                    </option>
+                </template>
+            </select>
+            <div class="product-card__button_cancel_mobile">
+                <a class="btn btn-cancel" data-cancel-swatch-qs><svg aria-hidden="true" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10 fa-2x"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
+            </div>
+            <div class="product-card__button2">
+                <input type="hidden" name="quantity" value="1" />
+                <button data-btn-addToCart class="btn add-to-cart-btn" type="submit" :data-form-id="'#swatch-grid-product-form--' + product.id + '-' + window._usfSectionId" v-html="_usfSubmit"></button>
+                <a class="btn btn-cancel" data-cancel-swatch-qs v-html="_usfCancel"></a>
+            </div>
+        </form>
+    </div>
+</div>
+`;
 var _usfFilterBodyTemplate = /*inc_begin_filter-body*/
 `<!-- Range filter -->
 <div v-if="isRange" class="usf-facet-values usf-facet-range">
@@ -361,15 +396,9 @@ usf.templates = {
                 <div class="product-des abs-bottom">
                     <!--action-->
                     <div class="action">
-                        <form :action="usf.platform.baseUrl + '/cart/add'" method="post" class="variants" :id="'grid-product-form--' + product.id" :data-id="'product-actions-' + product.id" enctype="multipart/form-data">
-                            <input v-if="!isSoldOut" type="hidden" name="id" :value="selectedVariantForPrice.id">
-                            <input v-if="product.variants.length == 1 && !isSoldOut" type="hidden" name="quantity" value="1">
-                            <button v-if="!isSoldOut" data-btn-addtocart="" class="btn add-to-cart-btn" type="submit" :data-form-id="'#grid-product-form--' + product.id" data-translate="products.product.add_to_cart" v-html="loc.addToCart"></button>
-                            <!--<a v-if="product.variants.length > 1 && !isSoldOut" class="btn" :href="productUrl" :title="product.title" data-translate="products.product.select_options">
-                                Select options
-                            </a>-->
-                            <button v-if="isSoldOut" class="btn add-to-cart-btn" type="submit" disabled="disabled" data-translate="products.product.unavailable">Unavailable</button>
-                        </form>
+              
+                        
+                         `+ _usfProductForm + _usfVariantPopup+` 
                     </div>
                     <a v-if="_usfGlobalSettings.enable_quick_view" class="quickview-button" href="javascript:void(0)" :id="product.urlName" title="Quick View" data-translate="products.product.quick_view" translate-item="title">
                         <span data-translate="products.product.quick_view" v-html="loc.quickView"></span>
@@ -412,16 +441,8 @@ usf.templates = {
                 <product-swatches :product="product" :productUrl="productUrl"></product-swatches>
                 <!--action-->
                 <div class="action">
-                    <form :action="usf.platform.baseUrl + '/cart/add'" method="post" class="variants" :id="'grid-product-form--' + product.id" :data-id="'product-actions-' + product.id" enctype="multipart/form-data">
-                            <input v-if="product.variants.length == 1 && !isSoldOut" type="hidden" name="id" :value="selectedVariantForPrice.id">
-                            <input v-if="product.variants.length == 1 && !isSoldOut" type="hidden" name="quantity" value="1">
-                            <button v-if="product.variants.length == 1 && !isSoldOut" data-btn-addtocart="" class="btn add-to-cart-btn" type="submit" :data-form-id="'#grid-product-form--' + product.id + '-' + window._usfSectionId" data-translate="products.product.add_to_cart" v-html="loc.addToCart"></button>
-                            <a v-if="product.variants.length > 1 && !isSoldOut" class="btn" :href="productUrl" :title="product.title" data-translate="products.product.select_options">
-                                Select options
-                            </a>
-                            <button v-if="isSoldOut" class="btn add-to-cart-btn" type="submit" disabled="disabled" data-translate="products.product.unavailable">Unavailable</button>
-                        </form>
-                        `+_usfVariantPopup+`
+
+                         `+ _usfProductForm + _usfVariantPopup+` 
                 </div>
                 <!--wishlist-->
                 <a class="wishlist" data-icon-wishlist="" href="#" :data-product-handle="product.urlName" :data-id="product.id">
@@ -1018,8 +1039,11 @@ usf.event.add('init', function () {
   
     usf.event.add(['sr_updated', 'sr_viewChanged', 'rerender'], function () {
         setTimeout(function () {
-            if(window._usfElla)
-                _usfElla.initWishListIcons();
+            if(window._usfElla){
+                 _usfElla.initWishListIcons();
+                _usfElla.initQuickshop()
+            }
+               
         }, 200);
     }); 
     var nodes = document.head.children;
@@ -1262,7 +1286,7 @@ var UsfSwatches = {
             class: 'selector-wrapper selector-wrapper-1 swatch js product-form__item option-color hide',
             attrs:{
                 'data-option-index': 0,
-                'data-option-position': this.option_index - 1,
+                'data-option-position': this.option_index,
             }
         }, [
             h('label',{
@@ -1270,7 +1294,10 @@ var UsfSwatches = {
                 class: {
                     'label--hidden': this.option.name == 'dafault'
                 }
-            },[this.selectedOptionValue]),
+            },[
+                this.option.name + ':', 
+                h('span', {class: `label-value-` + (this.option_index + 1)},[this.selectedOptionValue])
+            ]),
             this.option_with_values.map((o, index) => {
                 var optHandled = _usfHandlezie(o.value);
                 var _sold = usf.utils.isVariantSoldOut(o.variant);
@@ -1304,7 +1331,7 @@ var UsfSwatches = {
                             'data-imge': imgCompact,
                         },
                         style: _usfThemeSettings.show_product_variant_img ? `background-color: ${optHandled}; background-image: url(${usfFilesUrl + optHandled + '.png'})` : `background-color: ${optHandled};`
-                    }),
+                    },[o.value]),
                     o.image ? h('img',{
                         class:'lazyload',
                         attrs:{
@@ -1328,9 +1355,9 @@ var UsfSizes = {
     mixins: [usf.components.UsfOption],
     render(h) {
         if (this.option_with_values.length) return h('div', {
-            class: 'selector-wrapper selector-wrapper-' + (this.option_index == 0 ? this.option_index + 1 : this.option_index + 2) + ' swatch js product-form__item',
+            class: 'selector-wrapper selector-wrapper-' + (this.option_index == 0 ? 0 : this.option_index + 1) + ' swatch js product-form__item',
             attrs:{
-                'data-option-index' : this.option_index == 0 ?  this.option_index : this.option_index + 1
+                'data-option-index' : this.option_index == 0 ? 0 : this.option_index 
             }
         }, [
             h('label',{
@@ -1338,7 +1365,10 @@ var UsfSizes = {
                 class: {
                     'label--hidden': this.option.name == 'dafault'
                 }
-            },[this.selectedOptionValue]),
+            },[
+                this.option.name + ':', 
+                h('span', {class: `label-value-` + (this.option_index + 1)},[this.selectedOptionValue])
+            ]),
 
             this.option_with_values.map((o, index) => {
                 var _sold = usf.utils.isVariantSoldOut(o.variant);
@@ -1346,7 +1376,8 @@ var UsfSizes = {
                 return h('div',{
                     class: `swatch-element size ${optHandled} ${usf.utils.isVariantSoldOut(o.variant) ? 'soldout' : 'available'}`,
                     attrs:{
-                        'data-value': o.value
+                        'data-value': o.value,
+                        'data-available': o.variant.available
                     }
                 },[
                     h('input',{
@@ -1367,7 +1398,7 @@ var UsfSizes = {
                             'title': o.value,
                             for: `SingleOptionSelector${this.option_index}-${ o.value }-${ this.product.id }-${ window._usfSectionId }`,
                         },
-                    }),
+                    },[o.value]),
                 ])
             })
         ])

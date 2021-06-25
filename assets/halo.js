@@ -45,7 +45,7 @@
       });
       
 
-    },4000);
+    },1000);
   
   
 
@@ -661,7 +661,11 @@
                     productGrid = self.find('.products-grid'),
                     gridItemWidth = productGrid.data('row'),
                     hasRightSidebar = $('.halo-product-content .pro-page [data-has-right-sidebar]');
-
+              
+ 					productGrid.on('init', function(event, slick){
+    									
+                      _usfElla.initWishListIcons();
+ 					});
                 if(productGrid.not('.slick-initialized')) {
                     productGrid.slick({
                         get slidesToShow() {
@@ -863,6 +867,9 @@
                                         self.find('.products-grid').html(data);
                                     }
                                     $('[data-toggle="tooltip"]').tooltip();
+                                  ella.initWishListIcons();
+                                
+                                  
                                 },
                                 complete: function () {
                                     if (self.attr('data-featured-products') == undefined) {
@@ -872,8 +879,7 @@
                                         var productGrid = self.find('.products-grid'),
                                             gridItemWidth = productGrid.data('row'),
                                             hasRightSidebar = $('.halo-product-content .pro-page [data-has-right-sidebar]');
-                                      	console.log('slider');
-                                       _usfElla.initWishListIcons();
+                                      
                                         if (window.innerWidth < 1200) {
                                             self.on("afterChange", function(event, slick) {
                                                 var isElementVisible = function($el, threshold) {
@@ -920,6 +926,10 @@
                                                 });
                                             });
                                         }
+                                        productGrid.on('init', function(event, slick){
+    									
+                                       _usfElla.initWishListIcons();
+                                      });
                                         if(productGrid.not('.slick-initialized')) {
                                             productGrid.slick({
                                                 get slidesToShow() {
@@ -1093,8 +1103,9 @@
                                                 ]
                                             });
                                         };
+                                    
                                     }
-
+									
                                     if (ella.checkNeedToConvertCurrency()) {
                                         Currency.convertAll(window.shop_currency, $('#currencies .active').attr('data-currency'), 'span.money', 'money_format');
                                     };
@@ -1110,6 +1121,7 @@
             window.addEventListener('load', function loaderPostload() {
                 load();
                 window.addEventListener('scroll', load);
+              
             });
         },
 

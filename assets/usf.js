@@ -1,4 +1,4 @@
-/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 6/25/2021 6:00:56 AM*/
+/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 6/25/2021 6:15:33 AM*/
 /* Begin custom theme code */
 // define templates for the theme
 var usfFilesUrl;
@@ -35,7 +35,7 @@ var _usfProductForm = `
     </template>
 </form>`;
 var _usfVariantPopup = `
-<div v-if="!isSoldOut" class="product-card__variant--popup">
+<div v-if="!isSoldOut && _usfThemeSettings.enable_quick_shop && selectedVariantForPrice.options.length" class="product-card__variant--popup">
     <div class="product-card__variant--popup--content">
         <form :action="usf.platform.addToCartUrl" method="post" class="variants" :id="'swatch-grid-product-form--' + product.id + '-' + window._usfSectionId" :data-id="'product-actions-' + product.id" enctype="multipart/form-data">
             <template v-for="(o,opt_index) in product.options">
@@ -1357,9 +1357,9 @@ var UsfSizes = {
     mixins: [usf.components.UsfOption],
     render(h) {
         if (this.option_with_values.length) return h('div', {
-            class: 'selector-wrapper selector-wrapper-' + (this.option_index == 0 ? 0 : this.option_index + 1) + ' swatch js product-form__item',
+            class: 'selector-wrapper selector-wrapper-' + (this.option_index == 0 ? 2 : this.option_index + 1) + ' swatch js product-form__item',
             attrs:{
-                'data-option-index' : this.option_index == 0 ? 0 : this.option_index 
+                'data-option-index' : this.option_index == 0 ? 1 : this.option_index 
             }
         }, [
             h('label',{

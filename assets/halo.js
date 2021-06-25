@@ -187,7 +187,7 @@
                 this.initCompareSelected();
             }
 
-            if(body.hasClass('template-collection') || body.hasClass('template-product')) {
+            if(body.hasClass('template-collection') || body.hasClass('template-product') || body.hasClass('template-search')) {
                 this.loadJsonProductcard();
             }
 

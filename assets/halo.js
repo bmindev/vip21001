@@ -872,6 +872,8 @@
                                         var productGrid = self.find('.products-grid'),
                                             gridItemWidth = productGrid.data('row'),
                                             hasRightSidebar = $('.halo-product-content .pro-page [data-has-right-sidebar]');
+                                      	console.log('slider');
+                                       _usfElla.initWishListIcons();
                                         if (window.innerWidth < 1200) {
                                             self.on("afterChange", function(event, slick) {
                                                 var isElementVisible = function($el, threshold) {
@@ -5765,8 +5767,14 @@
                 return;
             }
           
+          document.onreadystatechange = function(e) {
+            if (document.readyState === 'complete') {
+
+            }
+        };
+
           var timeoutMiliseconds = $('.home-slideshow-sections').length > 0 ? 4000 : 2000;
-          setTimeout(function(){
+//           setTimeout(function(){
             for (var i = 0; i < wishListItems.length; i++) {
                 var icon = $('[data-product-handle="'+ wishListItems[i] +'"]');
                 icon.addClass('whislist-added');             	
@@ -5781,7 +5789,7 @@
 
 
             };
-          }, timeoutMiliseconds);
+//           }, timeoutMiliseconds);
           
 
             

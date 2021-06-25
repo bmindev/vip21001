@@ -326,12 +326,12 @@ usf.templates = {
                     <!--action-->
                     <div class="action">
                         <form :action="usf.platform.baseUrl + '/cart/add'" method="post" class="variants" :id="'grid-product-form--' + product.id" :data-id="'product-actions-' + product.id" enctype="multipart/form-data">
-                            <input v-if="product.variants.length == 1 && !isSoldOut" type="hidden" name="id" :value="selectedVariantForPrice.id">
+                            <input v-if="!isSoldOut" type="hidden" name="id" :value="selectedVariantForPrice.id">
                             <input v-if="product.variants.length == 1 && !isSoldOut" type="hidden" name="quantity" value="1">
-                            <button v-if="product.variants.length == 1 && !isSoldOut" data-btn-addtocart="" class="btn add-to-cart-btn" type="submit" :data-form-id="'#grid-product-form--' + product.id" data-translate="products.product.add_to_cart" v-html="loc.addToCart"></button>
-                            <a v-if="product.variants.length > 1 && !isSoldOut" class="btn" :href="productUrl" :title="product.title" data-translate="products.product.select_options">
+                            <button v-if="!isSoldOut" data-btn-addtocart="" class="btn add-to-cart-btn" type="submit" :data-form-id="'#grid-product-form--' + product.id" data-translate="products.product.add_to_cart" v-html="loc.addToCart"></button>
+                            <!--<a v-if="product.variants.length > 1 && !isSoldOut" class="btn" :href="productUrl" :title="product.title" data-translate="products.product.select_options">
                                 Select options
-                            </a>
+                            </a>-->
                             <button v-if="isSoldOut" class="btn add-to-cart-btn" type="submit" disabled="disabled" data-translate="products.product.unavailable">Unavailable</button>
                         </form>
                     </div>

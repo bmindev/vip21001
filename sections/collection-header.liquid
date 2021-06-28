@@ -12,12 +12,18 @@
         
         <div class="collection-image">
             {% if collection.description contains '<img' or section.settings.collection_image != blank %}
-            
-            {% if collection.description contains '<img' %}
-            <img {{ img_url }} alt="{{ collection_title }}" class="lazyautosizes lazyloaded" data-sizes="auto"/>
-            {% else %}
-            <img data-src="{{ img_url }}" class="lazyload" data-sizes="auto">
-            {% endif %}
+
+              {% if collection.description contains '<img' %}
+          		<div class="">
+              		<img {{ img_url }} alt="{{ collection_title }}" class="lazyautosizes lazyloaded" data-sizes="auto"/>
+          		</div>
+<!--           		<div class="d-lg-none">
+                   <img src=" {{ collection.metafields['Banner Image']['mob-banner'] }} " alt="{{ collection_title }}" class="lazyautosizes lazyloaded" data-sizes="auto"/>
+          
+          		</div> -->
+              {% else %}
+              <img data-src="{{ img_url }}" class="lazyload" data-sizes="auto">
+              {% endif %}
             {% endif %} 
 
             {% if section.settings.collection_header_style == 'style_1' %}  

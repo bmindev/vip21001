@@ -3341,7 +3341,9 @@
                     $('.filters-toolbar__sortby').appendTo('.toolbar .column-right');
                 }
                 var h_wrapper = wrapper.outerHeight() + 30;
-                var top = wrapper.offset().top;
+                if (wrapper.length) {
+                  var top = wrapper.offset().top;
+                }
                 $(window).scroll(function () {
                     var h = $('.sticky-wrapper.is-sticky').outerHeight();
                     if ($(this).scrollTop() > top) {
@@ -3384,7 +3386,9 @@
                     }
                     
                     var h_wrapper = wrapper.outerHeight() + 30;
-                    var top = wrapper.offset().top;
+                    if (wrapper.length) {
+                      var top = wrapper.offset().top;
+                	}
                     $(window).scroll(function () {
                         var h = $('.sticky-wrapper.is-sticky').outerHeight();
                         if ($(this).scrollTop() > top) {

@@ -138,10 +138,10 @@
     "popular_products_collection": "new-in",
     "popular_products_limit": 3,
     "display_popup_newsletter": true,
-    "hidden_default": true,
+    "hidden_default": false,
     "when_to_show": "all_the_time",
     "popup_newsletter_expire": "2",
-    "popup_newsletter_delay": "20",
+    "popup_newsletter_delay": "10",
     "newsletter": "shopify:\/\/shop_images\/Resize-360x335.jpg",
     "popup_newsletter_title": "Join Our Mailing List",
     "popup_newsletter_des": "Sign Up for exclusive updates,  <br>new arrivals & insider-only discounts",
@@ -2442,7 +2442,9 @@
           "font_size_banner_des": "12px",
           "color_banner_des": "#ffffff",
           "banner_button": "Shop Now",
+          "link": "",
           "banner_button_2": "Shop Now",
+          "link_2": "",
           "bg_banner_button": "#ffffff",
           "border_banner_button": "#ffffff",
           "color_banner_button": "#232323",
@@ -2451,6 +2453,7 @@
           "featured_products_title": "New Launches",
           "featured_products_des": "",
           "featured_products_text_link": "",
+          "featured_products_link": "",
           "color_text_link": "#3e45a3",
           "title_style": "style_2",
           "show_slider_featured_collection": "new-launches",
@@ -2468,61 +2471,71 @@
           "1585729380684": {
             "type": "instagram",
             "settings": {
-              "enable": true
+              "enable": true,
+              "link": ""
             }
           },
           "1585729405746": {
             "type": "instagram",
             "settings": {
-              "enable": true
+              "enable": true,
+              "link": ""
             }
           },
           "1585729414607": {
             "type": "instagram",
             "settings": {
-              "enable": true
+              "enable": true,
+              "link": ""
             }
           },
           "1585729422220": {
             "type": "instagram",
             "settings": {
-              "enable": true
+              "enable": true,
+              "link": ""
             }
           },
           "1585729429667": {
             "type": "instagram",
             "settings": {
-              "enable": true
+              "enable": true,
+              "link": ""
             }
           },
           "1585729437058": {
             "type": "instagram",
             "settings": {
-              "enable": true
+              "enable": true,
+              "link": ""
             }
           },
           "1585729446521": {
             "type": "instagram",
             "settings": {
-              "enable": true
+              "enable": true,
+              "link": ""
             }
           },
           "1585729453785": {
             "type": "instagram",
             "settings": {
-              "enable": true
+              "enable": true,
+              "link": ""
             }
           },
           "1585729461676": {
             "type": "instagram",
             "settings": {
-              "enable": true
+              "enable": true,
+              "link": ""
             }
           },
           "1585729471504": {
             "type": "instagram",
             "settings": {
-              "enable": true
+              "enable": true,
+              "link": ""
             }
           }
         },
@@ -2852,7 +2865,8 @@
               "link_banner_third_style_3": "shopify:\/\/collections\/aristocrat",
               "banner_four_style_3": "shopify:\/\/shop_images\/Mask_Group_129_b366a3e1-e1aa-4c53-9faf-25b049dc85e1.png",
               "logo_banner_four_style_3": "shopify:\/\/shop_images\/Group_3383.png",
-              "link_banner_four_style_3": "shopify:\/\/collections\/carlton"
+              "link_banner_four_style_3": "shopify:\/\/collections\/carlton",
+              "link_banner_five_style_3": ""
             }
           },
           "0b8e22ae-1401-409d-909d-e764a4f6ef0e": {
@@ -2860,7 +2874,8 @@
             "settings": {
               "megamenu_items_4": "categories",
               "title_featured_product": "Intelligent design for professional travel.",
-              "banner_first_style_4": "shopify:\/\/shop_images\/variationColorProd301Col3_1.png"
+              "banner_first_style_4": "shopify:\/\/shop_images\/variationColorProd301Col3_1.png",
+              "link_banner_first_style_4": ""
             }
           }
         },
@@ -2921,10 +2936,13 @@
           "policies_color": "#ffffff",
           "icon_1": "",
           "text_1": "Free Shipping on all orders *",
+          "link_1": "",
           "icon_2": "",
           "text_2": "Free Shipping on all orders *",
+          "link_2": "",
           "icon_3": "",
           "text_3": "Free Shipping on all orders *",
+          "link_3": "",
           "display_megamenu": true,
           "bg_style_new": "#eaeaea",
           "bg_color_arrow": "#8c8c8c",
@@ -3582,6 +3600,7 @@
           "font_size_title": "16px",
           "collection_results_per_row": "6",
           "btn_view_all": "",
+          "link_view_all": "",
           "margin_bottom_mb": 0,
           "margin_bottom_tab": 0,
           "margin_bottom": 0
@@ -3723,6 +3742,7 @@
           "font_size_title": "16px",
           "collection_results_per_row": "4",
           "btn_view_all": "",
+          "link_view_all": "",
           "margin_bottom_mb": 31,
           "margin_bottom_tab": 32,
           "margin_bottom": 34
@@ -3738,6 +3758,7 @@
               "title": "",
               "color_title": "#ffffff",
               "button": "",
+              "link": "",
               "bg_button": "#ffffff",
               "border_button": "#ffffff",
               "color_button": "#232323"
@@ -3750,6 +3771,7 @@
               "title": "",
               "color_title": "#ffffff",
               "button": "",
+              "link": "",
               "bg_button": "#ffffff",
               "border_button": "#ffffff",
               "color_button": "#232323"
@@ -3791,7 +3813,9 @@
           "font_size_banner_des": "12px",
           "color_banner_des": "#ffffff",
           "banner_button": "Shop Now",
+          "link": "",
           "banner_button_2": "Shop Now",
+          "link_2": "",
           "bg_banner_button": "#ffffff",
           "border_banner_button": "#ffffff",
           "color_banner_button": "#232323",
@@ -3800,6 +3824,7 @@
           "featured_products_title": "Best Sellers",
           "featured_products_des": "",
           "featured_products_text_link": "",
+          "featured_products_link": "",
           "color_text_link": "#3e45a3",
           "title_style": "style_2",
           "show_slider_featured_collection": "best-sellers",

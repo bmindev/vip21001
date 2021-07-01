@@ -391,7 +391,7 @@ usf.templates = {
                     <usf-plugin name="searchResultsProductWishList" :data="pluginData"></usf-plugin>
                    
                     <!-- Product review -->
-                    <usf-plugin name="searchResultsProductReview" :data="pluginData"></usf-plugin>
+                   <!--  <usf-plugin name="searchResultsProductReview" :data="pluginData"></usf-plugin> -->
                 </div>
                 <div class="product-des abs-bottom">
                     <!--action-->

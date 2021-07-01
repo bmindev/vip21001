@@ -1,4 +1,4 @@
-/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 6/25/2021 6:15:33 AM*/
+/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 7/1/2021 4:11:08 AM*/
 /* Begin custom theme code */
 // define templates for the theme
 var usfFilesUrl;
@@ -393,7 +393,7 @@ usf.templates = {
                     <usf-plugin name="searchResultsProductWishList" :data="pluginData"></usf-plugin>
                    
                     <!-- Product review -->
-                    <usf-plugin name="searchResultsProductReview" :data="pluginData"></usf-plugin>
+                   <!--  <usf-plugin name="searchResultsProductReview" :data="pluginData"></usf-plugin> -->
                 </div>
                 <div class="product-des abs-bottom">
                     <!--action-->

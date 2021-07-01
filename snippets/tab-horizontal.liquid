@@ -104,18 +104,77 @@
             </div>
           	<div class="row mx-auto justify-content-center">
               <div class="col-12 col-md-8">
-                <div class="row">
-                   <div class="col-6">
-                    <p>Premium polycarbonate</p>
-                    <p>5-year international warranty</p>
-                    <p>Anti-theft zipper</p>
+                 <div class="row">
+                  <div class="col-12 col-md-6">                  
+                       <ul class="features-data-list features-data-list-left">
+                         <li>
+                           {% if product.metafields['Outer Material']['Outer Material'] != blank %}
+                           	Outer Material: {{ product.metafields['Outer Material']['Outer Material'] }} 
+                           {% endif %}
+                         </li>
+                         <li>
+                           {% if product.metafields['Inner Material']['Inner Material'] != blank %}
+                           		Inner Material: {{ product.metafields['Inner Material']['Inner Material'] }}
+                           {% endif %}
+                         </li>
+                         <li>
+                           {% if product.metafields['Warranty Type']['Warranty Type'] != blank %}
+                           		Warranty Type: {{ product.metafields['Warranty Type']['Warranty Type'] }}
+                           {% endif %}
+                         </li>
+                         <li>
+                           {% if product.metafields['Warranty Duration']['Warranty Duration'] != blank %}
+                           		Warranty Duration: {{ product.metafields['Warranty Duration']['Warranty Duration'] }}
+                           {% endif %}
+                         </li>
+                         <li>
+                           {% if product.metafields['Country of Origin']['Country of Origin'] != blank %}
+                           	County Of Origin: {{ product.metafields['Country of Origin']['Country of Origin'] }}
+                           {% endif %}
+                         </li>                       
+                         
+                         </ul>
                   </div>
-                  <div class="col-6 ">
-                    <p>Dual wheels</p>
-                    <p>Spacious</p>
-                    <p>Combination lock</p>
+                  <div class="col-12 col-md-6">
+                    <ul class="features-data-list features-data-list-right">
+                      {% for paragraph in paragraphs offset: continue %}
+                        <li>{{ paragraph }}</li>
+                      {% endfor %}
+                    </ul>
+                      <ul class="features-data-list features-data-list-right">
+                        <li>
+                           {% if product.metafields['Feature_1']['Feature_1'] != blank %}
+                           	{{ product.metafields['Feature_1']['Feature_1'] }}
+                           {% endif %}
+                         </li>
+                       <li>
+                         {% if product.metafields['Feature_2']['Feature_2'] != blank %}
+                         {{ product.metafields['Feature_2']['Feature_2'] }}
+                         {% endif %}
+                        </li>
+                       <li>
+                         {% if product.metafields['Feature_3']['Feature_3'] != blank %}
+                         	{{ product.metafields['Feature_3']['Feature_3'] }}
+                         {% endif %}
+                        </li>
+                       <li>
+                          {% if product.metafields['Feature_4']['Feature_4'] != blank %}
+                         	{{ product.metafields['Feature_4']['Feature_4'] }}
+                         {% endif %}
+                        </li>                    
+                       <li>
+                         {% if product.metafields['Dimensions']['Dimensions']  != blank %}
+                         Dimensions: {{ product.metafields['Dimensions']['Dimensions'] }}
+                        {% endif %}
+                        </li>
+                        <li>
+                         {% if product.metafields['Material Care']['Material Care']  != blank %}
+                         	Material Care: {{ product.metafields['Material Care']['Material Care'] }}
+                         {% endif %}
+                        </li>
+                        
+                      </ul>
                   </div>
-
                 </div>
               
               </div>
@@ -268,3 +327,71 @@
     {% endif %}
 </div>
 
+<style>
+ 
+  
+  .fetures-heading{ font-size: 20px; font-weight: 600; position: relative; }
+  .fetures-heading::before{ content: "";     width: 27%;
+    right: 58%;
+    top: 14px;
+    display: block;
+    position: absolute;
+    height: 1px;
+    background: #009A8E; }
+  
+    .fetures-heading::after{ content: "";  width: 27%;
+    right: 15%;
+    top: 14px;
+    display: block;
+    position: absolute;
+    height: 1px;
+    background: #009A8E; }
+  
+  .tabs__product-page .list-tabs{ margin-bottom: 0;}
+  
+  .wrapper-tab-content{ width: 60%; margin: 0 auto; text-align: center; padding: 2rem; font-family: 'Open Sans', sans-serif; font-size: 14px;}
+  .tabs__product-page.horizontal-tabs-center .list-tabs .tab-links{ background-color: rgba(255,255,255,0.70); padding: 1rem 3.5rem; font-size: 17px;  font-family: 'Open Sans', sans-serif; text-transform: capitalize; }
+  .tabs__product-page .list-tabs { border-bottom: 0; }
+  .tabs__product-page.horizontal-tabs-center .tab-title:not(:last-child){ margin-right: 16px; }
+  .horizontal-tabs.horizontal-tabs-center .tab-links.active { background-color: #009E91; color: #fff;  border: 2px solid white; }
+  .tabs__product-page .list-tabs .tab-links:before { content: none; }
+  .horizontal-tabs .tab-content .f-content{   background-color: rgba(255,255,255,0.70); margin-top: 2rem; padding: 1rem 1rem 0; }
+/*   .horizontal-tabs .tab-content .features-data-list li{ text-align: left; } */
+  .horizontal-tabs .tab-content .features-data-list li::before{ float: none; margin: 0; padding-right: 5px; height: auto; width: auto; background: transparent; }
+/*   .horizontal-tabs .tab-content .features-data-list-left li:first-child::before{ content: "Range Name: " ; }
+  .horizontal-tabs .tab-content .features-data-list-left li:nth-child(2)::before{ content: "Size: " ; }
+  .horizontal-tabs .tab-content .features-data-list-left li:nth-child(4)::before{ content: "Internal Compartment: " ; }
+  .horizontal-tabs .tab-content .features-data-list-left li:nth-child(5)::before{ content: "Organizer: " ; }
+  .horizontal-tabs .tab-content .features-data-list-right li:first-child::before{ content: "Back Pocket: " ; }
+  .horizontal-tabs .tab-content .features-data-list-right li:nth-child(4)::before{ content: "PU Interior:  " ; }
+  .horizontal-tabs .tab-content .features-data-list-right li:nth-child(5)::before{ content: "Dimensions: " ; } */
+ 
+  @media (min-width: 768px){ 
+  .tabs__product-page{ width: 110%; margin: 0 -5%; }
+  }
+  
+  @media (min-width: 1199px){ 
+    .tabs__product-page{ width: 111%; margin: 0 -5.5%; }
+  
+  }
+  
+  @media (max-width: 767px){
+    .tabs__product-page{ padding: 0; }
+    .wrapper-tab-content{ padding: 5px 7px; }
+    .tabs__product-page.horizontal-tabs-center .tab-title:not(:last-child){ margin-right: 0; }
+    .tabs__product-page .tab-links .icon-dropdown{ right: 10px; }
+    .wrapper-tab-content .tab-title+.tab-content:not(:last-child){ border-bottom: 1px solid #009A8E; margin-bottom: 20px; }
+    .tabs__product-page .wrapper-tab-content .tab-links{ background: #F3FFFE;
+    border-color: #F3FFFE;
+    margin-bottom: 1rem;
+    color: #18A499; }
+    .tabs__product-page .tab-links.active .icon-dropdown{ color: #fff; opacity: 1; }
+    .tabs__product-page .tab-links .icon-dropdown{ color: #18A499; opacity: 1; }
+  
+  }
+  
+  @media (min-width: 1600px){
+   .tabs__product-page{ width: 116%; margin: 0 -8%; }
+  
+  }
+</style>

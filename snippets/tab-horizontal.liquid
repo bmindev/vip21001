@@ -103,7 +103,7 @@
                 {{ des | split: '[lang2]' | first }}
             </div>
           	<div class="row mx-auto justify-content-center">
-              <div class="col-12 col-md-8">
+              <div class="col-12 col-md-10">
                  <div class="row">
                   <div class="col-12 col-md-6">                  
                        <ul class="features-data-list features-data-list-left">
@@ -136,11 +136,11 @@
                          </ul>
                   </div>
                   <div class="col-12 col-md-6">
-                    <ul class="features-data-list features-data-list-right">
+<!--                     <ul class="features-data-list features-data-list-right">
                       {% for paragraph in paragraphs offset: continue %}
                         <li>{{ paragraph }}</li>
                       {% endfor %}
-                    </ul>
+                    </ul> -->
                       <ul class="features-data-list features-data-list-right">
                         <li>
                            {% if product.metafields['Feature_1']['Feature_1'] != blank %}
@@ -330,22 +330,7 @@
 <style>
  
   
-  .fetures-heading{ font-size: 20px; font-weight: 600; position: relative; }
-  .fetures-heading::before{ content: "";     width: 27%;
-    right: 58%;
-    top: 14px;
-    display: block;
-    position: absolute;
-    height: 1px;
-    background: #009A8E; }
-  
-    .fetures-heading::after{ content: "";  width: 27%;
-    right: 15%;
-    top: 14px;
-    display: block;
-    position: absolute;
-    height: 1px;
-    background: #009A8E; }
+
   
   .tabs__product-page .list-tabs{ margin-bottom: 0;}
   
@@ -357,7 +342,8 @@
   .tabs__product-page .list-tabs .tab-links:before { content: none; }
   .horizontal-tabs .tab-content .f-content{   background-color: rgba(255,255,255,0.70); margin-top: 2rem; padding: 1rem 1rem 0; }
 /*   .horizontal-tabs .tab-content .features-data-list li{ text-align: left; } */
-  .horizontal-tabs .tab-content .features-data-list li::before{ float: none; margin: 0; padding-right: 5px; height: auto; width: auto; background: transparent; }
+  .horizontal-tabs .tab-content .features-data-list{ list-style-type: none; }
+  .horizontal-tabs .tab-content .features-data-list li::before{ content: none; }
 /*   .horizontal-tabs .tab-content .features-data-list-left li:first-child::before{ content: "Range Name: " ; }
   .horizontal-tabs .tab-content .features-data-list-left li:nth-child(2)::before{ content: "Size: " ; }
   .horizontal-tabs .tab-content .features-data-list-left li:nth-child(4)::before{ content: "Internal Compartment: " ; }
@@ -367,16 +353,16 @@
   .horizontal-tabs .tab-content .features-data-list-right li:nth-child(5)::before{ content: "Dimensions: " ; } */
  
   @media (min-width: 768px){ 
-  .tabs__product-page{ width: 110%; margin: 0 -5%; }
+/*   .tabs__product-page{ width: 110%; margin: 0 -5%; } */
   }
   
   @media (min-width: 1199px){ 
-    .tabs__product-page{ width: 111%; margin: 0 -5.5%; }
+/*     .tabs__product-page{ width: 111%; margin: 0 -5.5%; } */
   
   }
   
   @media (max-width: 767px){
-    .tabs__product-page{ padding: 0; }
+/*     .tabs__product-page{ padding: 0; }
     .wrapper-tab-content{ padding: 5px 7px; }
     .tabs__product-page.horizontal-tabs-center .tab-title:not(:last-child){ margin-right: 0; }
     .tabs__product-page .tab-links .icon-dropdown{ right: 10px; }
@@ -386,12 +372,12 @@
     margin-bottom: 1rem;
     color: #18A499; }
     .tabs__product-page .tab-links.active .icon-dropdown{ color: #fff; opacity: 1; }
-    .tabs__product-page .tab-links .icon-dropdown{ color: #18A499; opacity: 1; }
+    .tabs__product-page .tab-links .icon-dropdown{ color: #18A499; opacity: 1; } */
   
   }
   
   @media (min-width: 1600px){
-   .tabs__product-page{ width: 116%; margin: 0 -8%; }
+/*    .tabs__product-page{ width: 116%; margin: 0 -8%; } */
   
   }
 </style>

@@ -1,4 +1,4 @@
-/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 7/5/2021 4:59:55 AM*/
+/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 7/5/2021 6:40:54 AM*/
 /* Begin custom theme code */
 // define templates for the theme
 var usfFilesUrl;
@@ -957,11 +957,9 @@ var sizeLists = function (product) {
     var sizeShowed = {};
     var count = 0;
     var rendered = 0;
-    console.log('Product',product)
     var option = product.options.find(o => o.name === 'Size');
-    console.log('Product',option)
     if (option) {
-        ////console.log(product.title + ">" + option)
+        //console.log(product.title + ">" + option)
 
         for (let j = 0; j < product.variants.length; j++) {
             var v = product.variants[j];

@@ -955,11 +955,9 @@ var sizeLists = function (product) {
     var sizeShowed = {};
     var count = 0;
     var rendered = 0;
-    console.log('Product',product)
     var option = product.options.find(o => o.name === 'Size');
-    console.log('Product',option)
     if (option) {
-        ////console.log(product.title + ">" + option)
+        //console.log(product.title + ">" + option)
 
         for (let j = 0; j < product.variants.length; j++) {
             var v = product.variants[j];

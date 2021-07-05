@@ -1,4 +1,4 @@
-/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 7/1/2021 4:11:08 AM*/
+/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 7/5/2021 4:59:55 AM*/
 /* Begin custom theme code */
 // define templates for the theme
 var usfFilesUrl;
@@ -106,12 +106,10 @@ var _usfProductPrice = `
     <div v-if="hasDiscount" class="price-sale">
         <span class="old-price" v-html="displayPrice"></span>
         <span class="special-price">
-            <em v-if="priceVaries && !product.selectedVariantId" v-html="loc.from"></em>
             <span v-html="priceVaries && !product.selectedVariantId ? displayMinDiscountedPrice : displayDiscountedPrice "></span>
         </span>
     </div>
     <div v-else class="price-regular">
-        <em v-if="priceVaries && !product.selectedVariantId" v-html="loc.from"></em>
         <span v-html="priceVaries && !product.selectedVariantId ? displayMinDiscountedPrice : displayDiscountedPrice "></span>
     </div>
 </div>
@@ -959,7 +957,9 @@ var sizeLists = function (product) {
     var sizeShowed = {};
     var count = 0;
     var rendered = 0;
+    console.log('Product',product)
     var option = product.options.find(o => o.name === 'Size');
+    console.log('Product',option)
     if (option) {
         ////console.log(product.title + ">" + option)
 

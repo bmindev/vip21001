@@ -104,12 +104,10 @@ var _usfProductPrice = `
     <div v-if="hasDiscount" class="price-sale">
         <span class="old-price" v-html="displayPrice"></span>
         <span class="special-price">
-            <em v-if="priceVaries && !product.selectedVariantId" v-html="loc.from"></em>
             <span v-html="priceVaries && !product.selectedVariantId ? displayMinDiscountedPrice : displayDiscountedPrice "></span>
         </span>
     </div>
     <div v-else class="price-regular">
-        <em v-if="priceVaries && !product.selectedVariantId" v-html="loc.from"></em>
         <span v-html="priceVaries && !product.selectedVariantId ? displayMinDiscountedPrice : displayDiscountedPrice "></span>
     </div>
 </div>
@@ -957,7 +955,9 @@ var sizeLists = function (product) {
     var sizeShowed = {};
     var count = 0;
     var rendered = 0;
+    console.log('Product',product)
     var option = product.options.find(o => o.name === 'Size');
+    console.log('Product',option)
     if (option) {
         ////console.log(product.title + ">" + option)
 

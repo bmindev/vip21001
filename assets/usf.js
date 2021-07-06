@@ -1,4 +1,4 @@
-/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 7/6/2021 7:15:21 AM*/
+/* USF file - Do not modify this file since it is regularly changed. Auto modified at: 7/6/2021 2:02:22 PM*/
 /* Begin custom theme code */
 // define templates for the theme
 var usfFilesUrl;
@@ -363,7 +363,7 @@ usf.templates = {
                     <strong class="label sold-out-label" v-if="isSoldOut && usf.settings.search.showSoldOut" v-html="loc.soldOut"></strong>
                     <br>
                 </div>
-                <div class="product-des abs-center">
+                <a class="product-des abs-center" :href="productUrl">
                 <div class="hover-sizes">
                     <p class="mb-1">AVAILABLE SIZES</p>
                     <ul class="sizes-list" v-html="sizeLists(product)"></ul>
@@ -392,7 +392,7 @@ usf.templates = {
                    
                     <!-- Product review -->
                    <!--  <usf-plugin name="searchResultsProductReview" :data="pluginData"></usf-plugin> -->
-                </div>
+                </a>
                 <div class="product-des abs-bottom">
                     <!--action-->
                     <div class="action">
@@ -966,7 +966,7 @@ var sizeLists = function (product) {
             for (let i = 0; i < option.values.length; i++) {
                 for (let n = 0; n < v.options.length; n++) {
                     var optVal = option.values[i];
-                    if (optVal == option.values[v.options[n]] && !usf.utils.isVariantSoldOut(v) && !sizeShowed[optVal]) {
+                    if (optVal == option.values[v.options[n]]  && !sizeShowed[optVal]) {
                         count++;
                         sizeShowed[optVal] = 1;
 

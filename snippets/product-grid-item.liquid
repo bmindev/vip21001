@@ -169,11 +169,11 @@
         {% else %}
           {% if settings.enable_quick_shop %}
           <div class="price-regular">
-            <span data-price-grid>{{ product.variants[0].price | money }}</span>
+            <span class="reg-price" data-price-grid>{{ product.variants[0].price | money }}</span>
           </div>
           {% else %}
           <div class="price-regular">
-            <span>{% if product.price_varies %}{% render 'varies_from' %}{% endif %}{{ product.price_min | money }}</span>
+            <span class="reg-price">{% if product.price_varies %}{% render 'varies_from' %}{% endif %}{{ product.price_min | money }}</span>
           </div>
           {% endif %}
         {% endif %}
@@ -232,11 +232,11 @@
         {% else %}
           {% if settings.enable_quick_shop %}
           <div class="price-regular">
-            <span data-price-grid>{{ product.variants[0].price | money }}</span>
+            <span class="reg-price" data-price-grid >{{ product.variants[0].price | money }}</span>
           </div>
           {% else %}
           <div class="price-regular">
-            <span>{% if product.price_varies %}{% render 'varies_from' %}{% endif %}{{ product.price_min | money }}</span>
+            <span class="reg-price">{% if product.price_varies %}{% render 'varies_from' %}{% endif %}{{ product.price_min | money }}</span>
           </div>
           {% endif %}
         {% endif %}
@@ -284,4 +284,5 @@
     
   }
 </style>
+
 

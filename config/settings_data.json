@@ -3828,7 +3828,7 @@
           "color_text_link": "#3e45a3",
           "title_style": "style_2",
           "show_slider_featured_collection": "best-sellers",
-          "slider_featured_limit_all": 10,
+          "slider_featured_limit_all": 20,
           "collection_results_per_row1": "4",
           "margin_bottom_mb": 40,
           "margin_bottom_tab": 40,

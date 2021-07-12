@@ -96,9 +96,9 @@
         {% render 'multilang' with product.title %}
         {% if select != blank %}<span data-change-title> - {{ select }}</span>{% endif %}
       </a> -->
-     {% if template == 'collections' %}
-{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
-{% endif %}
+     	{% if template == 'collections' %}
+      		{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
+      	{% endif %}
 <!--       <div class="price-box">
         {% if on_sale %}
         <div class="price-sale">
@@ -151,8 +151,8 @@
       </a>
       
       {% if template == 'collections' %}
-{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
-{% endif %}
+      	{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
+      {% endif %}
       <div class="price-box">
         {% if on_sale %}
         <div class="price-sale">

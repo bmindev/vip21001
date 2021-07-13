@@ -131,7 +131,17 @@
                            {% if product.metafields['Country of Origin']['Country of Origin'] != blank %}
                            	County Of Origin: {{ product.metafields['Country of Origin']['Country of Origin'] }}
                            {% endif %}
-                         </li>                       
+                         </li> 
+                         <li>
+                          {% if product.metafields['Feature_6']['Feature_6'] != blank %}
+                         	{{ product.metafields['Feature_6']['Feature_6'] }}
+                         {% endif %}
+                        </li>  
+                         <li>
+                          {% if product.metafields['Feature_7']['Feature_7'] != blank %}
+                         	{{ product.metafields['Feature_7']['Feature_7'] }}
+                         {% endif %}
+                        </li>  
                          
                          </ul>
                   </div>
@@ -161,7 +171,12 @@
                           {% if product.metafields['Feature_4']['Feature_4'] != blank %}
                          	{{ product.metafields['Feature_4']['Feature_4'] }}
                          {% endif %}
-                        </li>                    
+                        </li> 
+                         <li>
+                          {% if product.metafields['Feature_5']['Feature_5'] != blank %}
+                         	{{ product.metafields['Feature_5']['Feature_5'] }}
+                         {% endif %}
+                        </li>                         
                        <li>
                          {% if product.metafields['Dimensions']['Dimensions']  != blank %}
                          Dimensions: {{ product.metafields['Dimensions']['Dimensions'] }}

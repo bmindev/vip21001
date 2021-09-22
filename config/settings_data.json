@@ -4088,20 +4088,53 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-vip.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "vip-hard-luggage"
+            }
+          },
+          "8a79d5ea-cdc7-4f3c-8eb2-0e3df9bd921f": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-skybags.png",
+              "title": "",
+              "color_title": "#ffffff",
+              "btn_shop_now": "",
+              "link": "skybags"
+            }
+          },
+          "9666aabc-4ac4-4cf8-9d8a-a620ed9e08f6": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-carlton.png",
+              "title": "",
+              "color_title": "#ffffff",
+              "btn_shop_now": "",
+              "link": "carlton"
+            }
+          },
+          "c24b3aea-083f-4001-ad57-e50c9598a651": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-aristocrat.png",
+              "title": "",
+              "color_title": "#ffffff",
+              "btn_shop_now": "",
+              "link": "aristocrat"
             }
           }
         },
         "block_order": [
-          "24f12c4b-5bb4-4ee5-a8e7-6012186e1623"
+          "24f12c4b-5bb4-4ee5-a8e7-6012186e1623",
+          "8a79d5ea-cdc7-4f3c-8eb2-0e3df9bd921f",
+          "9666aabc-4ac4-4cf8-9d8a-a620ed9e08f6",
+          "c24b3aea-083f-4001-ad57-e50c9598a651"
         ],
         "settings": {
           "title": "Brands",
           "title_style": "style_1",
           "layout": "default",
-          "bg_color": "#fff",
+          "bg_color": "#ffffff",
           "font_size_title": "16px",
           "collection_results_per_row": "4",
           "btn_view_all": "",

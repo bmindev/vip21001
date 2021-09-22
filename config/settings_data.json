@@ -4073,9 +4073,9 @@
         "settings": {
           "display_sub_banner": true,
           "layout": "default",
-          "margin_bottom_mb": 0,
-          "margin_bottom_tab": 0,
-          "margin_bottom": 0,
+          "margin_bottom_mb": 25,
+          "margin_bottom_tab": 20,
+          "margin_bottom": 20,
           "font_size_title": "16px",
           "display_padding": true
         }
@@ -4100,7 +4100,7 @@
               "title": "",
               "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": "skybags"
+              "link": "hard-luggage-skybags"
             }
           },
           "9666aabc-4ac4-4cf8-9d8a-a620ed9e08f6": {
@@ -4110,7 +4110,7 @@
               "title": "",
               "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": "carlton"
+              "link": "hard-luggage-carlton"
             }
           },
           "c24b3aea-083f-4001-ad57-e50c9598a651": {
@@ -4120,7 +4120,7 @@
               "title": "",
               "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": "aristocrat"
+              "link": "hard-luggage-aristocrat"
             }
           }
         },
@@ -4139,9 +4139,64 @@
           "collection_results_per_row": "4",
           "btn_view_all": "",
           "link_view_all": "",
-          "margin_bottom_mb": 0,
-          "margin_bottom_tab": 0,
-          "margin_bottom": 0
+          "margin_bottom_mb": 51,
+          "margin_bottom_tab": 51,
+          "margin_bottom": 85
+        }
+      },
+      "home-custom-sub-banner-3": {
+        "type": "home-custom-sub-banner-3",
+        "blocks": {
+          "2820a170-50f7-462a-b462-3e647484ef09": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3570.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": "shopify:\/\/collections\/all"
+            }
+          },
+          "f217c0bb-889c-4732-929b-a753ef4c7c46": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3572.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": "shopify:\/\/collections\/all"
+            }
+          },
+          "1f325f45-f31c-4e55-b554-71d33f70969c": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3573.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "2820a170-50f7-462a-b462-3e647484ef09",
+          "f217c0bb-889c-4732-929b-a753ef4c7c46",
+          "1f325f45-f31c-4e55-b554-71d33f70969c"
+        ],
+        "settings": {
+          "layout": "default",
+          "sub_banner_style": "style_1",
+          "img_results_per_row": "3",
+          "widget_title": "",
+          "widget_des": "",
+          "title_style": "style_2",
+          "margin_bottom_mb": 25,
+          "margin_bottom_tab": 20,
+          "margin_bottom": 20,
+          "font_size_title": "30px"
         }
       }
     },

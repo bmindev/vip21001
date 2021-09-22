@@ -3906,6 +3906,132 @@
           "list_collection_title_size": "20",
           "style_categories": "style_show_all"
         }
+      },
+      "home-custom-block-baner-collection-list": {
+        "type": "home-custom-block-baner-collection-list",
+        "blocks": {
+          "d15353c2-6a74-41f6-8f61-4c248436f2b6": {
+            "type": "largeImg",
+            "settings": {
+              "collection_page": "category",
+              "image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-02_at_3.57.44_PM.jpg",
+              "display_parallax": false,
+              "dpl_down_arrow": false,
+              "height_img_parallax": "970px",
+              "alignment": "left",
+              "banner_heading": "",
+              "font_size_banner_heading": "40px",
+              "color_banner_heading": "#232323",
+              "banner_des": "",
+              "font_size_banner_des": "12px",
+              "color_banner_des": "#232323",
+              "countdown": "",
+              "banner_button": "",
+              "link": "shopify:\/\/pages\/hard-luggage",
+              "bg_banner_button": "#232323",
+              "border_banner_button": "#232323",
+              "color_banner_button": "#fff",
+              "min_width_banner_button": "167px"
+            }
+          },
+          "90c58383-df13-402c-853c-34d1d64f0f02": {
+            "type": "largeImg",
+            "settings": {
+              "collection_page": "category",
+              "image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-02_at_3.57.44_PM_1.jpg",
+              "display_parallax": false,
+              "dpl_down_arrow": false,
+              "height_img_parallax": "970px",
+              "alignment": "left",
+              "banner_heading": "",
+              "font_size_banner_heading": "40px",
+              "color_banner_heading": "#232323",
+              "banner_des": "",
+              "font_size_banner_des": "12px",
+              "color_banner_des": "#232323",
+              "countdown": "",
+              "banner_button": "",
+              "link": "shopify:\/\/pages\/soft-luggage",
+              "bg_banner_button": "#232323",
+              "border_banner_button": "#232323",
+              "color_banner_button": "#fff",
+              "min_width_banner_button": "167px"
+            }
+          },
+          "1a928afa-a658-4fbf-85e7-3749357d1824": {
+            "type": "largeImg",
+            "settings": {
+              "collection_page": "category",
+              "image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-03_at_10.43.53_AM.jpg",
+              "display_parallax": false,
+              "dpl_down_arrow": false,
+              "height_img_parallax": "970px",
+              "alignment": "left",
+              "banner_heading": "",
+              "font_size_banner_heading": "40px",
+              "color_banner_heading": "#232323",
+              "banner_des": "",
+              "font_size_banner_des": "12px",
+              "color_banner_des": "#232323",
+              "countdown": "",
+              "banner_button": "",
+              "link": "",
+              "bg_banner_button": "#232323",
+              "border_banner_button": "#232323",
+              "color_banner_button": "#fff",
+              "min_width_banner_button": "167px"
+            }
+          },
+          "458bf37d-c735-41b6-aa97-bfdb749d1d58": {
+            "type": "largeImg",
+            "settings": {
+              "collection_page": "category",
+              "image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-02_at_3.57.46_PM_1.jpg",
+              "display_parallax": false,
+              "dpl_down_arrow": false,
+              "height_img_parallax": "970px",
+              "alignment": "left",
+              "banner_heading": "",
+              "font_size_banner_heading": "40px",
+              "color_banner_heading": "#232323",
+              "banner_des": "",
+              "font_size_banner_des": "12px",
+              "color_banner_des": "#232323",
+              "countdown": "",
+              "banner_button": "",
+              "link": "",
+              "bg_banner_button": "#232323",
+              "border_banner_button": "#232323",
+              "color_banner_button": "#fff",
+              "min_width_banner_button": "167px"
+            }
+          }
+        },
+        "block_order": [
+          "d15353c2-6a74-41f6-8f61-4c248436f2b6",
+          "90c58383-df13-402c-853c-34d1d64f0f02",
+          "1a928afa-a658-4fbf-85e7-3749357d1824",
+          "458bf37d-c735-41b6-aa97-bfdb749d1d58"
+        ],
+        "settings": {
+          "layout": "default",
+          "margin_bottom_mb": 25,
+          "margin_bottom_tab": 30,
+          "margin_bottom": 30
+        }
+      },
+      "home-custom-product-collection-list": {
+        "type": "home-custom-product-collection-list",
+        "settings": {
+          "slider_collection_limit": 5,
+          "bg_collection_button": "#fff",
+          "border_collection_button": "#dadada",
+          "color_collection_button": "#27221b",
+          "min_width_collection_button": "252px",
+          "margin_bottom_mb": 40,
+          "margin_bottom_tab": 40,
+          "margin_bottom": 0
+        }
       }
     },
     "content_for_index": [

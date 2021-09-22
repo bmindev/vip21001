@@ -4086,9 +4086,9 @@
           "24f12c4b-5bb4-4ee5-a8e7-6012186e1623": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/brand-vip.png",
-              "title": "",
-              "color_title": "#ffffff",
+              "image": "shopify:\/\/shop_images\/Untitled-1.png",
+              "title": "Hard Luggage Trolleys",
+              "color_title": "#000000",
               "btn_shop_now": "",
               "link": "vip-hard-luggage"
             }
@@ -4096,31 +4096,51 @@
           "8a79d5ea-cdc7-4f3c-8eb2-0e3df9bd921f": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/brand-skybags.png",
-              "title": "",
-              "color_title": "#ffffff",
+              "image": "shopify:\/\/shop_images\/Untitled-11.png",
+              "title": "Soft Luggage Trolleys",
+              "color_title": "#000000",
               "btn_shop_now": "",
-              "link": "hard-luggage-skybags"
+              "link": ""
             }
           },
           "9666aabc-4ac4-4cf8-9d8a-a620ed9e08f6": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/brand-carlton.png",
-              "title": "",
-              "color_title": "#ffffff",
+              "image": "shopify:\/\/shop_images\/Untitled-13.png",
+              "title": "Backpack",
+              "color_title": "#000000",
               "btn_shop_now": "",
-              "link": "hard-luggage-carlton"
+              "link": ""
             }
           },
           "c24b3aea-083f-4001-ad57-e50c9598a651": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/brand-aristocrat.png",
-              "title": "",
-              "color_title": "#ffffff",
+              "image": "shopify:\/\/shop_images\/Untitled-14.png",
+              "title": "Business",
+              "color_title": "#000000",
               "btn_shop_now": "",
-              "link": "hard-luggage-aristocrat"
+              "link": ""
+            }
+          },
+          "cd0f5d2e-9182-4152-bfc3-ff2a6fcc092b": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Image_172.png",
+              "title": "Duffels",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "e5c84dc0-b541-441b-8bf3-943a38d8ee11": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-16.png",
+              "title": "Accessories",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
             }
           }
         },
@@ -4128,15 +4148,17 @@
           "24f12c4b-5bb4-4ee5-a8e7-6012186e1623",
           "8a79d5ea-cdc7-4f3c-8eb2-0e3df9bd921f",
           "9666aabc-4ac4-4cf8-9d8a-a620ed9e08f6",
-          "c24b3aea-083f-4001-ad57-e50c9598a651"
+          "c24b3aea-083f-4001-ad57-e50c9598a651",
+          "cd0f5d2e-9182-4152-bfc3-ff2a6fcc092b",
+          "e5c84dc0-b541-441b-8bf3-943a38d8ee11"
         ],
         "settings": {
-          "title": "Brands",
+          "title": "",
           "title_style": "style_1",
           "layout": "default",
           "bg_color": "#ffffff",
           "font_size_title": "16px",
-          "collection_results_per_row": "4",
+          "collection_results_per_row": "6",
           "btn_view_all": "",
           "link_view_all": "",
           "margin_bottom_mb": 51,
@@ -4207,19 +4229,19 @@
           "banner_is": "left",
           "banner_heading": "#CAMPAIGNS",
           "font_size_banner_heading": "40px",
-          "color_banner_heading": "#fff",
+          "color_banner_heading": "#ffffff",
           "banner_sub_heading": "Spring Summer’08",
           "font_size_banner_sub_heading": "13px",
-          "color_banner_sub_heading": "#fff",
+          "color_banner_sub_heading": "#ffffff",
           "banner_des": "Phasellus lorem malesuada ligula pulvinar de cosmopolis",
           "font_size_banner_des": "12px",
-          "color_banner_des": "#fff",
+          "color_banner_des": "#ffffff",
           "banner_button": "Shop Now",
           "link": "",
           "banner_button_2": "Shop Now",
           "link_2": "",
-          "bg_banner_button": "#fff",
-          "border_banner_button": "#fff",
+          "bg_banner_button": "#ffffff",
+          "border_banner_button": "#ffffff",
           "color_banner_button": "#232323",
           "bg_color_box_style_2": "#ffffff",
           "border_color_box_style_2": "#bcbcbc",
@@ -4235,6 +4257,88 @@
           "margin_bottom_mb": 40,
           "margin_bottom_tab": 40,
           "margin_bottom": 0
+        }
+      },
+      "home-custom-sub-banner": {
+        "type": "home-custom-sub-banner",
+        "blocks": {
+          "a5992e1b-04ab-4d19-a33d-7171c9f391ea": {
+            "type": "oneImage",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3573_5e4fa586-4d84-4367-9017-6a88d88719ca.png",
+              "title": "",
+              "des": "",
+              "countdown": "",
+              "color": "#fff",
+              "link": "",
+              "title_2": "Special Offers",
+              "des_2": "Sale up to 60% off on selected items. End ins:",
+              "countdown_2": "2020\/01\/7 0:0:00",
+              "color_2": "#fff",
+              "link_2": ""
+            }
+          }
+        },
+        "block_order": [
+          "a5992e1b-04ab-4d19-a33d-7171c9f391ea"
+        ],
+        "settings": {
+          "font_size_title": "20px",
+          "block_des": "",
+          "margin_bottom_mb": 0,
+          "margin_bottom_tab": 0,
+          "margin_bottom": 30
+        }
+      },
+      "home-custom-block-baner": {
+        "type": "home-custom-block-baner",
+        "blocks": {
+          "5b6b4ec2-5d3d-4407-8a81-d17cd4ad49f9": {
+            "type": "largeImg",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3573_5e4fa586-4d84-4367-9017-6a88d88719ca.png",
+              "display_parallax": false,
+              "dpl_down_arrow": false,
+              "height_img_parallax": "757px",
+              "alignment": "left",
+              "banner_heading": "",
+              "font_size_banner_heading": "40px",
+              "color_banner_heading": "#232323",
+              "color_banner_heading_mb": "#232323",
+              "banner_sub_heading": "",
+              "font_size_banner_sub_heading": "13px",
+              "color_banner_sub_heading": "#ffffff",
+              "color_banner_sub_heading_mb": "#232323",
+              "banner_des": "",
+              "font_size_banner_des": "12px",
+              "color_banner_des": "#232323",
+              "color_banner_des_mb": "#232323",
+              "countdown": "",
+              "banner_button": "",
+              "link": "",
+              "bg_banner_button": "#232323",
+              "border_banner_button": "#232323",
+              "color_banner_button": "#ffffff",
+              "bg_banner_button_mb": "#232323",
+              "border_banner_button_mb": "#232323",
+              "color_banner_button_mb": "#ffffff",
+              "min_width_banner_button": "237px"
+            }
+          }
+        },
+        "block_order": [
+          "5b6b4ec2-5d3d-4407-8a81-d17cd4ad49f9"
+        ],
+        "settings": {
+          "layout": "default",
+          "layout_style": "layout_style_1",
+          "widget_title": "",
+          "widget_des": "",
+          "title_style": "style_1",
+          "img_align": "center",
+          "margin_bottom_mb": 25,
+          "margin_bottom_tab": 30,
+          "margin_bottom": 30
         }
       }
     },

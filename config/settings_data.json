@@ -3043,6 +3043,7 @@
         "settings": {
           "display_collection_image": true,
           "collection_header_style": "style_1",
+          "collection_image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-02_at_3.57.44_PM.jpg",
           "display_collection_des": false,
           "color_wrapper": "#202020",
           "bg_color_content": "#ffffff",
@@ -4030,6 +4031,83 @@
           "min_width_collection_button": "252px",
           "margin_bottom_mb": 40,
           "margin_bottom_tab": 40,
+          "margin_bottom": 0
+        }
+      },
+      "home-sub-banner": {
+        "type": "home-sub-banner",
+        "blocks": {
+          "75e75e77-1f7d-4f0a-92bb-9a0f878415d0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/luggage-b01.png",
+              "title": "",
+              "color_title": "#ffffff",
+              "link": "shopify:\/\/collections\/all"
+            }
+          },
+          "b59da0cf-71a0-42d8-9b0a-0ab1259f2df5": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/luggage-b02.png",
+              "title": "",
+              "color_title": "#ffffff",
+              "link": "shopify:\/\/collections\/all"
+            }
+          },
+          "e59f4569-5cb8-4e1d-a714-0ffc036cc96d": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/luggage-b03.png",
+              "title": "",
+              "color_title": "#ffffff",
+              "link": "shopify:\/\/collections\/all"
+            }
+          }
+        },
+        "block_order": [
+          "75e75e77-1f7d-4f0a-92bb-9a0f878415d0",
+          "b59da0cf-71a0-42d8-9b0a-0ab1259f2df5",
+          "e59f4569-5cb8-4e1d-a714-0ffc036cc96d"
+        ],
+        "settings": {
+          "display_sub_banner": true,
+          "layout": "default",
+          "margin_bottom_mb": 0,
+          "margin_bottom_tab": 0,
+          "margin_bottom": 0,
+          "font_size_title": "16px",
+          "display_padding": true
+        }
+      },
+      "home-collections": {
+        "type": "home-collections",
+        "blocks": {
+          "24f12c4b-5bb4-4ee5-a8e7-6012186e1623": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-vip.png",
+              "title": "",
+              "color_title": "#fff",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "24f12c4b-5bb4-4ee5-a8e7-6012186e1623"
+        ],
+        "settings": {
+          "title": "Brands",
+          "title_style": "style_1",
+          "layout": "default",
+          "bg_color": "#fff",
+          "font_size_title": "16px",
+          "collection_results_per_row": "4",
+          "btn_view_all": "",
+          "link_view_all": "",
+          "margin_bottom_mb": 0,
+          "margin_bottom_tab": 0,
           "margin_bottom": 0
         }
       }

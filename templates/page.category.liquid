@@ -2,7 +2,10 @@
 
 <div class="category-template">
   <div class="container">
-    {% section 'collection-header' %}
+    <div class="category-banner mb-5">
+    	<img src="{{ page.metafields['category_banner']['category_banner'] }}">
+    </div>
+   
     {% section 'home-sub-banner' %}
     {% section 'home-custom-block-baner' %}
   	{% section 'category-collections' %}
@@ -10,3 +13,16 @@
     {% section 'home-featured-products' %}
   </div>
 </div>
+
+<style>
+  .category-banner{
+    text-align: center;
+  }
+  .category-banner img {
+    width: 97%;
+    object-fit: unset;
+    height: auto;
+    border-radius: 22px;
+    
+}
+</style>

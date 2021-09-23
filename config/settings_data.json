@@ -3043,7 +3043,7 @@
         "settings": {
           "display_collection_image": true,
           "collection_header_style": "style_1",
-          "collection_image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-02_at_3.57.44_PM.jpg",
+          "collection_image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-02_at_3.57.44_PM_1.jpg",
           "display_collection_des": false,
           "color_wrapper": "#202020",
           "bg_color_content": "#ffffff",
@@ -4349,7 +4349,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-vip.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
               "link": "vip-hard-luggage"
             }
@@ -4359,7 +4359,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-skybags.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
               "link": "hard-luggage-skybags"
             }
@@ -4369,7 +4369,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-carlton.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
               "link": "hard-luggage-carlton"
             }
@@ -4379,7 +4379,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-aristocrat.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
               "link": "hard-luggage-aristocrat"
             }
@@ -4395,7 +4395,7 @@
           "title": "Brands",
           "title_style": "style_1",
           "layout": "full",
-          "bg_color": "#fff",
+          "bg_color": "#ffffff",
           "font_size_title": "16px",
           "collection_results_per_row": "4",
           "btn_view_all": "",

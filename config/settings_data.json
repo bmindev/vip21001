@@ -4163,7 +4163,7 @@
           "link_view_all": "",
           "margin_bottom_mb": 51,
           "margin_bottom_tab": 51,
-          "margin_bottom": 85
+          "margin_bottom": 31
         }
       },
       "home-custom-sub-banner-3": {
@@ -4215,9 +4215,9 @@
           "widget_title": "",
           "widget_des": "",
           "title_style": "style_2",
-          "margin_bottom_mb": 25,
-          "margin_bottom_tab": 20,
-          "margin_bottom": 20,
+          "margin_bottom_mb": 35,
+          "margin_bottom_tab": 50,
+          "margin_bottom": 50,
           "font_size_title": "30px"
         }
       },
@@ -4336,9 +4336,9 @@
           "widget_des": "",
           "title_style": "style_1",
           "img_align": "center",
-          "margin_bottom_mb": 25,
-          "margin_bottom_tab": 30,
-          "margin_bottom": 30
+          "margin_bottom_mb": 35,
+          "margin_bottom_tab": 51,
+          "margin_bottom": 50
         }
       },
       "category-collections": {
@@ -4351,7 +4351,7 @@
               "title": "",
               "color_title": "#fff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "vip-hard-luggage"
             }
           },
           "573709c0-bf2e-4801-a301-719dc4122232": {
@@ -4361,7 +4361,7 @@
               "title": "",
               "color_title": "#fff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "hard-luggage-skybags"
             }
           },
           "9f5e7de3-bd5b-4710-87ed-aef6113c058f": {
@@ -4371,7 +4371,7 @@
               "title": "",
               "color_title": "#fff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "hard-luggage-carlton"
             }
           },
           "8b69982f-c80f-4a14-bec2-f9f594a1b45e": {
@@ -4381,7 +4381,7 @@
               "title": "",
               "color_title": "#fff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "hard-luggage-aristocrat"
             }
           }
         },
@@ -4400,9 +4400,68 @@
           "collection_results_per_row": "4",
           "btn_view_all": "",
           "link_view_all": "",
-          "margin_bottom_mb": 51,
-          "margin_bottom_tab": 51,
-          "margin_bottom": 51
+          "margin_bottom_mb": 61,
+          "margin_bottom_tab": 97,
+          "margin_bottom": 100
+        }
+      },
+      "home-slideshow": {
+        "type": "home-slideshow",
+        "blocks": {
+          "298ab240-9fea-4c0a-b6cb-5651592f0d8a": {
+            "type": "video",
+            "settings": {
+              "dpl_slide_img": true,
+              "style_video": "youtube",
+              "video_link": "ctBjj010VaE",
+              "video_mp4_link": "",
+              "alignment": "left",
+              "heading": "",
+              "font_size_heading": "40px",
+              "color_heading": "#232323",
+              "color_heading_mb": "#fff",
+              "slide-des": "",
+              "font_size_des": "12px",
+              "color_des": "#232323",
+              "color_des_mb": "#fff",
+              "button_slide": "",
+              "link": "",
+              "bg_button": "#232323",
+              "border_button": "#232323",
+              "color_button": "#fff",
+              "bg_button_mb": "#232323",
+              "border_button_mb": "#232323",
+              "color_button_mb": "#fff"
+            }
+          }
+        },
+        "block_order": [
+          "298ab240-9fea-4c0a-b6cb-5651592f0d8a"
+        ],
+        "settings": {
+          "layout": "padd_60",
+          "margin_bottom_mb": 56,
+          "margin_bottom_tab": 64,
+          "margin_bottom": 100,
+          "style_slideshow": "style_1",
+          "autoplay": true,
+          "slideshow_speed": "5000",
+          "slideshow_transition": "true",
+          "dots": "true",
+          "dots_color": "#707979",
+          "dots_active_color": "#505656",
+          "dots_opacity": false,
+          "bg_dots_color": "#bababa",
+          "arrow_active": true,
+          "arrow_color": "#666d6d",
+          "arrow_border_color": "#666d6d",
+          "arrow_bg_color": "#fff",
+          "position_slick_arrow": "10%",
+          "min_width_banner_button": "",
+          "bg_video": "#866965",
+          "bg_overlay_opacity": 71,
+          "video_height": "41.7%",
+          "auto_playvideo": true
         }
       }
     },

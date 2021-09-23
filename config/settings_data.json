@@ -4340,6 +4340,70 @@
           "margin_bottom_tab": 30,
           "margin_bottom": 30
         }
+      },
+      "category-collections": {
+        "type": "category-collections",
+        "blocks": {
+          "e110b2e9-7271-405b-bf5b-5560495eeb77": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-vip.png",
+              "title": "",
+              "color_title": "#fff",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "573709c0-bf2e-4801-a301-719dc4122232": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-skybags.png",
+              "title": "",
+              "color_title": "#fff",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "9f5e7de3-bd5b-4710-87ed-aef6113c058f": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-carlton.png",
+              "title": "",
+              "color_title": "#fff",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "8b69982f-c80f-4a14-bec2-f9f594a1b45e": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/brand-aristocrat.png",
+              "title": "",
+              "color_title": "#fff",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "e110b2e9-7271-405b-bf5b-5560495eeb77",
+          "573709c0-bf2e-4801-a301-719dc4122232",
+          "9f5e7de3-bd5b-4710-87ed-aef6113c058f",
+          "8b69982f-c80f-4a14-bec2-f9f594a1b45e"
+        ],
+        "settings": {
+          "title": "Brands",
+          "title_style": "style_1",
+          "layout": "full",
+          "bg_color": "#fff",
+          "font_size_title": "16px",
+          "collection_results_per_row": "4",
+          "btn_view_all": "",
+          "link_view_all": "",
+          "margin_bottom_mb": 51,
+          "margin_bottom_tab": 51,
+          "margin_bottom": 51
+        }
       }
     },
     "content_for_index": [

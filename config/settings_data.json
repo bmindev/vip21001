@@ -3042,8 +3042,8 @@
         "type": "collection-header",
         "settings": {
           "display_collection_image": true,
-          "collection_header_style": "style_1",
-          "collection_image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-02_at_3.57.44_PM_1.jpg",
+          "collection_header_style": "style_2",
+          "collection_image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-02_at_3.57.44_PM.jpg",
           "display_collection_des": false,
           "color_wrapper": "#202020",
           "bg_color_content": "#ffffff",
@@ -4462,6 +4462,36 @@
           "bg_overlay_opacity": 71,
           "video_height": "41.7%",
           "auto_playvideo": true
+        }
+      },
+      "collection-header-soft-luggage": {
+        "type": "collection-header-soft-luggage",
+        "settings": {
+          "display_collection_image": true,
+          "collection_header_style": "style_1",
+          "collection_image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-02_at_3.57.44_PM_1.jpg",
+          "display_collection_des": true,
+          "color_wrapper": "#202020",
+          "bg_color_content": "#fff",
+          "border_color_content": "#bcbcbc",
+          "height_img": "240px",
+          "enable_sub": false,
+          "sub_title": "Jump to:"
+        }
+      },
+      "collection-header-hard-luggage": {
+        "type": "collection-header-hard-luggage",
+        "settings": {
+          "display_collection_image": true,
+          "collection_header_style": "style_1",
+          "collection_image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-02_at_3.57.44_PM.jpg",
+          "display_collection_des": true,
+          "color_wrapper": "#202020",
+          "bg_color_content": "#fff",
+          "border_color_content": "#bcbcbc",
+          "height_img": "240px",
+          "enable_sub": false,
+          "sub_title": "Jump to:"
         }
       }
     },

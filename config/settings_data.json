@@ -4612,7 +4612,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/luggage-b01.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "link": ""
             }
           },
@@ -4621,7 +4621,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/luggage-b02.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "link": ""
             }
           },
@@ -4630,7 +4630,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/luggage-b03.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "link": ""
             }
           }
@@ -4660,7 +4660,7 @@
               "title": "",
               "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "soft-luggage-vip"
             }
           },
           "35dbcb2e-f3ad-4833-a068-95acb47ac2f2": {
@@ -4670,7 +4670,7 @@
               "title": "",
               "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "soft-luggage-skybags"
             }
           },
           "fbb2cf0a-0667-4e11-8bd6-d90f848914e6": {
@@ -4680,7 +4680,7 @@
               "title": "",
               "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "soft-luggage-carlton"
             }
           },
           "dd36cdcf-b955-47be-a0f9-8eb84b10a118": {
@@ -4690,7 +4690,7 @@
               "title": "",
               "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "soft-luggage-aristocrat"
             }
           }
         },
@@ -4737,7 +4737,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/luggage-b01.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "link": ""
             }
           },
@@ -4746,7 +4746,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/luggage-b02.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "link": ""
             }
           },
@@ -4755,7 +4755,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/luggage-b03.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "link": ""
             }
           }
@@ -4785,7 +4785,7 @@
               "title": "",
               "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "duffels-vip"
             }
           },
           "0b3f58fa-1a15-4332-95cf-42833e689c70": {
@@ -4795,7 +4795,7 @@
               "title": "",
               "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "duffels-skybags"
             }
           },
           "10607e8a-59d7-4383-b53b-61e4ea6ca48e": {
@@ -4805,7 +4805,7 @@
               "title": "",
               "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "duffels-carlton"
             }
           },
           "f393655d-2dcc-467e-9cef-d3eaae05dc1b": {
@@ -4815,7 +4815,7 @@
               "title": "",
               "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "duffels-aristocrat"
             }
           }
         },
@@ -4847,7 +4847,7 @@
           "collection_image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-02_at_3.57.46_PM_1.jpg",
           "display_collection_des": true,
           "color_wrapper": "#202020",
-          "bg_color_content": "#fff",
+          "bg_color_content": "#ffffff",
           "border_color_content": "#bcbcbc",
           "height_img": "240px",
           "enable_sub": false,
@@ -4874,9 +4874,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-vip.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "backpacks-vip"
             }
           },
           "a72f6e53-0f67-4631-9051-6980cf28e5d8": {
@@ -4884,9 +4884,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-skybags.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "backpacks-skybags"
             }
           },
           "e478663c-1c19-48c8-8e2d-c612083eb9a3": {
@@ -4894,9 +4894,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-carlton.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "backpacks-carlton"
             }
           },
           "2304808e-667c-4319-9af1-bbe10e4c7e2f": {
@@ -4904,9 +4904,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-aristocrat.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "backpacks-aristocrat"
             }
           }
         },
@@ -4920,7 +4920,7 @@
           "title": "Brands",
           "title_style": "style_1",
           "layout": "default",
-          "bg_color": "#fff",
+          "bg_color": "#ffffff",
           "font_size_title": "16px",
           "collection_results_per_row": "4",
           "btn_view_all": "",
@@ -4938,7 +4938,7 @@
           "collection_image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-02_at_3.57.47_PM.jpg",
           "display_collection_des": true,
           "color_wrapper": "#202020",
-          "bg_color_content": "#fff",
+          "bg_color_content": "#ffffff",
           "border_color_content": "#bcbcbc",
           "height_img": "240px",
           "enable_sub": false,
@@ -4965,9 +4965,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-vip.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "business-vip"
             }
           },
           "74197ee9-44d6-4092-8f9c-cda35dfd3c92": {
@@ -4975,9 +4975,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-skybags.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "business-skybags"
             }
           },
           "3431521a-ae38-4da9-a380-fa51d55bdf7c": {
@@ -4985,9 +4985,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-carlton.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "business-carlton"
             }
           },
           "c586379b-4ae5-43ca-84f4-c3be3d363c87": {
@@ -4995,9 +4995,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-aristocrat.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "business-aristocrat"
             }
           }
         },
@@ -5011,7 +5011,7 @@
           "title": "Brands",
           "title_style": "style_1",
           "layout": "default",
-          "bg_color": "#fff",
+          "bg_color": "#ffffff",
           "font_size_title": "16px",
           "collection_results_per_row": "4",
           "btn_view_all": "",
@@ -5029,7 +5029,7 @@
           "collection_image": "shopify:\/\/shop_images\/WhatsApp_Image_2021-06-02_at_3.57.46_PM.jpg",
           "display_collection_des": true,
           "color_wrapper": "#202020",
-          "bg_color_content": "#fff",
+          "bg_color_content": "#ffffff",
           "border_color_content": "#bcbcbc",
           "height_img": "240px",
           "enable_sub": false,
@@ -5044,7 +5044,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/luggage-b01.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "link": ""
             }
           },
@@ -5053,7 +5053,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/luggage-b02.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "link": ""
             }
           },
@@ -5062,7 +5062,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/luggage-b03.png",
               "title": "Editor’s Pick",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "link": ""
             }
           }
@@ -5090,9 +5090,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-vip.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "accessories-vip"
             }
           },
           "66bc5225-0560-4d8b-8f04-a22e5f54bfff": {
@@ -5100,9 +5100,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-skybags.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "accessories-skybags"
             }
           },
           "55728de3-b1d2-4da7-a5a4-a1c962ad1173": {
@@ -5110,9 +5110,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-carlton.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "accessories-carlton"
             }
           },
           "e754612a-f68b-4142-82d5-a0b6fa3a50c5": {
@@ -5120,9 +5120,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/brand-aristocrat.png",
               "title": "",
-              "color_title": "#fff",
+              "color_title": "#ffffff",
               "btn_shop_now": "",
-              "link": ""
+              "link": "accessories-aristocrat"
             }
           }
         },
@@ -5136,7 +5136,7 @@
           "title": "Brands",
           "title_style": "style_1",
           "layout": "default",
-          "bg_color": "#fff",
+          "bg_color": "#ffffff",
           "font_size_title": "16px",
           "collection_results_per_row": "4",
           "btn_view_all": "",

@@ -2859,13 +2859,13 @@
               "link_banner_first_style_3": "shopify:\/\/pages\/vip",
               "banner_second_style_3": "shopify:\/\/shop_images\/Mask_Group_124_ac6d30eb-cc46-42f5-b7cd-5076b6f2415d.png",
               "logo_banner_second_style_3": "shopify:\/\/shop_images\/Skybags_Logo_01_Blue_Background_Move_in_Style.png",
-              "link_banner_second_style_3": "shopify:\/\/collections\/skybags",
+              "link_banner_second_style_3": "shopify:\/\/pages\/skybags",
               "banner_third_style_3": "shopify:\/\/shop_images\/Mask_Group_128_dc831aae-18e7-4e7b-8233-6aafee2f8a6d.png",
               "logo_banner_third_style_3": "shopify:\/\/shop_images\/Group_3382.png",
-              "link_banner_third_style_3": "shopify:\/\/collections\/aristocrat",
+              "link_banner_third_style_3": "shopify:\/\/pages\/arisocrat",
               "banner_four_style_3": "shopify:\/\/shop_images\/Mask_Group_129_b366a3e1-e1aa-4c53-9faf-25b049dc85e1.png",
               "logo_banner_four_style_3": "shopify:\/\/shop_images\/Group_3383.png",
-              "link_banner_four_style_3": "shopify:\/\/collections\/carlton",
+              "link_banner_four_style_3": "shopify:\/\/pages\/carlton",
               "link_banner_five_style_3": ""
             }
           },
@@ -5144,6 +5144,228 @@
           "margin_bottom_mb": 80,
           "margin_bottom_tab": 77,
           "margin_bottom": 80
+        }
+      },
+      "collection-header-vip": {
+        "type": "collection-header-vip",
+        "settings": {
+          "display_collection_image": true,
+          "collection_header_style": "style_1",
+          "collection_image": "shopify:\/\/shop_images\/VIP-desktop02.png",
+          "display_collection_des": true,
+          "color_wrapper": "#202020",
+          "bg_color_content": "#fff",
+          "border_color_content": "#bcbcbc",
+          "height_img": "240px",
+          "enable_sub": false,
+          "sub_title": "Jump to:"
+        }
+      },
+      "home-slideshow-vip": {
+        "type": "home-slideshow-vip",
+        "blocks": {
+          "aab6455e-0005-4c5f-bcfd-80d407fb7feb": {
+            "type": "video",
+            "settings": {
+              "dpl_slide_img": true,
+              "style_video": "youtube",
+              "video_link": "ctBjj010VaE",
+              "video_mp4_link": "",
+              "alignment": "left",
+              "heading": "",
+              "font_size_heading": "40px",
+              "color_heading": "#232323",
+              "color_heading_mb": "#fff",
+              "slide-des": "",
+              "font_size_des": "12px",
+              "color_des": "#232323",
+              "color_des_mb": "#fff",
+              "button_slide": "",
+              "link": "",
+              "bg_button": "#232323",
+              "border_button": "#232323",
+              "color_button": "#fff",
+              "bg_button_mb": "#232323",
+              "border_button_mb": "#232323",
+              "color_button_mb": "#fff"
+            }
+          }
+        },
+        "block_order": [
+          "aab6455e-0005-4c5f-bcfd-80d407fb7feb"
+        ],
+        "settings": {
+          "layout": "padd_60",
+          "margin_bottom_mb": 20,
+          "margin_bottom_tab": 20,
+          "margin_bottom": 30,
+          "style_slideshow": "style_1",
+          "autoplay": true,
+          "slideshow_speed": "5000",
+          "slideshow_transition": "true",
+          "dots": "true",
+          "dots_color": "#707979",
+          "dots_active_color": "#505656",
+          "dots_opacity": false,
+          "bg_dots_color": "#bababa",
+          "arrow_active": true,
+          "arrow_color": "#666d6d",
+          "arrow_border_color": "#666d6d",
+          "arrow_bg_color": "#fff",
+          "position_slick_arrow": "10%",
+          "min_width_banner_button": "",
+          "bg_video": "#866965",
+          "bg_overlay_opacity": 40,
+          "video_height": "41.7%",
+          "auto_playvideo": true
+        }
+      },
+      "collection-header-skybags": {
+        "type": "collection-header-skybags",
+        "settings": {
+          "display_collection_image": true,
+          "collection_header_style": "style_1",
+          "collection_image": "shopify:\/\/shop_images\/Skybags-d1.png",
+          "display_collection_des": true,
+          "color_wrapper": "#202020",
+          "bg_color_content": "#fff",
+          "border_color_content": "#bcbcbc",
+          "height_img": "240px",
+          "enable_sub": false,
+          "sub_title": "Jump to:"
+        }
+      },
+      "home-slideshow-skybags": {
+        "type": "home-slideshow-skybags",
+        "blocks": {
+          "3b3c684c-af8d-4beb-9d03-3cdae21509cc": {
+            "type": "video",
+            "settings": {
+              "dpl_slide_img": true,
+              "style_video": "youtube",
+              "video_link": "9fqAF09h6CA",
+              "video_mp4_link": "",
+              "alignment": "left",
+              "heading": "",
+              "font_size_heading": "40px",
+              "color_heading": "#232323",
+              "color_heading_mb": "#fff",
+              "slide-des": "",
+              "font_size_des": "12px",
+              "color_des": "#232323",
+              "color_des_mb": "#fff",
+              "button_slide": "",
+              "link": "",
+              "bg_button": "#232323",
+              "border_button": "#232323",
+              "color_button": "#fff",
+              "bg_button_mb": "#232323",
+              "border_button_mb": "#232323",
+              "color_button_mb": "#fff"
+            }
+          }
+        },
+        "block_order": [
+          "3b3c684c-af8d-4beb-9d03-3cdae21509cc"
+        ],
+        "settings": {
+          "layout": "padd_60",
+          "margin_bottom_mb": 20,
+          "margin_bottom_tab": 20,
+          "margin_bottom": 30,
+          "style_slideshow": "style_1",
+          "autoplay": true,
+          "slideshow_speed": "5000",
+          "slideshow_transition": "true",
+          "dots": "true",
+          "dots_color": "#707979",
+          "dots_active_color": "#505656",
+          "dots_opacity": false,
+          "bg_dots_color": "#bababa",
+          "arrow_active": true,
+          "arrow_color": "#666d6d",
+          "arrow_border_color": "#666d6d",
+          "arrow_bg_color": "#fff",
+          "position_slick_arrow": "10%",
+          "min_width_banner_button": "",
+          "bg_video": "#866965",
+          "bg_overlay_opacity": 40,
+          "video_height": "41.7%",
+          "auto_playvideo": true
+        }
+      },
+      "collection-header-aristocrat": {
+        "type": "collection-header-aristocrat",
+        "settings": {
+          "display_collection_image": true,
+          "collection_header_style": "style_1",
+          "collection_image": "shopify:\/\/shop_images\/Carlton-desktop.png",
+          "display_collection_des": true,
+          "color_wrapper": "#202020",
+          "bg_color_content": "#fff",
+          "border_color_content": "#bcbcbc",
+          "height_img": "240px",
+          "enable_sub": false,
+          "sub_title": "Jump to:"
+        }
+      },
+      "home-slideshow-aristocrat": {
+        "type": "home-slideshow-aristocrat",
+        "blocks": {
+          "5889e4bf-2a7a-403e-b458-b37a0cd9d0bb": {
+            "type": "video",
+            "settings": {
+              "dpl_slide_img": true,
+              "style_video": "youtube",
+              "video_link": "-RK433qTu5w",
+              "video_mp4_link": "",
+              "alignment": "left",
+              "heading": "",
+              "font_size_heading": "40px",
+              "color_heading": "#232323",
+              "color_heading_mb": "#fff",
+              "slide-des": "",
+              "font_size_des": "12px",
+              "color_des": "#232323",
+              "color_des_mb": "#fff",
+              "button_slide": "",
+              "link": "",
+              "bg_button": "#232323",
+              "border_button": "#232323",
+              "color_button": "#fff",
+              "bg_button_mb": "#232323",
+              "border_button_mb": "#232323",
+              "color_button_mb": "#fff"
+            }
+          }
+        },
+        "block_order": [
+          "5889e4bf-2a7a-403e-b458-b37a0cd9d0bb"
+        ],
+        "settings": {
+          "layout": "padd_60",
+          "margin_bottom_mb": 20,
+          "margin_bottom_tab": 20,
+          "margin_bottom": 30,
+          "style_slideshow": "style_1",
+          "autoplay": true,
+          "slideshow_speed": "5000",
+          "slideshow_transition": "true",
+          "dots": "true",
+          "dots_color": "#707979",
+          "dots_active_color": "#505656",
+          "dots_opacity": false,
+          "bg_dots_color": "#bababa",
+          "arrow_active": true,
+          "arrow_color": "#666d6d",
+          "arrow_border_color": "#666d6d",
+          "arrow_bg_color": "#fff",
+          "position_slick_arrow": "10%",
+          "min_width_banner_button": "",
+          "bg_video": "#866965",
+          "bg_overlay_opacity": 40,
+          "video_height": "41.7%",
+          "auto_playvideo": true
         }
       }
     },

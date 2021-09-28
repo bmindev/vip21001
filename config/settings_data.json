@@ -4100,7 +4100,7 @@
               "title": "Soft Luggage Trolleys",
               "color_title": "#000000",
               "btn_shop_now": "",
-              "link": ""
+              "link": "soft-luggage-vip"
             }
           },
           "9666aabc-4ac4-4cf8-9d8a-a620ed9e08f6": {
@@ -4110,7 +4110,7 @@
               "title": "Backpack",
               "color_title": "#000000",
               "btn_shop_now": "",
-              "link": ""
+              "link": "backpacks-vip"
             }
           },
           "c24b3aea-083f-4001-ad57-e50c9598a651": {
@@ -4120,7 +4120,7 @@
               "title": "Business",
               "color_title": "#000000",
               "btn_shop_now": "",
-              "link": ""
+              "link": "business-vip"
             }
           },
           "cd0f5d2e-9182-4152-bfc3-ff2a6fcc092b": {
@@ -4130,7 +4130,7 @@
               "title": "Duffels",
               "color_title": "#000000",
               "btn_shop_now": "",
-              "link": ""
+              "link": "duffels-vip"
             }
           },
           "e5c84dc0-b541-441b-8bf3-943a38d8ee11": {
@@ -4140,7 +4140,7 @@
               "title": "Accessories",
               "color_title": "#000000",
               "btn_shop_now": "",
-              "link": ""
+              "link": "accessories-vip"
             }
           }
         },
@@ -5154,7 +5154,7 @@
           "collection_image": "shopify:\/\/shop_images\/VIP-desktop02.png",
           "display_collection_des": true,
           "color_wrapper": "#202020",
-          "bg_color_content": "#fff",
+          "bg_color_content": "#ffffff",
           "border_color_content": "#bcbcbc",
           "height_img": "240px",
           "enable_sub": false,
@@ -5175,19 +5175,19 @@
               "heading": "",
               "font_size_heading": "40px",
               "color_heading": "#232323",
-              "color_heading_mb": "#fff",
+              "color_heading_mb": "#ffffff",
               "slide-des": "",
               "font_size_des": "12px",
               "color_des": "#232323",
-              "color_des_mb": "#fff",
+              "color_des_mb": "#ffffff",
               "button_slide": "",
               "link": "",
               "bg_button": "#232323",
               "border_button": "#232323",
-              "color_button": "#fff",
+              "color_button": "#ffffff",
               "bg_button_mb": "#232323",
               "border_button_mb": "#232323",
-              "color_button_mb": "#fff"
+              "color_button_mb": "#ffffff"
             }
           }
         },
@@ -5211,7 +5211,7 @@
           "arrow_active": true,
           "arrow_color": "#666d6d",
           "arrow_border_color": "#666d6d",
-          "arrow_bg_color": "#fff",
+          "arrow_bg_color": "#ffffff",
           "position_slick_arrow": "10%",
           "min_width_banner_button": "",
           "bg_video": "#866965",

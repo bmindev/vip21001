@@ -5270,9 +5270,9 @@
         ],
         "settings": {
           "layout": "padd_60",
-          "margin_bottom_mb": 20,
-          "margin_bottom_tab": 20,
-          "margin_bottom": 30,
+          "margin_bottom_mb": 70,
+          "margin_bottom_tab": 70,
+          "margin_bottom": 70,
           "style_slideshow": "style_1",
           "autoplay": true,
           "slideshow_speed": "5000",
@@ -5299,7 +5299,7 @@
         "settings": {
           "display_collection_image": true,
           "collection_header_style": "style_1",
-          "collection_image": "shopify:\/\/shop_images\/Carlton-desktop.png",
+          "collection_image": "shopify:\/\/shop_images\/Aristocrat-desktop02.png",
           "display_collection_des": true,
           "color_wrapper": "#202020",
           "bg_color_content": "#fff",
@@ -5344,9 +5344,83 @@
         ],
         "settings": {
           "layout": "padd_60",
-          "margin_bottom_mb": 20,
-          "margin_bottom_tab": 20,
-          "margin_bottom": 30,
+          "margin_bottom_mb": 70,
+          "margin_bottom_tab": 70,
+          "margin_bottom": 70,
+          "style_slideshow": "style_1",
+          "autoplay": true,
+          "slideshow_speed": "5000",
+          "slideshow_transition": "true",
+          "dots": "true",
+          "dots_color": "#707979",
+          "dots_active_color": "#505656",
+          "dots_opacity": false,
+          "bg_dots_color": "#bababa",
+          "arrow_active": true,
+          "arrow_color": "#666d6d",
+          "arrow_border_color": "#666d6d",
+          "arrow_bg_color": "#fff",
+          "position_slick_arrow": "10%",
+          "min_width_banner_button": "",
+          "bg_video": "#866965",
+          "bg_overlay_opacity": 40,
+          "video_height": "41.7%",
+          "auto_playvideo": true
+        }
+      },
+      "collection-header-carlton": {
+        "type": "collection-header-carlton",
+        "settings": {
+          "display_collection_image": true,
+          "collection_header_style": "style_1",
+          "collection_image": "shopify:\/\/shop_images\/Carlton-desktop.png",
+          "display_collection_des": true,
+          "color_wrapper": "#202020",
+          "bg_color_content": "#fff",
+          "border_color_content": "#bcbcbc",
+          "height_img": "240px",
+          "enable_sub": false,
+          "sub_title": "Jump to:"
+        }
+      },
+      "home-slideshow-carlton": {
+        "type": "home-slideshow-carlton",
+        "blocks": {
+          "a5e3a7b2-9617-4152-9854-80aa6c4b19b7": {
+            "type": "video",
+            "settings": {
+              "dpl_slide_img": true,
+              "style_video": "youtube",
+              "video_link": "6ggAc8TAvQ8",
+              "video_mp4_link": "",
+              "alignment": "left",
+              "heading": "",
+              "font_size_heading": "40px",
+              "color_heading": "#232323",
+              "color_heading_mb": "#fff",
+              "slide-des": "",
+              "font_size_des": "12px",
+              "color_des": "#232323",
+              "color_des_mb": "#fff",
+              "button_slide": "",
+              "link": "",
+              "bg_button": "#232323",
+              "border_button": "#232323",
+              "color_button": "#fff",
+              "bg_button_mb": "#232323",
+              "border_button_mb": "#232323",
+              "color_button_mb": "#fff"
+            }
+          }
+        },
+        "block_order": [
+          "a5e3a7b2-9617-4152-9854-80aa6c4b19b7"
+        ],
+        "settings": {
+          "layout": "padd_60",
+          "margin_bottom_mb": 70,
+          "margin_bottom_tab": 70,
+          "margin_bottom": 70,
           "style_slideshow": "style_1",
           "autoplay": true,
           "slideshow_speed": "5000",

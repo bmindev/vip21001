@@ -5196,9 +5196,9 @@
         ],
         "settings": {
           "layout": "padd_60",
-          "margin_bottom_mb": 20,
-          "margin_bottom_tab": 20,
-          "margin_bottom": 30,
+          "margin_bottom_mb": 60,
+          "margin_bottom_tab": 60,
+          "margin_bottom": 60,
           "style_slideshow": "style_1",
           "autoplay": true,
           "slideshow_speed": "5000",
@@ -5228,7 +5228,7 @@
           "collection_image": "shopify:\/\/shop_images\/Skybags-d1.png",
           "display_collection_des": true,
           "color_wrapper": "#202020",
-          "bg_color_content": "#fff",
+          "bg_color_content": "#ffffff",
           "border_color_content": "#bcbcbc",
           "height_img": "240px",
           "enable_sub": false,
@@ -5249,19 +5249,19 @@
               "heading": "",
               "font_size_heading": "40px",
               "color_heading": "#232323",
-              "color_heading_mb": "#fff",
+              "color_heading_mb": "#ffffff",
               "slide-des": "",
               "font_size_des": "12px",
               "color_des": "#232323",
-              "color_des_mb": "#fff",
+              "color_des_mb": "#ffffff",
               "button_slide": "",
               "link": "",
               "bg_button": "#232323",
               "border_button": "#232323",
-              "color_button": "#fff",
+              "color_button": "#ffffff",
               "bg_button_mb": "#232323",
               "border_button_mb": "#232323",
-              "color_button_mb": "#fff"
+              "color_button_mb": "#ffffff"
             }
           }
         },
@@ -5285,7 +5285,7 @@
           "arrow_active": true,
           "arrow_color": "#666d6d",
           "arrow_border_color": "#666d6d",
-          "arrow_bg_color": "#fff",
+          "arrow_bg_color": "#ffffff",
           "position_slick_arrow": "10%",
           "min_width_banner_button": "",
           "bg_video": "#866965",
@@ -5376,7 +5376,7 @@
           "collection_image": "shopify:\/\/shop_images\/Carlton-desktop.png",
           "display_collection_des": true,
           "color_wrapper": "#202020",
-          "bg_color_content": "#fff",
+          "bg_color_content": "#ffffff",
           "border_color_content": "#bcbcbc",
           "height_img": "240px",
           "enable_sub": false,
@@ -5397,19 +5397,19 @@
               "heading": "",
               "font_size_heading": "40px",
               "color_heading": "#232323",
-              "color_heading_mb": "#fff",
+              "color_heading_mb": "#ffffff",
               "slide-des": "",
               "font_size_des": "12px",
               "color_des": "#232323",
-              "color_des_mb": "#fff",
+              "color_des_mb": "#ffffff",
               "button_slide": "",
               "link": "",
               "bg_button": "#232323",
               "border_button": "#232323",
-              "color_button": "#fff",
+              "color_button": "#ffffff",
               "bg_button_mb": "#232323",
               "border_button_mb": "#232323",
-              "color_button_mb": "#fff"
+              "color_button_mb": "#ffffff"
             }
           }
         },
@@ -5433,13 +5433,436 @@
           "arrow_active": true,
           "arrow_color": "#666d6d",
           "arrow_border_color": "#666d6d",
-          "arrow_bg_color": "#fff",
+          "arrow_bg_color": "#ffffff",
           "position_slick_arrow": "10%",
           "min_width_banner_button": "",
           "bg_video": "#866965",
           "bg_overlay_opacity": 40,
           "video_height": "41.7%",
           "auto_playvideo": true
+        }
+      },
+      "home-collections-vip": {
+        "type": "home-collections-vip",
+        "blocks": {
+          "4e2b7404-984a-4de8-848e-48fdeaeda595": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-1.png",
+              "title": "Hard Luggage Trolleys",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "4c015df2-755b-4421-96cd-3b8f3cd7808b": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-11.png",
+              "title": "Soft Luggage Trolleys",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "4e53ee78-0cb6-4134-8af2-959aba04af41": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-13.png",
+              "title": "Backpacks",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "561c8a92-ae3c-403c-8be4-f4375d55a6ce": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-14.png",
+              "title": "Business",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "73f3d709-dd42-4058-b161-8f04d8d59296": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-15.png",
+              "title": "Duffels",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "27169715-a660-4a65-9b0b-6f32ab8ee8b7": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-16.png",
+              "title": "Accessories",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "4e2b7404-984a-4de8-848e-48fdeaeda595",
+          "4c015df2-755b-4421-96cd-3b8f3cd7808b",
+          "4e53ee78-0cb6-4134-8af2-959aba04af41",
+          "561c8a92-ae3c-403c-8be4-f4375d55a6ce",
+          "73f3d709-dd42-4058-b161-8f04d8d59296",
+          "27169715-a660-4a65-9b0b-6f32ab8ee8b7"
+        ],
+        "settings": {
+          "title": "",
+          "title_style": "style_1",
+          "layout": "default",
+          "bg_color": "#fff",
+          "font_size_title": "16px",
+          "collection_results_per_row": "6",
+          "btn_view_all": "",
+          "link_view_all": "",
+          "margin_bottom_mb": 0,
+          "margin_bottom_tab": 0,
+          "margin_bottom": 0
+        }
+      },
+      "home-custom-sub-banner-3-vip": {
+        "type": "home-custom-sub-banner-3-vip",
+        "blocks": {
+          "3d1be17c-fd41-4625-8a30-a8f5f70a5021": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3570.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": ""
+            }
+          },
+          "8fabf8f3-2631-47c6-b46d-b09cdbb096b5": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3572.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": ""
+            }
+          },
+          "bbadd772-09af-4dff-988f-d1325b5f7daa": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3573.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "3d1be17c-fd41-4625-8a30-a8f5f70a5021",
+          "8fabf8f3-2631-47c6-b46d-b09cdbb096b5",
+          "bbadd772-09af-4dff-988f-d1325b5f7daa"
+        ],
+        "settings": {
+          "layout": "default",
+          "sub_banner_style": "style_1",
+          "img_results_per_row": "3",
+          "widget_title": "",
+          "widget_des": "",
+          "title_style": "style_1",
+          "margin_bottom_mb": 60,
+          "margin_bottom_tab": 60,
+          "margin_bottom": 60,
+          "font_size_title": "30px"
+        }
+      },
+      "home-collections-skybags": {
+        "type": "home-collections-skybags",
+        "blocks": {
+          "448af743-20df-429f-9768-82633a744ffb": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-1.png",
+              "title": "Hard luggage trolleys",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "d8269c40-9c5f-4eab-9983-086cecdcb2be": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-11.png",
+              "title": "Soft Luggage trolleys",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "56c13f05-de3e-45b7-92ec-4da8c1728658": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-13.png",
+              "title": "Backpacks",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "41475dd0-efe5-4bea-aa94-c8a8757e41ca": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-14.png",
+              "title": "Business",
+              "color_title": "#000000",
+              "btn_shop_now": "Shop Now",
+              "link": ""
+            }
+          },
+          "621091ae-d2ab-41d4-9f14-615c1c85ef8c": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Image_172.png",
+              "title": "Duffels",
+              "color_title": "#000000",
+              "btn_shop_now": "Shop Now",
+              "link": ""
+            }
+          },
+          "75cd115d-3889-49f2-a0a3-ae5d34ce1ea2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-16.png",
+              "title": "Accessories",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "448af743-20df-429f-9768-82633a744ffb",
+          "d8269c40-9c5f-4eab-9983-086cecdcb2be",
+          "56c13f05-de3e-45b7-92ec-4da8c1728658",
+          "41475dd0-efe5-4bea-aa94-c8a8757e41ca",
+          "621091ae-d2ab-41d4-9f14-615c1c85ef8c",
+          "75cd115d-3889-49f2-a0a3-ae5d34ce1ea2"
+        ],
+        "settings": {
+          "title": "",
+          "title_style": "style_1",
+          "layout": "default",
+          "bg_color": "#fff",
+          "font_size_title": "16px",
+          "collection_results_per_row": "6",
+          "btn_view_all": "",
+          "link_view_all": "",
+          "margin_bottom_mb": 61,
+          "margin_bottom_tab": 60,
+          "margin_bottom": 60
+        }
+      },
+      "home-custom-sub-banner-3-skybags": {
+        "type": "home-custom-sub-banner-3-skybags",
+        "blocks": {
+          "ed14c83d-4b76-47f1-845a-3bd0ad5226e6": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3570.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": ""
+            }
+          },
+          "38a25df5-3e66-4eb5-bfc7-33011a4c3959": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3572.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": ""
+            }
+          },
+          "cd425e4f-9036-436f-a6dd-2e27e9818a9d": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3573.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "ed14c83d-4b76-47f1-845a-3bd0ad5226e6",
+          "38a25df5-3e66-4eb5-bfc7-33011a4c3959",
+          "cd425e4f-9036-436f-a6dd-2e27e9818a9d"
+        ],
+        "settings": {
+          "layout": "default",
+          "sub_banner_style": "style_1",
+          "img_results_per_row": "3",
+          "widget_title": "",
+          "widget_des": "",
+          "title_style": "style_1",
+          "margin_bottom_mb": 50,
+          "margin_bottom_tab": 50,
+          "margin_bottom": 50,
+          "font_size_title": "30px"
+        }
+      },
+      "home-collections-carlton": {
+        "type": "home-collections-carlton",
+        "blocks": {
+          "b2286752-2c5c-41ec-9089-aabdbaff07f4": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-1.png",
+              "title": "Hard luggage trolleys",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "e00f0df8-7950-4866-be14-1256378151a8": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-11.png",
+              "title": "Soft luggage trolleys",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "9e2e3958-1b60-4cac-924c-03500783acc5": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-13.png",
+              "title": "Backpacks",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "52c5ed6f-2d17-4242-abf8-f58820744fcb": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-14.png",
+              "title": "Business",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "886bbcc0-3d4c-429d-91c9-d8a6626d1f8b": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-15.png",
+              "title": "Duffels",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          },
+          "26bf84f1-c183-4118-945e-88654b85d8fe": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-16.png",
+              "title": "Accessories",
+              "color_title": "#000000",
+              "btn_shop_now": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "b2286752-2c5c-41ec-9089-aabdbaff07f4",
+          "e00f0df8-7950-4866-be14-1256378151a8",
+          "9e2e3958-1b60-4cac-924c-03500783acc5",
+          "52c5ed6f-2d17-4242-abf8-f58820744fcb",
+          "886bbcc0-3d4c-429d-91c9-d8a6626d1f8b",
+          "26bf84f1-c183-4118-945e-88654b85d8fe"
+        ],
+        "settings": {
+          "title": "",
+          "title_style": "style_1",
+          "layout": "default",
+          "bg_color": "#fff",
+          "font_size_title": "16px",
+          "collection_results_per_row": "6",
+          "btn_view_all": "",
+          "link_view_all": "",
+          "margin_bottom_mb": 60,
+          "margin_bottom_tab": 60,
+          "margin_bottom": 60
+        }
+      },
+      "home-custom-sub-banner-3-carlton": {
+        "type": "home-custom-sub-banner-3-carlton",
+        "blocks": {
+          "e5f2e9dc-41f6-4fa7-96d8-9b03a7ebffa6": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3570.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": ""
+            }
+          },
+          "f9331da5-4f3d-40c6-be4b-3bb368d29a21": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3572.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": ""
+            }
+          },
+          "38ba9e08-ba9b-44c5-82ce-955cd52e2749": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Group_3573.png",
+              "color": "#fff",
+              "title": "",
+              "des": "",
+              "link_text": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "e5f2e9dc-41f6-4fa7-96d8-9b03a7ebffa6",
+          "f9331da5-4f3d-40c6-be4b-3bb368d29a21",
+          "38ba9e08-ba9b-44c5-82ce-955cd52e2749"
+        ],
+        "settings": {
+          "layout": "default",
+          "sub_banner_style": "style_1",
+          "img_results_per_row": "3",
+          "widget_title": "",
+          "widget_des": "",
+          "title_style": "style_1",
+          "margin_bottom_mb": 0,
+          "margin_bottom_tab": 0,
+          "margin_bottom": 0,
+          "font_size_title": "30px"
         }
       }
     },

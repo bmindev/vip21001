@@ -4613,7 +4613,7 @@
               "image": "shopify:\/\/shop_images\/luggage-b01.png",
               "title": "",
               "color_title": "#ffffff",
-              "link": ""
+              "link": "shopify:\/\/collections\/hl-trolleys"
             }
           },
           "d7340de3-46df-477e-8dba-f8fd8bdf04cf": {
@@ -4622,7 +4622,7 @@
               "image": "shopify:\/\/shop_images\/luggage-b02.png",
               "title": "",
               "color_title": "#ffffff",
-              "link": ""
+              "link": "shopify:\/\/collections\/skybags"
             }
           },
           "998dafdc-c26b-4a56-bae9-f73a8ba50128": {
@@ -4631,7 +4631,7 @@
               "image": "shopify:\/\/shop_images\/luggage-b03.png",
               "title": "",
               "color_title": "#ffffff",
-              "link": ""
+              "link": "shopify:\/\/collections\/new-launches"
             }
           }
         },
@@ -5539,7 +5539,7 @@
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/vip?uff_ixerwl_price=%3A0%205000%20Less%20than%20%7B1%7D"
             }
           },
           "8fabf8f3-2631-47c6-b46d-b09cdbb096b5": {
@@ -5550,7 +5550,7 @@
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/vip?uff_ixerwl_price=%3A5000%2010000%20%7B0%7D%20-%20%7B1%7D"
             }
           },
           "bbadd772-09af-4dff-988f-d1325b5f7daa": {
@@ -5561,7 +5561,7 @@
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/vip?uff_ixerwl_price=%3A10000%2020000%20%7B0%7D%20-%20%7B1%7D"
             }
           }
         },
@@ -5680,7 +5680,7 @@
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/skybags?uff_ixerwl_price=%3A0%205000%20Less%20than%20%7B1%7D"
             }
           },
           "38a25df5-3e66-4eb5-bfc7-33011a4c3959": {
@@ -5691,7 +5691,7 @@
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/skybags?uff_ixerwl_price=%3A5000%2010000%20%7B0%7D%20-%20%7B1%7D"
             }
           },
           "cd425e4f-9036-436f-a6dd-2e27e9818a9d": {
@@ -5832,7 +5832,7 @@
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/carlton?uff_ixerwl_price=%3A5000%2010000%20%7B0%7D%20-%20%7B1%7D"
             }
           },
           "38ba9e08-ba9b-44c5-82ce-955cd52e2749": {
@@ -5843,7 +5843,7 @@
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/carlton?uff_ixerwl_price=%3A10000%2020000%20%7B0%7D%20-%20%7B1%7D"
             }
           }
         },
@@ -5962,7 +5962,7 @@
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/aristocrat?uff_ixerwl_price=%3A0%205000%20Less%20than%20%7B1%7D"
             }
           },
           "2291f597-5350-4312-a7ef-ca8a151b0450": {
@@ -5973,7 +5973,7 @@
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/aristocrat?uff_ixerwl_price=%3A5000%2010000%20%7B0%7D%20-%20%7B1%7D"
             }
           },
           "ef1d72f3-ac04-4b4f-9ca7-93847b5b711a": {
@@ -6017,7 +6017,7 @@
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/hl-trolleys?uff_aoasfn_price=%3A0%205000%20Less%20than%20%7B1%7D"
             }
           },
           "a5a26811-dda9-4bf3-9034-2a0563b12712": {
@@ -6028,7 +6028,7 @@
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/hl-trolleys?uff_aoasfn_price=%3A5000%2010000%20%7B0%7D%20-%20%7B1%7D"
             }
           },
           "08aafd58-555a-438b-b155-d2548702f299": {
@@ -6039,7 +6039,7 @@
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/hl-trolleys?uff_aoasfn_price=%3A10000%2020000%20%7B0%7D%20-%20%7B1%7D"
             }
           }
         },
@@ -6068,33 +6068,33 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Group_3570.png",
-              "color": "#fff",
+              "color": "#ffffff",
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/sl-trolleys?uff_aoasfn_price=%3A0%205000%20Less%20than%20%7B1%7D"
             }
           },
           "8e3a756b-8a05-40f3-8983-7f79c4e02d15": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Group_3572.png",
-              "color": "#fff",
+              "color": "#ffffff",
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/sl-trolleys?uff_aoasfn_price=%3A5000%2010000%20%7B0%7D%20-%20%7B1%7D"
             }
           },
           "313ef365-4442-4501-ba2d-e98c765c0f21": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Group_3573.png",
-              "color": "#fff",
+              "color": "#ffffff",
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/sl-trolleys?uff_aoasfn_price=%3A10000%2020000%20%7B0%7D%20-%20%7B1%7D"
             }
           }
         },
@@ -6233,18 +6233,18 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Group_3570.png",
-              "color": "#fff",
+              "color": "#ffffff",
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/duffels?uff_aoasfn_price=%3A0%205000%20Less%20than%20%7B1%7D"
             }
           },
           "34ed852a-d9b8-4749-936c-91f7fa83fa79": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Group_3572.png",
-              "color": "#fff",
+              "color": "#ffffff",
               "title": "",
               "des": "",
               "link_text": "",
@@ -6255,7 +6255,7 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Group_3573.png",
-              "color": "#fff",
+              "color": "#ffffff",
               "title": "",
               "des": "",
               "link_text": "",
@@ -6288,29 +6288,29 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Group_3570.png",
-              "color": "#fff",
+              "color": "#ffffff",
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/backpacks?uff_mvty9l_price=%3A0%205000%20Less%20than%20%7B1%7D"
             }
           },
           "fec86cf9-1f5c-4706-943f-6e2891cd5429": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Group_3572.png",
-              "color": "#fff",
+              "color": "#ffffff",
               "title": "",
               "des": "",
               "link_text": "",
-              "link": ""
+              "link": "https:\/\/vip-luggage2021.myshopify.com\/collections\/backpacks?uff_mvty9l_price=%3A5000%2010000%20%7B0%7D%20-%20%7B1%7D"
             }
           },
           "df03e880-32d6-4db1-a784-a15390e573f0": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Group_3573.png",
-              "color": "#fff",
+              "color": "#ffffff",
               "title": "",
               "des": "",
               "link_text": "",

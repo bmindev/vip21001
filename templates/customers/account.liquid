@@ -68,12 +68,12 @@
                         <p class="my-1"><a href="{{ order.customer_url }}">View Order Details</a></p>
                       </div>
                       
+                      {% assign billing_phone = order.billing_address.phone | remove:" " %}
+                      {% assign shipping_phone = order.shipping_address.phone | remove:" " %}
                       
-                      {{ checkout.attributes }}
-                      {{ order.billing_address.phone | remove:" "}}
-						{% assign isNumber = 1234abcd | remove:" " %}                            
+                      <p class="billing_phone">{{ billing_phone }} </p>                            
+                      <p class="shipping_phone">{{ shipping_phone }} </p>
                      
-                      {% if isNumber contains '"' %}string{% else %}number{% endif %}
                       
                       {% for line_item in order.line_items %} 
                         <div class="order-information pt-2 pb-5 pt-md-5 pb-md-5" style="display:flex; justify-content:space-between;">
@@ -142,4 +142,26 @@
   
   .dropdown-toggle::after{ content: url({{ 'down-arrow.png' | asset_url }}) !important; position: absolute; right: 27px; border: 0 !important;}
 </style>
+
+<script>
+  document.onreadystatechange = function(e)
+{ 
+    var abc = $('.billing_phone').text();
+     var xyz = $('.shipping_phone').text();
+    
+    console.log(abc);
+    console.log(xyz);
+     var inputtxt = 8879608610 ;
+     var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+      if(phoneno.test(inputtxt))
+      {
+	   	console.log('true');
+      }
+     else
+     {
+	   alert("Not a valid Phone Number");
+	   return false;
+     } 
+};
+</script>
   

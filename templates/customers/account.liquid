@@ -67,7 +67,13 @@
                           {{ 'customer.orders.date' | t }} {{ order.created_at | date: format: 'month_day_year' }}  </p>
                         <p class="my-1"><a href="{{ order.customer_url }}">View Order Details</a></p>
                       </div>
-
+                      {{ order.billing_address.phone | remove:" "}}
+						{% assign isNumber = order.billing_address.phone | remove:" " %}                            
+                     
+                      {% capture test_var1 %}{{ isNumber | json }}{% endcapture %}
+                      {{ test_var1 }}
+                      {% if test_var1 contains '"' %}string{% else %}number{% endif %}
+                      
                       {% for line_item in order.line_items %} 
                         <div class="order-information pt-2 pb-5 pt-md-5 pb-md-5" style="display:flex; justify-content:space-between;">
                           <div class="row align-items-center no-gutters">

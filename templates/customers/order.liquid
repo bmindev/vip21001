@@ -50,6 +50,11 @@
           	</div>
             <div class="tab-content">
               	<div class="tab-pane active">
+                   {% assign billing_phone = order.billing_address.phone | remove:" " %}
+                      {% assign shipping_phone = order.shipping_address.phone | remove:" " %}
+                      
+                      <p class="billing_phone">{{ billing_phone }}</p>                            
+                      <p class="shipping_phone">{{ shipping_phone }} </p>
 <!--                     <header class="page-header">
                         <h1 {% if settings.enable_multilang %}data-translate="customer.account.title"{%endif%}>{{ 'customer.account.title' | t }}</h1>
                   	</header>
@@ -381,5 +386,24 @@
 </script>
 
 
-
+<script>
+  document.onreadystatechange = function(e)
+{ 
+    var billing_phone = $('.billing_phone').text();
+     var shipping_phone = $('.shipping_phone').text();
+    
+    console.log(billing_phone);
+     var inputtxt = 8879608610;
+     var phoneno = /^\d{10}$/;
+      if(phoneno.test(inputtxt))
+      {
+	   	console.log('true');
+      }
+     else
+     {
+	   alert("Not a valid Phone Number");
+	   return false;
+     } 
+};
+</script>
 

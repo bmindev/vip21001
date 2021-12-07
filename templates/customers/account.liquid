@@ -59,7 +59,10 @@
                 {% if customer.orders.size != 0 %}
                 <div  class="custom-account-section">
                   {% for order in customer.orders %}
-                    <div class="order-container">
+                  {% if order.tags contains "phone_invalid" %}
+                  {{ order.tags }}
+                  {% endif %}
+                    <div class="order-container {% if order.tags contains "phone_invalid" %}phone-invalid{% endif %}">
                       <div class="order-header px-4 px-lg-5 py-4 py-md-2 d-flex justify-content-between flex-column flex-md-row" style="background-color:#a0e0db;">
                         <p class="my-1" {% if settings.enable_multilang %}data-translate="customer.orders.order_number"{%endif%}>
                           {{ 'customer.orders.order_number' | t }} {{ order.name }}  </p> 
@@ -69,7 +72,6 @@
                       </div>
                       
                       
-                     
                       
                       {% for line_item in order.line_items %} 
                       <div class="order-information pt-2 pb-5 pt-md-5 pb-md-5" style="display:flex; justify-content:space-between;">

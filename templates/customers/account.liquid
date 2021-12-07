@@ -59,10 +59,7 @@
                 {% if customer.orders.size != 0 %}
                 <div  class="custom-account-section">
                   {% for order in customer.orders %}
-                  {% if order.tags contains "phone_invalid" %}
-                  {{ order.tags }}
-                  {% endif %}
-                    <div class="order-container {% if order.tags contains "phone_invalid" %}phone-invalid{% endif %}">
+                    <div class="order-container {% if order.tags contains "phone-invalid" %}phone-invalid{% endif %}">
                       <div class="order-header px-4 px-lg-5 py-4 py-md-2 d-flex justify-content-between flex-column flex-md-row" style="background-color:#a0e0db;">
                         <p class="my-1" {% if settings.enable_multilang %}data-translate="customer.orders.order_number"{%endif%}>
                           {{ 'customer.orders.order_number' | t }} {{ order.name }}  </p> 
@@ -70,6 +67,9 @@
                           {{ 'customer.orders.date' | t }} {{ order.created_at | date: format: 'month_day_year' }}  </p>
                         <p class="my-1"><a href="{{ order.customer_url }}">View Order Details</a></p>
                       </div>
+                      {% if order.tags contains "phone-invalid" %}
+                      	<p class="text-center mt-2 phone-message"> Order can not processed. Please give valid phone number </p>
+                      {% endif %}
                       
                       
                       
@@ -139,6 +139,8 @@
 <style>
   
   .dropdown-toggle::after{ content: url({{ 'down-arrow.png' | asset_url }}) !important; position: absolute; right: 27px; border: 0 !important;}
+  .phone-invalid{ border: 2px solid red !important; }
+  .phone-message{ color: red; font-size: 2rem; }
 </style>
 
 

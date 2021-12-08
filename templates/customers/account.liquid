@@ -70,7 +70,9 @@
                       {% if order.tags contains "phone-invalid" %}
                       	<p class="text-center mt-2 phone-message"> Order can not processed. Please give valid phone number </p>
                       {% endif %}
-                      
+                      {% if order.tags contains "customer-edit" %}
+                      <P class="phone-message"></P>
+                      {% endif %}
                       
                       
                       {% for line_item in order.line_items %} 

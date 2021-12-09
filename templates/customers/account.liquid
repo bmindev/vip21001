@@ -70,7 +70,7 @@
                      
                       {% if order.tags contains "phone-invalid" %}
                       	{% unless order.tags contains "customer-edit" or order.tags contains "customer-cancel" %}
-                      		<p class="text-center mt-4 phone-message"> Order can not processed due to invalid phone number. Please edit/cancel the order </p> 
+                      		<p class="text-center mt-4 phone-message"> Order can not processed due to invalid phone number. Please  <a href="{{ order.order_status_url }}">edit or cancel</a> the order </p> 
                       	{% endunless %}           
                       {% endif %}
                       
@@ -145,6 +145,7 @@
   .dropdown-toggle::after{ content: url({{ 'down-arrow.png' | asset_url }}) !important; position: absolute; right: 27px; border: 0 !important;}
   .phone-invalid{ border: 2px solid red !important; }
   .phone-message{ color: white; font-size: 1.2rem; background: #f75f54; width: 70%; margin: 0 auto; }
+  .phone-message a{ color: white; text-decoration: underline; }
 </style>
 
 

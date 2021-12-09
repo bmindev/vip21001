@@ -59,7 +59,7 @@
                 {% if customer.orders.size != 0 %}
                 <div  class="custom-account-section">
                   {% for order in customer.orders %}
-                    <div class="order-container {% if order.tags contains "phone-invalid" %}phone-invalid{% endif %}">
+                    <div class="order-container">
                       <div class="order-header px-4 px-lg-5 py-4 py-md-2 d-flex justify-content-between flex-column flex-md-row" style="background-color:#a0e0db;">
                         <p class="my-1" {% if settings.enable_multilang %}data-translate="customer.orders.order_number"{%endif%}>
                           {{ 'customer.orders.order_number' | t }} {{ order.name }}  </p> 
@@ -67,12 +67,14 @@
                           {{ 'customer.orders.date' | t }} {{ order.created_at | date: format: 'month_day_year' }}  </p>
                         <p class="my-1"><a href="{{ order.customer_url }}">View Order Details</a></p>
                       </div>
+                     
                       {% if order.tags contains "phone-invalid" %}
-                      	<p class="text-center mt-2 phone-message"> Order can not processed. Please give valid phone number </p>
+                      	{% unless order.tags contains "customer-edit" or order.tags contains "customer-cancel" %}
+                      		<p class="text-center mt-4 phone-message"> Order can not processed due to invalid phone number. Please edit/cancel the order </p> 
+                      	{% endunless %}           
                       {% endif %}
-                      {% if order.tags contains "customer-edit" %}
-                      <P class="phone-message"></P>
-                      {% endif %}
+                      
+                      
                       
                       
                       {% for line_item in order.line_items %} 
@@ -142,7 +144,7 @@
   
   .dropdown-toggle::after{ content: url({{ 'down-arrow.png' | asset_url }}) !important; position: absolute; right: 27px; border: 0 !important;}
   .phone-invalid{ border: 2px solid red !important; }
-  .phone-message{ color: red; font-size: 2rem; }
+  .phone-message{ color: white; font-size: 1.2rem; background: #f75f54; width: 70%; margin: 0 auto; }
 </style>
 
 

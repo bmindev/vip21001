@@ -8,14 +8,23 @@
             reCaptcha : {
                 siteKey : ''
             },
-            hideWaterMark : false
+            hideWaterMark : false,
+            encryptionFormId : false,
+            copyright: 'Powered by Globo <a href="https://apps.shopify.com/form-builder-contact-form" target="_blank">Contact Form</a>',
+            scrollTop: true
         },
         pricing:{
             features:{
                 fileUpload : 30,
-                removeCopyright : true
+                removeCopyright : true,
+                bulkOrderForm: true,
+                cartForm: true,
             }
-        }
+        },
+        configuration: {
+            money_format:  "{{ shop.money_format | replace: '"', "'" }}"
+        },
+        encryption_form_id : false
     };
     Globo.FormBuilder.forms = [];
 
@@ -28,7 +37,8 @@
     {% endif %}
     Globo.FormBuilder.page = {
         title : document.title,
-        href : window.location.href
+        href : window.location.href,
+        type: "{{ request.page_type }}"
     };
     Globo.FormBuilder.assetFormUrls = [];
             Globo.FormBuilder.assetFormUrls[48008] = "{{ 'globo.formbuilder.data.48008.js' | asset_url }}";
@@ -40,6 +50,7 @@
 
 <link rel="preload" href="{{ 'globo.formbuilder.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ 'globo.formbuilder.css' | asset_url }}"></noscript>
+<link rel="stylesheet" href="{{ 'globo.formbuilder.css' | asset_url }}">
 {% capture GF_appScript %}{{ 'globo.formbuilder.index.js' | asset_url }}{% endcapture %}
 {% assign GF_assetsPath = GF_appScript | split: 'globo.formbuilder.index.js' | first %}
 <script>

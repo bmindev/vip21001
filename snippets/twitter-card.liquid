@@ -41,7 +41,7 @@
   <meta name="twitter:description" content="{{ article.excerpt_or_content | strip_html | truncatewords: 140, '' | escape }}">
   {% comment %}
     Check if content contains an image to add to the card
-      - Source: http://blog.viralica.com/2013/09/twitter-product-cards-on-shopify/
+      - Source: https://blog.viralica.com/2013/09/twitter-product-cards-on-shopify/
   {% endcomment %}
   {% if article.content contains "<img" %}
     {% assign src = article.content | split: 'src="' %}

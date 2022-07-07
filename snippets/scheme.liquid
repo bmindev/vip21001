@@ -5,7 +5,7 @@
 {% assign fa_count = 0 %}
 <script type="application/ld+json" data-creator_name="FeedArmy">
 {
-  "@context": "http://schema.org/",
+  "@context": "https://schema.org/",
   "@type": "Product",
   "name": "{{ product.title | strip_html | escape }}",
   "url": "{{ shop.url }}{{ product.url }}",
@@ -37,8 +37,8 @@
         "@type" : "Offer",
         "priceCurrency": "{{ shop.currency }}",
         "price": "{{ fa_current_variant.price | money_without_currency  | strip_html | remove: ',' }}",
-        "itemCondition" : "http://schema.org/NewCondition",
-        "availability" : "http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+        "itemCondition" : "https://schema.org/NewCondition",
+        "availability" : "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
         "url" : "{{ shop.url }}{{ fa_current_variant.url }}",
 
 
@@ -81,8 +81,8 @@
           "@type" : "Offer",
           "priceCurrency": "{{ shop.currency }}",
           "price": "{{ variant.price | money_without_currency  | strip_html | remove: ',' }}",
-          "itemCondition" : "http://schema.org/NewCondition",
-          "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+          "itemCondition" : "https://schema.org/NewCondition",
+          "availability" : "https://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
           "url" : "{{ shop.url }}{{ variant.url }}",
 
 
@@ -142,7 +142,7 @@
 </script>
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org/",
+  "@context": "https://schema.org/",
   "@type": "BreadcrumbList",
   "itemListElement": [{
     "@type": "ListItem",
@@ -177,7 +177,7 @@
 {% elsif template contains 'article' %}
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org/",
+  "@context": "https://schema.org/",
   "@type": "Article",
   "name": "{{ article.title }}",
   "description": "{{ article.content | split: '[lang2]' | first | strip_html }}",
@@ -190,7 +190,7 @@
 </script>
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org/",
+  "@context": "https://schema.org/",
   "@type": "BreadcrumbList",
   "itemListElement": [{
     "@type": "ListItem",
@@ -209,7 +209,7 @@
 {% elsif template contains 'collection' and collection.handle %}
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org/",
+  "@context": "https://schema.org/",
   "@type": "CollectionPage",
   "name": "{{ collection.title }}",
   "url": "{{ canonical_url }}",
@@ -218,7 +218,7 @@
 </script>
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org/",
+  "@context": "https://schema.org/",
   "@type": "BreadcrumbList",
   "itemListElement": [{
     "@type": "ListItem",

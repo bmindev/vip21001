@@ -28,7 +28,7 @@
             <div class="header-panel-bt">
                 <div class="col-left">
                     <div class="left-header header-items">
-                        <div class="header-logo" itemscope itemtype="http://schema.org/Organization">
+                        <div class="header-logo" itemscope itemtype="https://schema.org/Organization">
                           <meta itemprop="url" content="{{ shop.url }}">
                             {% if section.settings.brand_type == 'image' and section.settings.logo_pc != bank %}
                             <a class="logo-img" href="{{ routes.cart_url | split: 'cart' | first }}" title="Logo">
@@ -71,7 +71,7 @@
                     <div class="appentMb" data-append-header-mb>
                       <div class="mob-links d-xl-none">
                         <a href="/pages/contact-us">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20.93" height="20.93" viewBox="0 0 20.93 20.93">
+                          <svg xmlns="https://www.w3.org/2000/svg" width="20.93" height="20.93" viewBox="0 0 20.93 20.93">
                             <path id="iconmonstr-phone-9" d="M10.465,1.744a8.721,8.721,0,1,1-8.721,8.721A8.731,8.731,0,0,1,10.465,1.744Zm0-1.744A10.465,10.465,0,1,0,20.93,10.465,10.465,10.465,0,0,0,10.465,0Zm3.924,15.1-1.535-2.962-.9.44c-.977.474-2.965-3.41-2.01-3.922l.909-.447L9.33,5.232l-.918.453c-3.14,1.637,1.846,11.329,5.058,9.861l.92-.451Z" fill="#acacac"/>
                           </svg>
 
@@ -80,7 +80,7 @@
                       </div>	
                       <div class="mob-links d-xl-none">
                         <a href="">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                          <svg xmlns="https://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
                             <path id="iconmonstr-navigation-1" d="M0,6.75,18,0,11.26,18,9,9Z" fill="#acacac"/>
                           </svg>
 
@@ -90,10 +90,10 @@
                       </div>
                       
                         <a class="wishlist locator-icon" href="{{ pages['store-locator-1'].url }}" >
-							<svg class=" d-none d-xl-block " xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 16 24">
+							<svg class=" d-none d-xl-block " xmlns="https://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 16 24">
                                 <path id="iconmonstr-location-1" d="M12,0C7.8,0,4,3.4,4,7.6s3.469,9.21,8,16.4c4.531-7.188,8-12.2,8-16.4S16.2,0,12,0Zm0,11a3,3,0,1,1,3-3A3,3,0,0,1,12,11Z" transform="translate(-4)" fill="#243841"/>
                           	</svg>
-                          	<svg class="d-xl-none" xmlns="http://www.w3.org/2000/svg" width="21.818" height="20" viewBox="0 0 21.818 20">
+                          	<svg class="d-xl-none" xmlns="https://www.w3.org/2000/svg" width="21.818" height="20" viewBox="0 0 21.818 20">
                               <path id="iconmonstr-location-24_1_" data-name="iconmonstr-location-24 (1)" d="M10.909,2.818a3.6,3.6,0,0,1,3.636,3.365c0,1.864-1.558,4.492-3.636,7.783C8.831,10.675,7.273,8.047,7.273,6.184A3.6,3.6,0,0,1,10.909,2.818Zm0-1.818A5.423,5.423,0,0,0,5.455,6.184c0,2.862,2.365,6.279,5.455,11.18,3.089-4.9,5.455-8.318,5.455-11.18A5.422,5.422,0,0,0,10.909,1Zm0,7.273a1.818,1.818,0,1,1,1.818-1.818A1.818,1.818,0,0,1,10.909,8.273ZM21.818,21H0l3.636-7.273h2.85c.35.583.725,1.19,1.12,1.818H4.76L2.942,19.182H18.875l-1.818-3.636H14.211c.4-.628.771-1.235,1.12-1.818h2.851Z" transform="translate(0 -1)" fill="#acacac"/>
                             </svg>
 
@@ -104,7 +104,7 @@
                         <div class="customer-links text-uppercase">
                             {% if customer %}
                             <a  class="acc-links acc-title" href="{{ routes.account_url }}"{% if settings.enable_multilang %} data-translate="customer.account.title"{% endif %}>
-                                <svg class="d-xl-none" xmlns="http://www.w3.org/2000/svg" width="20.042" height="20.042" viewBox="0 0 20.042 20.042">
+                                <svg class="d-xl-none" xmlns="https://www.w3.org/2000/svg" width="20.042" height="20.042" viewBox="0 0 20.042 20.042">
                                   <g id="Group_2" data-name="Group 2" transform="translate(-1483 -57.073)">
                                     <path id="iconmonstr-user-20" d="M10.021,0A10.021,10.021,0,1,0,20.042,10.021,10.021,10.021,0,0,0,10.021,0ZM16.5,15.286a1.98,1.98,0,0,0-1.562-1.036c-1.915-.442-3.7-.829-2.833-2.459,2.626-4.962.7-7.615-2.079-7.615-2.829,0-4.713,2.755-2.079,7.615.89,1.64-.959,2.027-2.833,2.459A1.967,1.967,0,0,0,3.55,15.29a8.351,8.351,0,1,1,12.945,0Z" transform="translate(1483 57.073)" fill="#acacac"/>
                                   </g>
@@ -113,7 +113,7 @@
                             </a>
                             {% else %}                                       
                             <a class="acc-links acc-sign-in" id="customer_login_link" href="{{ routes.account_login_url }}" {% if settings.enable_multilang %}data-translate="customer.login.sign_in"{% endif %}>
-                                <svg class="d-xl-none" xmlns="http://www.w3.org/2000/svg" width="20.042" height="20.042" viewBox="0 0 20.042 20.042">
+                                <svg class="d-xl-none" xmlns="https://www.w3.org/2000/svg" width="20.042" height="20.042" viewBox="0 0 20.042 20.042">
                                   <g id="Group_2" data-name="Group 2" transform="translate(-1483 -57.073)">
                                     <path id="iconmonstr-user-20" d="M10.021,0A10.021,10.021,0,1,0,20.042,10.021,10.021,10.021,0,0,0,10.021,0ZM16.5,15.286a1.98,1.98,0,0,0-1.562-1.036c-1.915-.442-3.7-.829-2.833-2.459,2.626-4.962.7-7.615-2.079-7.615-2.829,0-4.713,2.755-2.079,7.615.89,1.64-.959,2.027-2.833,2.459A1.967,1.967,0,0,0,3.55,15.29a8.351,8.351,0,1,1,12.945,0Z" transform="translate(1483 57.073)" fill="#acacac"/>
                                   </g>
@@ -137,7 +137,7 @@
 
                             {% if settings.enable_wishlist %}
                             <a class="wishlist d-none d-xl-block" href="{{ pages['wish-list'].url }}" title='{% if settings.enable_multilang %}data-translate="wishlist.general.my_wishlist"{% endif %}'>
-                                <svg aria-hidden="true" data-prefix="fal" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16 fa-2x"><path fill="currentColor" d="M462.3 62.7c-54.5-46.4-136-38.7-186.6 13.5L256 96.6l-19.7-20.3C195.5 34.1 113.2 8.7 49.7 62.7c-62.8 53.6-66.1 149.8-9.9 207.8l193.5 199.8c6.2 6.4 14.4 9.7 22.6 9.7 8.2 0 16.4-3.2 22.6-9.7L472 270.5c56.4-58 53.1-154.2-9.7-207.8zm-13.1 185.6L256.4 448.1 62.8 248.3c-38.4-39.6-46.4-115.1 7.7-161.2 54.8-46.8 119.2-12.9 142.8 11.5l42.7 44.1 42.7-44.1c23.2-24 88.2-58 142.8-11.5 54 46 46.1 121.5 7.7 161.2z" class=""></path></svg>
+                                <svg aria-hidden="true" data-prefix="fal" data-icon="heart" role="img" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16 fa-2x"><path fill="currentColor" d="M462.3 62.7c-54.5-46.4-136-38.7-186.6 13.5L256 96.6l-19.7-20.3C195.5 34.1 113.2 8.7 49.7 62.7c-62.8 53.6-66.1 149.8-9.9 207.8l193.5 199.8c6.2 6.4 14.4 9.7 22.6 9.7 8.2 0 16.4-3.2 22.6-9.7L472 270.5c56.4-58 53.1-154.2-9.7-207.8zm-13.1 185.6L256.4 448.1 62.8 248.3c-38.4-39.6-46.4-115.1 7.7-161.2 54.8-46.8 119.2-12.9 142.8 11.5l42.7 44.1 42.7-44.1c23.2-24 88.2-58 142.8-11.5 54 46 46.1 121.5 7.7 161.2z" class=""></path></svg>
                                 <span class="wishlist-text text-hover"{% if settings.enable_multilang %} data-translate="wishlist.general.my_wishlist"{% endif %}>
                                     {{ 'wishlist.general.my_wishlist' | t }}
                                 </span>   

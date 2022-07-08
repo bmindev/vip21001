@@ -19,6 +19,8 @@
   <meta name="description" content="{{ page_description | escape | split: '[/countdown]' | last | strip_html }}">
   {% endif %}
 
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+  
   <!-- Product meta ================================================== -->
   {% render 'fb-open-graph-tags' %}
   {% render 'twitter-card' %}

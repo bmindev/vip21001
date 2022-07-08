@@ -19,7 +19,9 @@
   <meta name="description" content="{{ page_description | escape | split: '[/countdown]' | last | strip_html }}">
   {% endif %}
 
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+
+    <meta http-equiv="Content-Security-Policy" content="object-src 'none';">
+
   
   <!-- Product meta ================================================== -->
   {% render 'fb-open-graph-tags' %}
